@@ -1,0 +1,25 @@
+{
+	"your-project-name-1": {
+		"description": null,
+		"group": [ "group-1" ],
+		"source-path": "/home/<your-username>/projects/<your-project-name-1>/source",
+		"destination-path": "/home/<your-username>/projects/<your-project-name-1>/backup",
+		"exclusions": [ "*.git*", "*node_modules*" ]
+	},
+
+	"your-project-name-2": {
+		"description": null,
+		"group": [ "group-2" ],
+		"source-path": "/home/<your-username>/projects/<your-project-name-2>/source",
+		"destination-path": "/home/<your-username>/projects/<your-project-name-2>/backup",
+		"exclusions": []
+	},
+
+	"your-project-name-3": {
+		"description": null,
+		"group": [ "group-1", "group-2" ],
+		"source-path": "/home/<your-username>/projects/<your-project-name-3>/source",
+		"destination-path": "/home/<your-username>/projects/<your-project-name-3>/backup",
+		"exclusions": [ "*.key*" ]
+    }
+}
