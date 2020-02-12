@@ -2,14 +2,11 @@
 
 #####################################
 # Name: archiver.sh
-# Description: Null
-# Version: 1.1
-# Revision: 41
-# Organization: Bayesian Flow
+# Bayesian Ecosystem
 # Initial author: Damien Bayes <damien.bayes.db@gmail.com>
 #
 # Synopsis:
-# sudo ./archiver.sh [ source, destination, exclusions, filename, group, list-group, group-count, verbose, help ]
+# sudo ./archiver.sh [source, destination, exclusions, filename, group, list-group, group-count, verbose, help]
 #
 # Use cases:
 # 1. sudo ./archiver.sh -s <your-source-path> -d <your-destination-path>
@@ -40,9 +37,6 @@
 # Aliases:
 # alias bayesian-archiver='sudo bash "$HOME/projects/bayesian-job-automation/source/actions/bash/archiver.sh" / 
 # -f "$HOME/projects/bayesian-job-automation/source/objectives.json"'
-#
-# If you have some problems or proposals, please open an issue including a log error on https://github.com/damien-bayes/bayesian-packer/issues
-# The reports make it easy for the Bayesian Flow team to identify the bug, solve it, and release a new version of Bayesian Job Automation by seeing the stacktrace.
 #####################################
 
 # Set a current working directory to the script location ()
@@ -179,13 +173,13 @@ function archive () {
 #
 # @return {void}
 function printCompletion () {
-    echo -e "
-        Archiving status: `writeColoredString "Done" "greenColor"`
-        Name: `writeColoredString "${1}" "greenColor"`
-        Source: `writeColoredString "${2}" "greenColor"`
-        Destination: `writeColoredString "${3}" "greenColor"`
-        Execution time: `writeColoredString "${4}" "greenColor"`
-    "
+  echo -e "
+    Archiving status: `writeColoredString "Done" "greenColor"`
+    Name: `writeColoredString "${1}" "greenColor"`
+    Source: `writeColoredString "${2}" "greenColor"`
+    Destination: `writeColoredString "${3}" "greenColor"`
+    Execution time: `writeColoredString "${4}" "greenColor"`
+  "
 }
 
 # Name: printHelp
@@ -204,9 +198,9 @@ function printHelp () {
         `writeColoredString "-e" "greenColor"` (optional)       Exclusions
         `writeColoredString "-f" "greenColor"` (optional)       Path to a file that is represented as json containing all necessary information about source, destination directories along with exclusions
 
-        Organization: `writeColoredString "Bayesian Flow" "greenColor"`
+        Organization: `writeColoredString "Bayesian Ecosystem" "greenColor"`
 
-        Initial author: `writeColoredString "Damien Bayes <damien.bayes.db@gmail.com, damien.bayes.db@bayesianflow.space> | https://github.com/damien-bayes" "greenColor"`
+        Initial author: `writeColoredString "Damien Bayes <damien.bayes.db@gmail.com> | https://github.com/damien-bayes" "greenColor"`
         Do not hesitate to contact me if you require more information about this script.
     "
 }
