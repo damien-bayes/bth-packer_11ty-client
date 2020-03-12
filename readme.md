@@ -38,7 +38,7 @@ sudo docker build -t bayesian-ecosystem/bayesian-packer_client:1.0 .
 sudo docker run \
 -d \
 --name bayesian-packer_client \
---expose 10033 \
+--expose 80 \
 --net bayesian-network-1 \
 -e VIRTUAL_HOST=packer.bayesianflow.space \
 bayesian-ecosystem/bayesian-packer_client:1.0
