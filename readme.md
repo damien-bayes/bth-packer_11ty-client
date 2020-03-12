@@ -29,6 +29,23 @@ For instance, the jq is used for processing configuration data along with a basi
 
 ---
 
+### Docker
+
+```bash
+# Build a new docker image using the Dockerfile
+sudo docker build -t bayesian-ecosystem/bayesian-packer_client:1.0 .
+
+sudo docker run \
+-d \
+--name bayesian-packer_client \
+--expose 10033 \
+--net bayesian-network-1 \
+-e VIRTUAL_HOST=packer.bayesianflow.space \
+bayesian-ecosystem/bayesian-packer_client:1.0
+```
+
+---
+
 ## Bug Fixes
 
 If you have some problems or proposals, please open an issue including a log error on https://github.com/damien-bayes/bayesian-packer/issues
