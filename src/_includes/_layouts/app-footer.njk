@@ -1,3 +1,20 @@
-<footer>
-  Footer 1
+<footer class="app-footer">
+  <!-- Deck 1 -->
+  <div class="app-footer__brand">
+    <img src="" alt="Bayesian Ecosystem"/>
+  </div>
+
+  <!-- Deck 2 -->
+  <div class="app-footer__copyright">
+    <p>© {{ app_footer.currentYear }} Bayesian Ecosystem</p>
+    <p>
+      <span>All product names, trademarks and registered trademarks are property of their respective owners</span>
+      <span>Use of these names, trademarks and brands does not imply endorsement</span>
+    </p>
+  </div>
+
+  <!-- Deck 3 -->
+  <div class="app-footer__synthesis">
+    <p>Product name: {{ metadata.title }} | Client version: {{ metadata.version }}</p>
+  </div>
 </footer>

@@ -12,13 +12,14 @@ module.exports = config => {
   /*
   WARNING: Most likely, the "_includes" is being searched in the current directory, NOT in the original 11ty folder 
   and in this case the 11ty configures required environment options on its own
-
-  let nunjucksEnvironment = new Nunjucks.Environment(
-    new Nunjucks.FileSystemLoader("_includes")
-  );
-  config.setLibrary("njk", nunjucksEnvironment);
   */
 
+  let nunjucksEnvironment = new Nunjucks.Environment(
+    new Nunjucks.FileSystemLoader("src/_includes")
+  );
+
+  config.setLibrary("njk", nunjucksEnvironment);
+  
   /*
   config.setBrowserSyncConfig({
     callbacks: {
@@ -50,7 +51,7 @@ module.exports = config => {
 
   config.addPassthroughCopy("css");
   config.addPassthroughCopy("js");
-  config.addPassthroughCopy("img");
+  config.addPassthroughCopy("images");
 
   return {
     dir: {

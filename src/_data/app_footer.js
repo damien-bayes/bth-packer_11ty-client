@@ -1,4 +1,5 @@
 module.exports = {
+  currentYear: new Date().getFullYear(),
   mapUrl: "https://goo.gl/maps/3YTkhCgfEgj1PRAd7",
   en: {
     addressTitle: "Address",

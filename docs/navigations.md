@@ -1,6 +1,8 @@
 # Navigations
 
 - Home;
+- Guide;
+- Updates;
 - About;
 - FAQ;
 - Contact;

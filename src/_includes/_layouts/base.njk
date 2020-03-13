@@ -73,6 +73,8 @@ description: "Large-scale and secure folder and file archiver for automating you
       {{ content | safe }}
     </main>
 
+    {% include "_layouts/app-footer.njk" %}
+
     {% if metadata.environment != "development" %}
     <code>
       <pre>You're running the application in the {{ metadata.environment }} mode.</pre>
