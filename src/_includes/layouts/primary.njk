@@ -1,0 +1,78 @@
+---
+description: "Large-scale and secure folder and file archiver for automating your infrastructure"
+---
+
+<!doctype html>
+
+<html lang="{{ locale }}">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="copyright" content="Bayesian Ecosystem"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="googlebot" content="all"/>
+    <meta name="google" content="notranslate"/>
+    <meta name="author" content="Damien Bayes"/>
+    <meta name="rating" content="general"/>
+    <meta name="coverage" content="worldwide"/>
+    <meta name="target" content="all"/>
+
+    <!-- Change the color of the header and address bar -->
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#ffffff"/>
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#ffffff"/>
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff"/>
+
+    <!-- <meta name="google-site-verification" content="" /> -->
+    <!-- <script src="https://cdn.optimizely.com/js/11399244737.js"></script> -->
+
+    <!-- <meta name="monetization" content="$pay.stronghold.co/1a155e3a09e210742be8c38ba7cab4795c4"/> -->
+
+    <!-- Open Graph Protocol / Facebook -->
+    <!--
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="{{ metaTitle }}"/>
+    <meta property="og:image" content="{{ metaImage }}"/>
+    <meta property="og:site_name" content="{{ site.name }}"/>
+    <meta property="og:description" content="{{ metaDescription }}"/>
+    -->
+
+    <!-- Twitter -->
+    <!--
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="{{ site.twitter }}"/>
+    <meta name="twitter:title" content="{{ metaTitle }}"/>
+    <meta name="twitter:description" content="{{ metaDescription }}"/>
+    <meta name="twitter:image" content="{{ metaImage }}"/>
+    -->
+
+    <title>{{ title }} - Bayesian Packer</title>
+
+    <!--
+    <meta name="keywords" content="{{ keywords }}"/>
+    -->
+    <meta name="description" content="{{ description }}"/>
+    
+
+    <!-- <link rel="icon" href="favicon.ico"/> -->
+    <link href="/styles/bayesian-aspectus.css" rel="stylesheet"/>
+  </head>
+
+  <body>
+    <noscript>
+      <strong>We're sorry but this web application doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+
+    <main>
+      <!-- Dynamic content -->
+      {{ content | safe }}
+    </main>
+
+    <!-- Current page: {{ page.url | url }} -->
+  </body>
+</html>

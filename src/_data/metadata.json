@@ -1,0 +1,15 @@
+{
+    "title": "Bayesian Packer",
+    "url": "https://packer.bayesianflow.space",
+    "description": "",
+    "feed": {
+      "subtitle": "",
+      "filename": "feed.xml",
+      "path": "/feed/feed.xml",
+      "id": "https://myurl.com/"
+    },
+    "author": {
+      "name": "Damien Bayes",
+      "email": "damien.bayes.db@gmail.com"
+    }
+  }

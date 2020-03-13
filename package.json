@@ -1,7 +1,7 @@
 {
   "name": "bayesian-packer_client",
   "version": "1.0.0",
-  "description": "***Resource:*** https://packer.bayesianflow.space  \r ***Initial author:*** Damien Bayes  \r ***Description:*** Large-scale and secure folder and file archiver for automating your infrastructure",
+  "description": "Large-scale and secure folder and file archiver for automating your infrastructure",
   "main": ".eleventy.js",
   "directories": {
     "doc": "docs"
@@ -11,11 +11,13 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
+    "html-minifier": "^4.0.0",
     "sass": "^1.25.0"
   },
   "scripts": {
     "eleventy:build": "eleventy",
-    "eleventy:serve": "eleventy --serve --port 8080",
+    "eleventy:serve": "eleventy --serve --port 8080 --watch",
+    "eleventy:build-quietly": "eleventy --quiet",
     "eleventy:help": "eleventy --help",
     "lint:es": "eslint ./",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -25,8 +27,8 @@
     "url": "git+https://github.com/damien-bayes/bayesian-packer_client.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Damien Bayes <damien.bayes.db@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/damien-bayes/bayesian-packer_client/issues"
   },

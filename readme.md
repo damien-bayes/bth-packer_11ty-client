@@ -1,12 +1,13 @@
-# Bayesian Packer
+# Bayesian Packer - Client
 
-***Resource:*** https://packer.bayesianflow.space  
-***Initial author:*** Damien Bayes  
-***Description:*** Large-scale and secure folder and file archiver for automating your infrastructure  
+<b>Resource:</b> https://packer.bayesianflow.space<br/>
+<b>Dedicated port number:</b> 10033<br/>
+<b>Initial author:</b> Damien Bayes<br/>
+<b>Description:</b> Large-scale and secure folder and file archiver for automating your infrastructure<br/>
 
 ---
 
-## How to use
+## Getting Started
 
 ### Bash
 
@@ -25,11 +26,19 @@ sudo apt install jq
 
 For instance, the jq is used for processing configuration data along with a basic structure composed of sections, properties, and values. Whereas the zip/unzip utilities are used for working with archives.
 
+```bash
+sudo ./archiver.sh -s <your-source-path> -d <your-destination-path>
+```
+
 ### Powershell
+
+...
 
 ---
 
-```
+## Development
+
+```bash
 # Install Eleventy
 npm install -g @11ty/eleventy
 ```
@@ -38,7 +47,9 @@ npm install -g @11ty/eleventy
 
 ```bash
 # Build a new docker image using the Dockerfile
-sudo docker build -t bayesian-ecosystem/bayesian-packer_client:1.0 .
+sudo docker build \
+-t \
+bayesian-ecosystem/bayesian-packer_client:1.0 .
 
 sudo docker run \
 -d \
@@ -59,3 +70,6 @@ The reports make it easy for the Bayesian Ecosystem team to identify the bug, so
 
 ## References
 1. https://stedolan.github.io/jq
+2. https://www.webstoemp.com/blog/multilingual-sites-eleventy
+3. https://www.11ty.dev/docs/config/#default-template-engine-for-markdown-files
+4. https://www.11ty.dev/docs/config/#transforms
