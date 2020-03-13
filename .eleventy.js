@@ -10,10 +10,12 @@ module.exports = config => {
   sass("./src/assets/styles/bayesian-aspectus.scss", "./dist/styles/bayesian-aspectus.css");
 
   /*
+  WARNING: Most likely, the "_includes" is being searched in the current directory, NOT in the original 11ty folder 
+  and in this case the 11ty configures required environment options on its own
+
   let nunjucksEnvironment = new Nunjucks.Environment(
     new Nunjucks.FileSystemLoader("_includes")
   );
-
   config.setLibrary("njk", nunjucksEnvironment);
   */
 
