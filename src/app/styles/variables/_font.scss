@@ -1,0 +1,82 @@
+/**
+ * Font
+ *
+ * Project: Bayesian Aspectus
+ * Author: Damien Bayes <damien.bayes.db@gmail.com>
+ */
+
+ @import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap&subset=cyrillic');
+
+ /**
+  * Note: The correct way to address the space between text lines is with the margins CSS property and not by adding <br> elements or empty paragraphs between them.
+  * Note: Font is a group dictating the general characteristics. It is the overall style and weight of the text and letter. It deals with single characters, spaces, words and so on
+  *
+  * The rules:
+  * - Font-size and family must be declared, otherwise the overall will be ignored
+  * - Font-family must be declared last
+  * - Every other font property can be declared without order, as long as it come before font-size
+  * - Remember to add spaces between each property, to enclose the exact name families between double quotes, and to divide a generic one with a comma
+  */
+ 
+ $monospace-font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+ 
+ $base-font-family:
+   Arial,
+   "Segoe UI",
+   sans-serif,
+   "Georgia",
+   "Times New Roman",
+   Times,
+   serif,
+   -apple-system,
+   BlinkMacSystemFont,
+   "Apple Color Emoji",
+   "Segoe UI Emoji",
+   "Segoe UI Symbol",
+   "Noto Color Emoji" !default;
+ 
+ /**
+  * Assumes the browser default, typically `16px`
+  * Note: An em is a worldwide standard, defining the 16pt value
+  * Note: Rem stands for Root em, specifying that the element and sizing is indeed tied to the root of our document
+  */
+ $base-font-size: 16px !default;
+ 
+ $xl-font-size: 36px !default;
+ $lg-font-size: 24px !default;
+ $sm-font-size: 14px !default;
+ $xs-font-size: 12px !default;
+ 
+ /**
+  * Font-weight allows you to choose the weight of the font, with values as light, lighter, and normal, 100, 200, 300, 400, 500, 600, 700, 800, 900, bold, and bolder.
+  * Note: Numbers of course refer to specified weights of your chosen typeface, but we'll generally end up using bold or light, never lighter or bolder.
+  */
+ $font-weight-100: 100 !default;
+ $font-weight-200: 200 !default;
+ $font-weight-300: 300 !default;
+ $font-weight-400: 400 !default;
+ $font-weight-500: 500 !default;
+ $font-weight-600: 600 !default;
+ $font-weight-700: 700 !default;
+ $font-weight-800: 800 !default;
+ $font-weight-900: 900 !default;
+ 
+ $base-font-weight: $font-weight-400 !default;
+ 
+ $font-weight-lighter: $font-weight-200 !default;
+ $font-weight-light: $font-weight-300 !default;
+ $font-weight-bold: $font-weight-700 !default;
+ $font-weight-bolder: $font-weight-800 !default;
+ 
+ $h1-font-size: 36px !default;
+ $h2-font-size: 32px !default;
+ $h3-font-size: 24px !default;
+ $h4-font-size: 20px !default;
+ $h5-font-size: 18px !default;
+ $h6-font-size: $base-font-size !default;
+ 
+ /**
+ * On the Web, the default print rule of 120% seems a little too cluttered, while perfectly readable.
+ * We usually suggest implementing it from 130% / 150% on, especially for a small amount of text.
+ */
+ $line-height-base: 130% !default;

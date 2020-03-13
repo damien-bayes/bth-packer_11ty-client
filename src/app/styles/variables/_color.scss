@@ -1,0 +1,86 @@
+/**
+ * Color
+ *
+ * File: /src/styles/variables/color.scss
+ * Project: Bayesian Aspectus
+ * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ */
+
+ $white: #ffffff !default;
+ $black: #000000 !default;
+ 
+ $gray-100: #F5F5F5 !default;
+ $gray-200: #EEEEEE !default;
+ $gray-300: #E0E0E0 !default;
+ $gray-400: #BDBDBD !default;
+ $gray-500: #9E9E9E !default;
+ $gray-600: #757575 !default;
+ $gray-700: #616161 !default;
+ $gray-800: #424242 !default;
+ $gray-900: #212121 !default;
+ 
+ $grays: () !default;
+ 
+ // stylelint-disable-next-line scss/dollar-variable-default
+ $grays: map-merge(
+   (
+     "100": $gray-100,
+     "200": $gray-200,
+     "300": $gray-300,
+     "400": $gray-400,
+     "500": $gray-500,
+     "600": $gray-600,
+     "700": $gray-700,
+     "800": $gray-800,
+     "900": $gray-900
+   ),
+   $grays
+ );
+ 
+ $blue: #1976D2 !default;
+ $indigo: #303F9F !default;
+ $purple: #6f42c1 !default;
+ $pink: #e83e8c !default;
+ $red: #e53935 !default;
+ $orange: #F4511E !default;
+ $yellow: #FFEB3B !default;
+ $green: #43A047 !default;
+ $teal: #00897B !default;
+ $cyan: #00BCD4 !default;
+ $brown: #795548 !default;
+ $deepOrange: #FF5722 !default;
+ $blueGrey: #607D8B !default;
+ $lightGreen: #8BC34A !default;
+ $lime: #CDDC39 !default;
+ 
+ /**
+  * May be unique in many ways depending on an organization brand colors
+  */
+ $primary: #3A1F5D !default;
+ $secondary: #C83660 !default;
+ 
+ $success: $green !default;
+ $info: $teal !default;
+ $warning: $yellow !default;
+ $danger: $red !default;
+ 
+ $light: $gray-200 !default;
+ $dark: $gray-800 !default;
+ 
+ $theme-colors: () !default;
+ 
+ $theme-colors: map-merge(
+   (
+     "primary":    $primary,
+     "secondary":  $secondary,
+ 
+     "success":    $success,
+     "info":       $info,
+     "warning":    $warning,
+     "danger":     $danger,
+ 
+     "light":      $light,
+     "dark":       $dark
+   ),
+   $theme-colors
+ );

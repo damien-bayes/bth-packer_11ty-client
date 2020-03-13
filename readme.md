@@ -29,6 +29,11 @@ For instance, the jq is used for processing configuration data along with a basi
 
 ---
 
+```
+# Install Eleventy
+npm install -g @11ty/eleventy
+```
+
 ### Docker
 
 ```bash
