@@ -16,7 +16,8 @@
   },
   "scripts": {
     "eleventy:build": "eleventy",
-    "eleventy:serve": "eleventy --serve --port 8080 --watch",
+    "eleventy:serve-1": "set ELEVENTY_ENV=development & eleventy --serve --port 8080 --watch",
+    "eleventy:serve-2": "set DEBUG=Eleventy* & eleventy --serve --port 8080 --watch",
     "eleventy:build-quietly": "eleventy --quiet",
     "eleventy:help": "eleventy --help",
     "lint:es": "eslint ./",

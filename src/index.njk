@@ -1,9 +1,15 @@
 ---
-layout: "layouts/primary.njk"
+layout: "_layouts/base.njk"
 title: "Home"
+
+advantages:
+  items:
+    - image: https://static.bayesianflow.space/1205921/images/43ad5bac-7952-4523-b4d4-f59ac23a165a.jpg
+    - image: https://static.bayesianflow.space/1205921/images/e386e08a-c9a8-4e7d-a6ba-5628a20906d9.jpg
+    - image: https://static.bayesianflow.space/1205921/images/ca99ec4f-542b-41a5-ac1c-72ecb354feab.jpg
 ---
 
 <section>
-  <h1>Bayesian Packer</h1>
-  <p>{{ title }}</p>
+  <h1>Bayesian Packer <span>{{ metadata.version }}</span></h1>
+  <p>{{ metadata.description }}</p>
 </section>

@@ -15,6 +15,7 @@ module.exports = config => {
 
   config.setLibrary("njk", nunjucksEnvironment);
 
+  /*
   config.setBrowserSyncConfig({
     callbacks: {
       ready: (err, browserSync) => {
@@ -27,7 +28,7 @@ module.exports = config => {
         });
       },
     }
-  });
+  });*/
 
   config.addTransform("htmlmin", (content, outputPath) => {
     if(outputPath.endsWith(".html")) {
@@ -43,24 +44,36 @@ module.exports = config => {
     return content;
   });
 
-  return {
-    // passthroughFileCopy: true,
+  config.addPassthroughCopy("css");
+  config.addPassthroughCopy("js");
+  config.addPassthroughCopy("img");
 
+  return {
     dir: {
       input: "src",
       output: "dist",
       includes: "_includes",
       data: "_data"
     },
+
     templateFormats: [
       "njk",
       "html", 
       "md",
+      "liquid",
       "css",
-      "svg"
+      "svg",
     ],
+
+    pathPrefix: "/",
+
     htmlTemplateEngine: "njk",
-    markdownTemplateEngine: "njk",
-    dataTemplateEngine: "njk"
+    markdownTemplateEngine: "liquid",
+    dataTemplateEngine: "njk",
+
+    /*
+    setQuietMode: true,
+    passthroughFileCopy: true
+    */
   }
 }
