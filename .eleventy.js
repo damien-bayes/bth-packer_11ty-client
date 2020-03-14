@@ -7,7 +7,7 @@ const htmlmin = require("html-minifier");
 
 module.exports = config => {
   //Watching for modificaions in style directory
-  sass("./src/assets/styles/bayesian-aspectus.scss", "./dist/styles/bayesian-aspectus.css");
+  sass("./src/styles/bayesian-aspectus.scss", "./dist/styles/bayesian-aspectus.css");
 
   /*
   WARNING: Most likely, the "_includes" is being searched in the current directory, NOT in the original 11ty folder 

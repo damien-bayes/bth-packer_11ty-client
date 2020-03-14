@@ -1,0 +1,5 @@
+{%- for navigation in collections.navigation -%}
+<li>
+    <a href="#">{{ navigation.data.name }}</a>
+</li>
+{%- endfor -%}
