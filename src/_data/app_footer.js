@@ -1,28 +1,56 @@
 module.exports = {
   currentYear: new Date().getFullYear(),
-  mapUrl: "https://goo.gl/maps/3YTkhCgfEgj1PRAd7",
+  brandUrl: "images/bayesian-ecosystem-inverted.svg",
+
+  /* English */
   en: {
-    addressTitle: "Address",
-    addressStreet: "Market street",
-    addressNumber: "42",
-    addressPostcode: "1000",
-    addressCity: "Brussels",
-    directionsLabel: "Directions"
+    /* Deck 1: Language Switcher */
+    languageSwitcher: {
+      language: "Language",
+    },
+
+    /* Deck 4: Copyright */
+    copyright: {
+      paragraphs: [
+        "All product names, trademarks and registered trademarks are property of their respective owners.",
+        "Use of these names, trademarks and brands does not imply endorsement"
+      ]
+    },
+
+    /* Deck 5: Synthesis */
+    synthesis: {
+      productName: "Product name",
+      clientVersion: "Client version"
+    }
   },
+
+  /* Russian */
   ru: {
-    addressTitle: "Address",
-    addressStreet: "Market street",
-    addressNumber: "42",
-    addressPostcode: "1000",
-    addressCity: "Brussels",
-    directionsLabel: "Directions"
+    copyright: {
+      paragraphs: [
+        "Все торговые марки и логотипы являются зарегистрированными торговыми марками их соответствующих владельцев.",
+        "Использование наименований, логотипов и торговых марок не одобряется со стороны их владельцев"
+      ]
+    },
+
+    synthesis: {
+      productName: "Наименование продукта",
+      clientVersion: "Версия приложения"
+    }
   },
+
+  /* German */
   de: {
-    addressTitle: "Adresse",
-    addressStreet: "Rue du marché",
-    addressNumber: "42",
-    addressPostcode: "1000",
-    addressCity: "Bruxelles",
-    directionsLabel: "Itinéraire"
+    copyright: {
+      paragraphs: [
+        "Alle Produktnamen, Marken und eingetragenen Marken sind Eigentum ihrer jeweiligen Inhaber.",
+        "Die Verwendung dieser Namen, Marken und Marken bedeutet keine Billigung"
+      ]
+    },
+
+    synthesis: {
+      productName: "Produktname",
+      clientVersion: "Anwendungsversion"
+    }
   }
 };

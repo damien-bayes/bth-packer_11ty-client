@@ -1,39 +1,51 @@
 <footer class="app-footer">
-  <!-- Deck 1 -->
-  <nav class="app-footer__navigation">
-    <ul>
-      {%- for navigation in navigation.items -%}
+  <!-- Deck 1: Language Switcher -->
+  <div class="language-switcher">
+    {{ app_footer[app.locale].languageSwitcher.language }}: 
 
-      {%- set name = navigation.name %}
-      {%- set url = navigation.url %}
-
-      <li>
-        <a href="{{ url }}">{{ name }}</a>
-      </li>
-
-      {%- endfor -%}
-    </ul>
-  </nav>
-
-  <!-- Deck 2 -->
-  <div class="app-footer__brand">
-    <img src="{{ '/' | url }}images/bayesian-ecosystem-inverted.svg" alt="Bayesian Ecosystem"/>
+    <a href="javascript:" class="button button--secondary">
+      {% for lang in app.languages %}
+        {{ lang.label if lang.code == app.locale else "" }}
+      {% endfor %}
+    </a>
   </div>
 
-  <!-- Deck 3 -->
+  <!-- Deck 2: Navigation -->
+  <nav class="app-footer__navigation">
+    {# Start looping though navigation items #}
+    {%- for navigation in navigation[app.locale].items -%}
+      {% if loop.first %}<ul>{% endif %}
+
+        {%- set name = navigation.name %}
+        {%- set url = navigation.url %}
+
+        <li>
+          <a href="{{ url }}">{{ name }}</a>
+        </li>
+
+      {% if loop.last %}</ul>{% endif %}
+    {%- endfor -%}
+  </nav>
+
+  <!-- Deck 3: Brand -->
+  <div class="app-footer__brand">
+    <img src="{{ '/' | url }}{{ app_footer.brandUrl }}" alt="{{ app.company.name }}"/>
+  </div>
+
+  <!-- Deck 4: Copyright -->
   <div class="app-footer__copyright">
-    <p>&copy; {{ app_footer.currentYear }} Bayesian Ecosystem</p>
+    <p>&copy; {{ app_footer.currentYear }} {{ app.company.name }}</p>
     <p>
-      <span>All product names, trademarks and registered trademarks are property of their respective owners</span>
-      <span>Use of these names, trademarks and brands does not imply endorsement</span>
+      <span>{{ app_footer[app.locale].copyright.paragraphs[0] }}</span>
+      <span>{{ app_footer[app.locale].copyright.paragraphs[1] }}</span>
     </p>
   </div>
 
-  <!-- Deck 4 -->
+  <!-- Deck 5: Synthesis -->
   <div class="app-footer__synthesis">
     <ul>
-      <li>Product name: <span>{{ app.name }}</span></li>
-      <li>Client version: <span>{{ app.version }}</span></li>
+      <li>{{ app_footer[app.locale].synthesis.productName }}: <span>{{ app.name }}</span></li>
+      <li>{{ app_footer[app.locale].synthesis.clientVersion }}: <span>{{ app.version }}</span></li>
     </ul>
   </div>
 </footer>

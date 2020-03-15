@@ -6,11 +6,8 @@ const package = require("../../package.json");
 
 module.exports = {
   name: "Bayesian Packer",
-
   version: package.version,
-
   url: "https://packer.bayesianflow.space",
-
   description: package.description,
 
   author: {
@@ -20,6 +17,26 @@ module.exports = {
     facebook: "https://www.facebook.com/damien.bayes.db1",
     twitter: "https://twitter.com/damien_bayes"
   },
+  company: {
+    name: "Bayesian Ecosystem"
+  },
+
+  locale: "en",
+  languages: [
+    {
+      label: "English",
+      code: "en"
+    },
+    {
+      label: "Русский",
+      code: "ru"
+    },
+    {
+      label: "Deutsche",
+      code: "de"
+    }
+  ],
   
+  buildTime: new Date(),
   environment: process.env.ELEVENTY_ENV
 }

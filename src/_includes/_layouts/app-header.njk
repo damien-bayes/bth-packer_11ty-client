@@ -16,7 +16,7 @@
 
   <nav>
     <ul>
-      {%- for navigation in navigation.items -%}
+      {%- for navigation in navigation[ app.locale ].items -%}
       <li>
         <a href="{{ navigation.url }}">{{ navigation.name }}</a>
       </li>

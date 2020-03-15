@@ -5,14 +5,14 @@ description: "Large-scale and secure folder and file archiver for automating you
 
 <!doctype html>
 
-<html lang="{{ locale }}">
+<html lang="{{ app.locale }}">
   <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-    <meta name="copyright" content="Bayesian Ecosystem"/>
+    <meta name="copyright" content="{{ app.company.name }}"/>
     <meta name="robots" content="index, follow"/>
     <meta name="googlebot" content="all"/>
     <meta name="google" content="notranslate"/>
@@ -37,22 +37,22 @@ description: "Large-scale and secure folder and file archiver for automating you
     <!-- Open Graph Protocol / Facebook -->
     <!--
     <meta property="og:type" content="article"/>
-    <meta property="og:title" content="{{ metaTitle }}"/>
-    <meta property="og:image" content="{{ metaImage }}"/>
-    <meta property="og:site_name" content="{{ site.name }}"/>
-    <meta property="og:description" content="{{ metaDescription }}"/>
+    <meta property="og:title" content="{{ app.name }}"/>
+    <meta property="og:image" content="{{ app.image }}"/>
+    <meta property="og:site_name" content="{{ app.name }}"/>
+    <meta property="og:description" content="{{ app.description }}"/>
     -->
 
     <!-- Twitter -->
     <!--
     <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:site" content="{{ site.twitter }}"/>
-    <meta name="twitter:title" content="{{ metaTitle }}"/>
-    <meta name="twitter:description" content="{{ metaDescription }}"/>
-    <meta name="twitter:image" content="{{ metaImage }}"/>
+    <meta name="twitter:site" content="{{ app.url }}"/>
+    <meta name="twitter:title" content="{{ app.name }}"/>
+    <meta name="twitter:description" content="{{ app.description }}"/>
+    <meta name="twitter:image" content="{{ app.image }}"/>
     -->
 
-    <title>{{ title }} - Bayesian Packer</title>
+    <title>{{ title }} - {{ app.name }}</title>
 
     <meta name="keywords" content="{{ keywords }}"/>
     <meta name="description" content="{{ description }}"/>

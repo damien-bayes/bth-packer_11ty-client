@@ -1,70 +1,20 @@
 "use strict";
 
-const sass = require("./config/sass-processing");
+const sass = require("./config/sass-processing.config");
 const Nunjucks = require("nunjucks");
-const fs = require("fs");
-const htmlmin = require("html-minifier");
 
 module.exports = config => {
-  //Watching for modificaions in style directory
+  //Watch for modificaions in style directory
   sass("./src/styles/bayesian-aspectus.scss", "./dist/styles/bayesian-aspectus.css");
 
-  /* Enable quiet mode to reduce console noise */
-  config.setQuietMode(false);
-
-  /* Watch JavaScript dependencies */
-  config.setWatchJavaScriptDependencies(true);
-
-  /* Add scss directory for Eleventy to watch */
-  config.addWatchTarget("./src/styles/");
-
-  /*
-  WARNING: Most likely, the "_includes" is being searched in the current directory, NOT in the original 11ty folder 
-  and in this case the 11ty configures required environment options on its own
-  */
-
+  // require("./config/nunjucks.config")(config);
   const nunjucksEnvironment = new Nunjucks.Environment(
     new Nunjucks.FileSystemLoader("src/_includes")
   );
 
   config.setLibrary("njk", nunjucksEnvironment);
-  
-  /*
-  config.setBrowserSyncConfig({
-    callbacks: {
-      ready: (err, browserSync) => {
-        const content404 = fs.readFileSync("./src/page-not-found.njk");
 
-        browserSync.addMiddleware("*", (req, res) => {
-          // Provides the 404 content without redirect.
-          res.write(content404);
-          res.end();
-        });
-      },
-    }
-  });*/
-
-  /* Minify HTML output */
-  config.addTransform("htmlmin", (content, outputPath) => {
-    if(outputPath.endsWith(".html")) {
-      const minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true
-      });
-
-      return minified;
-    }
-
-    return content;
-  });
-
-  /* NOTE: Using this feature, will likely speed up your build process */
-  config.addPassthroughCopy("./src/js");
-  config.addPassthroughCopy("./src/images");
-  config.addPassthroughCopy("./src/fonts");
-
-  // config.addPassthroughCopy("./src/styles");
+  require("./config/eleventy.config")(config);
 
   return {
     dir: {

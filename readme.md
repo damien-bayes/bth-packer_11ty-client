@@ -3,7 +3,7 @@
 <b>Resource:</b> https://packer.bayesianflow.space<br/>
 <b>Dedicated port number:</b> 10033<br/>
 <b>Initial author:</b> Damien Bayes<br/>
-<b>Description:</b> Large-scale and secure folder and file archiver for automating your infrastructure<br/>
+<b>Description:</b> Archive your large-scale infrastructure more secure and effectively using our command-line tool and keep control of organization data<br/>
 
 ---
 
@@ -75,3 +75,5 @@ The reports make it easy for the Bayesian Ecosystem team to identify the bug, so
 4. https://www.11ty.dev/docs/config/#transforms
 5. https://www.hawksworx.com/blog/keeping-sass-simple-and-speedy-on-eleventy
 6. https://www.11ty.dev/docs
+7. https://www.11ty.dev/docs/data-template-dir
+8. https://www.webstoemp.com/blog/language-switcher-multilingual-jamstack-sites/
