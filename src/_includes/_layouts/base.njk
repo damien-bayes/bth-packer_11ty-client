@@ -16,7 +16,7 @@ description: "Large-scale and secure folder and file archiver for automating you
     <meta name="robots" content="index, follow"/>
     <meta name="googlebot" content="all"/>
     <meta name="google" content="notranslate"/>
-    <meta name="author" content="{{ metadata.author.name }} <{{ metadata.author.email }}>"/>
+    <meta name="author" content="{{ app.author.name }} <{{ app.author.email }}>"/>
     <meta name="rating" content="general"/>
     <meta name="coverage" content="worldwide"/>
     <meta name="target" content="all"/>
@@ -75,9 +75,9 @@ description: "Large-scale and secure folder and file archiver for automating you
 
     {% include "_layouts/app-footer.njk" %}
 
-    {% if metadata.environment != "development" %}
+    {% if app.environment === "development" %}
     <code>
-      <pre>You're running the application in the {{ metadata.environment }} mode.</pre>
+      <pre>You're running the application in the {{ app.environment }} mode.</pre>
       <pre>Current page: {{ page.url | url }}</pre>
     </code>
     {% endif %}

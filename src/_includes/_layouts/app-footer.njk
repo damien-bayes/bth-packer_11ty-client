@@ -1,28 +1,17 @@
 <footer class="app-footer">
   <!-- Deck 1 -->
   <nav class="app-footer__navigation">
-    <ul>      
+    <ul>
+      {%- for navigation in navigation.items -%}
+
+      {%- set name = navigation.name %}
+      {%- set url = navigation.url %}
+
       <li>
-        <a href="#">Home</a>
+        <a href="{{ url }}">{{ name }}</a>
       </li>
-      <li>
-        <a href="#">Guide</a>
-      </li>
-      <li>
-        <a href="#">Updates</a>
-      </li>
-      <li>
-        <a href="#">About</a>
-      </li>
-      <li>
-        <a href="#">FAQ</a>
-      </li>
-      <li>
-        <a href="#">Contribution</a>
-      </li>
-      <li>
-        <a href="#">Contact</a>
-      </li>
+
+      {%- endfor -%}
     </ul>
   </nav>
 
@@ -43,8 +32,8 @@
   <!-- Deck 4 -->
   <div class="app-footer__synthesis">
     <ul>
-      <li>Product name: <span>{{ metadata.title }}</span></li>
-      <li>Client version: <span>{{ metadata.version }}</span></li>
+      <li>Product name: <span>{{ app.name }}</span></li>
+      <li>Client version: <span>{{ app.version }}</span></li>
     </ul>
   </div>
 </footer>

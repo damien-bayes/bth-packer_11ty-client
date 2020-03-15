@@ -1,0 +1,238 @@
+/**
+ * File: /src/styles/variables/_all.scss
+ * Project: Bayesian Aspectus
+ * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ */
+/**
+ * Border
+ *
+ * File: /src/styles/variables/border.scss
+ * Project: Bayesian Aspectus
+ * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ */
+/**
+ * Duration
+ *
+ * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ * Project: Bayesian Aspectus
+ */
+/**
+ * Font
+ *
+ * Project: Bayesian Aspectus
+ * Author: Damien Bayes <damien.bayes.db@gmail.com>
+ */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap&subset=cyrillic");
+/**
+ * Note: The correct way to address the space between text lines is with the margins CSS property and not by adding <br> elements or empty paragraphs between them.
+ * Note: Font is a group dictating the general characteristics. It is the overall style and weight of the text and letter. It deals with single characters, spaces, words and so on
+ *
+ * The rules:
+ * - Font-size and family must be declared, otherwise the overall will be ignored
+ * - Font-family must be declared last
+ * - Every other font property can be declared without order, as long as it come before font-size
+ * - Remember to add spaces between each property, to enclose the exact name families between double quotes, and to divide a generic one with a comma
+ */
+/**
+ * Assumes the browser default, typically `16px`
+ * Note: An em is a worldwide standard, defining the 16pt value
+ * Note: Rem stands for Root em, specifying that the element and sizing is indeed tied to the root of our document
+ */
+/**
+ * Font-weight allows you to choose the weight of the font, with values as light, lighter, and normal, 100, 200, 300, 400, 500, 600, 700, 800, 900, bold, and bolder.
+ * Note: Numbers of course refer to specified weights of your chosen typeface, but we'll generally end up using bold or light, never lighter or bolder.
+ */
+/**
+* On the Web, the default print rule of 120% seems a little too cluttered, while perfectly readable.
+* We usually suggest implementing it from 130% / 150% on, especially for a small amount of text.
+*/
+/**
+ * Indent
+ *
+ * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ * Project: Bayesian Aspectus
+ */
+/**
+ * Layer
+ * File: /src/styles/variables/layer.scss
+ * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ * Project: Bayesian Aspectus
+ */
+/**
+ * Shadow
+ *
+ * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ * Project: Bayesian Aspectus
+ */
+/**
+ * Color
+ *
+ * File: /src/styles/variables/color.scss
+ * Project: Bayesian Aspectus
+ * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ */
+/**
+ * May be unique in many ways depending on an organization brand colors
+ */
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: linear-gradient(22.5deg, rgba(242, 242, 242, 0.03) 0%, rgba(242, 242, 242, 0.03) 16%, rgba(81, 81, 81, 0.03) 16%, rgba(81, 81, 81, 0.03) 26%, rgba(99, 99, 99, 0.03) 26%, rgba(99, 99, 99, 0.03) 73%, rgba(43, 43, 43, 0.03) 73%, rgba(43, 43, 43, 0.03) 84%, rgba(213, 213, 213, 0.03) 84%, rgba(213, 213, 213, 0.03) 85%, rgba(125, 125, 125, 0.03) 85%, rgba(125, 125, 125, 0.03) 100%), linear-gradient(22.5deg, rgba(25, 25, 25, 0.03) 0%, rgba(25, 25, 25, 0.03) 54%, rgba(144, 144, 144, 0.03) 54%, rgba(144, 144, 144, 0.03) 60%, rgba(204, 204, 204, 0.03) 60%, rgba(204, 204, 204, 0.03) 76%, rgba(37, 37, 37, 0.03) 76%, rgba(37, 37, 37, 0.03) 78%, rgba(115, 115, 115, 0.03) 78%, rgba(115, 115, 115, 0.03) 91%, rgba(63, 63, 63, 0.03) 91%, rgba(63, 63, 63, 0.03) 100%), linear-gradient(157.5deg, rgba(71, 71, 71, 0.03) 0%, rgba(71, 71, 71, 0.03) 6%, rgba(75, 75, 75, 0.03) 6%, rgba(75, 75, 75, 0.03) 15%, rgba(131, 131, 131, 0.03) 15%, rgba(131, 131, 131, 0.03) 18%, rgba(110, 110, 110, 0.03) 18%, rgba(110, 110, 110, 0.03) 37%, rgba(215, 215, 215, 0.03) 37%, rgba(215, 215, 215, 0.03) 62%, rgba(5, 5, 5, 0.03) 62%, rgba(5, 5, 5, 0.03) 100%), linear-gradient(90deg, #FFF, #FFF) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: Arial, "Segoe UI", sans-serif, "Georgia", "Times New Roman", Times, serif, -apple-system, BlinkMacSystemFont, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: #0a0611;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+::selection {
+  background-color: #424242;
+  color: #ffffff;
+}
+
+.app-footer {
+  color: #ffffff;
+  background-color: #3A1F5D;
+  background: linear-gradient(120deg, #3a1f5d 0%, #280c4f 100%);
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+.app-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 512px;
+  height: 512px;
+  background: url("../images/network-lines.svg") 0 0 no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  object-fit: contain;
+  z-index: -1;
+  filter: invert(1);
+  opacity: 0.15;
+}
+.app-footer__navigation {
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+.app-footer__navigation ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.app-footer__navigation ul li:not(:last-of-type) {
+  margin-right: 16px;
+}
+.app-footer__navigation ul > li a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px;
+  border-bottom: 1px solid transparent;
+}
+.app-footer__navigation ul > li a:hover {
+  border-bottom: 1px solid #C83660;
+}
+.app-footer__copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+.app-footer__copyright p:first-of-type {
+  margin-bottom: 16px;
+}
+.app-footer__copyright span {
+  display: block;
+  text-align: center;
+}
+.app-footer__synthesis {
+  display: flex;
+  justify-content: flex-end;
+}
+.app-footer__synthesis ul {
+  display: inline-flex;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.app-footer__synthesis ul li:not(:last-of-type) {
+  margin-right: 16px;
+}
+.app-footer__synthesis ul span {
+  padding: 0 4px;
+  color: #000000;
+  border-radius: 4px;
+  color: #ffffff;
+}
+.app-footer__synthesis ul span:hover {
+  background-color: #F6D365;
+  color: #000000;
+}
+.app-footer__brand {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+.app-footer__brand img {
+  width: 128px;
+  height: auto;
+  object-fit: contain;
+}
