@@ -1,7 +1,7 @@
 {
   "name": "bayesian-packer_client",
   "version": "0.1.0",
-  "description": "Large-scale and secure folder and file archiver for automating your infrastructure",
+  "description": "Archive your large-scale infrastructure more secure and effectively using our command-line tool and keep control of organization data",
   "main": ".eleventy.js",
   "directories": {
     "doc": "docs"
