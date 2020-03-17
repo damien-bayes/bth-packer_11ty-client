@@ -10,7 +10,7 @@ const sass = require("./config/sass-processing.config");
 const Nunjucks = require("nunjucks");
 
 module.exports = config => {
-  //Watch for modificaions in style directory
+  // Watch for modificaions in style directory
   sass("./src/styles/bayesian-aspectus.scss", "./dist/styles/bayesian-aspectus.css");
 
   // require("./config/nunjucks.config")(config);

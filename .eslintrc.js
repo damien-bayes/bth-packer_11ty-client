@@ -1,13 +1,16 @@
 module.exports = {
     root: true,
+
     parserOptions: {
       "parser": "babel-eslint"
     },
+
     env: {
       "es6": true,
       "node": true,
       "browser": true
     },
+    
     /* Add your rules here */
     rules: {
       // "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
