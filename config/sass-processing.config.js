@@ -1,3 +1,9 @@
+/**
+ * Project: Bayesian Packer
+ * This project is a part of Bayesian Ecosystem
+ * Initial author: Damien Bayes (damien.bayes.db@gmail.com)
+ */
+
 const sass = require("sass");
 const fs = require("fs-extra");
 const path = require("path");

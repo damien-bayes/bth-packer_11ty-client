@@ -1,29 +1,29 @@
 #!/bin/bash
 
 #####################################
-# Name: archiver.sh
+# Name: bayesian-packer.sh
 # Bayesian Ecosystem
 # Initial author: Damien Bayes <damien.bayes.db@gmail.com>
 #
 # Synopsis:
-# sudo ./archiver.sh [source, destination, exclusions, filename, group, list-group, group-count, verbose, help]
+# sudo ./bayesian-packer.sh [source, destination, exclusions, filename, group, list-group, group-count, verbose, help]
 #
 # Use cases:
-# 1. sudo ./archiver.sh -s <your-source-path> -d <your-destination-path>
-# 1.1. sudo ./archiver.sh -s <your-source-path> -d <your-destination-path> -gpg
-# 1.2. sudo ./archiver.sh -s <your-source-path> -d <your-destination-path> -e [<your-exclusion-file>|<your-exclusion-folder]
-# 1.3. sudo ./archiver.sh -s <your-source-path> -d <your-destination-path> -e [<your-exclusion-file>|<your-exclusion-folder] -gpg
-# 2. sudo ./archiver.sh -f <your-objective-file-path>
-# 2.1. sudo ./archiver.sh -f <your-objective-file-path> -g
-# 2.2. sudo ./archiver.sh -f <your-objective-file-path> -g <your-group-name>
-# 3. sudo ./archiver.sh -lg <your-group-name>
-# 3.1. sudo ./archiver.sh -lg
-# 4. sudo ./archiver.sh -gc <your-group-name>
-# 4.1. sudo ./archiver.sh -gc
-# 5. sudo ./archiver.sh -v
-# 6. sudo ./archiver.sh -h
+# 1. sudo ./bayesian-packer.sh -s <your-source-path> -d <your-destination-path>
+# 1.1. sudo ./bayesian-packer.sh -s <your-source-path> -d <your-destination-path> -gpg
+# 1.2. sudo ./bayesian-packer.sh -s <your-source-path> -d <your-destination-path> -e [<your-exclusion-file>|<your-exclusion-folder]
+# 1.3. sudo ./bayesian-packer.sh -s <your-source-path> -d <your-destination-path> -e [<your-exclusion-file>|<your-exclusion-folder] -gpg
+# 2. sudo ./bayesian-packer.sh -f <your-objective-file-path>
+# 2.1. sudo ./bayesian-packer.sh -f <your-objective-file-path> -g
+# 2.2. sudo ./bayesian-packer.sh -f <your-objective-file-path> -g <your-group-name>
+# 3. sudo ./bayesian-packer.sh -lg <your-group-name>
+# 3.1. sudo ./bayesian-packer.sh -lg
+# 4. sudo ./bayesian-packer.sh -gc <your-group-name>
+# 4.1. sudo ./bayesian-packer.sh -gc
+# 5. sudo ./bayesian-packer.sh -v
+# 6. sudo ./bayesian-packer.sh -h
 #
-# sudo ./archiver.sh /
+# sudo ./bayesian-packer.sh /
 # -s <your-source-path> /
 # -d <your-destination-path> /
 # -e *<your-exclusion-file>* -e *<your-exclusion-folder>* /

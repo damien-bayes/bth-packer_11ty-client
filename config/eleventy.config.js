@@ -1,3 +1,9 @@
+/**
+ * Project: Bayesian Packer
+ * This project is a part of Bayesian Ecosystem
+ * Initial author: Damien Bayes (damien.bayes.db@gmail.com)
+ */
+
 // const fs = require("fs");
 const htmlmin = require("html-minifier");
 

@@ -1,6 +1,12 @@
 /**
+ * Project: Bayesian Packer
+ * This project is a part of Bayesian Ecosystem
+ * Initial author: Damien Bayes (damien.bayes.db@gmail.com)
+ * 
  * NOTE: Available to all templates
  */
+
+"use strict";
 
 const package = require("../../package.json");
 
