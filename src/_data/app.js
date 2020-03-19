@@ -8,13 +8,13 @@
 
 "use strict";
 
-const package = require("../../package.json");
+const pack = require("../../package.json");
 
 module.exports = {
   name: "Bayesian Packer",
-  version: package.version,
+  version: pack.version,
   url: "https://packer.bayesianflow.space",
-  description: package.description,
+  description: pack.description,
 
   author: {
     name: "Damien Bayes",

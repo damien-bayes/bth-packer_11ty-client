@@ -137,6 +137,66 @@ h6 {
   color: #ffffff;
 }
 
+.app-header {
+  color: #000000;
+  background-color: #ffffff;
+  overflow: hidden;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+}
+.app-header__system {
+  display: flex;
+}
+.app-header__default {
+  display: flex;
+  border-bottom: 1px solid #EEEEEE;
+}
+.app-header__default > div {
+  flex: 50% 0 1;
+}
+.app-header__default > div:last-of-type {
+  display: flex;
+  justify-content: flex-end;
+}
+.app-header__brand {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+.app-header__brand img {
+  width: 32px;
+  height: 32px;
+  margin-right: 16px;
+}
+.app-header__brand a {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  text-decoration: none;
+}
+.app-header__parallelogram {
+  position: relative;
+  background-color: #3A1F5D;
+  color: #ffffff;
+  background-color: #3A1F5D;
+  z-index: 0;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+}
+.app-header__parallelogram::before {
+  position: absolute;
+  left: -24px;
+  top: 0;
+  content: "";
+  width: 50%;
+  height: 100%;
+  transform: skew(20deg);
+  background-color: #3A1F5D;
+  z-index: -1;
+}
+
 .app-footer {
   color: #ffffff;
   background-color: #3A1F5D;
@@ -235,4 +295,59 @@ h6 {
   width: 128px;
   height: auto;
   object-fit: contain;
+}
+
+.navigation {
+  display: flex;
+  color: #424242;
+  padding: 16px 0;
+}
+.navigation__list {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  padding: 0 16px;
+}
+.navigation__button:first-of-type {
+  border-right: 1px solid #E0E0E0;
+  margin-right: 4px;
+}
+.navigation__button:last-of-type {
+  border-left: 1px solid #E0E0E0;
+  margin-left: 4px;
+}
+.navigation__wrapper {
+  flex: 1;
+  overflow: hidden;
+}
+.navigation__button {
+  background: none;
+  border: 0;
+  padding: 0 8px;
+  outline: 0;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  vertical-align: middle;
+  color: inherit;
+  user-select: none;
+  transition: transform 0.3s ease-in;
+  transform: scale(1) translate3d(0, 0, 0);
+  overflow: hidden;
+  position: relative;
+  font-size: 36px;
+}
+.navigation__link {
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.navigation__button, .navigation__link {
+  color: inherit;
+}
+.navigation__item {
+  margin-right: 64px;
+  display: flex;
+  align-items: center;
 }

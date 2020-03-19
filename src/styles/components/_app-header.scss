@@ -1,0 +1,68 @@
+.app-header {
+  color: $black;
+  background-color: $white;
+  overflow: hidden;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+
+  &__system {
+    display: flex;
+  }
+
+  &__default {
+    display: flex;
+    border-bottom: 1px solid $gray-200;
+    
+    > div {
+      flex: 50% 0 1;
+    }
+
+    > div:last-of-type {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    padding: $base-indent;
+
+    img {
+      width: 32px;
+      height: 32px;
+      margin-right: $base-indent;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+
+  &__parallelogram {
+    position: relative;
+    background-color: $primary;
+    color: $white;
+    background-color: $primary;
+    z-index: 0;
+    padding: $base-indent;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      position: absolute;
+      left:-24px;
+      top: 0;
+      content: "";
+      width: 50%;
+      height: 100%;
+      transform: skew(20deg);
+      background-color: $primary;
+      z-index: -1;
+    }
+  }
+}

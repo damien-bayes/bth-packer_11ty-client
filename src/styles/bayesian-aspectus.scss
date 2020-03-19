@@ -46,4 +46,7 @@ h6 { font-size: $h6-font-size; }
   color: $white;
 }
 
-@import "components/_app-footer"; 
+@import "components/_app-header";
+@import "components/_app-footer";
+
+@import "components/_navigation";

@@ -15,8 +15,9 @@
     "sass": "^1.25.0"
   },
   "scripts": {
+    "clean": "rimraf dist",
     "eleventy:build": "eleventy",
-    "eleventy:serve-1": "set ELEVENTY_ENV=development & eleventy --serve --port 8080 --watch",
+    "eleventy:serve-1": "npm run clean && set ELEVENTY_ENV=development & eleventy --serve --port 8080 --watch",
     "eleventy:serve-2": "set DEBUG=Eleventy* & eleventy --serve --port 8080 --watch",
     "eleventy:build-quietly": "eleventy --quiet",
     "eleventy:help": "eleventy --help",
