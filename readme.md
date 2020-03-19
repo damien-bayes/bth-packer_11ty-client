@@ -63,7 +63,7 @@ bayesian-ecosystem/bayesian-packer_client:1.2
 ---
 ## Contribution
 
-Thanks for contributing to scrollnav. Without you and the Open Source community this project wouldn't be possible. Before you get started, please familiarize yourself with the project and its standards.
+Thanks for contributing to Bayesian Packer. Without you and the Open Source community this project wouldn't be possible. Before you get started, please familiarize yourself with the project and its standards.
 
 ## Bug Fixes
 
