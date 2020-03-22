@@ -14,12 +14,12 @@ module.exports = {
         url: "/"
       },
       { 
-        name: "Guide",
-        url: "/guide"
+        name: "Documentation",
+        url: "/documentation"
       },
       { 
-        name: "Updates",
-        url: "/updates"
+        name: "Patch Notes",
+        url: "/patch-notes"
       },
       { 
         name: "About",

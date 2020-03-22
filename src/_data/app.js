@@ -10,7 +10,7 @@
 
 const pack = require("../../package.json");
 
-module.exports = {
+const options = {
   name: "Bayesian Packer",
   version: pack.version,
   url: "https://packer.bayesianflow.space",
@@ -46,3 +46,7 @@ module.exports = {
   buildTime: new Date(),
   environment: process.env.ELEVENTY_ENV
 }
+
+console.info(`${options.name} is in ${options.environment} state`);
+
+module.exports = options; 

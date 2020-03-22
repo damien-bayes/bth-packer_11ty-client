@@ -1,0 +1,18 @@
+---
+layout: "_layouts/base.njk"
+title: "Patch Notes"
+
+pagination:
+  data: collections.patch_notes
+  size: 10
+  alias: notes
+---
+
+{% for note in notes %}
+  <article>
+    <a href="{{ note.url | url }}">
+      {{ note.data.title }}
+      {{ note.date | convertToReadableDate }}
+    </a>
+  </article>
+{% endfor %}

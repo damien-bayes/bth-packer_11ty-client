@@ -7,6 +7,8 @@
 // const fs = require("fs");
 const htmlmin = require("html-minifier");
 
+const dayjs = require("dayjs");
+
 module.exports = eleventyConfig => {
   /* Enable quiet mode to reduce console noise */
   eleventyConfig.setQuietMode(false);
@@ -16,6 +18,10 @@ module.exports = eleventyConfig => {
 
   /* Add scss directory for Eleventy to watch */
   eleventyConfig.addWatchTarget("src/styles/");
+
+  eleventyConfig.addFilter('convertToReadableDate', date => {
+    return dayjs(date).format("YYYY-MM-DD");
+  })
 
   /*
   eleventyConfig.setBrowserSyncConfig({
@@ -48,9 +54,7 @@ module.exports = eleventyConfig => {
   });
     
   /* NOTE: Using this feature, will likely speed up your build process */
-  eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/fonts");
-    
   // eleventyConfig.addPassthroughCopy("src/styles");
 }

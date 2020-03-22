@@ -67,19 +67,12 @@ description: "Large-scale and secure folder and file archiver for automating you
     </noscript>
 
     {% include "_layouts/app-header.njk" %}
-
     <main>
-      <!-- Dynamic content -->
+      <!-- Dynamic content goes here -->
       {{ content | safe }}
     </main>
-
     {% include "_layouts/app-footer.njk" %}
 
-    {% if app.environment === "development" %}
-    <code>
-      <pre>You're running the application in the {{ app.environment }} mode.</pre>
-      <pre>Current page: {{ page.url | url }}</pre>
-    </code>
-    {% endif %}
+    <script src="/js/index.js"></script>
   </body>
 </html>

@@ -1,3 +1,10 @@
+{% if app.environment === "development" %}
+<code>
+  <pre>You're running the application in the {{ app.environment }} mode.</pre>
+  <pre>Current page: {{ page.url | url }}</pre>
+</code>
+{% endif %}
+
 <header class="app-header">
   <!-- Deck 1: System -->
   <div class="app-header__system">
