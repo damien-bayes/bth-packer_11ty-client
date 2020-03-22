@@ -35,22 +35,18 @@ description: "Large-scale and secure folder and file archiver for automating you
     <!-- <meta name="monetization" content="$pay.stronghold.co/1a155e3a09e210742be8c38ba7cab4795c4"/> -->
 
     <!-- Open Graph Protocol / Facebook -->
-    <!--
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="{{ app.name }}"/>
-    <meta property="og:image" content="{{ app.image }}"/>
     <meta property="og:site_name" content="{{ app.name }}"/>
-    <meta property="og:description" content="{{ app.description }}"/>
-    -->
+    <meta property="og:description" content="{{ description }}"/>
+    <!-- <meta property="og:image" content="{{ app.image }}"/> -->
 
     <!-- Twitter -->
-    <!--
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="{{ app.url }}"/>
     <meta name="twitter:title" content="{{ app.name }}"/>
-    <meta name="twitter:description" content="{{ app.description }}"/>
-    <meta name="twitter:image" content="{{ app.image }}"/>
-    -->
+    <meta name="twitter:description" content="{{ description }}"/>
+    <!-- <meta name="twitter:image" content="{{ app.image }}"/> -->
 
     <title>{{ title }} - {{ app.name }}</title>
 
@@ -66,13 +62,20 @@ description: "Large-scale and secure folder and file archiver for automating you
       <strong>We're sorry but this web application doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
 
-    {% include "_layouts/app-header.njk" %}
+    {% include "_partials/app-header.njk" %}
     <main>
       <!-- Dynamic content goes here -->
       {{ content | safe }}
     </main>
-    {% include "_layouts/app-footer.njk" %}
+    {% include "_partials/app-footer.njk" %}
 
-    <script src="/js/global.js"></script>
+    <!-- 1. Capture the javascript content as a nunjucks variable -->
+    {% set js %}
+      {% include "_js/global.js" %}
+    {% endset %}
+    <!-- 2. Feed it through minifyJs filter to minify content -->
+    <script>
+      {{ js | minifyJs | safe }}
+    </script>
   </body>
 </html>

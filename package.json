@@ -20,7 +20,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "html-minifier": "^4.0.0",
     "sass": "^1.25.0",
-    "uglify-js": "^3.8.0"
+    "terser": "^4.6.7"
   },
   "scripts": {
     "clean": "rimraf dist",

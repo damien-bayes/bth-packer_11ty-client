@@ -4,9 +4,9 @@
  * Initial author: Damien Bayes (damien.bayes.db@gmail.com)
  */
 
-// const fs = require("fs");
+const fs = require("fs");
 const htmlmin = require("html-minifier");
-
+const terser = require("terser");
 const dayjs = require("dayjs");
 
 module.exports = eleventyConfig => {
@@ -19,26 +19,42 @@ module.exports = eleventyConfig => {
   /* Add scss directory for Eleventy to watch */
   eleventyConfig.addWatchTarget("src/styles/");
 
+  /* Add filter for coverting UTC datetime to readable one */
   eleventyConfig.addFilter("convertToReadableDate", date => {
     return dayjs(date).format("YYYY-MM-DD");
   });
 
-  /*
+  /* Add filter for minifying javascript using terser */
+  eleventyConfig.addFilter('minifyJs', code => {
+    const minified = terser.minify(code);
+
+    if (minified.error) {
+      console.warn('Terser error has been occurred', minified.error);
+      return code;
+    }
+
+    return minified.code;
+  })
+
+  /* Configure Browsersync to do the 404 routing */
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
       ready: (err, browserSync) => {
-        const content404 = fs.readFileSync("./src/page-not-found.njk");
+        const content404 = fs.readFileSync("dist/404/index.html");
 
         browserSync.addMiddleware("*", (req, res) => {
-          // Provides the 404 content without redirect.
+          /* Provide the 404 content without redirect */
           res.write(content404);
+
+          /* Add 404 http status code in request header */
+          res.writeHead(404, { "Content-Type": "text/html" });
           res.end();
         });
       },
     }
-  }); */
+  });
 
-  /* Minify HTML output */
+  /* Add transformation for minifying HTML output */
   eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
     if (outputPath.endsWith(".html")) {
       const minified = htmlmin.minify(content, {
@@ -56,7 +72,5 @@ module.exports = eleventyConfig => {
   /* NOTE: Using this feature, will likely speed up your build process */
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/fonts");
-  eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/favicon.ico");
-  // eleventyConfig.addPassthroughCopy("src/styles");
 };

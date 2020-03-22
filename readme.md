@@ -82,3 +82,4 @@ The reports make it easy for the Bayesian Ecosystem team to identify the bug, so
 8. https://www.webstoemp.com/blog/language-switcher-multilingual-jamstack-sites/
 9. https://dev.to/omarhashimoto/create-a-blog-in-less-than-20-lines-of-code-using-11ty-3oh0
 10. https://keepinguptodate.com/pages/2019/06/creating-blog-with-eleventy/
+11. https://www.11ty.dev/docs/quicktips/inline-js/
