@@ -49,7 +49,7 @@ npm install -g @11ty/eleventy
 # Build a new docker image using the Dockerfile
 sudo docker build \
 -t \
-bayesian-ecosystem/bayesian-packer_client:1.2 .
+bayesian-ecosystem/bayesian-packer_client:1.3 .
 
 sudo docker run \
 -d \
@@ -57,7 +57,7 @@ sudo docker run \
 --expose 80 \
 --net bayesian-network-1 \
 -e VIRTUAL_HOST=packer.bayesianflow.space \
-bayesian-ecosystem/bayesian-packer_client:1.2
+bayesian-ecosystem/bayesian-packer_client:1.3
 ```
 
 ---
