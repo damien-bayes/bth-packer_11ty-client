@@ -12,28 +12,43 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
     "html-minifier": "^4.0.0",
     "sass": "^1.25.0",
-    "typescript": "^3.8.3"
+    "uglify-js": "^3.8.0"
   },
   "scripts": {
     "clean": "rimraf dist",
     "eleventy:build": "eleventy",
-    "eleventy:serve": "npm run clean && set ELEVENTY_ENV=\"development\" && npm run tsc && eleventy --serve --port 10033 --watch",
-    "eleventy:debug": "set DEBUG=\"Eleventy*\" && npm run tsc && eleventy --serve --port 10033 --watch",
+    "eleventy:serve": "npm run clean && set ELEVENTY_ENV=\"development\" && eleventy --serve --port 10033 --watch",
+    "eleventy:debug": "set DEBUG=\"Eleventy*\" && eleventy --serve --port 10033 --watch",
+    "eleventy:watch": "eleventy --port 10033 --watch",
     "eleventy:build-quietly": "eleventy --quiet",
     "eleventy:help": "eleventy --help",
-    "lint:es": "eslint ./",
-    "tsc:init": "tsc --init",
-    "tsc": "tsc",
+    "npm:audit": "npm audit fix",
+    "eslint:init": "eslint --init",
+    "eslint": "eslint ./ --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/damien-bayes/bayesian-packer_client.git"
   },
-  "keywords": ["Bayesian Ecosystem", "Bayesian Family", "Bayesian Packer"],
-  "author": "Damien Bayes <damien.bayes.db@gmail.com>",
+  "keywords": [
+    "Bayesian Ecosystem",
+    "Bayesian Family",
+    "Bayesian Packer"
+  ],
+  "author": {
+    "name": "Damien Bayes",
+    "email": "damien.bayes.db@gmail.com",
+    "url": "https://bayesianflow.space"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/damien-bayes/bayesian-packer_client/issues"

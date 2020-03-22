@@ -19,9 +19,9 @@ module.exports = eleventyConfig => {
   /* Add scss directory for Eleventy to watch */
   eleventyConfig.addWatchTarget("src/styles/");
 
-  eleventyConfig.addFilter('convertToReadableDate', date => {
+  eleventyConfig.addFilter("convertToReadableDate", date => {
     return dayjs(date).format("YYYY-MM-DD");
-  })
+  });
 
   /*
   eleventyConfig.setBrowserSyncConfig({
@@ -36,11 +36,11 @@ module.exports = eleventyConfig => {
         });
       },
     }
-  });*/
+  }); */
 
   /* Minify HTML output */
   eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
-    if(outputPath.endsWith(".html")) {
+    if (outputPath.endsWith(".html")) {
       const minified = htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
@@ -56,5 +56,7 @@ module.exports = eleventyConfig => {
   /* NOTE: Using this feature, will likely speed up your build process */
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/fonts");
+  eleventyConfig.addPassthroughCopy("src/js");
+  eleventyConfig.addPassthroughCopy("src/favicon.ico");
   // eleventyConfig.addPassthroughCopy("src/styles");
-}
+};

@@ -2,7 +2,7 @@
  * Project: Bayesian Packer
  * This project is a part of Bayesian Ecosystem
  * Initial author: Damien Bayes (damien.bayes.db@gmail.com)
- * 
+ *
  * NOTE: Available to all templates
  */
 
@@ -45,8 +45,8 @@ const options = {
   
   buildTime: new Date(),
   environment: process.env.ELEVENTY_ENV
-}
+};
 
 console.info(`${options.name} is in ${options.environment} state`);
 
-module.exports = options; 
+module.exports = options;

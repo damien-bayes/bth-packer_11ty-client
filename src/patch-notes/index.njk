@@ -1,12 +1,20 @@
----
-layout: "_layouts/base.njk"
-title: "Patch Notes"
+---js
+{
+  layout: "_layouts/base.njk",
+  title: "Patch Notes",
 
-pagination:
-  data: collections.patch_notes
-  size: 10
-  alias: notes
+  pagination: {
+    data: "collections.patch_notes",
+    size: 2,
+    alias: "notes"
+  }
+}
 ---
+
+<div class="headline">
+  <h1>{{ title }}</h1>
+  <p>Read the latest {{ app.name }} patch notes or research historical changes</p>
+</div>
 
 {% for note in notes %}
   <article>

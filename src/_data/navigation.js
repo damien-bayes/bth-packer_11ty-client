@@ -9,23 +9,23 @@
 module.exports = {
   en: {
     items: [
-      { 
+      {
         name: "Home",
         url: "/"
       },
-      { 
+      {
         name: "Documentation",
         url: "/documentation"
       },
-      { 
+      {
         name: "Patch Notes",
         url: "/patch-notes"
       },
-      { 
+      {
         name: "About",
         url: "/about"
       },
-      { 
+      {
         name: "FAQ",
         url: "/faq"
       },
@@ -39,4 +39,4 @@ module.exports = {
       }
     ]
   }
-}
+};

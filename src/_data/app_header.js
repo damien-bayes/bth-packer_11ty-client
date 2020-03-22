@@ -8,4 +8,4 @@
 
 module.exports = {
   brandUrl: "images/bayesian-ecosystem.svg"
-}
+};

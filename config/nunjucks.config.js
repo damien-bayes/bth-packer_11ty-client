@@ -8,7 +8,7 @@ const Nunjucks = require("nunjucks");
 
 module.exports = eleventyConfig => {
   /*
-  WARNING: Most likely, the "_includes" is being searched in the current directory, NOT in the original 11ty folder 
+  WARNING: Most likely, the "_includes" is being searched in the current directory, NOT in the original 11ty folder
   and in this case the 11ty configures required environment options on its own
   */
 
@@ -17,4 +17,4 @@ module.exports = eleventyConfig => {
   );
 
   eleventyConfig.setLibrary("njk", nunjucksEnvironment);
-}
+};
