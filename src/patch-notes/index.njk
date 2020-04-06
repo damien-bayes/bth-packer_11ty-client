@@ -19,7 +19,7 @@
   </div>
 
   {# Start looping notes #}
-  {% for note in notes %}
+  {% for note in notes | reverse %}
     {% if loop.first %}<ul>{% endif %}
       <li>
         <article>
