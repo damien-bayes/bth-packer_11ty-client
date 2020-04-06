@@ -10,30 +10,37 @@ module.exports = {
   en: {
     items: [
       {
+        id: 1,
         name: "Home",
         url: "/"
       },
       {
+        id: 2,
         name: "Documentation",
         url: "/documentation"
       },
       {
+        id: 3,
         name: "Patch Notes",
         url: "/patch-notes"
       },
       {
+        id: 4,
         name: "About",
         url: "/about"
       },
       {
+        id: 5,
         name: "FAQ",
         url: "/faq"
       },
       {
+        id: 6,
         name: "Contribution",
         url: "/contribution"
       },
       {
+        id: 7,
         name: "Contact",
         url: "/contact"
       }
