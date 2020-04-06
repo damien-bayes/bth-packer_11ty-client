@@ -1,6 +1,6 @@
 {% if app.environment === "development" %}
 <div class="alert alert--warning">
-  <p>You're running the application in the {{ app.environment }} mode.</p>
+  <p>You're running the application in the <strong>{{ app.environment }}</strong> mode.</p>
   <p>Current page: {{ page.url | url }}</p>
 </div>
 {% endif %}
