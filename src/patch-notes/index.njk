@@ -19,12 +19,16 @@
   </div>
 
   {% for note in notes %}
-    <article>
-      <a href="{{ note.url | url }}">
-        {{ note.data.title }}
-        {{ note.date | convertToReadableDate }}
-      </a>
-    </article>
+    {% if loop.first %}<ul>{% endif %}
+      <li>
+        <article>
+          <a href="{{ note.url | url }}">
+            {{ note.data.title }}
+            {{ note.date | convertToReadableDate }}
+          </a>
+        </article>
+      </li>
+    {% if loop.last %}</ul>{% endif %}
   {% endfor %}
 
 </section>
