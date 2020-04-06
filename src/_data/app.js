@@ -15,6 +15,7 @@ const options = {
   version: pack.version,
   url: "https://packer.bayesianflow.space",
   description: pack.description,
+  keywords: [],
 
   author: {
     name: "Damien Bayes",
