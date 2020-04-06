@@ -22,7 +22,7 @@
           {%- set name = navigation.name %}
           {%- set url = navigation.url %}
 
-          <li data-navigation-id="{{ id }}" {% if page.url == post.url %} class="app-footer__navigation--active"{% endif %}>
+          <li data-navigation-id="{{ id }}" {% if page.url == url %} class="app-footer__navigation--active"{% endif %}>
             <a href="{{ url }}">{{ name }}</a>
           </li>
 
