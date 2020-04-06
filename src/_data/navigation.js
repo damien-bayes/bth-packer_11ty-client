@@ -45,5 +45,83 @@ module.exports = {
         url: "/contact"
       }
     ]
+  },
+  ru: {
+    items: [
+      {
+        id: 1,
+        name: "Главная",
+        url: "/"
+      },
+      {
+        id: 2,
+        name: "Документация",
+        url: "/documentation"
+      },
+      {
+        id: 3,
+        name: "Patch Notes",
+        url: "/patch-notes"
+      },
+      {
+        id: 4,
+        name: "О проекте",
+        url: "/about"
+      },
+      {
+        id: 5,
+        name: "FAQ",
+        url: "/faq"
+      },
+      {
+        id: 6,
+        name: "Вклад",
+        url: "/contribution"
+      },
+      {
+        id: 7,
+        name: "Контакты",
+        url: "/contact"
+      }
+    ]
+  },
+  de: {
+    items: [
+      {
+        id: 1,
+        name: "Главная",
+        url: "/"
+      },
+      {
+        id: 2,
+        name: "Документация",
+        url: "/documentation"
+      },
+      {
+        id: 3,
+        name: "Patch Notes",
+        url: "/patch-notes"
+      },
+      {
+        id: 4,
+        name: "О проекте",
+        url: "/about"
+      },
+      {
+        id: 5,
+        name: "FAQ",
+        url: "/faq"
+      },
+      {
+        id: 6,
+        name: "Вклад",
+        url: "/contribution"
+      },
+      {
+        id: 7,
+        name: "Контакты",
+        url: "/contact"
+      }
+    ]
   }
 };
