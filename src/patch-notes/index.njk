@@ -18,6 +18,7 @@
     <p class="headline__description">Read the latest {{ app.name }} patch notes or research historical changes</p>
   </div>
 
+  {# Start looping notes #}
   {% for note in notes %}
     {% if loop.first %}<ul>{% endif %}
       <li>
