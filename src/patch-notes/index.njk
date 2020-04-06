@@ -32,8 +32,8 @@
     {% if loop.last %}</ul>{% endif %}
   {% endfor %}
 
-  <nav class="pagination">
-    <h2 id="my-pagination">This is the pagination</h2>
+  <nav class="pagination" aria-labelledby="pagination1">
+    <h2 id="pagination1">This is the pagination</h2>
     <ul class="pagination__list">
       {%- for pageEntry in pagination.pages %}
 
