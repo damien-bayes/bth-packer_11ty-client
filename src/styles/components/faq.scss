@@ -1,0 +1,72 @@
+/**
+ * FAQ
+ * 
+ * Project: Bayesian Packer
+ * File: /src/scss/components/faq.scss
+ * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ */
+
+.faq-pillar {
+  margin: 0;
+  padding: 0;
+
+  &__handler {
+    display: none;
+    margin: 0;
+
+    &[type="checkbox"]:checked ~ .faq-pillar__answer {
+      height: 100%;
+      opacity: 1;
+    }
+
+    &[type="checkbox"]:checked ~ .faq-pillar__square {
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      background-color: $secondary;
+    }
+  }
+
+  &__question {
+    position: relative;
+    padding: 0 0 1em 2em;
+  }
+
+  &__title {
+    font-size: 1rem;
+    cursor: pointer;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    margin: 0;
+  }
+
+  &__square {
+    position: absolute;
+    top: .25em;
+    left: .5em;
+    width: 6px;
+    height: 6px;
+    background-color: $gray-600;
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+    transition: -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    font-size: $xl-font-size;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+  }
+
+  &__answer {
+    opacity: 0;
+    height: 0;
+    color: $gray-600;
+    padding: $sm-indent 0;
+  }
+}

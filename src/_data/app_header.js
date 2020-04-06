@@ -7,5 +7,27 @@
 "use strict";
 
 module.exports = {
-  brandUrl: "images/bayesian-ecosystem.svg"
+  brandUrl: "images/bayesian-ecosystem.svg",
+
+  /* English */
+  en: {
+    system: {
+      ecosystem: "Ecosystem",
+      supportCenter: "Support Center",
+      signUp: "Sign Up",
+      signIn: "Sign In"
+    }
+  },
+
+  /* Russian */
+  ru: {
+    system: {
+      ecosystem: "Экосистема",
+      supportCenter: "Центр Поддержки",
+      signUp: "Зарегистрироваться",
+      signIn: "Войти"
+    }
+  }
+
+  /* German */
 };

@@ -1,0 +1,34 @@
+/**
+ * Language Switcher
+ * 
+ * Project: Bayesian Packer
+ * File: /src/scss/components/language-switcher.scss
+ * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ */
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-globe-americas);
+    margin-right: $sm-indent;
+  }
+
+  &__link {
+    color: $white;
+    text-decoration: none;
+    margin-left: $sm-indent;
+    background-color: $secondary;
+    border-radius: $sm-border-radius;
+    color: $white;
+    padding: $sm-indent;
+
+    &:hover {
+      background-color: lighten($secondary, 5%);
+    }
+  }
+}

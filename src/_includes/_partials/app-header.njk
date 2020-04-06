@@ -34,9 +34,9 @@
         <div class="app-header__parallelogram">
           <!-- Language switcher -->
           <div class="language-switcher">
-            {{ app_footer[app.locale].languageSwitcher.language }}: 
+            {{ language_switcher[app.locale].language }}: 
 
-            <a href="javascript:" class="button">
+            <a href="javascript:" class="language-switcher__link">
               {% for lang in app.languages %}
                 {{ lang.label if lang.code == app.locale else "" }}
               {% endfor %}

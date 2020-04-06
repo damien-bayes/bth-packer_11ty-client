@@ -12,11 +12,6 @@ module.exports = {
 
   /* English */
   en: {
-    /* Deck 1: Language Switcher */
-    languageSwitcher: {
-      language: "Language"
-    },
-
     /* Deck 4: Copyright */
     copyright: {
       paragraphs: [

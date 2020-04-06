@@ -9,7 +9,26 @@
 
   <div class="headline">
     <h1 class="headline__title">{{ title }}</h1>
-    <p class="headline__description"></p>
+    <p class="headline__description">Find answers to frequently asked questions. See the most common topics and more.</p>
   </div>
+
+  {# Start looping through faq items #}
+  {%- for faqItem in faq[app.locale].items -%}
+
+    {%- set id = faqItem.id %}
+    {%- set question = faqItem.question %}
+    {%- set answer = faqItem.answer %}
+
+    <div class="faq-pillar">
+      <div class="faq-pillar__question">
+        <label for="question-{{ id }}" class="faq-pillar__title">{{ question }}</label>
+        <input id="question-{{ id }}" data-faq-id="{{ id }}" class="faq-pillar__handler" {% if loop.first %} checked="checked" {% endif %} type="checkbox"/>
+
+        <div class="faq-pillar__square"></div>
+
+        <div class="faq-pillar__answer">{{ answer }}</div>
+      </div>
+    </div>
+  {%- endfor -%}
 
 </section>

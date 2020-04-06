@@ -5,12 +5,8 @@
 
   pagination: {
     data: "collections.patch_notes",
-    size: 6,
-    alias: "notes",
-    reverse: true,
-    before: function(data) {
-      return data.map(entry => `${entry} with a suffix`);
-    }
+    size: 2,
+    alias: "notes"
   }
 }
 ---
@@ -38,17 +34,12 @@
 
   <nav class="pagination" aria-labelledby="pagination1">
     <h2 id="pagination1">This is the pagination</h2>
+
     <ul class="pagination__list">
       {%- for pageEntry in pagination.pages %}
-
-        <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
-
-          {%- for pageEntry in pagination.pages %}
-            <li><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a></li>
-          {%- endfor %}
-
-        <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}</li>
-
+        <li>
+          <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a>
+        </li>
       {%- endfor %}
     </ul>
   </nav>

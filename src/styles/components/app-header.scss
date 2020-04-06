@@ -1,3 +1,11 @@
+/**
+ * App Header
+ * 
+ * Project: Bayesian Packer
+ * File: /src/scss/components/app-header.scss
+ * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ */
+
 .app-header {
   color: $black;
   background-color: $white;
@@ -8,6 +16,23 @@
 
   &__system {
     display: flex;
+
+    ul {
+      flex: 50% 0 1;
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+
+      li:not(:last-of-type) {
+        margin-right: $base-indent;
+      }
+    }
+
+    ul:last-of-type {
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
   }
 
   &__default {
@@ -33,6 +58,13 @@
       width: 32px;
       height: 32px;
       margin-right: $base-indent;
+      transition: -webkit-filter 200ms;
+      transition: filter 200ms;
+
+      &:hover {
+        -webkit-filter: brightness(110%) contrast(110%);
+        filter: brightness(110%) contrast(110%)
+      }
     }
 
     a {

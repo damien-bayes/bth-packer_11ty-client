@@ -2,10 +2,10 @@
   <div class="container">
 
     <!-- Deck 1: Language Switcher -->
-    <div class="language-switcher">
-      {{ app_footer[app.locale].languageSwitcher.language }}: 
+    <div class="language-switcher mb-4">
+      {{ language_switcher[app.locale].language }}: 
 
-      <a href="javascript:" class="button">
+      <a href="javascript:" class="language-switcher__link">
         {% for lang in app.languages %}
           {{ lang.label if lang.code == app.locale else "" }}
         {% endfor %}
@@ -14,17 +14,17 @@
 
     <!-- Deck 2: Navigation -->
     <nav class="app-footer__navigation">
-      {# Start looping though navigation items #}
+      {# Start looping through navigation items #}
       {%- for navigation in navigation[app.locale].items -%}
-        {% if loop.first %}<ul>{% endif %}
+        {% if loop.first %}<ul class="app-footer__navigation-list">{% endif %}
 
           {%- set id = navigation.id %}
           {%- set name = navigation.name %}
           {%- set url = navigation.url %}
 
           {# Compare the navigation url and special Eleventy-provided page.url variable to find the current page #}
-          <li data-navigation-id="{{ id }}" {% if page.url == url %} class="app-footer__navigation--active"{% endif %}>
-            <a href="{{ url }}">{{ name }}</a>
+          <li data-navigation-id="{{ id }}" class="app-footer__navigation-item">
+            <a {% if page.url == url %} class="app-footer__navigation-link app-footer__navigation-link--active" {% else %} class="app-footer__navigation-link" {% endif %} href="{{ url }}">{{ name }}</a>
           </li>
 
         {% if loop.last %}</ul>{% endif %}

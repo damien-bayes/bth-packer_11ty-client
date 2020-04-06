@@ -1,0 +1,84 @@
+/* Base Class Definition */
+.#{$fa-css-prefix},
+.fas,
+.far,
+.fal,
+.fad,
+.fab {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+%fa-icon {
+  @include fa-icon;
+}
+
+/* Icon Size */
+
+/* Makes the font 33% larger relative to the icon container */
+.#{$fa-css-prefix}-lg {
+  font-size: (4em / 3);
+  line-height: (3em / 4);
+  vertical-align: -.0667em;
+}
+
+.#{$fa-css-prefix}-xs {
+  font-size: .75em;
+}
+
+.#{$fa-css-prefix}-sm {
+  font-size: .875em;
+}
+
+@for $i from 1 through 10 {
+  .#{$fa-css-prefix}-#{$i}x {
+    font-size: $i * 1em;
+  }
+}
+
+/* Fixed Width Icons */
+.#{$fa-css-prefix}-fw {
+  text-align: center;
+  width: $fa-fw-width;
+}
+
+/* List Icons */
+.#{$fa-css-prefix}-ul {
+  list-style-type: none;
+  margin-left: $fa-li-width * 5/4;
+  padding-left: 0;
+
+  > li { position: relative; }
+}
+
+.#{$fa-css-prefix}-li {
+  left: -$fa-li-width;
+  position: absolute;
+  text-align: center;
+  width: $fa-li-width;
+  line-height: inherit;
+}
+
+/* Bordered & Pulled */
+.#{$fa-css-prefix}-border {
+  border: solid .08em $fa-border-color;
+  border-radius: .1em;
+  padding: .2em .25em .15em;
+}
+
+.#{$fa-css-prefix}-pull-left { float: left; }
+.#{$fa-css-prefix}-pull-right { float: right; }
+
+.#{$fa-css-prefix},
+.fas,
+.far,
+.fal,
+.fab {
+  &.#{$fa-css-prefix}-pull-left { margin-right: .3em; }
+  &.#{$fa-css-prefix}-pull-right { margin-left: .3em; }
+}

@@ -1,3 +1,11 @@
+/**
+ * App Footer
+ * 
+ * Project: Bayesian Packer
+ * File: /src/scss/components/app-footer.scss
+ * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ */
+
 .app-footer {
     color: $white;
     background-color: $primary;
@@ -24,37 +32,45 @@
       filter: invert(1);
       opacity: .15;
     }
+
+    &__navigation-item:not(:last-of-type) {
+      margin-right: $base-indent;
+    }
+
+    &__navigation-list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    &__navigation-link {
+      display: block;
+      color: $white;
+      text-decoration: none;
+      padding: $sm-indent;
+      border-bottom: 1px solid transparent;
+
+      &--active {
+        background-color: $alternative;
+        color: $black !important;
+        border-radius: $sm-border-radius;
+
+        &:hover {
+          background-color: lighten($alternative, 5%);
+        }
+      }
+
+      &:hover {
+        border-bottom: 1px solid $secondary;
+      }
+    }
   
     &__navigation {
       color: $white;
       margin-bottom: $base-indent;
-  
-      ul {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        justify-content: center;
-        flex-wrap: wrap;
-  
-        li:not(:last-of-type) {
-          margin-right: $base-indent;
-        }
-  
-        > li {
-          a {
-            display: block;
-            color: $white;
-            text-decoration: none;
-            padding: $sm-indent;
-            border-bottom: 1px solid transparent;
-  
-            &:hover {
-              border-bottom: 1px solid $secondary;
-            }
-          }
-        }
-      }
     }
   
     &__copyright {
@@ -111,7 +127,14 @@
       img {
         width: 128px;
         height: auto;
-        object-fit: contain;
+        object-fit: contain;;
+        transition: -webkit-filter 200ms;
+        transition: filter 200ms;
+
+        &:hover {
+          -webkit-filter: brightness(110%) contrast(110%);
+          filter: brightness(110%) contrast(110%)
+        }
       }
     }
   }

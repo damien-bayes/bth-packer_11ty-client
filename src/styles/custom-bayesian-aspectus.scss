@@ -1,18 +1,42 @@
-@import "variables/_all"; 
+/* VARIABLES */
+@import "variables/all"; 
 
-html {
-  height: 100%;
-}
+/* MIXINS */
+@import "mixins/font";
 
-@import "components/_app-header";
-@import "components/_app-footer";
+/* UTILS */
+@import "icons";
 
-@import "components/_navigation";
+/* COMPONENTS */
+@import "components/font";
 
-section {
-  padding: $base-indent;
-}
+@import "components/app-header";
+@import "components/app-footer";
+@import "components/navigation";
+@import "components/language-switcher";
+@import "components/faq";
 
-.button {
-  text-decoration: none;
+/* ANIMATIONS */
+@import "animations/font";
+
+/* CUSTOM MODIFICATIONS */
+@import "fonts/solid";
+@import "fonts/solid";
+
+html { height: 100%; }
+body { min-width: 400px; }
+.section { padding: $lg-indent $base-indent; }
+.button { text-decoration: none; }
+
+.page-not-found {
+  &__image {
+    display: flex;
+    align-items: center;
+    padding: $base-indent;
+
+    img {
+      width: 512px;
+      height: auto;
+    }
+  }
 }

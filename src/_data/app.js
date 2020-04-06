@@ -24,6 +24,7 @@ const options = {
     facebook: "https://www.facebook.com/damien.bayes.db1",
     twitter: "https://twitter.com/damien_bayes"
   },
+
   company: {
     name: "Bayesian Ecosystem"
   },
@@ -45,7 +46,9 @@ const options = {
   ],
   
   buildTime: new Date(),
-  environment: process.env.ELEVENTY_ENV
+  environment: process.env.ELEVENTY_ENV,
+  
+  pageNotFoundUrl: "images/page-not-found.svg",
 };
 
 console.info(`${options.name} is in ${options.environment} state`);
