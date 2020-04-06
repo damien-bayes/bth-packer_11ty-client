@@ -18,10 +18,11 @@
       {%- for navigation in navigation[app.locale].items -%}
         {% if loop.first %}<ul>{% endif %}
 
+          {%- set id = navigation.id %}
           {%- set name = navigation.name %}
           {%- set url = navigation.url %}
 
-          <li>
+          <li data-navigation-id="{{ id }}">
             <a href="{{ url }}">{{ name }}</a>
           </li>
 
