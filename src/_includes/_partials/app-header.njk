@@ -1,8 +1,8 @@
 {% if app.environment === "development" %}
-<code>
-  <pre>You're running the application in the {{ app.environment }} mode.</pre>
-  <pre>Current page: {{ page.url | url }}</pre>
-</code>
+<div class="alert alert--warning">
+  <p>You're running the application in the {{ app.environment }} mode.</p>
+  <p>Current page: {{ page.url | url }}</p>
+</div>
 {% endif %}
 
 <header class="app-header">
