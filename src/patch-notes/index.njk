@@ -32,4 +32,15 @@
     {% if loop.last %}</ul>{% endif %}
   {% endfor %}
 
+  <nav class="pagination">
+    <h2 id="my-pagination">This is the pagination</h2>
+    <ul class="pagination__list">
+      {%- for pageEntry in pagination.pages %}
+        <li class="pagination__item">
+          <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a>
+        </li>
+      {%- endfor %}
+    </ul>
+  </nav>
+
 </section>
