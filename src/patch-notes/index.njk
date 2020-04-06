@@ -7,7 +7,10 @@
     data: "collections.patch_notes",
     size: 6,
     alias: "notes",
-    reverse: true
+    reverse: true,
+    before: function(data) {
+      return data.map(entry => `${entry} with a suffix`);
+    }
   }
 }
 ---
