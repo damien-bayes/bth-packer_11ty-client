@@ -22,6 +22,7 @@
           {%- set name = navigation.name %}
           {%- set url = navigation.url %}
 
+          {# Compare the navigation url and special Eleventy-provided page.url variable to find the current page #}
           <li data-navigation-id="{{ id }}" {% if page.url == url %} class="app-footer__navigation--active"{% endif %}>
             <a href="{{ url }}">{{ name }}</a>
           </li>
