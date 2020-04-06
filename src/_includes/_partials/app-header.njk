@@ -52,13 +52,19 @@
         class="navigation__button">&#8249;</button>
       
       <div class="navigation__wrapper">
-        <ul class="navigation__list">
-          {%- for navigation in navigation[ app.locale ].items -%}
-          <li class="navigation__item">
-            <a class="navigation__link" href="{{ navigation.url }}">{{ navigation.name }}</a>
-          </li>
-          {%- endfor -%}
-        </ul>
+        {%- for navigation in navigation[ app.locale ].items -%}
+          {% if loop.first %}<ul class="navigation__list">{% endif %}
+          
+            {%- set id = navigation.id %}
+            {%- set name = navigation.name %}
+            {%- set url = navigation.url %}
+
+            <li class="navigation__item" data-navigation-id="{{ id }}">
+              <a class="navigation__link" href="{{ url }}">{{ name }}</a>
+            </li>
+
+          {% if loop.last %}</ul>{% endif %}
+        {%- endfor -%}
       </div>
 
       <button 
