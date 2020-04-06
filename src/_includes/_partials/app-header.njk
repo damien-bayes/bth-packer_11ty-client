@@ -6,61 +6,64 @@
 {% endif %}
 
 <header class="app-header">
-  <!-- Deck 1: System -->
-  <div class="app-header__system">
-    <ul>
-      <li>Ecosystem</li>
-      <li>Support Center</li>
-    </ul>
-    <ul>
-      <li>Sign Up</li>
-      <li>Sign In</li>
-    </ul>
-  </div>
+  <div class="container">
 
-  <!-- Deck 2 -->
-  <div class="app-header__default">
-    <div>
-      <div class="app-header__brand">
-        <a href="/">
-          <img src="{{ '/' | url }}{{ app_header.brandUrl }}" alt="{{ app.name }}"/>
-          {{ app.name }}
-        </a>
-      </div>
-    </div>
-    <div>
-      <div class="app-header__parallelogram">
-        <!-- Language switcher -->
-        <div class="language-switcher">
-          {{ app_footer[app.locale].languageSwitcher.language }}: 
-
-          <a href="javascript:" class="button button--secondary">
-            {% for lang in app.languages %}
-              {{ lang.label if lang.code == app.locale else "" }}
-            {% endfor %}
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Deck 3: Navigation -->
-  <nav class="navigation">
-    <button 
-      class="navigation__button">&#8249;</button>
-    
-    <div class="navigation__wrapper">
-      <ul class="navigation__list">
-        {%- for navigation in navigation[ app.locale ].items -%}
-        <li class="navigation__item">
-          <a class="navigation__link" href="{{ navigation.url }}">{{ navigation.name }}</a>
-        </li>
-        {%- endfor -%}
+    <!-- Deck 1: System -->
+    <div class="app-header__system">
+      <ul>
+        <li>Ecosystem</li>
+        <li>Support Center</li>
+      </ul>
+      <ul>
+        <li>Sign Up</li>
+        <li>Sign In</li>
       </ul>
     </div>
 
-    <button 
-      class="navigation__button">&#8250;</button>
-  </nav>
+    <!-- Deck 2 -->
+    <div class="app-header__default">
+      <div>
+        <div class="app-header__brand">
+          <a href="/">
+            <img src="{{ '/' | url }}{{ app_header.brandUrl }}" alt="{{ app.name }}"/>
+            {{ app.name }}
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="app-header__parallelogram">
+          <!-- Language switcher -->
+          <div class="language-switcher">
+            {{ app_footer[app.locale].languageSwitcher.language }}: 
 
+            <a href="javascript:" class="button">
+              {% for lang in app.languages %}
+                {{ lang.label if lang.code == app.locale else "" }}
+              {% endfor %}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Deck 3: Navigation -->
+    <nav class="navigation">
+      <button 
+        class="navigation__button">&#8249;</button>
+      
+      <div class="navigation__wrapper">
+        <ul class="navigation__list">
+          {%- for navigation in navigation[ app.locale ].items -%}
+          <li class="navigation__item">
+            <a class="navigation__link" href="{{ navigation.url }}">{{ navigation.name }}</a>
+          </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+
+      <button 
+        class="navigation__button">&#8250;</button>
+    </nav>
+
+  </div>
 </header>

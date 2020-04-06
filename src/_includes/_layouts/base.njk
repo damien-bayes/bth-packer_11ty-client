@@ -54,21 +54,23 @@ description: "Large-scale and secure folder and file archiver for automating you
     <meta name="description" content="{{ description }}"/>
 
     <link rel="icon" href="/favicon.ico"/>
-    <link href="/styles/bayesian-aspectus.css" rel="stylesheet"/>
+
+    <link href="/styles/bayesian-aspectus.min.css" rel="stylesheet"/>
+    <link href="/styles/custom-bayesian-aspectus.css" rel="stylesheet"/>
   </head>
 
   <body>
-    <noscript>
-      <strong>We're sorry but this web application doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-
     {% include "_partials/app-header.njk" %}
-    <main>
+    <main class="container">
       <!-- Dynamic content goes here -->
       {{ content | safe }}
     </main>
     {% include "_partials/app-footer.njk" %}
 
+    <noscript>
+      <strong>We're sorry but this web application doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <script src="/js/bayesian-aspectus.min.js"></script>
     <!-- 1. Capture the javascript content as a nunjucks variable -->
     {% set js %}
       {% include "_js/global.js" %}

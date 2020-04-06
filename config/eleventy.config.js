@@ -73,4 +73,9 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/fonts");
   eleventyConfig.addPassthroughCopy("src/favicon.ico");
+
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/@damien-bayes/bayesian-aspectus_package/dist/bayesian-aspectus.css": "styles/bayesian-aspectus.min.css",
+    "node_modules/@damien-bayes/bayesian-aspectus_package/dist/bayesian-aspectus.js": "js/bayesian-aspectus.min.js"
+  });
 };

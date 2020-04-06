@@ -10,13 +10,16 @@
   <div class="card">
     <div class="card__body">
       <div>
-        <h1>{{ metadata.title }} <span class="badge badge--alternative">{{ metadata.version }}</span></h1>
-        <h6>Built for developers in order to make technology open to the world</h6>
-        <p>{{ metadata.description }}</p>
+        <div class="headline headline--large">
+          <h1 class="headline__title">{{ app.name }} <span class="badge badge--alternative">{{ app.version }}</span></h1>
+          <p class="headline__description">{{ app.description }}</p>
+        </div>
 
-        <div class="button-collection">
-          <a href="button button--outlined">Get Started</a>
-          <a href="button button--primary">Github</a>
+        <!-- <h6>Built for developers in order to make technology open to the world</h6> -->
+
+        <div class="button-collection button-collection--left-aligned">
+          <a class="button button--outlined-primary mr-2">Get Started</a>
+          <a href="https://github.com/damien-bayes/bayesian-packer_client" target="_blank" class="button button--primary">Github</a>
         </div>
       </div>
       <div>
@@ -28,7 +31,7 @@
   <!-- Deck 2 -->
   <div class="card">
     <div class="card__body">
-      <div class="headline">
+      <div class="headline headline--normal">
         <h2 class="headline__title">Features</h2>
         <p class="headline__description">We do the work and you stay focused on the big picture</p>
       </div>

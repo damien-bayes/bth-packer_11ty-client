@@ -78,65 +78,6 @@ html {
   height: 100%;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background: linear-gradient(22.5deg, rgba(242, 242, 242, 0.03) 0%, rgba(242, 242, 242, 0.03) 16%, rgba(81, 81, 81, 0.03) 16%, rgba(81, 81, 81, 0.03) 26%, rgba(99, 99, 99, 0.03) 26%, rgba(99, 99, 99, 0.03) 73%, rgba(43, 43, 43, 0.03) 73%, rgba(43, 43, 43, 0.03) 84%, rgba(213, 213, 213, 0.03) 84%, rgba(213, 213, 213, 0.03) 85%, rgba(125, 125, 125, 0.03) 85%, rgba(125, 125, 125, 0.03) 100%), linear-gradient(22.5deg, rgba(25, 25, 25, 0.03) 0%, rgba(25, 25, 25, 0.03) 54%, rgba(144, 144, 144, 0.03) 54%, rgba(144, 144, 144, 0.03) 60%, rgba(204, 204, 204, 0.03) 60%, rgba(204, 204, 204, 0.03) 76%, rgba(37, 37, 37, 0.03) 76%, rgba(37, 37, 37, 0.03) 78%, rgba(115, 115, 115, 0.03) 78%, rgba(115, 115, 115, 0.03) 91%, rgba(63, 63, 63, 0.03) 91%, rgba(63, 63, 63, 0.03) 100%), linear-gradient(157.5deg, rgba(71, 71, 71, 0.03) 0%, rgba(71, 71, 71, 0.03) 6%, rgba(75, 75, 75, 0.03) 6%, rgba(75, 75, 75, 0.03) 15%, rgba(131, 131, 131, 0.03) 15%, rgba(131, 131, 131, 0.03) 18%, rgba(110, 110, 110, 0.03) 18%, rgba(110, 110, 110, 0.03) 37%, rgba(215, 215, 215, 0.03) 37%, rgba(215, 215, 215, 0.03) 62%, rgba(5, 5, 5, 0.03) 62%, rgba(5, 5, 5, 0.03) 100%), linear-gradient(90deg, #FFF, #FFF) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  font-family: Arial, "Segoe UI", sans-serif, "Georgia", "Times New Roman", Times, serif, -apple-system, BlinkMacSystemFont, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-a {
-  color: #0a0611;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-  margin-bottom: 16px;
-}
-
-h1 {
-  font-size: 36px;
-}
-
-h2 {
-  font-size: 32px;
-}
-
-h3 {
-  font-size: 24px;
-}
-
-h4 {
-  font-size: 20px;
-}
-
-h5 {
-  font-size: 18px;
-}
-
-h6 {
-  font-size: 16px;
-}
-
-::selection {
-  background-color: #424242;
-  color: #ffffff;
-}
-
 .app-header {
   color: #000000;
   background-color: #ffffff;
@@ -350,4 +291,12 @@ h6 {
   margin-right: 64px;
   display: flex;
   align-items: center;
+}
+
+section {
+  padding: 16px;
+}
+
+.button {
+  text-decoration: none;
 }

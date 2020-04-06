@@ -1,53 +1,55 @@
-
-
 <footer class="app-footer">
-  <!-- Deck 1: Language Switcher -->
-  <div class="language-switcher">
-    {{ app_footer[app.locale].languageSwitcher.language }}: 
+  <div class="container">
 
-    <a href="javascript:" class="button button--secondary">
-      {% for lang in app.languages %}
-        {{ lang.label if lang.code == app.locale else "" }}
-      {% endfor %}
-    </a>
-  </div>
+    <!-- Deck 1: Language Switcher -->
+    <div class="language-switcher">
+      {{ app_footer[app.locale].languageSwitcher.language }}: 
 
-  <!-- Deck 2: Navigation -->
-  <nav class="app-footer__navigation">
-    {# Start looping though navigation items #}
-    {%- for navigation in navigation[app.locale].items -%}
-      {% if loop.first %}<ul>{% endif %}
+      <a href="javascript:" class="button">
+        {% for lang in app.languages %}
+          {{ lang.label if lang.code == app.locale else "" }}
+        {% endfor %}
+      </a>
+    </div>
 
-        {%- set name = navigation.name %}
-        {%- set url = navigation.url %}
+    <!-- Deck 2: Navigation -->
+    <nav class="app-footer__navigation">
+      {# Start looping though navigation items #}
+      {%- for navigation in navigation[app.locale].items -%}
+        {% if loop.first %}<ul>{% endif %}
 
-        <li>
-          <a href="{{ url }}">{{ name }}</a>
-        </li>
+          {%- set name = navigation.name %}
+          {%- set url = navigation.url %}
 
-      {% if loop.last %}</ul>{% endif %}
-    {%- endfor -%}
-  </nav>
+          <li>
+            <a href="{{ url }}">{{ name }}</a>
+          </li>
 
-  <!-- Deck 3: Brand -->
-  <div class="app-footer__brand">
-    <img src="{{ '/' | url }}{{ app_footer.brandUrl }}" alt="{{ app.company.name }}"/>
-  </div>
+        {% if loop.last %}</ul>{% endif %}
+      {%- endfor -%}
+    </nav>
 
-  <!-- Deck 4: Copyright -->
-  <div class="app-footer__copyright">
-    <p>&copy; {{ app_footer.currentYear }} {{ app.company.name }}</p>
-    <p>
-      <span>{{ app_footer[app.locale].copyright.paragraphs[0] }}</span>
-      <span>{{ app_footer[app.locale].copyright.paragraphs[1] }}</span>
-    </p>
-  </div>
+    <!-- Deck 3: Brand -->
+    <div class="app-footer__brand">
+      <img src="{{ '/' | url }}{{ app_footer.brandUrl }}" alt="{{ app.company.name }}"/>
+    </div>
 
-  <!-- Deck 5: Synthesis -->
-  <div class="app-footer__synthesis">
-    <ul>
-      <li>{{ app_footer[app.locale].synthesis.productName }}: <span>{{ app.name }}</span></li>
-      <li>{{ app_footer[app.locale].synthesis.clientVersion }}: <span>{{ app.version }}</span></li>
-    </ul>
+    <!-- Deck 4: Copyright -->
+    <div class="app-footer__copyright">
+      <p>&copy; {{ app_footer.currentYear }} {{ app.company.name }}</p>
+      <p>
+        <span>{{ app_footer[app.locale].copyright.paragraphs[0] }}</span>
+        <span>{{ app_footer[app.locale].copyright.paragraphs[1] }}</span>
+      </p>
+    </div>
+
+    <!-- Deck 5: Synthesis -->
+    <div class="app-footer__synthesis">
+      <ul>
+        <li>{{ app_footer[app.locale].synthesis.productName }}: <span>{{ app.name }}</span></li>
+        <li>{{ app_footer[app.locale].synthesis.clientVersion }}: <span>{{ app.version }}</span></li>
+      </ul>
+    </div>
+
   </div>
 </footer>
