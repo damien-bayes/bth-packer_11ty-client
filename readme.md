@@ -52,7 +52,7 @@ npm update @damien-bayes/bayesian-aspectus_package --save
 # Build a new docker image using the Dockerfile
 sudo docker build \
 -t \
-bayesian-ecosystem/bayesian-packer_client:1.5 .
+bayesian-ecosystem/bayesian-packer_client:1.6 .
 
 sudo docker run \
 -d \
@@ -61,7 +61,7 @@ sudo docker run \
 --net bayesian-network-1 \
 -e VIRTUAL_HOST=packer.bayesianflow.space \
 --restart=on-failure:3 \
-bayesian-ecosystem/bayesian-packer_client:1.5
+bayesian-ecosystem/bayesian-packer_client:1.6
 ```
 
 ---
