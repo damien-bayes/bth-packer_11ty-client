@@ -6,14 +6,29 @@
  * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  */
 
-$max-border-radius: 100%;
+/* Variant 1 (Default border radius) */
+$max-border-radius: 100% !default;
+$half-border-radius: 50% !default;
 
-$xl-border-radius: 3em !default;
-$lg-border-radius: 2em !default;
+$xl-border-radius: 32px !default;
+$lg-border-radius: 24px !default;
  
-$base-border-radius: 1em !default;
+$base-border-radius: 16px !default;
  
-$sm-border-radius: .5em !default;
-$xs-border-radius: .25em !default;
+$sm-border-radius: 8px !default;
+$xs-border-radius: 2px !default;
  
-$min-border-radius: 0%;
+$min-border-radius: 0% !default;
+
+/* Variant 2 (Binary border radius) */
+$border-radius-0: 0px !default;
+$border-radius-1: 1px !default;
+$border-radius-2: 2px !default;
+$border-radius-4: 4px !default;
+$border-radius-8: 8px !default;
+$border-radius-16: 16px !default;
+$border-radius-32: 32px !default;
+$border-radius-64: 64px !default;
+$border-radius-128: 128px !default;
+$border-radius-256: 256px !default;
+$border-radius-512: 512px !default;

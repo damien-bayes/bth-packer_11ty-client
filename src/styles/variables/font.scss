@@ -1,8 +1,9 @@
 /**
  * Font
  *
- * Project: Bayesian Aspectus + Bayesian Packer
- * Author: Damien Bayes <damien.bayes.db@gmail.com>
+ * Project: Bayesian Aspectus
+ * File: /src/styles/variables/font.scss
+ * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  */
 
  @import url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap&subset=cyrillic");
@@ -47,10 +48,11 @@ $base-font-family:
  * Note: An em is a worldwide standard, defining the 16pt value
  * Note: Rem stands for Root em, specifying that the element and sizing is indeed tied to the root of our document
  */
-$base-font-size: 16px !default;
- 
 $xl-font-size: 24px !default;
 $lg-font-size: 18px !default;
+
+$base-font-size: 16px !default;
+
 $sm-font-size: 14px !default;
 $xs-font-size: 12px !default;
  
@@ -86,7 +88,23 @@ $h6-font-size: $base-font-size !default;
  * On the Web, the default print rule of 120% seems a little too cluttered, while perfectly readable.
  * We usually suggest implementing it from 130% / 150% on, especially for a small amount of text.
  */
-$line-height-base: 130% !default;
+
+/* Variant 1 (Default line heights) */
+$no-line-height: 0px !default;
+$base-line-height: 24px !default;
+
+/* Variant 2 (Binary line heights) */
+$line-height-0: 0px !default;
+$line-height-1: 1px !default;
+$line-height-2: 2px !default;
+$line-height-4: 4px !default;
+$line-height-8: 8px !default;
+$line-height-16: 16px !default;
+$line-height-32: 32px !default;
+$line-height-64: 64px !default;
+$line-height-128: 128px !default;
+$line-height-256: 256px !default;
+$line-height-512: 512px !default;
 
 /** 
  * FONTAWESOME

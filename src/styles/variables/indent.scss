@@ -6,11 +6,26 @@
  * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  */
 
+/* Variant 1 (Default indents) */
+$xl-indent: 32px !default;
+$lg-indent: 24px !default;
+
 $base-indent: 16px !default;
 
-$xl-indent: 64px !default;
-$lg-indent: 32px !default;
 $sm-indent: 8px !default;
-$xs-indent: 4px !default;
+$xs-indent: 2px !default;
 
 $no-indent: 0px !default;
+
+/* Variant 2 (Binary indents) */
+$indent-0: 0px !default;
+$indent-1: 1px !default;
+$indent-2: 2px !default;
+$indent-4: 4px !default;
+$indent-8: 8px !default;
+$indent-16: 16px !default;
+$indent-32: 32px !default;
+$indent-64: 64px !default;
+$indent-128: 128px !default;
+$indent-256: 256px !default;
+$indent-512: 512px !default;

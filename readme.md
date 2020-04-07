@@ -41,6 +41,9 @@ sudo ./archiver.sh -s <your-source-path> -d <your-destination-path>
 ```bash
 # Install Eleventy
 npm install -g @11ty/eleventy
+
+# Update Bayesian Aspectus (Optional)
+npm update @damien-bayes/bayesian-aspectus_package --save
 ```
 
 ### Docker

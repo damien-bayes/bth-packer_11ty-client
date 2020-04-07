@@ -14,6 +14,8 @@
  * File: /src/styles/variables/border.scss
  * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  */
+/* Variant 1 (Default border radius) */
+/* Variant 2 (Binary border radius) */
 /**
  * Color
  *
@@ -57,8 +59,9 @@
 /**
  * Font
  *
- * Project: Bayesian Aspectus + Bayesian Packer
- * Author: Damien Bayes <damien.bayes.db@gmail.com>
+ * Project: Bayesian Aspectus
+ * File: /src/styles/variables/font.scss
+ * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  */
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap&subset=cyrillic");
 /**
@@ -84,6 +87,8 @@
  * On the Web, the default print rule of 120% seems a little too cluttered, while perfectly readable.
  * We usually suggest implementing it from 130% / 150% on, especially for a small amount of text.
  */
+/* Variant 1 (Default line heights) */
+/* Variant 2 (Binary line heights) */
 /** 
  * FONTAWESOME
  *
@@ -98,6 +103,8 @@
  * File: /src/styles/variables/indent.scss
  * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  */
+/* Variant 1 (Default indents) */
+/* Variant 2 (Binary indents) */
 /**
  * Layer
  *
@@ -105,12 +112,27 @@
  * File: /src/styles/variables/layer.scss
  * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  */
+/* Variant 1 (Default layers) */
+/* Variant 2 (Binary layers) */
 /**
  * Shadow
  *
  * Project: Bayesian Aspectus
  * File: /src/styles/variables/shadow.scss
  * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ *
+ * References
+ * 1. https://codepen.io/sdthornton/pen/wBZdXq
+ */
+/*
+ * box-shadow: h-offset v-offset blur-radius spread-radius color;
+ *
+ * h-offset: The horizontal offset of the shadow. Negative values put the shadow to the left of the element.
+ * v-offset: The vertical offset of the shadow. Negative values put the shadow above the element.
+ * blur-radius: Determines the blur amount; the higher the number, the more blur (optional).
+ * spread-radius: The size of the shadow. If zero, it's the same size as the blur (optional).
+ * color: The color of the shadow (optional).
+ * inset: Add inset to change shadow from outer to inner (optional).
  */
 /* MIXINS */
 /**
@@ -6164,7 +6186,7 @@ readers do not read off random characters that represent icons */
 .app-footer__navigation-link--active {
   background-color: #F6D365;
   color: #000000 !important;
-  border-radius: 0.5em;
+  border-radius: 8px;
 }
 .app-footer__navigation-link--active:hover {
   background-color: #f7da7d;
@@ -6205,7 +6227,7 @@ readers do not read off random characters that represent icons */
   margin-right: 16px;
 }
 .app-footer__synthesis ul span {
-  padding: 0 4px;
+  padding: 0 2px;
   color: #000000;
   border-radius: 4px;
   color: #ffffff;
@@ -6217,7 +6239,7 @@ readers do not read off random characters that represent icons */
 .app-footer__brand {
   display: flex;
   justify-content: center;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 .app-footer__brand img {
   width: 128px;
@@ -6252,11 +6274,11 @@ readers do not read off random characters that represent icons */
 }
 .navigation__button:first-of-type {
   border-right: 1px solid #e0e0e0;
-  margin-right: 4px;
+  margin-right: 2px;
 }
 .navigation__button:last-of-type {
   border-left: 1px solid #e0e0e0;
-  margin-left: 4px;
+  margin-left: 2px;
 }
 .navigation__wrapper {
   flex: 1;
@@ -6288,7 +6310,7 @@ readers do not read off random characters that represent icons */
   color: inherit;
 }
 .navigation__item {
-  margin-right: 64px;
+  margin-right: 32px;
   display: flex;
   align-items: center;
 }
@@ -6314,7 +6336,7 @@ readers do not read off random characters that represent icons */
   text-decoration: none;
   margin-left: 8px;
   background-color: #C83660;
-  border-radius: 0.5em;
+  border-radius: 8px;
   color: #ffffff;
   padding: 8px;
 }
@@ -6353,7 +6375,7 @@ readers do not read off random characters that represent icons */
   padding: 0 0 1em 2em;
 }
 .faq-pillar__title {
-  font-size: 1rem;
+  font-size: 16px;
   cursor: pointer;
   -ms-user-select: none;
   user-select: none;
@@ -6361,11 +6383,13 @@ readers do not read off random characters that represent icons */
   -moz-user-select: none;
   -o-user-select: none;
   margin: 0;
+  font-weight: 700;
+  line-height: 24px;
 }
 .faq-pillar__square {
   position: absolute;
-  top: 0.25em;
-  left: 0.5em;
+  top: 9.6px;
+  left: 9.6px;
   width: 6px;
   height: 6px;
   background-color: #757575;
@@ -6383,7 +6407,7 @@ readers do not read off random characters that represent icons */
 .faq-pillar__answer {
   opacity: 0;
   height: 0;
-  color: #757575;
+  color: #424242;
   padding: 8px 0;
 }
 
@@ -6552,7 +6576,7 @@ body {
 }
 
 .section {
-  padding: 32px 16px;
+  padding: 24px 16px;
 }
 
 .button {

@@ -6,4 +6,10 @@
  * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  */
 
-$base-animation-duration: 300ms;
+ $extra-small-animation-duration: 1s;
+ $small-animation-duration: 600ms;
+ 
+ $base-animation-duration: 300ms;
+ 
+ $fast-animation-duration: 200ms;
+ $extra-fast-animation-duration: 100ms;

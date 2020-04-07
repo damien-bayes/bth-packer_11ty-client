@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "dependencies": {
-    "@damien-bayes/bayesian-aspectus_package": "^1.0.2",
+    "@damien-bayes/bayesian-aspectus_package": "^1.0.3",
     "dayjs": "^1.8.23",
     "nunjucks": "^3.2.0"
   },
