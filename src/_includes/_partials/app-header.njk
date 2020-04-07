@@ -1,3 +1,5 @@
+<!-- Header Partial -->
+
 {% if app.environment === "development" %}
 <div class="alert alert--warning">
   <p>You're running the application in the <strong>{{ app.environment }}</strong> mode.</p>
@@ -34,7 +36,7 @@
         <div class="app-header__parallelogram">
           <!-- Language switcher -->
           <div class="language-switcher">
-            {{ language_switcher[app.locale].language }}: 
+            <span class="visible-xs">{{ language_switcher[app.locale].language }}:</span>
 
             <a href="javascript:" class="language-switcher__link">
               {% for lang in app.languages %}

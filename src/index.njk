@@ -5,26 +5,41 @@
 }
 ---
 
+<!-- Home Page -->
 <section class="section home">
+
   <!-- Deck 1 -->
   <div class="card">
     <div class="card__body">
-      <div>
-        <div class="headline headline--extra-large">
-          <h1 class="headline__title">{{ app.name }} <span class="badge badge--alternative badge--rounded">{{ app.version }}</span></h1>
-          <p class="headline__description">{{ app.description }}</p>
+  
+      <div class="row">
+        
+        <!-- Subdeck 1 -->
+        <div class="sm-column-6">
+          <div class="home__brand">
+            <img src="{{ '/' | url }}images/vacuum.svg" alt="{{ app.name }}"/>  
+            <p><span class="badge badge--extra-small badge--primary">Built for developers</span> in order to make technology open to the world</p>
+          </div>
         </div>
 
-        <!-- <h6>Built for developers in order to make technology open to the world</h6> -->
+        <!-- Subdeck 2 -->
+        <div class="sm-column-6">
 
-        <div class="button-collection button-collection--left-aligned">
-          <a class="button button--outlined-primary button--rounded mr-2">Get Started</a>
-          <a href="https://github.com/damien-bayes/bayesian-packer_client" target="_blank" class="button button--primary button--rounded">Github</a>
+          <!-- Headline -->
+          <div class="headline headline--extra-large">
+            <h1 class="headline__title">{{ app.name }}<span class="badge badge--alternative badge--rounded ml-3">{{ app.version }}</span></h1>
+            <p class="headline__description">{{ app.description }}</p>
+          </div>
+
+          <!-- Button collection -->
+          <div class="button-collection button-collection--left-aligned">
+            <a class="button button--outlined-primary button--rounded mr-2 button--small"><span class="icon icon--get-started"></span>Documentation</a>
+            <a href="https://github.com/damien-bayes/bayesian-packer_client" target="_blank" class="button button--outlined-primary button--rounded button--small mr-2"><span class="icon icon--github"></span>Github</a>
+            <a href="https://github.com/damien-bayes/bayesian-packer_client" target="_blank" class="button button--primary button--rounded button--small"><span class="icon icon--download"></span>Download</a>
+          </div>
+
         </div>
-      </div>
-      <div>
-        <img src="" alt="{{ metadata.title }}"/>        
-      </div>    
+      </div> 
     </div>
   </div>
 
@@ -37,4 +52,5 @@
       </div>
     </div>
   </div>
+
 </section>

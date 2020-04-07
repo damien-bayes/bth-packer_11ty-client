@@ -13,35 +13,45 @@
 
 <section class="section patch-notes">
 
-  <div class="headline headline--extra-large">
-    <h1 class="headline__title">{{ title }}</h1>
-    <p class="headline__description">Read the latest {{ app.name }} patch notes or research historical changes</p>
+  <div class="card">
+    <div class="card__body">
+    
+      <!-- Headline -->
+      <div class="headline headline--extra-large">
+        <h1 class="headline__title">{{ title }}</h1>
+        <p class="headline__description">Read the latest {{ app.name }} patch notes or research historical changes</p>
+      </div>
+
+      {# Start looping notes #}
+      {% for note in notes | reverse %}
+        {% if loop.first %}<ul>{% endif %}
+          <li>
+            <article>
+              <a href="{{ note.url | url }}">
+                {{ note.data.title }}
+                {{ note.date | convertToReadableDate }}
+              </a>
+            </article>
+          </li>
+        {% if loop.last %}</ul>{% endif %}
+      {% endfor %}
+    </div>
+    <div class="card__action-bar">
+
+      <!-- Pagination -->
+      <nav class="pagination" aria-labelledby="pagination1">
+        <h6 id="pagination1">This is the pagination</h6>
+
+        <ul class="pagination__list">
+          {%- for pageEntry in pagination.pages %}
+            <li>
+              <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a>
+            </li>
+          {%- endfor %}
+        </ul>
+      </nav>
+
+    </div>
   </div>
-
-  {# Start looping notes #}
-  {% for note in notes | reverse %}
-    {% if loop.first %}<ul>{% endif %}
-      <li>
-        <article>
-          <a href="{{ note.url | url }}">
-            {{ note.data.title }}
-            {{ note.date | convertToReadableDate }}
-          </a>
-        </article>
-      </li>
-    {% if loop.last %}</ul>{% endif %}
-  {% endfor %}
-
-  <nav class="pagination" aria-labelledby="pagination1">
-    <h6 id="pagination1">This is the pagination</h6>
-
-    <ul class="pagination__list">
-      {%- for pageEntry in pagination.pages %}
-        <li>
-          <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a>
-        </li>
-      {%- endfor %}
-    </ul>
-  </nav>
 
 </section>

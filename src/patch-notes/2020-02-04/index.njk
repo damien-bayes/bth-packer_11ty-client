@@ -6,19 +6,61 @@ date: 2020-02-04
 tags: "patch_notes"
 ---
 
-<div class="headline">
-  <h1>{{ title }}</h1>
-  <p>{{ date | convertToReadableDate }}</p>
-</div>
+<section class="section">
+  <div class="row">
+    <!-- Deck 1 -->
+    <div class="sm-column-4">
+      {% include "_partials/path-note.njk" %}
+    </div>
 
-<div class="table-of-content">
-  <h2 class="table-of-content__title">Table of Contents</h2>
+    <!-- Deck 2 -->
+    <div class="sm-column-8">
 
-  <ul class="table-of-content__list">
-    <li class="table-of-content__item">
-      <a href="#" class="table-of-content__link">1</a>
-    </li>
-  </ul>
-</div>
+      <div class="card">
+        <div class="card__body">
 
-Hello World - 2
+          <!-- Headline -->
+          <div class="headline">
+            <h1>{{ title }}</h1>
+            <p>{{ date | convertToReadableDate }}</p>
+          </div>
+
+          <!-- Table of contents -->
+          <div class="table-of-content">
+            <h2 class="table-of-content__title">Table of Contents</h2>
+            
+            <ul class="table-of-content__list">
+              <li class="table-of-content__item">
+                <a href="#content-1" class="table-of-content__link">Pellentesque non egestas nunc</a>
+              </li>
+              <li class="table-of-content__item">
+                <a href="#content-2" class="table-of-content__link">Proin ornare felis nec ipsum elementum malesuada</a>
+              </li>
+              <li class="table-of-content__item">
+                <a href="#content-3" class="table-of-content__link">Nunc dignissim volutpat tortor</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Content -->
+          <article>
+            <h2 id="content-1">Pellentesque non egestas nunc</h2>
+            <p>Nulla nec est metus. Quisque eu volutpat ex, id sagittis lectus. Integer malesuada mauris eget ligula feugiat semper. Fusce tincidunt vehicula ante. Suspendisse accumsan sagittis risus sed ultrices. Curabitur at ultrices mauris, tincidunt semper turpis. Mauris dapibus diam sit amet tempus vestibulum.</p>
+            <p>Suspendisse efficitur enim ut posuere volutpat. Vivamus iaculis mi est, at rutrum ante feugiat et. Donec ultricies fringilla diam et aliquam. Quisque accumsan massa eget interdum dignissim. Nunc rhoncus enim libero, id accumsan augue lacinia nec. Cras et elit sodales, ornare dolor ac, condimentum metus. Nulla ut nisi in turpis ornare porttitor. Suspendisse rutrum, eros eget lobortis vehicula, dolor ante auctor est, sagittis fringilla nunc nisi sed dolor. Praesent scelerisque, nisi a tempor sodales, leo libero molestie eros, porttitor vehicula eros sapien in odio. Morbi venenatis mi eget mauris dictum molestie. In id tortor non mi suscipit consequat. Praesent in leo nec lorem pretium posuere.</p>
+
+            <h2 id="content-2">Proin ornare felis nec ipsum elementum malesuada</h2>
+            <p>Pellentesque nunc dolor, viverra et orci in, auctor suscipit lorem. Nam ultrices, leo et volutpat feugiat, nisl tortor accumsan dolor, vitae interdum arcu odio sit amet ipsum. Sed libero eros, vestibulum sed diam eget, tempus maximus odio. Curabitur tempor felis et felis lobortis lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec id sapien tortor.</p>
+
+            <h2 id="content-3">Nunc dignissim volutpat tortor</h2>
+            <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec id sapien tortor. Vivamus viverra metus tellus, at euismod elit congue eget. Morbi ut dui libero. Fusce tincidunt mi vitae ligula convallis accumsan. Sed eu ex tortor. Duis ullamcorper ante eros, convallis vulputate metus vestibulum vitae. Fusce elit orci, euismod sed est non, sodales pulvinar nisi.</p>
+            <p>Mauris mollis viverra aliquam. Morbi eros ex, congue non iaculis at, ultricies et quam. Duis gravida nec est ac placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed gravida risus sed aliquam bibendum. Nunc eu leo lectus. Quisque aliquam lacus in massa interdum sollicitudin.</p>
+            <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras finibus sapien vitae nibh commodo, nec consequat ex vulputate.</p>
+          </article>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

@@ -5909,11 +5909,14 @@ readers do not read off random characters that represent icons */
 /* Base Class Definition */
 .fa,
 .fas,
+.icon--download,
+.icon--get-started,
 .language-switcher::before,
 .far,
 .fal,
 .fad,
-.fab {
+.fab,
+.icon--github {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -5923,7 +5926,7 @@ readers do not read off random characters that represent icons */
   line-height: 1;
 }
 
-.language-switcher::before {
+.icon--download, .icon--github, .icon--get-started, .language-switcher::before {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -6030,18 +6033,24 @@ readers do not read off random characters that represent icons */
 
 .fa.fa-pull-left,
 .fas.fa-pull-left,
+.fa-pull-left.icon--download,
+.fa-pull-left.icon--get-started,
 .fa-pull-left.language-switcher::before,
 .far.fa-pull-left,
 .fal.fa-pull-left,
-.fab.fa-pull-left {
+.fab.fa-pull-left,
+.fa-pull-left.icon--github {
   margin-right: 0.3em;
 }
 .fa.fa-pull-right,
 .fas.fa-pull-right,
+.fa-pull-right.icon--download,
+.fa-pull-right.icon--get-started,
 .fa-pull-right.language-switcher::before,
 .far.fa-pull-right,
 .fal.fa-pull-right,
-.fab.fa-pull-right {
+.fab.fa-pull-right,
+.fa-pull-right.icon--github {
   margin-left: 0.3em;
 }
 
@@ -6182,6 +6191,7 @@ readers do not read off random characters that represent icons */
   text-decoration: none;
   padding: 8px;
   border-bottom: 1px solid transparent;
+  line-height: 8px;
 }
 .app-footer__navigation-link--active {
   background-color: #F6D365;
@@ -6339,6 +6349,7 @@ readers do not read off random characters that represent icons */
   border-radius: 8px;
   color: #ffffff;
   padding: 8px;
+  line-height: 16px;
 }
 .language-switcher__link:hover {
   background-color: #ce4a70;
@@ -6411,6 +6422,123 @@ readers do not read off random characters that represent icons */
   padding: 8px 0;
 }
 
+/**
+ * Card
+ *
+ * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  word-wrap: break-word;
+  background-clip: border-box;
+  background-color: #ffffff;
+  margin-bottom: 16px;
+}
+.card--scalable {
+  transform: scale(1);
+  transition: transform 0.3s ease-in;
+}
+.card--scalable:hover {
+  transform: scale(1.05);
+}
+.card__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 8px;
+  background-color: #ffffff;
+  border: 1px solid #f5f5f5;
+  position: relative;
+  transition: box-shadow 0.3s ease-in;
+}
+.card__link:hover {
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.02);
+}
+.card__body {
+  /*
+   * Enable `flex-grow: 1` for decks and groups so that card blocks take up
+   * as much space as possible, ensuring footers are aligned to the bottom.
+   */
+  flex: 1 1 auto;
+  padding: 16px;
+  color: #000000;
+  border-bottom: 1px solid #eeeeee;
+}
+.card__image-wrapper {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+.card__image-wrapper::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: #ffffff;
+  opacity: 0.3;
+}
+.card__image-wrapper:hover .card__image--is-scalable {
+  transform: translatz(0) scale(1.05);
+  /* Safari and Chrome */
+  -webkit-transform: translateZ(0) scale(1.05);
+  /* Firefox */
+  -moz-transform: scale(1.05);
+  /* IE 9 */
+  -ms-transform: scale(1.05);
+  /* Opera */
+  -o-transform: translatz(0) scale(1.05);
+  backface-visibility: hidden;
+}
+.card__image-wrapper--is-empty-image {
+  flex-direction: column;
+  text-align: center;
+  height: 192px;
+  justify-content: center;
+}
+.card__image-wrapper--is-empty-image img {
+  filter: opacity(25%) grayscale(100%);
+  height: 96px;
+}
+.card__image-wrapper--is-empty-image span {
+  margin-top: 8px;
+  color: #757575;
+  font-size: 14px;
+}
+.card__image {
+  position: relative;
+  /* Required because we use flexbox and this inherently applies align-self: stretch */
+  width: 100%;
+  height: 198px;
+  object-fit: cover;
+}
+.card__image--is-scalable {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1);
+}
+.card__action-bar {
+  flex: 0;
+  padding: 16px;
+}
+
+/*
+@include media-breakpoint-down(md) {
+  .card {
+    &--is-scalable {
+      &:hover {
+        transform: none;
+      }
+    }
+  }
+}
+*/
 /* ANIMATIONS */
 /**
  * Font
@@ -6543,46 +6671,50 @@ readers do not read off random characters that represent icons */
 }
 .fa,
 .fas,
+.icon--download,
+.icon--get-started,
 .language-switcher::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
 
-/*!
+/**
+ * Brands
+ * 
+ * Project: Bayesian Packer
+ * File: /src/scss/fonts/brands.scss
+ * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ *
  * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 5 Brands";
   font-style: normal;
-  font-weight: 900;
+  font-weight: 400;
   font-display: block;
-  src: url("/fonts/fontawesome/fa-solid-900.eot");
-  src: url("/fonts/fontawesome/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("/fonts/fontawesome/fa-solid-900.woff2") format("woff2"), url("/fonts/fontawesome/fa-solid-900.woff") format("woff"), url("/fonts/fontawesome/fa-solid-900.ttf") format("truetype"), url("/fonts/fontawesome/fa-solid-900.svg#fontawesome") format("svg");
+  src: url("/fonts/fontawesome/fa-brands-400.eot");
+  src: url("/fonts/fontawesome/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("/fonts/fontawesome/fa-brands-400.woff2") format("woff2"), url("/fonts/fontawesome/fa-brands-400.woff") format("woff"), url("/fonts/fontawesome/fa-brands-400.ttf") format("truetype"), url("/fonts/fontawesome/fa-brands-400.svg#fontawesome") format("svg");
 }
-.fa,
-.fas,
-.language-switcher::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
+.fab, .icon--github {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
 }
 
 html {
   height: 100%;
-}
-
-body {
-  min-width: 400px;
+  scroll-behavior: smooth;
 }
 
 .section {
-  padding: 24px 16px;
+  padding: 16px 0;
 }
 
 .button {
   text-decoration: none;
 }
 
+/* PAGES */
 .page-not-found__image {
   display: flex;
   align-items: center;
@@ -6591,4 +6723,57 @@ body {
 .page-not-found__image img {
   width: 512px;
   height: auto;
+}
+
+.home__brand {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  flex-direction: column;
+}
+.home__brand img {
+  width: 196px;
+  height: auto;
+  margin-bottom: 16px;
+}
+.home__brand p {
+  text-align: center;
+  font-size: 12px;
+}
+.home .card:first-of-type {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+.home .card:first-of-type::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/tiles.svg") 0 0 no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  object-fit: contain;
+  z-index: -1;
+  opacity: 0.25;
+}
+
+/* ICONS */
+.icon {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+.icon--get-started:before {
+  content: "";
+}
+.icon--github:before {
+  content: "";
+}
+.icon--download:before {
+  content: "";
 }

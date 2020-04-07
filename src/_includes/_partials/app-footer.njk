@@ -1,9 +1,11 @@
+<!-- Footer Partial -->
+
 <footer class="app-footer">
   <div class="container">
 
     <!-- Deck 1: Language Switcher -->
     <div class="language-switcher mb-4">
-      {{ language_switcher[app.locale].language }}: 
+      <span class="visible-xs">{{ language_switcher[app.locale].language }}:</span>
 
       <a href="javascript:" class="language-switcher__link">
         {% for lang in app.languages %}

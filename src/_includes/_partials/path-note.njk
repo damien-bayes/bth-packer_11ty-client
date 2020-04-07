@@ -1,0 +1,21 @@
+<!-- Patch Note Partial -->
+
+<div class="card mrmd--2">
+  <div class="card__body">
+
+    <!-- Headline -->
+    <div class="headline">
+      <h2 class="headline__title">Recent Patch Notes</h2>
+    </div>
+
+    {# Start looping through patch notes #}
+    {% for note in collections.patch_notes %}
+      {% if loop.first %}<ul class="list">{% endif %}
+        <div>
+          <a href="{{ note.url | url }}">{{ note.data.title }}<span class="badge badge--alternative badge--rounded">{{ note.data.date | convertToReadableDate }}</span></a>
+        </div>
+      {% if loop.last %}</ul>{% endif %}
+    {% endfor %}
+
+  </div>
+</div>

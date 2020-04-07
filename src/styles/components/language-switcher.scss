@@ -14,6 +14,7 @@
   &::before {
     @extend %fa-icon;
     @extend .fas;
+    
     content: fa-content($fa-var-globe-americas);
     margin-right: $sm-indent;
   }
@@ -26,6 +27,7 @@
     border-radius: $sm-border-radius;
     color: $white;
     padding: $sm-indent;
+    line-height: $line-height-16;
 
     &:hover {
       background-color: lighten($secondary, 5%);

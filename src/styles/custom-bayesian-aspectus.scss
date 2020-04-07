@@ -15,19 +15,27 @@
 @import "components/navigation";
 @import "components/language-switcher";
 @import "components/faq";
+@import "components/card";
 
 /* ANIMATIONS */
 @import "animations/font";
 
 /* CUSTOM MODIFICATIONS */
 @import "fonts/solid";
-@import "fonts/solid";
+@import "fonts/brands";
 
-html { height: 100%; }
-body { min-width: 400px; }
-.section { padding: $lg-indent $base-indent; }
+html { 
+  height: 100%;
+  scroll-behavior: smooth; 
+}
+
+.section { 
+  padding: $base-indent 0; 
+}
+
 .button { text-decoration: none; }
 
+/* PAGES */
 .page-not-found {
   &__image {
     display: flex;
@@ -37,6 +45,83 @@ body { min-width: 400px; }
     img {
       width: 512px;
       height: auto;
+    }
+  }
+}
+
+.home {
+  &__brand {
+    display: flex;
+    align-items: center;
+    padding: $base-indent;
+    flex-direction: column;
+
+    img {
+      width: 196px;
+      height: auto;
+      margin-bottom: $base-indent;
+    }
+
+    p {
+      text-align: center;
+      font-size: $xs-font-size;
+    }
+  }
+
+  .card:first-of-type {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../images/tiles.svg") 0 0 no-repeat; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      object-fit: contain;
+      z-index: -1;
+      opacity: .25;
+    }
+  }
+}
+
+/* ICONS */
+.icon {
+  display: flex;
+  align-items: center;
+  margin-right: $sm-indent;
+
+  &--get-started {
+    @extend %fa-icon;
+    @extend .fas;
+
+    &:before {
+      content: fa-content($fa-var-book);
+    }
+  }
+
+  &--github {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+      content: fa-content($fa-var-github-square);
+    }
+  }
+
+  &--download {
+    @extend %fa-icon;
+    @extend .fas;
+
+    &:before {
+      content: fa-content($fa-var-cloud-download-alt);
     }
   }
 }

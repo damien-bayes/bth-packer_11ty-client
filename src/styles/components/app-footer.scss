@@ -52,6 +52,7 @@
       text-decoration: none;
       padding: $sm-indent;
       border-bottom: 1px solid transparent;
+      line-height: $line-height-8;
 
       &--active {
         background-color: $alternative;
