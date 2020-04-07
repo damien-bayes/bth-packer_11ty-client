@@ -71,7 +71,7 @@ Thanks for contributing to Baythium Packer. Without you and the Open Source comm
 
 ## Bug Fixes
 
-If you have some problems or proposals, please open an issue including a log error on https://github.com/damien-bayes/bayesian-packer/issues
+If you have some problems or proposals, please open an issue including a log error on https://github.com/damien-bayes/baythium-packer/issues
 
 The reports make it easy for the Baythium Ecosystem team to identify the bug, solve it, and release a new version of the Bayesian Packer by seeing the stacktrace.
 
