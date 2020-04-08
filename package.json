@@ -1,5 +1,5 @@
 {
-  "name": "bayesian-packer_client",
+  "name": "baythium-packer_client",
   "version": "0.1.7",
   "description": "Archive your large-scale infrastructure more secure and effectively using our command-line tool and keep control of organization data",
   "main": ".eleventy.js",
@@ -7,21 +7,21 @@
     "doc": "docs"
   },
   "dependencies": {
-    "@damien-bayes/bayesian-aspectus_package": "^1.0.3",
+    "@damien-bayes/baythium-aspectus_package": "^1.0.3",
     "dayjs": "^1.8.23",
-    "nunjucks": "^3.2.0"
+    "nunjucks": "^3.2.1"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.1",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "html-minifier": "^4.0.0",
-    "sass": "^1.25.0",
-    "terser": "^4.6.7"
+    "sass": "^1.26.3",
+    "terser": "^4.6.10"
   },
   "scripts": {
     "clean": "rimraf dist",
@@ -41,9 +41,20 @@
     "url": "git+https://github.com/damien-bayes/bayesian-packer_client.git"
   },
   "keywords": [
-    "Bayesian Ecosystem",
-    "Bayesian Family",
-    "Bayesian Packer"
+    "baythium",
+    "baythium-ecosystem",
+    "baythium-family",
+    "baythium-open-source",
+    "baythium-packer",
+    "baythium-automation",
+    "11ty",
+    "bash",
+    "shell",
+    "archiver",
+    "powershell",
+    "docker",
+    "front-end",
+    "cli"
   ],
   "author": {
     "name": "Damien Bayes",

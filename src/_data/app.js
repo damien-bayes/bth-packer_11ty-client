@@ -11,9 +11,9 @@
 const pack = require("../../package.json");
 
 const options = {
-  name: "Bayesian Packer",
+  name: "Baythium Packer",
   version: pack.version,
-  url: "https://packer.bayesianflow.space",
+  url: "https://packer.baythium.com",
   description: pack.description,
   keywords: [],
 
@@ -26,7 +26,7 @@ const options = {
   },
 
   company: {
-    name: "Bayesian Ecosystem"
+    name: "Baythium"
   },
 
   locale: "en",
