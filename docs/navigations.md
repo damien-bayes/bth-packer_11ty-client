@@ -1,8 +1,8 @@
 # Navigations
 
 - Home;
-- Guide;
-- Updates;
+- Documentation;
+- Patch Notes;
 - About;
 - FAQ;
 - Contact;
