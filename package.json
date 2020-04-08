@@ -38,7 +38,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/damien-bayes/bayesian-packer_client.git"
+    "url": "git+https://github.com/damien-bayes/baythium-packer_client.git"
   },
   "keywords": [
     "baythium",
@@ -59,11 +59,11 @@
   "author": {
     "name": "Damien Bayes",
     "email": "damien.bayes.db@gmail.com",
-    "url": "https://bayesianflow.space"
+    "url": "https://baythium.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/damien-bayes/bayesian-packer_client/issues"
+    "url": "https://github.com/damien-bayes/baythium-packer_client/issues"
   },
-  "homepage": "https://github.com/damien-bayes/bayesian-packer_client#readme"
+  "homepage": "https://github.com/damien-bayes/baythium-packer_client#readme"
 }

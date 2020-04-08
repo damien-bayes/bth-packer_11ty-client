@@ -40,7 +40,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
       ready: (err, browserSync) => {
-        const content404 = fs.readFileSync("dist/404/index.html");
+        const content404 = fs.readFileSync("dist/exceptions/404/index.html");
 
         browserSync.addMiddleware("*", (req, res) => {
           /* Provide the 404 content without redirect */
@@ -75,7 +75,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy("src/favicon.ico");
 
   eleventyConfig.addPassthroughCopy({
-    "node_modules/@damien-bayes/bayesian-aspectus_package/dist/bayesian-aspectus.css": "styles/bayesian-aspectus.min.css",
-    "node_modules/@damien-bayes/bayesian-aspectus_package/dist/bayesian-aspectus.js": "js/bayesian-aspectus.min.js"
+    "node_modules/@damien-bayes/baythium-aspectus_package/dist/baythium-aspectus.css": "styles/baythium-aspectus.min.css",
+    "node_modules/@damien-bayes/baythium-aspectus_package/dist/baythium-aspectus.js": "js/baythium-aspectus.min.js"
   });
 };

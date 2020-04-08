@@ -26,7 +26,7 @@ const options = {
   },
 
   company: {
-    name: "Baythium"
+    name: "Baythium Ecosystem"
   },
 
   locale: "en",

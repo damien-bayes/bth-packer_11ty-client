@@ -11,7 +11,7 @@ const Nunjucks = require("nunjucks");
 
 module.exports = config => {
   // Watch for modificaions in style directory
-  sass("./src/styles/custom-bayesian-aspectus.scss", "./dist/styles/custom-bayesian-aspectus.css");
+  sass("./src/styles/custom-baythium-aspectus.scss", "./dist/styles/custom-baythium-aspectus.css");
 
   // require("./config/nunjucks.config")(config);
   const nunjucksEnvironment = new Nunjucks.Environment(

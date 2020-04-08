@@ -8,7 +8,7 @@
 
 module.exports = {
   currentYear: new Date().getFullYear(),
-  brandUrl: "images/bayesian-ecosystem-inverted.svg",
+  brandUrl: "images/baythium-ecosystem-inverted.svg",
 
   /* English */
   en: {

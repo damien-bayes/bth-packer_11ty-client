@@ -7,7 +7,7 @@
 "use strict";
 
 module.exports = {
-  brandUrl: "images/bayesian-ecosystem.svg",
+  brandUrl: "images/baythium-ecosystem.svg",
 
   /* English */
   en: {
