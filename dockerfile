@@ -9,7 +9,7 @@ COPY dist/ /usr/share/nginx/html/
 
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 COPY nginx/custom-errors.conf /etc/nginx/custom-errors.conf
-COPY nginx.default.conf /etc/nginx/conf.d/default.conf
+COPY nginx/nginx.default.conf /etc/nginx/conf.d/default.conf
 
 # RUN chown nginx:nginx /usr/share/nginx/html/*
 RUN chmod -R 755 /usr/share/nginx/html
