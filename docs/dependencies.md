@@ -1,6 +1,8 @@
-# Dependencies
+# Baythium Packer CLI Dependencies
 
-## Ubuntu
+## Unix
+
+###### Ubuntu 18.04 LTS
 
 ```bash
 sudo apt-get install zip

@@ -1,8 +1,12 @@
 /**
- * Project: Bayesian Packer
- * This project is a part of Bayesian Ecosystem
- * Initial author: Damien Bayes (damien.bayes.db@gmail.com)
+ * Eleventy Configuration
+ * 
+ * Project: Baythium Packer
+ * File: /config/eleventy.config.js
+ * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  */
+
+"use strict";
 
 const fs = require("fs");
 const htmlmin = require("html-minifier");

@@ -3,6 +3,14 @@ keywords: "bash, shell, unix, automation, baythium-automation, baythium-ecosyste
 description: "Large-scale and secure folder and file archiver for automating your infrastructure"
 ---
 
+{# 
+  Base Layout
+
+  Project: Baythium Packer
+  File: /src/_includes/_layouts/base.njk
+  Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+#}
+
 {% set metaDescription = app[locale].description %}
 {% set metaKeywords = app[locale].keyWords %}
 
@@ -55,6 +63,8 @@ description: "Large-scale and secure folder and file archiver for automating you
 
     <meta name="keywords" content="{{ keywords }}"/>
     <meta name="description" content="{{ description }}"/>
+
+    <link rel="canonical" href="{{ app.url }}"/>
 
     <link rel="icon" href="/favicon.ico"/>
 

@@ -1,0 +1,7 @@
+# To Do
+
+## CLI
+1. Add possibility of an archived file to be encrypted using GPG with a symmetric key (Ex: gpg -c <your-filename>);
+2. Add possibility to delete non-encrypted archived files (Ex: rm -rf <your-filename>);
+3. Think of creating the following CLI command: $ baythium-packer <args> --verbose;
+4. Allow users to define shortcuts like git does in the .gitconfig file;

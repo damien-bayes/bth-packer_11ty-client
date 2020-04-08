@@ -1,5 +1,13 @@
 #!/usr/bin/env sh
 
+: '
+Entrypoint
+
+Project: Baythium Packer - Client
+File: /scripts/entrypoint.sh
+Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+'
+
 # App path exits?
 if [ ! -d "/nginx" ]; then
   echo "The directory /nginx doesn't exist. Please mount or create it."

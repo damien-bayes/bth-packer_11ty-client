@@ -1,16 +1,23 @@
 @charset "UTF-8";
+/**
+ * Custom Baythium Aspectus
+ *
+ * Project: Bayesian Packer
+ * File: /src/styles/custom-baythium-aspectus.scss
+ * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ */
 /* VARIABLES */
 /**
  * All
  *
  * File: /src/styles/variables/_all.scss
- * Project: Bayesian Packer
+ * Project: Baythium Aspectus
  * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  */
 /**
  * Border
  *
- * Project: Bayesian Aspectus
+ * Project: Baythium Aspectus
  * File: /src/styles/variables/border.scss
  * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  */
@@ -19,7 +26,7 @@
 /**
  * Color
  *
- * Project: Bayesian Aspectus
+ * Project: Baythium Aspectus
  * File: /src/styles/variables/color.scss
  * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  *
@@ -52,14 +59,14 @@
 /**
  * Duration
  *
- * Project: Bayesian Aspectus
+ * Project: Baythium Aspectus
  * File: /src/styles/variables/duration.scss
  * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  */
 /**
  * Font
  *
- * Project: Bayesian Aspectus
+ * Project: Baythium Aspectus
  * File: /src/styles/variables/font.scss
  * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  */
@@ -99,7 +106,7 @@
 /**
  * Indent
  *
- * Project: Bayesian Aspectus
+ * Project: Baythium Aspectus
  * File: /src/styles/variables/indent.scss
  * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  */
@@ -108,7 +115,7 @@
 /**
  * Layer
  *
- * Project: Bayesian Aspectus
+ * Project: Baythium Aspectus
  * File: /src/styles/variables/layer.scss
  * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  */
@@ -117,7 +124,7 @@
 /**
  * Shadow
  *
- * Project: Bayesian Aspectus
+ * Project: Baythium Aspectus
  * File: /src/styles/variables/shadow.scss
  * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  *
@@ -151,6 +158,16 @@
  * Useful for "Skip to main content" links; see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
  */
 /* UTILS */
+/**
+ * Icons
+ *
+ * Project: Bayesian Packer
+ * File: /src/styles/icons.scss
+ * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ *
+ * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
 readers do not read off random characters that represent icons */
 .fa-500px:before {
@@ -6057,7 +6074,7 @@ readers do not read off random characters that represent icons */
 /**
  * App Header
  * 
- * Project: Bayesian Packer
+ * Project: Baythium Packer
  * File: /src/scss/components/app-header.scss
  * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  */
@@ -6144,7 +6161,7 @@ readers do not read off random characters that represent icons */
 /**
  * App Footer
  * 
- * Project: Bayesian Packer
+ * Project: Baythium Packer
  * File: /src/scss/components/app-footer.scss
  * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  */
@@ -6266,7 +6283,7 @@ readers do not read off random characters that represent icons */
 /**
  * Navigation
  * 
- * Project: Bayesian Packer
+ * Project: Baythium Packer
  * File: /src/scss/components/navigation.scss
  * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  */
@@ -6328,7 +6345,7 @@ readers do not read off random characters that represent icons */
 /**
  * Language Switcher
  * 
- * Project: Bayesian Packer
+ * Project: Baythium Packer
  * File: /src/scss/components/language-switcher.scss
  * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  */
@@ -6358,7 +6375,7 @@ readers do not read off random characters that represent icons */
 /**
  * FAQ
  * 
- * Project: Bayesian Packer
+ * Project: Baythium Packer
  * File: /src/scss/components/faq.scss
  * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  */
@@ -6543,7 +6560,7 @@ readers do not read off random characters that represent icons */
 /**
  * Font
  * 
- * Project: Bayesian Packer
+ * Project: Baythium Packer
  * File: /src/scss/animations/font.scss
  * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  */
@@ -6658,6 +6675,12 @@ readers do not read off random characters that represent icons */
 
 /* CUSTOM MODIFICATIONS */
 /*!
+ * Solid
+ *
+ * Project: Baythium Packer
+ * File: /src/styles/fonts/solid.scss
+ * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ *
  * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
@@ -6681,8 +6704,8 @@ readers do not read off random characters that represent icons */
 /**
  * Brands
  * 
- * Project: Bayesian Packer
- * File: /src/scss/fonts/brands.scss
+ * Project: Baythium Packer
+ * File: /src/styles/fonts/brands.scss
  * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  *
  * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com

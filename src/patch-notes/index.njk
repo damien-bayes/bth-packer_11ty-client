@@ -2,14 +2,23 @@
 {
   layout: "_layouts/base.njk",
   title: "Patch Notes",
-
   pagination: {
     data: "collections.patch_notes",
     size: 2,
     alias: "notes"
-  }
+  },
+  changeFrequency: "daily",
+  priority: 0.9
 }
 ---
+
+{# 
+  Patch Notes
+
+  Project: Baythium Packer
+  File: /src/patch-notes/index.njk
+  Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+#}
 
 <section class="section patch-notes">
 

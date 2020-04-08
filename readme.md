@@ -1,52 +1,43 @@
 # Baythium Packer - Client
 
-<b>Resource:</b> https://packer.baythium.com<br/>
-<b>Dedicated port number:</b> 10033<br/>
-<b>Initial author:</b> Damien Bayes<br/>
-<b>Description:</b> Archive your large-scale infrastructure more secure and effectively using our command-line tool and keep control of organization data<br/>
+**Resource:** https://packer.baythium.com<br/>
+**Dedicated Port Number:** 10033<br/>
+**Initial Author:** Damien Bayes<br/>
+**Description:** Archive your large-scale infrastructure more secure and effectively using our command-line tool and keep control of organization data<br/>
 
 ---
 
 ## Getting Started
 
-### Bash
-
-First and foremost, you have to install required dependencies which are part of the entire program. Just use subsequent commands in sequence:
-
 ```bash
-# Get info on an updated version of packages or their dependencies
-sudo apt update
+# Automatically run an Eleventy web server on 127.0.0.1:10033 for testing it out
+npm run eleventy:serve
 
-# Install zip/unzip utilities
-sudo apt install zip unzip
+# Build a project for production
+npm run eleventy:build
 
-# Install lightweight and flexible command-line JSON processor
-sudo apt install jq
+# Run Eleventy in debug mode
+npm run eleventy:debug
+
+# Check all javascript files on syntax requirements under the Baythium ecosystem standards
+npm run eslint
 ```
 
-For instance, the jq is used for processing configuration data along with a basic structure composed of sections, properties, and values. Whereas the zip/unzip utilities are used for working with archives.
+### Development
 
 ```bash
-sudo ./archiver.sh -s <your-source-path> -d <your-destination-path>
-```
-
-### Powershell
-
-...
-
----
-
-## Development
-
-```bash
-# Install Eleventy
+# Install Eleventy (Static site generator)
 npm install -g @11ty/eleventy
 
-# Update baythium aspectus package (Optional)
+# Update the Baythium aspectus package from the Github repository (Optional)
 npm update @damien-bayes/baythium-aspectus_package --save
 ```
 
 ### Docker
+
+Docker plays an essential part on the Baythium Ecosystem and if you are familiar with it you CAN use the following commands for getting the ball rolling.
+
+###### Variant 1
 
 ```bash
 # Build a new docker image using the Dockerfile
@@ -54,6 +45,7 @@ sudo docker build \
 -t \
 baythium-ecosystem/baythium-packer_client:1.7 .
 
+# Run the Baythium Packer in an isolated container using the specified options
 sudo docker run \
 -d \
 --name baythium-packer_client \
@@ -65,26 +57,30 @@ baythium-ecosystem/baythium-packer_client:1.7
 ```
 
 ---
+
 ## Contribution
 
-Thanks for contributing to Baythium Packer. Without you and the Open Source community this project wouldn't be possible. Before you get started, please familiarize yourself with the project and its standards.
+Thanks for contributing to the Baythium Packer. Without you and the open source community this project would NOT be possible. Before you get started, please familiarize yourself with the project and its demanding standards.
 
 ## Bug Fixes
 
-If you have some problems or proposals, please open an issue including a log error on https://github.com/damien-bayes/baythium-packer/issues
+If you have some problems or proposals, please open an issue including a log error on https://github.com/damien-bayes/baythium-packer/issues and we will try to fix it as soon as possible in accordance with the priorities.
 
-The reports make it easy for the Baythium Ecosystem team to identify the bug, solve it, and release a new version of the Bayesian Packer by seeing the stacktrace.
+The reports make it easy for the Baythium team to handle errors, identify bugs, solve it, and release a new version of the Baythium Packer by seeing the stacktrace.
 
 ## References
-1. https://stedolan.github.io/jq
-2. https://www.webstoemp.com/blog/multilingual-sites-eleventy
-3. https://www.11ty.dev/docs/config/#default-template-engine-for-markdown-files
-4. https://www.11ty.dev/docs/config/#transforms
-5. https://www.hawksworx.com/blog/keeping-sass-simple-and-speedy-on-eleventy
-6. https://www.11ty.dev/docs
-7. https://www.11ty.dev/docs/data-template-dir
-8. https://www.webstoemp.com/blog/language-switcher-multilingual-jamstack-sites
-9. https://dev.to/omarhashimoto/create-a-blog-in-less-than-20-lines-of-code-using-11ty-3oh0
-10. https://keepinguptodate.com/pages/2019/06/creating-blog-with-eleventy
-11. https://www.11ty.dev/docs/quicktips/inline-js
-12. https://www.belter.io/eleventy-sitemap
+
+The list of references used to improve the project planning and its functionalities.
+
+1. https://www.webstoemp.com/blog/multilingual-sites-eleventy
+2. https://www.11ty.dev/docs/config/#default-template-engine-for-markdown-files
+3. https://www.11ty.dev/docs/config/#transforms
+4. https://www.hawksworx.com/blog/keeping-sass-simple-and-speedy-on-eleventy
+5. https://www.11ty.dev/docs
+6. https://www.11ty.dev/docs/data-template-dir
+7. https://www.webstoemp.com/blog/language-switcher-multilingual-jamstack-sites
+8. https://dev.to/omarhashimoto/create-a-blog-in-less-than-20-lines-of-code-using-11ty-3oh0
+9. https://keepinguptodate.com/pages/2019/06/creating-blog-with-eleventy
+10. https://www.11ty.dev/docs/quicktips/inline-js
+11. https://www.belter.io/eleventy-sitemap
+12. https://mozilla.github.io/nunjucks/templating.html

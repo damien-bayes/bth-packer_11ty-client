@@ -1,9 +1,9 @@
 /**
- * Project: Bayesian Packer
- * This project is a part of Bayesian Ecosystem
- * Initial author: Damien Bayes (damien.bayes.db@gmail.com)
- *
- * NOTE: Available to all templates
+ * App
+ * 
+ * Project: Baythium Packer
+ * File: /src/_data/app.js
+ * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  */
 
 "use strict";

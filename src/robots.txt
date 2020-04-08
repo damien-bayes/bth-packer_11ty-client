@@ -1,4 +1,0 @@
-Sitemap: https://packer.baythium.com/sitemap.xml
-
-User-agent: *
-Disallow:

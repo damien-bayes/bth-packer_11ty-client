@@ -1,3 +1,14 @@
+/**
+ * Shims
+ *
+ * Project: Bayesian Packer
+ * File: /src/styles/shims.scss
+ * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ *
+ * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+
 .#{$fa-css-prefix}.#{$fa-css-prefix}-glass:before { content: fa-content($fa-var-glass-martini); }
 
 .#{$fa-css-prefix}.#{$fa-css-prefix}-meetup {

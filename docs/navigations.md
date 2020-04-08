@@ -1,4 +1,4 @@
-# Navigations
+# Baythium Packer Navigations - Client
 
 - Home;
 - Documentation;
@@ -6,5 +6,4 @@
 - About;
 - FAQ;
 - Contact;
-
 - Page Not Found;

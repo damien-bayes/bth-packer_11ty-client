@@ -1,8 +1,12 @@
 /**
- * Project: Bayesian Packer
- * This project is a part of Bayesian Ecosystem
- * Initial author: Damien Bayes (damien.bayes.db@gmail.com)
+ * Nunjucks Configuration
+ * 
+ * Project: Baythium Packer
+ * File: /config/nunjucks.config.js
+ * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  */
+
+"use strict";
 
 const Nunjucks = require("nunjucks");
 

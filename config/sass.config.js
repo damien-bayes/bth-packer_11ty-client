@@ -1,8 +1,12 @@
 /**
- * Project: Bayesian Packer
- * This project is a part of Bayesian Ecosystem
- * Initial author: Damien Bayes (damien.bayes.db@gmail.com)
+ * SASS/SCSS Configuration
+ * 
+ * Project: Baythium Packer
+ * File: /config/sass.config.js
+ * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  */
+
+"use strict";
 
 const sass = require("sass");
 const fs = require("fs-extra");
@@ -14,9 +18,8 @@ module.exports = (scssPath, cssPath) => {
     /* Encapsulate rendered css from scssPath into result variable */
     const result = sass.renderSync({ file: scssPath });
 
-    /* Create cssPath directory recursively */
+    /* Create cssPath directory recursively then write result css string to cssPath file */
     fs.mkdir(path.dirname(cssPath), { recursive: true })
-    /* Then write result css string to cssPath file */
       .then(() => fs.writeFile(cssPath, result.css.toString()))
       .catch(error => console.error(error));
   }
@@ -24,6 +27,7 @@ module.exports = (scssPath, cssPath) => {
   /* Watch for changes to scssPath directory... */
   fs.watch(path.dirname(scssPath), () => {
     console.log(`Watching ${path.dirname(scssPath)}...`);
+
     /* Encapsulate rendered css from scssPath into watchResult variable */
     const watchResult = sass.renderSync({ file: scssPath });
     /* Then write result css string to cssPath file */

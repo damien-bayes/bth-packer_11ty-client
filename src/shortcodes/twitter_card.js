@@ -1,3 +1,13 @@
+/**
+ * Twitter Card
+ * 
+ * Project: Baythium Packer
+ * File: /src/shortcodes/twitter_card.js
+ * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ */
+
+"use strict";
+
 const setTwitterCard = (site, title, description, image, creator) => {
     let content = '';
 

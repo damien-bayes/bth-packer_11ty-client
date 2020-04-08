@@ -6,7 +6,7 @@
 
 "use strict";
 
-const sass = require("./config/sass-processing.config");
+const sass = require("./config/sass.config");
 const Nunjucks = require("nunjucks");
 
 module.exports = config => {
