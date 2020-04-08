@@ -87,3 +87,4 @@ The reports make it easy for the Baythium Ecosystem team to identify the bug, so
 9. https://dev.to/omarhashimoto/create-a-blog-in-less-than-20-lines-of-code-using-11ty-3oh0
 10. https://keepinguptodate.com/pages/2019/06/creating-blog-with-eleventy
 11. https://www.11ty.dev/docs/quicktips/inline-js
+12. https://www.belter.io/eleventy-sitemap
