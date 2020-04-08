@@ -1,4 +1,4 @@
-const createTwitterCard = (site, title, description, image, creator) => {
+const setTwitterCard = (site, title, description, image, creator) => {
     let content = '';
 
     if(image) {
@@ -22,5 +22,5 @@ const createTwitterCard = (site, title, description, image, creator) => {
 }
 
 module.exports = {
-  createTwitterCard
+  setTwitterCard
 };
