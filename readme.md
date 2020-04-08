@@ -1,6 +1,6 @@
-# Bayesian Packer - Client
+# Baythium Packer - Client
 
-<b>Resource:</b> https://packer.bayesianflow.space<br/>
+<b>Resource:</b> https://packer.baythium.com<br/>
 <b>Dedicated port number:</b> 10033<br/>
 <b>Initial author:</b> Damien Bayes<br/>
 <b>Description:</b> Archive your large-scale infrastructure more secure and effectively using our command-line tool and keep control of organization data<br/>
@@ -42,8 +42,8 @@ sudo ./archiver.sh -s <your-source-path> -d <your-destination-path>
 # Install Eleventy
 npm install -g @11ty/eleventy
 
-# Update Bayesian Aspectus (Optional)
-npm update @damien-bayes/bayesian-aspectus_package --save
+# Update baythium aspectus package (Optional)
+npm update @damien-bayes/baythium-aspectus_package --save
 ```
 
 ### Docker
@@ -52,28 +52,28 @@ npm update @damien-bayes/bayesian-aspectus_package --save
 # Build a new docker image using the Dockerfile
 sudo docker build \
 -t \
-bayesian-ecosystem/bayesian-packer_client:1.7 .
+baythium-ecosystem/baythium-packer_client:1.7 .
 
 sudo docker run \
 -d \
---name bayesian-packer_client \
+--name baythium-packer_client \
 --expose 10033 \
---net bayesian-network-1 \
--e VIRTUAL_HOST=packer.bayesianflow.space \
+--net baythium-network-1 \
+-e "VIRTUAL_HOST=packer.baythium.com, packer.bayesianflow.space" \
 --restart=on-failure:3 \
-bayesian-ecosystem/bayesian-packer_client:1.7
+baythium-ecosystem/baythium-packer_client:1.7
 ```
 
 ---
 ## Contribution
 
-Thanks for contributing to Bayesian Packer. Without you and the Open Source community this project wouldn't be possible. Before you get started, please familiarize yourself with the project and its standards.
+Thanks for contributing to Baythium Packer. Without you and the Open Source community this project wouldn't be possible. Before you get started, please familiarize yourself with the project and its standards.
 
 ## Bug Fixes
 
-If you have some problems or proposals, please open an issue including a log error on https://github.com/damien-bayes/bayesian-packer/issues
+If you have some problems or proposals, please open an issue including a log error on https://github.com/damien-bayes/baythium-packer/issues
 
-The reports make it easy for the Bayesian Ecosystem team to identify the bug, solve it, and release a new version of the Bayesian Packer by seeing the stacktrace.
+The reports make it easy for the Baythium Ecosystem team to identify the bug, solve it, and release a new version of the Bayesian Packer by seeing the stacktrace.
 
 ## References
 1. https://stedolan.github.io/jq
