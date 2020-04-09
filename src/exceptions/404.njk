@@ -14,16 +14,20 @@
   Initial author: Damien Bayes <damien.bayes.db@gmail.com>
 #}
 
-<!-- 404 Page -->
 <section class="section page-not-found">
   
+  <!-- Deck 1 -->
   <div class="row">
+    <!-- Subdeck 1 -->
     <div class="column-6">
-      <h1>Page Not Found</h1>
+      <h1>{{ title }}</h1>
+      <p>The requested resource could not be found but may be available in the future</p>
     </div>
+
+    <!-- Subdeck 2 -->
     <div class="column-6">
       <div class="page-not-found__image">
-        <img src="{{ '/' | url }}{{ app.pageNotFoundUrl }}" alt="{{ app.name }}"/>
+        <img src="{{ '/' | url }}images/page-not-found.svg" alt="{{ app.name }}"/>
       </div>
     </div>
   </div>

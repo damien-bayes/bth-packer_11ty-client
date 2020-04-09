@@ -13,6 +13,8 @@ const htmlmin = require("html-minifier");
 const terser = require("terser");
 const dayjs = require("dayjs");
 
+const { getCurrentYear } = require("../src/shortcodes/helper");
+
 module.exports = eleventyConfig => {
   /* Enable quiet mode to reduce console noise */
   eleventyConfig.setQuietMode(false);
@@ -22,23 +24,6 @@ module.exports = eleventyConfig => {
 
   /* Add scss directory for Eleventy to watch */
   eleventyConfig.addWatchTarget("src/styles/");
-
-  /* Add filter for coverting UTC datetime to readable one */
-  eleventyConfig.addFilter("convertToReadableDate", date => {
-    return dayjs(date).format("YYYY-MM-DD");
-  });
-
-  /* Add filter for minifying javascript using terser */
-  eleventyConfig.addFilter('minifyJs', code => {
-    const minified = terser.minify(code);
-
-    if (minified.error) {
-      console.warn('Terser error has been occurred', minified.error);
-      return code;
-    }
-
-    return minified.code;
-  })
 
   /* Configure Browsersync to do the 404 routing */
   eleventyConfig.setBrowserSyncConfig({
@@ -58,6 +43,13 @@ module.exports = eleventyConfig => {
     }
   });
 
+  /* LAYOUT ALIASES */
+
+  // eleventyConfig.addLayoutAlias("base", "src/_includes/_layouts/base.njk");
+  // eleventyConfig.addLayoutAlias("secondary", "src/_includes/_layouts/secondary.njk");
+
+  /* TRANSFORMS */
+
   /* Add transformation for minifying HTML output */
   eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
     if (outputPath.endsWith(".html")) {
@@ -72,6 +64,8 @@ module.exports = eleventyConfig => {
     
     return content;
   });
+
+  /* PASSTHROUGH */
     
   /* NOTE: Using this feature, will likely speed up your build process */
   eleventyConfig.addPassthroughCopy("src/images");
@@ -82,4 +76,31 @@ module.exports = eleventyConfig => {
     "node_modules/@damien-bayes/baythium-aspectus_package/dist/baythium-aspectus.css": "styles/baythium-aspectus.min.css",
     "node_modules/@damien-bayes/baythium-aspectus_package/dist/baythium-aspectus.js": "js/baythium-aspectus.min.js"
   });
+
+  /* SHORTCODES */
+  eleventyConfig.addNunjucksShortcode("currentYear", getCurrentYear);
+
+  /* FILTERS */
+
+  /* Add filter for coverting UTC datetime to readable one */
+  eleventyConfig.addFilter("humanReadableFormat", date => {
+    return dayjs(date).format("MMMM D YYYY");
+  });
+
+  /* Add filter for minifying javascript using terser */
+  eleventyConfig.addFilter("minifyJs", code => {
+    const minified = terser.minify(code);
+
+    if (minified.error) {
+      console.warn("Terser error has been occurred", minified.error);
+
+      return code;
+    }
+
+    return minified.code;
+  });
+
+  /* PLUGINS */
+
+  /* CUSTOM COLLECTIONS */
 };

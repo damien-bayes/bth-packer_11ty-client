@@ -11,7 +11,7 @@
 
     <!-- Deck 1: Language Switcher -->
     <div class="language-switcher mb-4">
-      <span class="visible-xs">{{ language_switcher[app.locale].language }}:</span>
+      <span class="visible-xs">{{ translation[app.locale].language }}:</span>
 
       <a href="javascript:" class="language-switcher__link">
         {% for lang in app.languages %}
@@ -41,23 +41,23 @@
 
     <!-- Deck 3: Brand -->
     <div class="app-footer__brand">
-      <img src="{{ '/' | url }}{{ app_footer.brandUrl }}" alt="{{ app.company.name }}"/>
+      <img src="{{ '/' | url }}images/baythium-ecosystem-inverted.svg" alt="{{ app.company.name }}"/>
     </div>
 
     <!-- Deck 4: Copyright -->
     <div class="app-footer__copyright">
-      <p>&copy; {{ app_footer.currentYear }} {{ app.company.name }}</p>
+      <p>&copy; {% currentYear %} {{ app.company.name }}</p>
       <p>
-        <span>{{ app_footer[app.locale].copyright.paragraphs[0] }}</span>
-        <span>{{ app_footer[app.locale].copyright.paragraphs[1] }}</span>
+        <span>{{ translation[app.locale].copyright.paragraphs[0] }}</span>
+        <span>{{ translation[app.locale].copyright.paragraphs[1] }}</span>
       </p>
     </div>
 
     <!-- Deck 5: Synthesis -->
     <div class="app-footer__synthesis">
       <ul>
-        <li>{{ app_footer[app.locale].synthesis.productName }}: <span>{{ app.name }}</span></li>
-        <li>{{ app_footer[app.locale].synthesis.clientVersion }}: <span>{{ app.version }}</span></li>
+        <li>{{ translation[app.locale].productName }}: <span>{{ app.name }}</span></li>
+        <li>{{ translation[app.locale].clientVersion }}: <span>{{ app.version }}</span></li>
       </ul>
     </div>
 

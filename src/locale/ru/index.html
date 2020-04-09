@@ -1,14 +1,16 @@
 ---js
 {
   layout: "_layouts/base.njk",
-  title: "Home",
+  title: "Главная",
   changeFrequency: "monthly",
-  priority: 0.8
+  priority: 0.8,
+  permalink: "/{{ locale }}/index.html",
+  translationKey: "home"
 }
 ---
 
 {# 
-  Home
+  Home (Russian)
 
   Project: Baythium Packer
   File: /src/index.njk
@@ -17,6 +19,7 @@
 
 <!-- Home Page -->
 <section class="section home">
+
   <!-- Deck 1 -->
   <div class="card">
     <div class="card__body">
@@ -27,7 +30,7 @@
         <div class="sm-column-6">
           <div class="home__brand">
             <img src="{{ '/' | url }}images/vacuum.svg" alt="{{ app.name }}"/>  
-            <p><span class="badge badge--extra-small badge--primary">Built for developers</span> in order to make technology open to the world</p>
+            <p><span class="badge badge--extra-small badge--primary">Создан для разработчиков</span> для того чтобы сделать технологии открытыми всему миру</p>
           </div>
         </div>
 
@@ -42,9 +45,9 @@
 
           <!-- Button collection -->
           <div class="button-collection button-collection--left-aligned">
-            <a class="button button--outlined-primary button--rounded mr-2 button--small"><span class="icon icon--get-started"></span>{{ translation[app.locale].documentation }}</a>
-            <a href="https://github.com/damien-bayes/baythium-packer_client" target="_blank" class="button button--outlined-primary button--rounded button--small mr-2"><span class="icon icon--github"></span>{{ translation[app.locale].github }}</a>
-            <a href="javascript:" target="_blank" class="button button--primary button--rounded button--small"><span class="icon icon--download"></span>{{ translation[app.locale].download }}</a>
+            <a class="button button--outlined-primary button--rounded mr-2 button--small"><span class="icon icon--get-started"></span>Документация</a>
+            <a href="https://github.com/damien-bayes/baythium-packer_client" target="_blank" class="button button--outlined-primary button--rounded button--small mr-2"><span class="icon icon--github"></span>Github</a>
+            <a href="javascript:" target="_blank" class="button button--primary button--rounded button--small"><span class="icon icon--download"></span>Скачать</a>
           </div>
 
         </div>

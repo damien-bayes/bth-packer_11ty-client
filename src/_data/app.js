@@ -8,18 +8,21 @@
 
 "use strict";
 
-const pack = require("../../package.json");
-
+const p = require("../../package.json");
+ 
 const options = {
   name: "Baythium Packer",
-  version: pack.version,
   url: "https://packer.baythium.com",
-  description: pack.description,
-  keywords: [],
+
+  version: p.version,
+  description: p.description,
+  keywords: p.keywords,
+  license: p.license,
 
   author: {
-    name: "Damien Bayes",
-    email: "damien.bayes.db@gmail.com",
+    name: p.author.name,
+    email: p.author.email,
+
     github: "https://github.com/damien-bayes",
     facebook: "https://www.facebook.com/damien.bayes.db1",
     twitter: "https://twitter.com/damien_bayes"
@@ -29,7 +32,10 @@ const options = {
     name: "Baythium Ecosystem"
   },
 
+  /* Default language */
   locale: "en",
+
+  /* An array of all the languages the website uses */
   languages: [
     {
       label: "English",
@@ -46,9 +52,7 @@ const options = {
   ],
   
   buildTime: new Date(),
-  environment: process.env.ELEVENTY_ENV,
-  
-  pageNotFoundUrl: "images/page-not-found.svg",
+  environment: process.env.ELEVENTY_ENV
 };
 
 console.info(`${options.name} is in ${options.environment} state`);

@@ -9,26 +9,26 @@
 "use strict";
 
 const setTwitterCard = (site, title, description, image, creator) => {
-    let content = '';
+  let content = '';
 
-    if(image) {
-      content += `
-        <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:image" content="${image}"/>`;
-    } 
-    
-    content += `<meta name="twitter:card" content="summary"/>`;
-
+  if(image) {
     content += `
-      <meta name="twitter:site" content="${site}"/>
-      <meta name="twitter:title" content="${title}"/>
-      <meta name="twitter:description" content="${description}"/>`;
+      <meta name="twitter:card" content="summary_large_image"/>
+      <meta name="twitter:image" content="${image}"/>`;
+  } 
+    
+  content += `<meta name="twitter:card" content="summary"/>`;
 
-    if(creator) {
-      content += `<meta name="twitter:creator" content="${creator}"/>`;
-    }
+  content += `
+    <meta name="twitter:site" content="${site}"/>
+    <meta name="twitter:title" content="${title}"/>
+    <meta name="twitter:description" content="${description}"/>`;
 
-    return content;
+  if(creator) {
+    content += `<meta name="twitter:creator" content="${creator}"/>`;
+  }
+
+  return content;
 }
 
 module.exports = {

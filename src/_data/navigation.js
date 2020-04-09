@@ -9,6 +9,7 @@
 "use strict";
 
 module.exports = {
+  /* English */
   en: {
     items: [
       {
@@ -48,6 +49,8 @@ module.exports = {
       }
     ]
   },
+
+  /* Russian */
   ru: {
     items: [
       {
@@ -87,6 +90,8 @@ module.exports = {
       }
     ]
   },
+
+  /* German */
   de: {
     items: [
       {

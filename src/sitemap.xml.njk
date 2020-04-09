@@ -7,9 +7,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% for page in collections.all %}
-    {%- if item.data.excludedFromSitemap != true %}
+    {%- if page.data.excludedFromSitemap != true %}
       <url>
-        <loc>https://packer.baythium.com{{ page.url | url }}</loc>
+        <loc>{{ app.url }}{{ page.url | url }}</loc>
         <lastmod>{{ page.date.toISOString() }}</lastmod>
         <changefreq>{{ page.data.changeFrequency }}</changefreq>
         <priority>{{ page.data.priority }}</priority>

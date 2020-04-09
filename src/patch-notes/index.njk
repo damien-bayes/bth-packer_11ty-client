@@ -7,7 +7,7 @@
     size: 2,
     alias: "notes"
   },
-  changeFrequency: "daily",
+  changeFrequency: "monthly",
   priority: 0.9
 }
 ---
@@ -38,7 +38,7 @@
             <article>
               <a href="{{ note.url | url }}">
                 {{ note.data.title }}
-                {{ note.date | convertToReadableDate }}
+                {{ note.date | humanReadableFormat }}
               </a>
             </article>
           </li>

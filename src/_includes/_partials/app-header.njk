@@ -8,8 +8,8 @@
 
 {% if app.environment === "development" %}
 <div class="alert alert--warning">
-  <p>You're running the application in the <strong>{{ app.environment }}</strong> mode.</p>
-  <p>Current page: {{ page.url | url }}</p>
+  <p>Website mode: <strong>{{ app.environment }}</strong></p>
+  <p>{{ translation[app.locale].currentPage }}: {{ page.url | url }}</p>
 </div>
 {% endif %}
 
@@ -19,12 +19,12 @@
     <!-- Deck 1: System -->
     <div class="app-header__system">
       <ul>
-        <li>Ecosystem</li>
-        <li>Support Center</li>
+        <li>{{ translation[app.locale].ecosystem }}</li>
+        <li>{{ translation[app.locale].supportCenter }}</li>
       </ul>
       <ul>
-        <li>Sign Up</li>
-        <li>Sign In</li>
+        <li>{{ translation[app.locale].signUp }}</li>
+        <li>{{ translation[app.locale].signIn }}</li>
       </ul>
     </div>
 
@@ -33,7 +33,7 @@
       <div>
         <div class="app-header__brand">
           <a href="/">
-            <img src="{{ '/' | url }}{{ app_header.brandUrl }}" alt="{{ app.name }}"/>
+            <img src="{{ '/' | url }}images/baythium-ecosystem.svg" alt="{{ app.name }}"/>
             {{ app.name }}
           </a>
         </div>
@@ -42,7 +42,7 @@
         <div class="app-header__parallelogram">
           <!-- Language switcher -->
           <div class="language-switcher">
-            <span class="visible-xs">{{ language_switcher[app.locale].language }}:</span>
+            <span class="visible-xs">{{ translation[app.locale].language }}:</span>
 
             <a href="javascript:" class="language-switcher__link">
               {% for lang in app.languages %}

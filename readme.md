@@ -84,3 +84,4 @@ The list of references used to improve the project planning and its functionalit
 10. https://www.11ty.dev/docs/quicktips/inline-js
 11. https://www.belter.io/eleventy-sitemap
 12. https://mozilla.github.io/nunjucks/templating.html
+13. https://css-tricks.com/quick-reminder-that-details-summary-is-the-easiest-way-ever-to-make-an-accordion

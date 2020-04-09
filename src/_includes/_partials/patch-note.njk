@@ -18,7 +18,7 @@
     {% for note in collections.patch_notes %}
       {% if loop.first %}<ul class="list">{% endif %}
         <div>
-          <a href="{{ note.url | url }}">{{ note.data.title }}<span class="badge badge--alternative badge--rounded">{{ note.data.date | convertToReadableDate }}</span></a>
+          <a href="{{ note.url | url }}">{{ note.data.title }}<span class="badge badge--alternative badge--rounded">{{ note.data.date | humanReadableFormat }}</span></a>
         </div>
       {% if loop.last %}</ul>{% endif %}
     {% endfor %}
