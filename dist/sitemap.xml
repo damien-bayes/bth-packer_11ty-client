@@ -106,4 +106,46 @@
   
   
   
+      <url>
+        <loc>https://packer.baythium.com/locale/ru/about/</loc>
+        <lastmod>2020-04-09T07:23:05.010Z</lastmod>
+        <changefreq></changefreq>
+        <priority></priority>
+      </url>
+  
+      <url>
+        <loc>https://packer.baythium.com/locale/de/about/</loc>
+        <lastmod>2020-04-09T07:23:23.236Z</lastmod>
+        <changefreq></changefreq>
+        <priority></priority>
+      </url>
+  
+      <url>
+        <loc>https://packer.baythium.com/locale/ru/faq/</loc>
+        <lastmod>2020-04-09T07:23:35.054Z</lastmod>
+        <changefreq></changefreq>
+        <priority></priority>
+      </url>
+  
+      <url>
+        <loc>https://packer.baythium.com/locale/ru/contribution/</loc>
+        <lastmod>2020-04-09T07:23:45.745Z</lastmod>
+        <changefreq></changefreq>
+        <priority></priority>
+      </url>
+  
+      <url>
+        <loc>https://packer.baythium.com/locale/de/contribution/</loc>
+        <lastmod>2020-04-09T07:23:52.649Z</lastmod>
+        <changefreq></changefreq>
+        <priority></priority>
+      </url>
+  
+      <url>
+        <loc>https://packer.baythium.com/locale/de/faq/</loc>
+        <lastmod>2020-04-09T07:24:10.119Z</lastmod>
+        <changefreq></changefreq>
+        <priority></priority>
+      </url>
+  
 </urlset>

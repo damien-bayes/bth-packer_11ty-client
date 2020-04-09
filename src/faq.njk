@@ -34,16 +34,11 @@
         {%- set question = faqItem.question %}
         {%- set answer = faqItem.answer %}
 
-        <div class="faq-pillar">
-          <div class="faq-pillar__question">
-            <label for="question-{{ id }}" class="faq-pillar__title">{{ question }}</label>
-            <input id="question-{{ id }}" data-faq-id="{{ id }}" class="faq-pillar__handler" {% if loop.first %} checked="checked" {% endif %} type="checkbox"/>
+        <details data-faq-id="{{ id }}" class="faq-pillar" {% if loop.first %} open {% endif %}>
+          <summary class="faq-pillar__question">{{ question }}</summary>
+          <p>{{ answer }}</p>
+        </details>
 
-            <div class="faq-pillar__square"></div>
-
-            <div class="faq-pillar__answer">{{ answer }}</div>
-          </div>
-        </div>
       {%- endfor -%}
 
     </div>

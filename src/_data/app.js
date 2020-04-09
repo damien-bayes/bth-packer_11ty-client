@@ -13,6 +13,7 @@ const p = require("../../package.json");
 const options = {
   name: "Baythium Packer",
   url: "https://packer.baythium.com",
+  baseUrl: "/",
 
   version: p.version,
   description: p.description,
@@ -52,9 +53,7 @@ const options = {
   ],
   
   buildTime: new Date(),
-  environment: process.env.ELEVENTY_ENV
+  environment: process.env.ELEVENTY_ENV.replace(/"/g, "").trim()
 };
-
-console.info(`${options.name} is in ${options.environment} state`);
 
 module.exports = options;

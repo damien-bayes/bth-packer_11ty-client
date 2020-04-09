@@ -24,6 +24,7 @@
 @import "components/language-switcher";
 @import "components/faq";
 @import "components/card";
+@import "components/alert";
 
 /* ANIMATIONS */
 @import "animations/font";
@@ -73,6 +74,12 @@ html {
     p {
       text-align: center;
       font-size: $xs-font-size;
+    }
+  }
+
+  .button-collection {
+    .button {
+      margin-bottom: $base-indent;
     }
   }
 

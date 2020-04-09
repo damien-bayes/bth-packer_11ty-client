@@ -7,68 +7,61 @@
  */
 
 .faq-pillar {
-  margin: 0;
-  padding: 0;
+  margin-bottom: $base-indent;
 
-  &__handler {
-    display: none;
-    margin: 0;
+  & > summary {
+    list-style: none;
 
-    &[type="checkbox"]:checked ~ .faq-pillar__answer {
-      height: 100%;
-      opacity: 1;
+    &::-webkit-details-marker { display: none; }
+  }
+
+  &[open] {
+    p { 
+      padding: 0 0 0 $xl-indent;
+      margin: 0;
     }
 
-    &[type="checkbox"]:checked ~ .faq-pillar__square {
-      transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      background-color: $secondary;
+    summary {
+      margin-bottom: $base-indent;
+
+      &::before {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        background-color: $secondary;
+      }
     }
   }
 
   &__question {
-    position: relative;
-    padding: 0 0 1em 2em;
-  }
-
-  &__title {
-    font-size: $base-font-size;
-    cursor: pointer;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -o-user-select: none;
     margin: 0;
+    outline: 0;
+    position: relative;
+    cursor: pointer;
+    padding: 0 0 0 $xl-indent;
     font-weight: $font-weight-bold;
     line-height: $base-line-height;
-  }
+    font-size: $base-font-size;
 
-  &__square {
-    position: absolute;
-    top: 9.6px;
-    left: 9.6px;
-    width: 6px;
-    height: 6px;
-    background-color: $gray-600;
-    -webkit-transition: -webkit-transform .3s ease-in-out;
-    transition: -webkit-transform .3s ease-in-out;
-    transition: transform .3s ease-in-out;
-    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
-    font-size: $xl-font-size;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -o-user-select: none;
-  }
-
-  &__answer {
-    opacity: 0;
-    height: 0;
-    color: $gray-800;
-    padding: $sm-indent 0;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8.4px;
+      left: 8.4px;
+      width: 6px;
+      height: 6px;
+      background-color: $gray-600;
+      -webkit-transition: -webkit-transform .3s ease-in-out;
+      transition: -webkit-transform .3s ease-in-out;
+      transition: transform .3s ease-in-out;
+      transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+      font-size: $xl-font-size;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -o-user-select: none;
+    }
   }
 }

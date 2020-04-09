@@ -4,3 +4,35 @@
     <a href="#">{{ navigation.data.name }}</a>
 </li>
 {%- endfor -%}
+
+
+
+
+  {# loop though site.languages #}
+{% for lang in app.languages %}
+  {% if loop.first %}<ul class="c-lggnav">{% endif %}
+
+  {# set translatedUrl to the homepage of that language by default #}
+  {% set translatedUrl = "/" + lang.code + "/" %}
+
+  {# set current language class #}
+  {% set activeClass = "is-active" if lang.code == app.locale else "" %}
+
+  {# loop through all the content of the site #}
+  {% for item in collections.all %}
+
+    {# for each item in the loop, check if
+    - its translationKey matches the current item translationKey
+    - its locale matches the code of the language we are looping through #}
+    {% if item.data.translationKey == translationKey and item.data.locale == lang.code %}
+      {% set translatedUrl = item.url %}
+    {% endif %}
+
+  {% endfor%}
+
+  <li class="c-lggnav__item">
+    <a class="c-lggnav__link  {{ activeClass }}" href="{{ translatedUrl }}">{{ lang.label }}</a>
+  </li>
+
+  {% if loop.last %}</ul>{% endif %}
+{% endfor %}

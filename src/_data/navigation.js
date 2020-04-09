@@ -14,37 +14,37 @@ module.exports = {
     items: [
       {
         id: 1,
-        name: "Home",
+        name: "home",
         url: "/"
       },
       {
         id: 2,
-        name: "Documentation",
+        name: "documentation",
         url: "/documentation"
       },
       {
         id: 3,
-        name: "Patch Notes",
+        name: "patch notes",
         url: "/patch-notes"
       },
       {
         id: 4,
-        name: "About",
+        name: "about project",
         url: "/about"
       },
       {
         id: 5,
-        name: "FAQ",
+        name: "faq",
         url: "/faq"
       },
       {
         id: 6,
-        name: "Contribution",
+        name: "contribution",
         url: "/contribution"
       },
       {
         id: 7,
-        name: "Contact",
+        name: "contact",
         url: "/contact"
       }
     ]
@@ -96,12 +96,12 @@ module.exports = {
     items: [
       {
         id: 1,
-        name: "Главная",
+        name: "Home",
         url: "/"
       },
       {
         id: 2,
-        name: "Документация",
+        name: "Documentation",
         url: "/documentation"
       },
       {
@@ -111,7 +111,7 @@ module.exports = {
       },
       {
         id: 4,
-        name: "О проекте",
+        name: "About Project",
         url: "/about"
       },
       {
@@ -121,12 +121,12 @@ module.exports = {
       },
       {
         id: 6,
-        name: "Вклад",
+        name: "Contribution",
         url: "/contribution"
       },
       {
         id: 7,
-        name: "Контакты",
+        name: "Contact",
         url: "/contact"
       }
     ]

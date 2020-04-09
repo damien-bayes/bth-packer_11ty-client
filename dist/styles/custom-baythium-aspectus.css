@@ -5928,7 +5928,7 @@ readers do not read off random characters that represent icons */
 .fas,
 .icon--download,
 .icon--get-started,
-.language-switcher::before,
+.language-switcher span::before,
 .far,
 .fal,
 .fad,
@@ -5943,7 +5943,7 @@ readers do not read off random characters that represent icons */
   line-height: 1;
 }
 
-.icon--download, .icon--github, .icon--get-started, .language-switcher::before {
+.icon--download, .icon--github, .icon--get-started, .language-switcher span::before {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -6052,7 +6052,7 @@ readers do not read off random characters that represent icons */
 .fas.fa-pull-left,
 .fa-pull-left.icon--download,
 .fa-pull-left.icon--get-started,
-.fa-pull-left.language-switcher::before,
+.language-switcher span.fa-pull-left::before,
 .far.fa-pull-left,
 .fal.fa-pull-left,
 .fab.fa-pull-left,
@@ -6063,7 +6063,7 @@ readers do not read off random characters that represent icons */
 .fas.fa-pull-right,
 .fa-pull-right.icon--download,
 .fa-pull-right.icon--get-started,
-.fa-pull-right.language-switcher::before,
+.language-switcher span.fa-pull-right::before,
 .far.fa-pull-right,
 .fal.fa-pull-right,
 .fab.fa-pull-right,
@@ -6088,20 +6088,14 @@ readers do not read off random characters that represent icons */
 }
 .app-header__system {
   display: flex;
+  flex-direction: column;
+  padding: 4px 8px;
 }
-.app-header__system ul {
-  flex: 50% 0 1;
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
+.app-header__system a {
+  text-decoration: none;
 }
-.app-header__system ul li:not(:last-of-type) {
-  margin-right: 16px;
-}
-.app-header__system ul:last-of-type {
-  align-items: flex-end;
-  justify-content: flex-end;
+.app-header__system a:not(:last-of-type) {
+  margin-right: 8px;
 }
 .app-header__default {
   display: flex;
@@ -6191,6 +6185,9 @@ readers do not read off random characters that represent icons */
   filter: invert(1);
   opacity: 0.15;
 }
+.app-footer__navigation-item {
+  margin-bottom: 16px;
+}
 .app-footer__navigation-item:not(:last-of-type) {
   margin-right: 16px;
 }
@@ -6206,9 +6203,9 @@ readers do not read off random characters that represent icons */
   display: block;
   color: #ffffff;
   text-decoration: none;
-  padding: 8px;
+  padding: 2px 8px !important;
   border-bottom: 1px solid transparent;
-  line-height: 8px;
+  line-height: 24px;
 }
 .app-footer__navigation-link--active {
   background-color: #F6D365;
@@ -6223,7 +6220,6 @@ readers do not read off random characters that represent icons */
 }
 .app-footer__navigation {
   color: #ffffff;
-  margin-bottom: 16px;
 }
 .app-footer__copyright {
   display: flex;
@@ -6290,7 +6286,8 @@ readers do not read off random characters that represent icons */
 .navigation {
   display: flex;
   color: #424242;
-  padding: 16px 0;
+  /* hide horizontal scrollbar */
+  -ms-overflow-style: none;
 }
 .navigation__list {
   height: 100%;
@@ -6309,7 +6306,12 @@ readers do not read off random characters that represent icons */
 }
 .navigation__wrapper {
   flex: 1;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.navigation ::-webkit-scrollbar {
+  width: 0;
 }
 .navigation__button {
   background: none;
@@ -6332,6 +6334,11 @@ readers do not read off random characters that represent icons */
   text-align: center;
   white-space: nowrap;
   text-decoration: none;
+  padding: 4px 0;
+  border-bottom: 1px solid transparent;
+}
+.navigation__link:hover {
+  border-bottom: 1px solid #C83660;
 }
 .navigation__button, .navigation__link {
   color: inherit;
@@ -6354,14 +6361,16 @@ readers do not read off random characters that represent icons */
   align-items: center;
   justify-content: center;
 }
-.language-switcher::before {
+.language-switcher span {
+  margin-right: 8px;
+}
+.language-switcher span::before {
   content: "";
   margin-right: 8px;
 }
 .language-switcher__link {
   color: #ffffff;
   text-decoration: none;
-  margin-left: 8px;
   background-color: #C83660;
   border-radius: 8px;
   color: #ffffff;
@@ -6380,18 +6389,22 @@ readers do not read off random characters that represent icons */
  * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
  */
 .faq-pillar {
-  margin: 0;
-  padding: 0;
+  margin-bottom: 16px;
 }
-.faq-pillar__handler {
+.faq-pillar > summary {
+  list-style: none;
+}
+.faq-pillar > summary::-webkit-details-marker {
   display: none;
+}
+.faq-pillar[open] p {
+  padding: 0 0 0 32px;
   margin: 0;
 }
-.faq-pillar__handler[type=checkbox]:checked ~ .faq-pillar__answer {
-  height: 100%;
-  opacity: 1;
+.faq-pillar[open] summary {
+  margin-bottom: 16px;
 }
-.faq-pillar__handler[type=checkbox]:checked ~ .faq-pillar__square {
+.faq-pillar[open] summary::before {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   -o-transform: rotate(45deg);
@@ -6399,25 +6412,20 @@ readers do not read off random characters that represent icons */
   background-color: #C83660;
 }
 .faq-pillar__question {
-  position: relative;
-  padding: 0 0 1em 2em;
-}
-.faq-pillar__title {
-  font-size: 16px;
-  cursor: pointer;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -o-user-select: none;
   margin: 0;
+  outline: 0;
+  position: relative;
+  cursor: pointer;
+  padding: 0 0 0 32px;
   font-weight: 700;
   line-height: 24px;
+  font-size: 16px;
 }
-.faq-pillar__square {
+.faq-pillar__question::before {
+  content: "";
   position: absolute;
-  top: 9.6px;
-  left: 9.6px;
+  top: 8.4px;
+  left: 8.4px;
   width: 6px;
   height: 6px;
   background-color: #757575;
@@ -6431,12 +6439,6 @@ readers do not read off random characters that represent icons */
   -webkit-user-select: none;
   -moz-user-select: none;
   -o-user-select: none;
-}
-.faq-pillar__answer {
-  opacity: 0;
-  height: 0;
-  color: #424242;
-  padding: 8px 0;
 }
 
 /**
@@ -6556,6 +6558,41 @@ readers do not read off random characters that represent icons */
   }
 }
 */
+.alert {
+  position: relative;
+  min-width: 240px;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  pointer-events: all;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+.alert__header {
+  display: flex;
+  padding: 8px 16px;
+}
+.alert__header > div:first-of-type {
+  flex: 1;
+}
+.alert p {
+  margin: 0;
+}
+.alert__title {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.alert__body {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+.alert__close-button {
+  cursor: pointer;
+  width: 100%;
+  height: 24px;
+  background-color: transparent;
+  border: 1px solid #e0e0e0;
+}
+
 /* ANIMATIONS */
 /**
  * Font
@@ -6696,7 +6733,7 @@ readers do not read off random characters that represent icons */
 .fas,
 .icon--download,
 .icon--get-started,
-.language-switcher::before {
+.language-switcher span::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
@@ -6762,6 +6799,9 @@ html {
 .home__brand p {
   text-align: center;
   font-size: 12px;
+}
+.home .button-collection .button {
+  margin-bottom: 16px;
 }
 .home .card:first-of-type {
   position: relative;

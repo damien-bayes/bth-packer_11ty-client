@@ -1,6 +1,6 @@
 {
   "name": "baythium-packer_client",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Archive your large-scale infrastructure more secure and effectively using our command-line tool and keep control of organization data",
   "main": ".eleventy.js",
   "directories": {
@@ -26,7 +26,8 @@
   "scripts": {
     "clean": "rimraf dist",
     "eleventy:build": "eleventy",
-    "eleventy:serve": "npm run clean && set ELEVENTY_ENV=\"development\" && eleventy --serve --port 10033 --watch",
+    "eleventy:serve-1": "npm run clean && set ELEVENTY_ENV=\"development\" && eleventy --serve --port 10033 --watch",
+    "eleventy:serve-2": "npm run clean && set ELEVENTY_ENV=\"production\" && eleventy --serve --port 10033 --watch",
     "eleventy:debug": "set DEBUG=\"Eleventy*\" && eleventy --serve --port 10033 --watch",
     "eleventy:watch": "eleventy --port 10033 --watch",
     "eleventy:build-quietly": "eleventy --quiet",

@@ -11,18 +11,21 @@
   align-items: center;
   justify-content: center;
 
-  &::before {
-    @extend %fa-icon;
-    @extend .fas;
-    
-    content: fa-content($fa-var-globe-americas);
+  span {
     margin-right: $sm-indent;
+
+    &::before {
+      @extend %fa-icon;
+      @extend .fas;
+      
+      content: fa-content($fa-var-globe-americas);
+      margin-right: $sm-indent;
+    }
   }
 
   &__link {
     color: $white;
     text-decoration: none;
-    margin-left: $sm-indent;
     background-color: $secondary;
     border-radius: $sm-border-radius;
     color: $white;

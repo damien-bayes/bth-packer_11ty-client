@@ -22,7 +22,7 @@
       right: 0;
       width: 512px;
       height: 512px;
-      background: url("../images/network-lines.svg") 0 0 no-repeat; 
+      background: url("../images/network-lines.svg") 0 0 no-repeat;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -33,8 +33,10 @@
       opacity: .15;
     }
 
-    &__navigation-item:not(:last-of-type) {
-      margin-right: $base-indent;
+    &__navigation-item {
+      margin-bottom: $base-indent;
+
+      &:not(:last-of-type) { margin-right: $base-indent; }
     }
 
     &__navigation-list {
@@ -50,9 +52,9 @@
       display: block;
       color: $white;
       text-decoration: none;
-      padding: $sm-indent;
+      padding: $indent-2 $sm-indent !important;
       border-bottom: 1px solid transparent;
-      line-height: $line-height-8;
+      line-height: $base-line-height;
 
       &--active {
         background-color: $alternative;
@@ -69,10 +71,7 @@
       }
     }
   
-    &__navigation {
-      color: $white;
-      margin-bottom: $base-indent;
-    }
+    &__navigation { color: $white; }
   
     &__copyright {
       display: flex;
@@ -128,13 +127,13 @@
       img {
         width: 128px;
         height: auto;
-        object-fit: contain;;
+        object-fit: contain;
         transition: -webkit-filter 200ms;
         transition: filter 200ms;
 
         &:hover {
           -webkit-filter: brightness(110%) contrast(110%);
-          filter: brightness(110%) contrast(110%)
+          filter: brightness(110%) contrast(110%);
         }
       }
     }

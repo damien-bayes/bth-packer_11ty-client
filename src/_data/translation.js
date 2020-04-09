@@ -11,24 +11,24 @@
 module.exports = {
   /* English */
   en: {
-    ecosystem: "Ecosystem",
-    supportCenter: "Support Center",
-    signUp: "Sign Up",
-    signIn: "Sign In",
+    ecosystem: "ecosystem",
+    supportCenter: "support center",
+    signUp: "sign up",
+    signIn: "sign in",
     copyright: {
       paragraphs: [
-        "All product names, trademarks and registered trademarks are property of their respective owners",
-        "Use of these names, trademarks and brands does not imply endorsement"
+        "all product names, trademarks and registered trademarks are property of their respective owners",
+        "use of these names, trademarks and brands does not imply endorsement"
       ]
     },
-    productName: "Product name",
-    clientVersion: "Client version",
-    language: "Language",
-    currentPage: "Current page",
-    websiteMode: "Website mode",
-    documentation: "Documentation",
-    download: "Download",
-    github: "GitHub"
+    productName: "product name",
+    clientVersion: "client version",
+    language: "language",
+    currentPage: "current page",
+    websiteMode: "website mode",
+    documentation: "documentation",
+    download: "download",
+    github: "github"
   },
 
   /* Russian */
@@ -39,8 +39,8 @@ module.exports = {
     signIn: "Войти",
     copyright: {
       paragraphs: [
-        "Все торговые марки и логотипы являются зарегистрированными торговыми марками их соответствующих владельцев",
-        "Использование наименований, логотипов и торговых марок не одобряется со стороны их владельцев"
+        "Все ресурсы, включая текстовую, графическую и видео информацию, защищены международными законами и соглашениями об авторских правах их соответствующих владельцев",
+        "Использование наименований, логотипов и прочих ресурсов является нарушением интеллектуальной собственности"
       ]
     },
     productName: "Наименование продукта",
@@ -50,18 +50,18 @@ module.exports = {
 
   /* German */
   de: {
-    ecosystem: "Ecosystem",
-    supportCenter: "Support Center",
-    signUp: "Sign Up",
-    signIn: "Sign In",
+    ecosystem: "Ökosystem",
+    supportCenter: "Unterstützung",
+    signUp: "Anmelden",
+    signIn: "Einloggen",
     copyright: {
       paragraphs: [
         "Alle Produktnamen, Marken und eingetragenen Marken sind Eigentum ihrer jeweiligen Inhaber",
         "Die Verwendung dieser Namen, Marken und Marken bedeutet keine Billigung"
       ]
     },
-    productName: "Product name",
-    clientVersion: "Client version",
-    language: "Language"
+    productName: "Produktname",
+    clientVersion: "Client-version",
+    language: "Sprache"
   }
 };

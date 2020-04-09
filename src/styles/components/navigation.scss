@@ -9,7 +9,6 @@
 .navigation {
   display: flex;
   color: $gray-800;
-  padding: $base-indent 0;
   
   &__list {
     height: 100%;
@@ -31,7 +30,15 @@
 
   &__wrapper {
     flex: 1;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* hide horizontal scrollbar */
+  -ms-overflow-style: none; 
+  ::-webkit-scrollbar { 
+    width: 0; 
   }
 
   &__button {
@@ -56,6 +63,12 @@
     text-align: center;
     white-space: nowrap;
     text-decoration: none;
+    padding: $indent-4 0;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      border-bottom: 1px solid $secondary;
+    }
   }
 
   &__button,

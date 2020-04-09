@@ -3,7 +3,9 @@
   layout: "_layouts/base.njk",
   title: "Home",
   changeFrequency: "monthly",
-  priority: 0.8
+  priority: 0.8,
+  translationKey: "home",
+  locale: "en"
 }
 ---
 
@@ -20,7 +22,7 @@
   <!-- Deck 1 -->
   <div class="card">
     <div class="card__body">
-  
+
       <div class="row">
         
         <!-- Subdeck 1 -->
@@ -42,9 +44,9 @@
 
           <!-- Button collection -->
           <div class="button-collection button-collection--left-aligned">
-            <a class="button button--outlined-primary button--rounded mr-2 button--small"><span class="icon icon--get-started"></span>{{ translation[app.locale].documentation }}</a>
-            <a href="https://github.com/damien-bayes/baythium-packer_client" target="_blank" class="button button--outlined-primary button--rounded button--small mr-2"><span class="icon icon--github"></span>{{ translation[app.locale].github }}</a>
-            <a href="javascript:" target="_blank" class="button button--primary button--rounded button--small"><span class="icon icon--download"></span>{{ translation[app.locale].download }}</a>
+            <a class="button button--outlined-primary button--rounded mr-2 button--small"><span class="icon icon--get-started"></span>{{ translation[app.locale].documentation | capitalize }}</a>
+            <a href="https://github.com/damien-bayes/baythium-packer_client" target="_blank" class="button button--outlined-primary button--rounded button--small mr-2"><span class="icon icon--github"></span>{{ translation[app.locale].github | capitalize }}</a>
+            <a href="javascript:" target="_blank" class="button button--primary button--rounded button--small"><span class="icon icon--download"></span>{{ translation[app.locale].download | capitalize }}</a>
           </div>
 
         </div>

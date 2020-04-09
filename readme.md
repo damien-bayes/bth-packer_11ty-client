@@ -43,7 +43,7 @@ Docker plays an essential part on the Baythium Ecosystem and if you are familiar
 # Build a new docker image using the Dockerfile
 sudo docker build \
 -t \
-baythium-ecosystem/baythium-packer_client:1.7 .
+baythium-ecosystem/baythium-packer_client:1.8 .
 
 # Run the Baythium Packer in an isolated container using the specified options
 sudo docker run \
@@ -53,7 +53,7 @@ sudo docker run \
 --net baythium-network-1 \
 -e "VIRTUAL_HOST=packer.baythium.com, packer.bayesianflow.space" \
 --restart=on-failure:3 \
-baythium-ecosystem/baythium-packer_client:1.7
+baythium-ecosystem/baythium-packer_client:1.8
 ```
 
 ---

@@ -11,7 +11,7 @@
 
     <!-- Deck 1: Language Switcher -->
     <div class="language-switcher mb-4">
-      <span class="visible-xs">{{ translation[app.locale].language }}:</span>
+      <span class="visible-xs">{{ translation[app.locale].language | capitalize }}:</span>
 
       <a href="javascript:" class="language-switcher__link">
         {% for lang in app.languages %}
@@ -32,7 +32,7 @@
 
           {# Compare the navigation url and special Eleventy-provided page.url variable to find the current page #}
           <li data-navigation-id="{{ id }}" class="app-footer__navigation-item">
-            <a {% if page.url == url %} class="app-footer__navigation-link app-footer__navigation-link--active" {% else %} class="app-footer__navigation-link" {% endif %} href="{{ url }}">{{ name }}</a>
+            <a {% if page.url == url %} class="app-footer__navigation-link app-footer__navigation-link--active" {% else %} class="app-footer__navigation-link" {% endif %} href="{{ url }}">{{ name | title }}</a>
           </li>
 
         {% if loop.last %}</ul>{% endif %}
@@ -48,16 +48,16 @@
     <div class="app-footer__copyright">
       <p>&copy; {% currentYear %} {{ app.company.name }}</p>
       <p>
-        <span>{{ translation[app.locale].copyright.paragraphs[0] }}</span>
-        <span>{{ translation[app.locale].copyright.paragraphs[1] }}</span>
+        <span>{{ translation[app.locale].copyright.paragraphs[0] | capitalize }}</span>
+        <span>{{ translation[app.locale].copyright.paragraphs[1] | capitalize }}</span>
       </p>
     </div>
 
     <!-- Deck 5: Synthesis -->
     <div class="app-footer__synthesis">
       <ul>
-        <li>{{ translation[app.locale].productName }}: <span>{{ app.name }}</span></li>
-        <li>{{ translation[app.locale].clientVersion }}: <span>{{ app.version }}</span></li>
+        <li>{{ translation[app.locale].productName | title }}: <span>{{ app.name }}</span></li>
+        <li>{{ translation[app.locale].clientVersion | title }}: <span>{{ app.version }}</span></li>
       </ul>
     </div>
 

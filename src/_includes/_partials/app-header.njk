@@ -6,26 +6,31 @@
   Initial author: Damien Bayes <damien.bayes.db@gmail.com>
 #}
 
-{% if app.environment === "development" %}
+{# Alert #}
+{%- if app.environment == "development" %}
 <div class="alert alert--warning">
-  <p>Website mode: <strong>{{ app.environment }}</strong></p>
-  <p>{{ translation[app.locale].currentPage }}: {{ page.url | url }}</p>
+  <div class="alert__body">
+    <p><b>{{ translation[app.locale].websiteMode | title }}:</b><span class="ml-2">{{ app.environment }}</span></p>
+    <p><b>{{ translation[app.locale].currentPage | title }}:</b><span class="ml-2">{{ page.url | url }}</span></p>
+  </div>
 </div>
-{% endif %}
+{%- endif %}
 
 <header class="app-header">
   <div class="container">
 
     <!-- Deck 1: System -->
     <div class="app-header__system">
-      <ul>
-        <li>{{ translation[app.locale].ecosystem }}</li>
-        <li>{{ translation[app.locale].supportCenter }}</li>
-      </ul>
-      <ul>
-        <li>{{ translation[app.locale].signUp }}</li>
-        <li>{{ translation[app.locale].signIn }}</li>
-      </ul>
+      <div class="row">
+        <div class="column-6">
+          <a href="javascript:">{{ translation[app.locale].ecosystem | title }}</a>
+          <a href="javascript:">{{ translation[app.locale].supportCenter | title }}</a>
+        </div>
+        <div class="column-6" style="text-align: right;">
+          <a href="javascript:">{{ translation[app.locale].signUp | title }}</a>
+          <a href="javascript:">{{ translation[app.locale].signIn | title }}</a>
+        </div>
+      </div>
     </div>
 
     <!-- Deck 2 -->
@@ -42,7 +47,7 @@
         <div class="app-header__parallelogram">
           <!-- Language switcher -->
           <div class="language-switcher">
-            <span class="visible-xs">{{ translation[app.locale].language }}:</span>
+            <span class="visible-xs">{{ translation[app.locale].language | title }}:</span>
 
             <a href="javascript:" class="language-switcher__link">
               {% for lang in app.languages %}
@@ -56,8 +61,7 @@
 
     <!-- Deck 3: Navigation -->
     <nav class="navigation">
-      <button 
-        class="navigation__button">&#8249;</button>
+      <!-- <button class="navigation__button">&#8249;</button> -->
       
       <div class="navigation__wrapper">
         {%- for navigation in navigation[ app.locale ].items -%}
@@ -68,15 +72,14 @@
             {%- set url = navigation.url %}
 
             <li class="navigation__item" data-navigation-id="{{ id }}">
-              <a class="navigation__link" href="{{ url }}">{{ name }}</a>
+              <a class="navigation__link" href="{{ url }}">{{ name | title }}</a>
             </li>
 
           {% if loop.last %}</ul>{% endif %}
         {%- endfor -%}
       </div>
 
-      <button 
-        class="navigation__button">&#8250;</button>
+      <!-- <button class="navigation__button">&#8250;</button> -->
     </nav>
 
   </div>

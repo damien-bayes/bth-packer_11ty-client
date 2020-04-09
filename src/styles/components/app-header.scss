@@ -16,22 +16,13 @@
 
   &__system {
     display: flex;
+    flex-direction: column;
+    padding: $indent-4 $indent-8;
 
-    ul {
-      flex: 50% 0 1;
-      list-style: none;
-      display: flex;
-      margin: 0;
-      padding: 0;
+    a {
+      text-decoration: none;
 
-      li:not(:last-of-type) {
-        margin-right: $base-indent;
-      }
-    }
-
-    ul:last-of-type {
-      align-items: flex-end;
-      justify-content: flex-end;
+      &:not(:last-of-type) { margin-right: $sm-indent; }
     }
   }
 
@@ -39,9 +30,7 @@
     display: flex;
     border-bottom: 1px solid $gray-200;
     
-    > div {
-      flex: 50% 0 1;
-    }
+    > div { flex: 50% 0 1; }
 
     > div:last-of-type {
       display: flex;
