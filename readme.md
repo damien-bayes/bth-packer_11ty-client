@@ -42,9 +42,9 @@ Docker plays an essential part on the Baythium Ecosystem and if you are familiar
 
 ```bash
 # Build a new docker image using the Dockerfile
-sudo docker build \
--t \
-baythium-ecosystem/baythium-packer_client:1.9 .
+sudo docker build . \
+--file Dockerfile \
+--tag baythium-ecosystem/baythium-packer_client:1.9-$(date +%s)
 
 # Run the Baythium Packer in an isolated container using the specified options
 sudo docker run \
