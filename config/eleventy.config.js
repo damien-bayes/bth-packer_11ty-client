@@ -74,7 +74,10 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.addPassthroughCopy({
     "node_modules/@damien-bayes/baythium-aspectus_package/dist/baythium-aspectus.css": "styles/baythium-aspectus.min.css",
-    "node_modules/@damien-bayes/baythium-aspectus_package/dist/baythium-aspectus.js": "js/baythium-aspectus.min.js"
+    "node_modules/@damien-bayes/baythium-aspectus_package/dist/baythium-aspectus.js": "js/baythium-aspectus.min.js",
+
+    "node_modules/@damien-bayes/baythium-vector_package/dist/baythium-vector.css": "styles/baythium-vector.min.css",
+    "node_modules/@damien-bayes/baythium-vector_package/dist/fonts/fontawesome": "fonts/fontawesome"
   });
 
   /* SHORTCODES */

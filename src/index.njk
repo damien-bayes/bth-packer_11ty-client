@@ -45,7 +45,10 @@
           <!-- Button collection -->
           <div class="button-collection button-collection--left-aligned">
             <a class="button button--outlined-primary button--rounded mr-2 button--small"><span class="icon icon--get-started"></span>{{ translation[app.locale].documentation | capitalize }}</a>
-            <a href="https://github.com/damien-bayes/baythium-packer_client" target="_blank" class="button button--outlined-primary button--rounded button--small mr-2"><span class="icon icon--github"></span>{{ translation[app.locale].github | capitalize }}</a>
+
+            <!-- WARNING: External link (All external links tend to open in new windows or browser tabs) -->
+            <a href="https://github.com/damien-bayes/baythium-packer_client" target="_blank" rel="noopener noreferrer" class="button button--outlined-primary button--rounded button--small mr-2"><span class="icon icon--github"></span>{{ translation[app.locale].github | capitalize }}<span class="icon icon--external-link"></span></a>
+
             <a href="javascript:" target="_blank" class="button button--primary button--rounded button--small"><span class="icon icon--download"></span>{{ translation[app.locale].download | capitalize }}</a>
           </div>
 

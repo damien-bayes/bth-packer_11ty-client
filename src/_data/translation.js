@@ -28,7 +28,8 @@ module.exports = {
     websiteMode: "website mode",
     documentation: "documentation",
     download: "download",
-    github: "github"
+    github: "github",
+    noJs: "We are sorry but this website doesn't work properly without JavaScript enabled. Please enable it to continue"
   },
 
   /* Russian */

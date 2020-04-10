@@ -64,15 +64,19 @@ description: "Large-scale and secure folder and file archiver for automating you
     <meta name="keywords" content="{{ keywords }}"/>
     <meta name="description" content="{{ description }}"/>
 
+    {# WARNING: Link resources with a high priority MUST go first #}
     <link rel="canonical" href="{{ app.url }}"/>
+    <link rel="dns-prefetch" href="{{ app.url }}"/>
 
     <link rel="icon" href="/favicon.ico"/>
 
     <link href="/styles/baythium-aspectus.min.css" rel="stylesheet" media="all"/>
-    <link href="/styles/custom-baythium-aspectus.css" rel="stylesheet" media="all"/>
+    <link href="/styles/baythium-vector.min.css" rel="stylesheet" media="all"/>
+
+    <link href="/styles/custom-baythium-aspectus.min.css" rel="stylesheet" media="all"/>
   </head>
 
-  <body id="app">
+  <body id="app" class="baythium-aspectus baythium-aspectus--light no-js">
     {% include "_partials/app-header.njk" %}
     <main class="container">
       {# "Dynamic" content goes here #}
@@ -81,11 +85,15 @@ description: "Large-scale and secure folder and file archiver for automating you
     {% include "_partials/app-footer.njk" %}
 
     <noscript>
-      <strong>We're sorry but this website doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong>{{ translation[app.locale].noJs }}</strong>
     </noscript>
 
     <script src="/js/baythium-aspectus.min.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--
+      Global site tag (gtag.js) - Google Analytics
+
+      WARNING: For best practice, establish early connections to important third-party origins
+    -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163071822-1"></script>
 
     <!-- 1. Capture the javascript content as a nunjucks variable -->

@@ -29,8 +29,9 @@ npm run eslint
 # Install Eleventy (Static site generator)
 npm install -g @11ty/eleventy
 
-# Update the Baythium aspectus package from the Github repository (Optional)
+# Update Baythium packages from the repositories (Optional)
 npm update @damien-bayes/baythium-aspectus_package --save
+npm update @damien-bayes/baythium-vector_package --save
 ```
 
 ### Docker
@@ -85,3 +86,5 @@ The list of references used to improve the project planning and its functionalit
 11. https://www.belter.io/eleventy-sitemap
 12. https://mozilla.github.io/nunjucks/templating.html
 13. https://css-tricks.com/quick-reminder-that-details-summary-is-the-easiest-way-ever-to-make-an-accordion
+14. https://css-tricks.com/prefetching-preloading-prebrowsing
+15. https://www.reliablesoft.net/noreferrer-noopener

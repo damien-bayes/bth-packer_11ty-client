@@ -11,18 +11,6 @@
   align-items: center;
   justify-content: center;
 
-  span {
-    margin-right: $sm-indent;
-
-    &::before {
-      @extend %fa-icon;
-      @extend .fas;
-      
-      content: fa-content($fa-var-globe-americas);
-      margin-right: $sm-indent;
-    }
-  }
-
   &__link {
     color: $white;
     text-decoration: none;

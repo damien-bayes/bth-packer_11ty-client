@@ -9,15 +9,7 @@
 /* VARIABLES */
 @import "variables/all"; 
 
-/* MIXINS */
-@import "mixins/font";
-
-/* UTILS */
-@import "icons";
-
 /* COMPONENTS */
-@import "components/font";
-
 @import "components/app-header";
 @import "components/app-footer";
 @import "components/navigation";
@@ -26,13 +18,7 @@
 @import "components/card";
 @import "components/alert";
 
-/* ANIMATIONS */
-@import "animations/font";
-
 /* CUSTOM MODIFICATIONS */
-@import "fonts/solid";
-@import "fonts/brands";
-
 html { 
   height: 100%;
   scroll-behavior: smooth; 
@@ -103,40 +89,6 @@ html {
       object-fit: contain;
       z-index: -1;
       opacity: .25;
-    }
-  }
-}
-
-/* ICONS */
-.icon {
-  display: flex;
-  align-items: center;
-  margin-right: $sm-indent;
-
-  &--get-started {
-    @extend %fa-icon;
-    @extend .fas;
-
-    &:before {
-      content: fa-content($fa-var-book);
-    }
-  }
-
-  &--github {
-    @extend %fa-icon;
-    @extend .fab;
-
-    &:before {
-      content: fa-content($fa-var-github-square);
-    }
-  }
-
-  &--download {
-    @extend %fa-icon;
-    @extend .fas;
-
-    &:before {
-      content: fa-content($fa-var-cloud-download-alt);
     }
   }
 }
