@@ -47,8 +47,7 @@
         <div class="app-header__parallelogram">
           <!-- Language switcher -->
           <div class="language-switcher">
-            <span class="icon icon--language"></span>
-            <span class="visible-xs">{{ translation[app.locale].language | title }}:</span>
+            <span class="icon icon--globe visible-xs">{{ translation[app.locale].language | title }}:</span>
 
             <a href="javascript:" class="language-switcher__link">
               {% for lang in app.languages %}

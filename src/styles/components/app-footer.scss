@@ -10,7 +10,7 @@
     color: $white;
     background-color: $primary;
     background: linear-gradient(120deg, rgba(58,31,93,1) 0%, rgba(40,12,79,1) 100%);
-    padding: $base-indent;
+    padding: $xl-indent $base-indent;
     position: relative;
     overflow: hidden;
     z-index: 0;

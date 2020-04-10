@@ -18,18 +18,23 @@
   
   <!-- Deck 1 -->
   <div class="row">
+
     <!-- Subdeck 1 -->
-    <div class="column-6">
-      <h1>{{ title }}</h1>
-      <p>The requested resource could not be found but may be available in the future</p>
+    <div class="sm-column-6 sm-order-1 order-2">
+      <div class="page-not-found__content">
+        <h1>{{ title }}</h1>
+        <p>The requested resource could not be found but may be available in the future</p>
+        <a class="button button--primary button--rounded" style="display: block;" href="{{ '/' | url }}">Go Home</a>
+      </div>
     </div>
 
     <!-- Subdeck 2 -->
-    <div class="column-6">
+    <div class="sm-column-6 sm-order-2 order-1">
       <div class="page-not-found__image">
         <img src="{{ '/' | url }}images/page-not-found.svg" alt="{{ app.name }}"/>
       </div>
     </div>
-  </div>
 
+  </div>
+  
 </section>

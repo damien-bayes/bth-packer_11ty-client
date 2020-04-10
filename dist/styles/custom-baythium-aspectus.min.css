@@ -233,7 +233,7 @@
   color: #ffffff;
   background-color: #3A1F5D;
   background: linear-gradient(120deg, #3a1f5d 0%, #280c4f 100%);
-  padding: 16px;
+  padding: 32px 16px;
   position: relative;
   overflow: hidden;
   z-index: 0;
@@ -431,6 +431,9 @@
   align-items: center;
   justify-content: center;
 }
+.language-switcher span {
+  margin-right: 8px;
+}
 .language-switcher__link {
   color: #ffffff;
   text-decoration: none;
@@ -547,7 +550,7 @@
    * as much space as possible, ensuring footers are aligned to the bottom.
    */
   flex: 1 1 auto;
-  padding: 16px;
+  padding: 32px;
   color: #000000;
   border-bottom: 1px solid #eeeeee;
 }
@@ -663,28 +666,29 @@ html {
 }
 
 .section {
-  padding: 16px 0;
+  padding: 32px 0;
 }
 
 .button {
+  display: inline-flex !important;
   text-decoration: none;
 }
 
 /* PAGES */
-.page-not-found__image {
+.page-not-found .row {
   display: flex;
   align-items: center;
-  padding: 16px;
+  text-align: center;
 }
 .page-not-found__image img {
-  width: 512px;
+  max-width: 512px;
   height: auto;
 }
 
 .home__brand {
   display: flex;
   align-items: center;
-  padding: 16px;
+  padding: 32px 0;
   flex-direction: column;
 }
 .home__brand img {
@@ -719,4 +723,8 @@ html {
   object-fit: contain;
   z-index: -1;
   opacity: 0.25;
+}
+.home .card__body .row {
+  display: flex;
+  align-items: center;
 }

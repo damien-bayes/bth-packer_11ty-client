@@ -11,7 +11,7 @@
 
     <!-- Deck 1: Language Switcher -->
     <div class="language-switcher mb-4">
-      <span class="visible-xs">{{ translation[app.locale].language | capitalize }}:</span>
+      <span class="icon icon--globe visible-xs">{{ translation[app.locale].language | capitalize }}:</span>
 
       <a href="javascript:" class="language-switcher__link">
         {% for lang in app.languages %}

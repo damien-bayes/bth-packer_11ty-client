@@ -25,20 +25,25 @@ html {
 }
 
 .section { 
-  padding: $base-indent 0; 
+  padding: $xl-indent 0; 
 }
 
-.button { text-decoration: none; }
+.button { 
+  display: inline-flex !important;
+  text-decoration: none;
+}
 
 /* PAGES */
 .page-not-found {
-  &__image {
+  & .row {
     display: flex;
     align-items: center;
-    padding: $base-indent;
+    text-align: center;
+  }
 
+  &__image {
     img {
-      width: 512px;
+      max-width: 512px;
       height: auto;
     }
   }
@@ -48,7 +53,7 @@ html {
   &__brand {
     display: flex;
     align-items: center;
-    padding: $base-indent;
+    padding: $xl-indent 0;
     flex-direction: column;
 
     img {
@@ -90,5 +95,10 @@ html {
       z-index: -1;
       opacity: .25;
     }
+  }
+
+  .card__body .row {
+    display: flex;
+    align-items: center;
   }
 }
