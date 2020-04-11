@@ -91,9 +91,9 @@
     }
   
     &__synthesis {
-      display: flex;
-      justify-content: flex-end;
-  
+      display: block;
+      text-align: center;
+      
       ul {
         display: inline-flex;
         font-size: $sm-font-size;

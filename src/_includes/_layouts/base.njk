@@ -16,7 +16,7 @@ description: "Large-scale and secure folder and file archiver for automating you
 
 <!doctype html>
 
-<html lang="{{ app.locale }}">
+<html lang="{{ app.locale }}" prefix="og:http://ogp.me/ns#">
   <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -38,18 +38,16 @@ description: "Large-scale and secure folder and file archiver for automating you
     <!-- Windows Phone -->
     <meta name="msapplication-navbutton-color" content="#ffffff"/>
     <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff"/>
-
-    <!-- <meta name="google-site-verification" content="" /> -->
-    <!-- <script src="https://cdn.optimizely.com/js/11399244737.js"></script> -->
+    <meta name="apple-mobi tps://cdn.optimizely.com/js/11399244737.js"></script>
 
     <!-- <meta name="monetization" content="$pay.stronghold.co/1a155e3a09e210742be8c38ba7cab4795c4"/> -->
 
-    <!-- Open Graph Protocol / Facebook -->
+    <!-- Open Graph Protocol for Facebook, Telegram -->
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="{{ app.name }}"/>
     <meta property="og:site_name" content="{{ app.name }}"/>
     <meta property="og:description" content="{{ description }}"/>
+    <meta property="og:url" content="{{ app.url }}"/>
     <!-- <meta property="og:image" content="{{ app.image }}"/> -->
 
     <!-- Twitter -->
@@ -78,7 +76,7 @@ description: "Large-scale and secure folder and file archiver for automating you
 
   <body id="app" class="baythium-aspectus baythium-aspectus--light no-js">
     {% include "_partials/app-header.njk" %}
-    <main class="container">
+    <main class="container-1">
       {# "Dynamic" content goes here #}
       {{ content | safe }}
     </main>

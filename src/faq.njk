@@ -16,15 +16,15 @@
 #}
 
 <!-- FAQ Page -->
-<section class="section faq">
+<section class="section-1 faq">
 
-  <div class="card">
-    <div class="card__body">
+  <div class="card-1">
+    <div class="card-1__body">
 
       <!-- Headline -->
-      <div class="headline headline--extra-large">
-        <h1 class="headline__title">{{ title }}</h1>
-        <p class="headline__description">Find answers to frequently asked questions. See the most common topics and more.</p>
+      <div class="headline-1 headline-1--xl">
+        <h1 class="headline-1__title">{{ title }}</h1>
+        <p class="headline-1__description">Find answers to frequently asked questions. See the most common topics and more.</p>
       </div>
 
       {# Start looping through faq items #}
@@ -36,7 +36,7 @@
 
         <details data-faq-id="{{ id }}" class="faq-pillar" {% if loop.first %} open {% endif %}>
           <summary class="faq-pillar__question">{{ question }}</summary>
-          <p>{{ answer }}</p>
+          <p class="faq-pillar__answer">{{ answer }}</p>
         </details>
 
       {%- endfor -%}

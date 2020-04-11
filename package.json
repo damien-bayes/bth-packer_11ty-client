@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "dependencies": {
-    "@damien-bayes/baythium-aspectus_package": "^1.0.3",
+    "@damien-bayes/baythium-aspectus_package": "^1.0.10",
     "@damien-bayes/baythium-vector_package": "^1.0.4",
     "dayjs": "^1.8.23",
     "nunjucks": "^3.2.1"

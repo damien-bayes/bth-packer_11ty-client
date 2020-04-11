@@ -6,19 +6,19 @@
   Initial author: Damien Bayes <damien.bayes.db@gmail.com>
 #}
 
-<div class="card mrmd--2">
-  <div class="card__body">
+<div class="card-1 mr-md-1--2">
+  <div class="card-1__body">
 
     <!-- Headline -->
-    <div class="headline">
-      <h2 class="headline__title">Recent Patch Notes</h2>
+    <div class="headline-1">
+      <h2 class="headline-1__title">Recent Patch Notes</h2>
     </div>
 
     {# Start looping through patch notes #}
     {% for note in collections.patch_notes %}
       {% if loop.first %}<ul class="list">{% endif %}
         <div>
-          <a href="{{ note.url | url }}">{{ note.data.title }}<span class="badge badge--alternative badge--rounded">{{ note.data.date | humanReadableFormat }}</span></a>
+          <a href="{{ note.url | url }}">{{ note.data.title }}<span class="badge-1 badge-1--alternative badge-1--rounded">{{ note.data.date | humanReadableFormat }}</span></a>
         </div>
       {% if loop.last %}</ul>{% endif %}
     {% endfor %}

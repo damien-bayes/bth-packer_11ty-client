@@ -11,7 +11,8 @@
 
 ```bash
 # Automatically run an Eleventy web server on 127.0.0.1:10033 for testing it out
-npm run eleventy:serve
+npm run eleventy:serve-1
+npm run eleventy:serve-2
 
 # Build a project for production
 npm run eleventy:build

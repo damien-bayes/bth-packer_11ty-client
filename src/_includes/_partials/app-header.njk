@@ -8,25 +8,30 @@
 
 {# Alert #}
 {%- if app.environment == "development" %}
-<div class="alert alert--warning">
-  <div class="alert__body">
-    <p><b>{{ translation[app.locale].websiteMode | title }}:</b><span class="ml-2">{{ app.environment }}</span></p>
-    <p><b>{{ translation[app.locale].currentPage | title }}:</b><span class="ml-2">{{ page.url | url }}</span></p>
+<div class="alert-1 alert-1--danger">
+  <div class="alert-1__header">
+    <div>{{ translation[app.locale].warning }}</div>
+    <div class="alert-1__close-button">&times;</div>
+  </div>
+  <div class="alert-1__body">
+    <p><b class="mr-1--2">{{ translation[app.locale].websiteMode | title }}:</b><span>{{ app.environment }}</span></p>
+    <p><b class="mr-1--2">{{ translation[app.locale].currentPage | title }}:</b><span>{{ page.url | url }}</span></p>
   </div>
 </div>
 {%- endif %}
 
 <header class="app-header">
-  <div class="container">
+  <div class="container-1">
 
     <!-- Deck 1: System -->
     <div class="app-header__system">
-      <div class="row">
-        <div class="column-6">
+      <div class="row-1">
+        <div class="column-1--6">
           <a href="javascript:">{{ translation[app.locale].ecosystem | title }}</a>
           <a href="javascript:">{{ translation[app.locale].supportCenter | title }}</a>
         </div>
-        <div class="column-6" style="text-align: right;">
+
+        <div class="column-1--6" style="text-align: right;">
           <a href="javascript:">{{ translation[app.locale].signUp | title }}</a>
           <a href="javascript:">{{ translation[app.locale].signIn | title }}</a>
         </div>
@@ -46,8 +51,8 @@
       <div>
         <div class="app-header__parallelogram">
           <!-- Language switcher -->
-          <div class="language-switcher">
-            <span class="icon icon--globe visible-xs">{{ translation[app.locale].language | title }}:</span>
+          <div class="language-switcher m-1--0">
+            <span class="icon icon--globe display-1--none display-sm-1--block">{{ translation[app.locale].language | title }}:</span>
 
             <a href="javascript:" class="language-switcher__link">
               {% for lang in app.languages %}

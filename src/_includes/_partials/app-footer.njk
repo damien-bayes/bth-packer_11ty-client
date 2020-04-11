@@ -7,10 +7,10 @@
 #}
 
 <footer class="app-footer">
-  <div class="container">
+  <div class="container-1">
 
     <!-- Deck 1: Language Switcher -->
-    <div class="language-switcher mb-4">
+    <div class="language-switcher">
       <span class="icon icon--globe visible-xs">{{ translation[app.locale].language | capitalize }}:</span>
 
       <a href="javascript:" class="language-switcher__link">
@@ -54,7 +54,7 @@
     </div>
 
     <!-- Deck 5: Synthesis -->
-    <div class="app-footer__synthesis">
+    <div class="app-footer__synthesis text-sm-1--right">
       <ul>
         <li>{{ translation[app.locale].productName | title }}: <span>{{ app.name }}</span></li>
         <li>{{ translation[app.locale].clientVersion | title }}: <span>{{ app.version }}</span></li>

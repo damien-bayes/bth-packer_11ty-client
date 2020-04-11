@@ -8,6 +8,8 @@
 
 .faq-pillar {
   margin-bottom: $base-indent;
+  padding: $base-indent 0;
+  border-bottom: 1px solid $gray-200;
 
   & > summary {
     list-style: none;

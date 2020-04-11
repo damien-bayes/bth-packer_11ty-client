@@ -49,11 +49,6 @@
       margin-right: $base-indent;
       transition: -webkit-filter 200ms;
       transition: filter 200ms;
-
-      &:hover {
-        -webkit-filter: brightness(110%) contrast(110%);
-        filter: brightness(110%) contrast(110%)
-      }
     }
 
     a {
@@ -61,6 +56,11 @@
       align-items: center;
       font-weight: bold;
       text-decoration: none;
+
+      &:hover img {
+        -webkit-filter: brightness(110%) contrast(110%);
+        filter: brightness(110%) contrast(110%);
+      }
     }
   }
 

@@ -190,15 +190,15 @@
   transition: -webkit-filter 200ms;
   transition: filter 200ms;
 }
-.app-header__brand img:hover {
-  -webkit-filter: brightness(110%) contrast(110%);
-  filter: brightness(110%) contrast(110%);
-}
 .app-header__brand a {
   display: flex;
   align-items: center;
   font-weight: bold;
   text-decoration: none;
+}
+.app-header__brand a:hover img {
+  -webkit-filter: brightness(110%) contrast(110%);
+  filter: brightness(110%) contrast(110%);
 }
 .app-header__parallelogram {
   position: relative;
@@ -306,8 +306,8 @@
   text-align: center;
 }
 .app-footer__synthesis {
-  display: flex;
-  justify-content: flex-end;
+  display: block;
+  text-align: center;
 }
 .app-footer__synthesis ul {
   display: inline-flex;
@@ -364,7 +364,6 @@
   margin: 0;
   padding: 0;
   display: flex;
-  padding: 0 16px;
 }
 .navigation__button:first-of-type {
   border-right: 1px solid #e0e0e0;
@@ -404,7 +403,7 @@
   text-align: center;
   white-space: nowrap;
   text-decoration: none;
-  padding: 4px 0;
+  padding: 8px 16px;
   border-bottom: 1px solid transparent;
 }
 .navigation__link:hover {
@@ -430,6 +429,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 16px;
 }
 .language-switcher span {
   margin-right: 8px;
@@ -456,6 +456,8 @@
  */
 .faq-pillar {
   margin-bottom: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #eeeeee;
 }
 .faq-pillar > summary {
   list-style: none;
@@ -507,181 +509,15 @@
   -o-user-select: none;
 }
 
-/**
- * Card
- *
- * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
- */
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  overflow: hidden;
-  word-wrap: break-word;
-  background-clip: border-box;
-  background-color: #ffffff;
-  margin-bottom: 16px;
-}
-.card--scalable {
-  transform: scale(1);
-  transition: transform 0.3s ease-in;
-}
-.card--scalable:hover {
-  transform: scale(1.05);
-}
-.card__link {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  margin: 8px;
-  background-color: #ffffff;
-  border: 1px solid #f5f5f5;
-  position: relative;
-  transition: box-shadow 0.3s ease-in;
-}
-.card__link:hover {
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.02);
-}
-.card__body {
-  /*
-   * Enable `flex-grow: 1` for decks and groups so that card blocks take up
-   * as much space as possible, ensuring footers are aligned to the bottom.
-   */
-  flex: 1 1 auto;
-  padding: 32px;
-  color: #000000;
-  border-bottom: 1px solid #eeeeee;
-}
-.card__image-wrapper {
-  position: relative;
-  display: flex;
-  overflow: hidden;
-}
-.card__image-wrapper::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  content: "";
-  background-color: #ffffff;
-  opacity: 0.3;
-}
-.card__image-wrapper:hover .card__image--is-scalable {
-  transform: translatz(0) scale(1.05);
-  /* Safari and Chrome */
-  -webkit-transform: translateZ(0) scale(1.05);
-  /* Firefox */
-  -moz-transform: scale(1.05);
-  /* IE 9 */
-  -ms-transform: scale(1.05);
-  /* Opera */
-  -o-transform: translatz(0) scale(1.05);
-  backface-visibility: hidden;
-}
-.card__image-wrapper--is-empty-image {
-  flex-direction: column;
-  text-align: center;
-  height: 192px;
-  justify-content: center;
-}
-.card__image-wrapper--is-empty-image img {
-  filter: opacity(25%) grayscale(100%);
-  height: 96px;
-}
-.card__image-wrapper--is-empty-image span {
-  margin-top: 8px;
-  color: #757575;
-  font-size: 14px;
-}
-.card__image {
-  position: relative;
-  /* Required because we use flexbox and this inherently applies align-self: stretch */
-  width: 100%;
-  height: 198px;
-  object-fit: cover;
-}
-.card__image--is-scalable {
-  transition: transform 0.3s ease-in-out;
-  transform: scale(1);
-}
-.card__action-bar {
-  flex: 0;
-  padding: 16px;
-}
-
-/*
-@include media-breakpoint-down(md) {
-  .card {
-    &--is-scalable {
-      &:hover {
-        transform: none;
-      }
-    }
-  }
-}
-*/
-.alert {
-  position: relative;
-  min-width: 240px;
-  backface-visibility: hidden;
-  transform: translate3d(0, 0, 0);
-  pointer-events: all;
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
-}
-.alert__header {
-  display: flex;
-  padding: 8px 16px;
-}
-.alert__header > div:first-of-type {
-  flex: 1;
-}
-.alert p {
-  margin: 0;
-}
-.alert__title {
-  margin-bottom: 5px;
-  font-size: 16px;
-}
-.alert__body {
-  font-size: 14px;
-  padding: 8px 16px;
-}
-.alert__close-button {
-  cursor: pointer;
-  width: 100%;
-  height: 24px;
-  background-color: transparent;
-  border: 1px solid #e0e0e0;
-}
-
 /* CUSTOM MODIFICATIONS */
-html {
-  height: 100%;
-  scroll-behavior: smooth;
-}
-
-.section {
-  padding: 32px 0;
-}
-
-.button {
-  display: inline-flex !important;
-  text-decoration: none;
-}
-
 /* PAGES */
-.page-not-found .row {
+.page-not-found .row-1 {
   display: flex;
   align-items: center;
   text-align: center;
 }
 .page-not-found__image img {
-  max-width: 512px;
+  max-width: 75%;
   height: auto;
 }
 

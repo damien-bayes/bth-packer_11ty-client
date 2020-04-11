@@ -15,7 +15,6 @@
     margin: 0;
     padding: 0;
     display: flex;
-    padding: 0 $base-indent;
   }
 
   &__button:first-of-type {
@@ -63,7 +62,7 @@
     text-align: center;
     white-space: nowrap;
     text-decoration: none;
-    padding: $indent-4 0;
+    padding: $indent-8 $base-indent;
     border-bottom: 1px solid transparent;
 
     &:hover {

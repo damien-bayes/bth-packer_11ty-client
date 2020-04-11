@@ -20,15 +20,15 @@
   Initial author: Damien Bayes <damien.bayes.db@gmail.com>
 #}
 
-<section class="section patch-notes">
+<section class="section-1 patch-notes">
 
-  <div class="card">
-    <div class="card__body">
+  <div class="card-1">
+    <div class="card-1__body">
     
       <!-- Headline -->
-      <div class="headline headline--extra-large">
-        <h1 class="headline__title">{{ title }}</h1>
-        <p class="headline__description">Read the latest {{ app.name }} patch notes or research historical changes</p>
+      <div class="headline-1 headline-1--xl">
+        <h1 class="headline-1__title">{{ title }}</h1>
+        <p class="headline-1__description">Read the latest {{ app.name }} patch notes or research historical changes</p>
       </div>
 
       {# Start looping notes #}
@@ -45,16 +45,16 @@
         {% if loop.last %}</ul>{% endif %}
       {% endfor %}
     </div>
-    <div class="card__action-bar">
+    <div class="card-1__action-bar">
 
       <!-- Pagination -->
-      <nav class="pagination" aria-labelledby="pagination1">
+      <nav class="pagination-1" aria-labelledby="pagination1">
         <h6 id="pagination1">This is the pagination</h6>
 
-        <ul class="pagination__list">
+        <ul class="pagination-1__list">
           {%- for pageEntry in pagination.pages %}
-            <li>
-              <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a>
+            <li class="pagination-1__item">
+              <a class="pagination-1__link" href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a>
             </li>
           {%- endfor %}
         </ul>
