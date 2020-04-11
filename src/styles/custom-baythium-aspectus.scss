@@ -19,19 +19,6 @@
 @import "components/alert";
 
 /* CUSTOM MODIFICATIONS */
-html { 
-  height: 100%;
-  scroll-behavior: smooth; 
-}
-
-.section { 
-  padding: $xl-indent 0; 
-}
-
-.button { 
-  display: inline-flex !important;
-  text-decoration: none;
-}
 
 /* PAGES */
 .page-not-found {
