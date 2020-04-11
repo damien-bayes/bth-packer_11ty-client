@@ -21,7 +21,7 @@
 <section class="section-1 home">
 
   <!-- Deck 1 -->
-  <div class="card-1">
+  <div class="card-1 home__main-card">
     <div class="card-1__body">
       <div class="row-1">
         
@@ -29,7 +29,7 @@
         <div class="sm-column-1--6">
           <div class="home__brand">
             <img src="{{ '/' | url }}images/vacuum.svg" alt="{{ app.name }}"/>  
-            <p><span class="badge-1 badge-1--extra-small badge-1--primary">Built for developers</span> in order to make technology open to the world</p>
+            <p><b>Built for developers</b> in order to make technology open to the world</p>
           </div>
         </div>
 
@@ -45,10 +45,8 @@
           <!-- Button collection -->
           <div class="button-collection-1 button-collection-1--left-aligned">
             <a href="/documentation" class="button-1 button-1--outlined-primary button-1--rounded button-1--small mr-1--2 mb-1--2"><span class="icon icon--get-started"></span>{{ translation[app.locale].documentation | capitalize }}</a>
-
             <!-- WARNING: External link (All external links tend to open in new windows or browser tabs) -->
             <a href="https://github.com/damien-bayes/baythium-packer_client" target="_blank" rel="noopener noreferrer" class="button-1 button-1--outlined-primary button-1--rounded button-1--small mr-1--2 mb-1--2"><span class="icon icon--github"></span>{{ translation[app.locale].github | capitalize }}<span class="icon icon--external-link"></span></a>
-
             <a href="javascript:" target="_blank" class="button-1 button-1--primary button-1--rounded button-1--small mb-1--2"><span class="icon icon--download"></span>{{ translation[app.locale].download | capitalize }}</a>
           </div>
 
@@ -62,12 +60,38 @@
   <div class="card-1">
     <div class="card-1__body">
 
-      <div class="headline-1 headline-1--md">
+      <!-- Headline -->
+      <div class="headline-1 headline-1--lg">
         <h2 class="headline-1__title">Features</h2>
-        <p class="headline-1__description">We do the work and you stay focused on the big picture</p>
+        <p class="headline-1__description">We combine many useful tools in a single package so whether you are small company, large enterprise or a government entity, we have all of your business file management needs covered</p>
       </div>
+
+      {# Start looping through faq items #}
+      {%- for item in feature[app.locale].items -%}
+        {% if loop.first %}<div class="row-1">{% endif %}
+
+          {%- set id = item.id %}
+          {%- set name = item.name %}
+          {%- set description = item.description %}
+          {%- set imageUrl = item.imageUrl %}
+
+          <div class="sm-column-1--6 md-column-1--4">
+            <div class="card-1 mx-sm-1--2" data-feature-id="{{ id }}">
+              <img class="card-1__image" style="opacity: .2; filter: grayscale(100%);" src="{{ imageUrl }}" alt="{{ name }}"/>
+              <div class="card-1__body">
+                <h3>{{ name }}</h3>
+                <p>{{ description }}</p>
+              </div>
+            </div>
+          </div>
+
+        {% if loop.last %}</div>{% endif %}
+      {%- endfor -%}
 
     </div>
   </div>
+
+  <!-- Deck 3 -->
+  {# Banner: Join us on Github #}
 
 </section>

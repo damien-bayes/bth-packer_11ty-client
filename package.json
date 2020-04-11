@@ -1,7 +1,7 @@
 {
   "name": "baythium-packer_client",
-  "version": "1.0.10",
-  "description": "Archive your large-scale infrastructure more secure and effectively using our command-line tool and keep control of organization data",
+  "version": "1.0.11",
+  "description": "Effectively archive your large-scale infrastructure data using our powerful and lightweight command-line tool",
   "main": ".eleventy.js",
   "directories": {
     "doc": "docs"

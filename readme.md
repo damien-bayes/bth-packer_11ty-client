@@ -47,8 +47,10 @@ sudo docker rm baythium-packer_client && sudo docker stop baythium-packer_client
 
 # Build a new docker image using the Dockerfile
 sudo docker build . \
---file Dockerfile \
---tag baythium-ecosystem/baythium-packer_client:1.0.10-$(date +%s)
+--file dockerfile \
+--tag baythium-ecosystem/baythium-packer_client:1.0.11-$(date +%s)
+
+sudo docker images
 
 # Run the Baythium Packer in an isolated container using the specified options
 sudo docker run \
@@ -58,7 +60,7 @@ sudo docker run \
 --net baythium-network-1 \
 -e "VIRTUAL_HOST=packer.baythium.com, packer.bayesianflow.space" \
 --restart=on-failure:3 \
-baythium-ecosystem/baythium-packer_client:1.0.10-$(date +%s)
+baythium-ecosystem/baythium-packer_client:1.0.11-$(date +%s)
 ```
 
 ## CI/CD

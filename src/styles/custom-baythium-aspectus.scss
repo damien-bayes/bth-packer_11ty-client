@@ -17,6 +17,12 @@
 @import "components/faq";
 
 /* CUSTOM MODIFICATIONS */
+.icon { 
+  display: inline-flex;
+  margin-left: 4px;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
 
 /* PAGES */
 .page-not-found {
@@ -38,7 +44,7 @@
   &__brand {
     display: flex;
     align-items: center;
-    padding: $xl-indent 0;
+    padding: $xl-indent;
     flex-direction: column;
 
     img {
@@ -47,22 +53,18 @@
       margin-bottom: $base-indent;
     }
 
-    p {
-      text-align: center;
-      font-size: $xs-font-size;
-    }
+    p { text-align: center; }
   }
 
-  .button-collection {
-    .button {
-      margin-bottom: $base-indent;
-    }
-  }
-
-  .card:first-of-type {
+  &__main-card {
     position: relative;
     overflow: hidden;
     z-index: 0;
+
+    .row-1 {
+      display: flex;
+      align-items: center;
+    }
 
     &::before {
       content: "";
@@ -71,7 +73,7 @@
       right: 0;
       width: 100%;
       height: 100%;
-      background: url("../images/tiles.svg") 0 0 no-repeat; 
+      background: url("/images/tiles.svg") 0 0 no-repeat; 
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -80,10 +82,5 @@
       z-index: -1;
       opacity: .25;
     }
-  }
-
-  .card__body .row {
-    display: flex;
-    align-items: center;
   }
 }
