@@ -59,7 +59,7 @@ baythium-ecosystem/baythium-packer_client:1.9-$(date +%s)
 
 ## CI/CD
 
-We use GitHub Actions, which allow for the creation of CI/CD pipelines
+We use GitHub Actions, which allow for the creation of CI/CD pipelines directly within GitHub.
 
 ---
 
