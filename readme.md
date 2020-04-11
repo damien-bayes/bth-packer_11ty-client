@@ -57,6 +57,10 @@ sudo docker run \
 baythium-ecosystem/baythium-packer_client:1.9
 ```
 
+## CI/CD
+
+We use GitHub Actions, which allow for the creation of CI/CD pipelines
+
 ---
 
 ## Contribution
