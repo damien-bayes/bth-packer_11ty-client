@@ -54,7 +54,7 @@ sudo docker run \
 --net baythium-network-1 \
 -e "VIRTUAL_HOST=packer.baythium.com, packer.bayesianflow.space" \
 --restart=on-failure:3 \
-baythium-ecosystem/baythium-packer_client:1.9
+baythium-ecosystem/baythium-packer_client:1.9-$(date +%s)
 ```
 
 ## CI/CD
