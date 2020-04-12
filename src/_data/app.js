@@ -37,7 +37,7 @@ const options = {
   },
 
   /* Default language */
-  locale: "en",
+  locale: process.env.LANGUAGE || "en",
 
   /* An array of all the languages the website uses */
   languages: [
@@ -56,7 +56,9 @@ const options = {
   ],
   
   buildTime: new Date(),
-  environment: process.env.ELEVENTY_ENV.replace(/"/g, "").trim()
+  environment: process.env.ELEVENTY_ENV.replace(/"/g, "").trim(),
+
+  clientId: process.env.CLIENT_ID || 0
 };
 
 module.exports = options;
