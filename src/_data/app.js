@@ -15,6 +15,9 @@ const options = {
   url: "https://packer.baythium.com",
   baseUrl: "/",
 
+  authUrl: "https://auth.baythium.com",
+  supportUrl: "https://support.baythium.com",
+
   version: p.version,
   description: p.description,
   keywords: p.keywords,
