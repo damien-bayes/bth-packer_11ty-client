@@ -10,8 +10,8 @@
   <div class="container-1">
 
     <!-- Deck 1: Language Switcher -->
-    <div class="language-switcher">
-      <span class="icon icon--globe visible-xs">{{ translation[app.locale].language | capitalize }}:</span>
+    <div class="language-switcher mb-1--5">
+      <span class="icon icon--globe">{{ translation[app.locale].language | capitalize }}:</span>
 
       <a href="javascript:" class="language-switcher__link">
         {% for lang in app.languages %}
@@ -41,7 +41,7 @@
 
     <!-- Deck 3: Brand -->
     <div class="app-footer__brand">
-      <img src="{{ '/' | url }}images/baythium-ecosystem-inverted.svg" alt="{{ app.company.name }}"/>
+      <img src="{{ '/' | url }}images/baythium-ecosystem-3.svg" alt="{{ app.company.name }}"/>
     </div>
 
     <!-- Deck 4: Copyright -->

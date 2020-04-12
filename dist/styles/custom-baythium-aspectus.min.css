@@ -517,6 +517,10 @@
   vertical-align: middle;
 }
 
+.card-1__body {
+  border: none !important;
+}
+
 /* PAGES */
 .page-not-found .row-1 {
   display: flex;
@@ -566,4 +570,32 @@
   object-fit: contain;
   z-index: -1;
   opacity: 0.25;
+}
+.home__github-banner {
+  background-color: #3A1F5D;
+  overflow: hidden;
+  z-index: 0;
+  padding: 32px;
+}
+.home__github-banner .row-1 {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+.home__github-banner::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 256px;
+  height: 256px;
+  background: url("/images/github.svg") 0 0 no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  object-fit: contain;
+  z-index: -1;
+  opacity: 0.05;
+  filter: invert(1);
 }
