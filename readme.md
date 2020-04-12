@@ -51,7 +51,7 @@ sudo docker build . \
 --tag baythium-ecosystem/baythium-packer_client:1.0.13-$(date +%s)
 
 sudo docker images
-
+ 
 # Run the Baythium Packer in an isolated container using the specified options
 sudo docker run \
 -d \
