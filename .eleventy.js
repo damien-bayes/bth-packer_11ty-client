@@ -48,13 +48,10 @@ module.exports = config => {
       "njk",
       "html", 
       "md",
-      "11ty.js",
-
-      /*
       "css",
       "svg",
-      "webp"
-      */
+      "webp",
+      "11ty.js"
     ],
 
     /* Deploy to a subdirectory with a path prefix */
