@@ -98,3 +98,4 @@ The list of references used to improve the project planning and its functionalit
 13. https://css-tricks.com/quick-reminder-that-details-summary-is-the-easiest-way-ever-to-make-an-accordion
 14. https://css-tricks.com/prefetching-preloading-prebrowsing
 15. https://www.reliablesoft.net/noreferrer-noopener
+16. https://snipcart.com/blog/11ty-javascript-static-site-generator-tutorial
