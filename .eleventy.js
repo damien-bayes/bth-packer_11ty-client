@@ -8,6 +8,7 @@
 
 const sass = require("./config/sass.config");
 const Nunjucks = require("nunjucks");
+// const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = config => {
   // Watch for modificaions in style directory
