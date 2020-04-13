@@ -99,3 +99,4 @@ The list of references used to improve the project planning and its functionalit
 14. https://css-tricks.com/prefetching-preloading-prebrowsing
 15. https://www.reliablesoft.net/noreferrer-noopener
 16. https://snipcart.com/blog/11ty-javascript-static-site-generator-tutorial
+17. https://bryanlrobinson.com/blog/using-eleventys-javascript-data-files
