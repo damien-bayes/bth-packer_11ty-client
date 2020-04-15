@@ -43,7 +43,7 @@ description: "Large-scale and secure folder and file archiver for automating you
     <!-- <meta name="monetization" content="$pay.stronghold.co/1a155e3a09e210742be8c38ba7cab4795c4"/> -->
 
     <!-- Open Graph Protocol for Facebook, Telegram -->
-    <meta property="og:type" content="article"/>
+    <meta property="og:type" content="website"/>
     <meta property="og:title" content="{{ app.name }}"/>
     <meta property="og:site_name" content="{{ app.name }}"/>
     <meta property="og:description" content="{{ description }}"/>
@@ -64,7 +64,11 @@ description: "Large-scale and secure folder and file archiver for automating you
 
     {# WARNING: Link resources with a high priority MUST go first #}
     <link rel="canonical" href="{{ app.url }}"/>
+
+    {# NOTE: DNS prefetching helps to decrease waiting time for visitors because the browser performs DNS lookups before it sends a request for resources located on other domains #}
     <link rel="dns-prefetch" href="{{ app.url }}"/>
+    <link rel="dns-prefetch" href="{{ app.supportUrl }}"/>
+    <link rel="dns-prefetch" href="{{ app.authUrl }}"/>
 
     {# 
       Mark a web page with a shortcut icon in the browser’s tab area
