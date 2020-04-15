@@ -4,6 +4,11 @@
   eleventyExcludeFromCollections: true
 }
 ---
+{# 
+  The current file is very important when you want to disallow search engines from scraping some URLs in the application
+
+  @see: http://www.robotstxt.org/robotstxt.html 
+#}
 User-agent: *
 Disallow:
 Sitemap: {{ app.url }}/sitemap.xml
