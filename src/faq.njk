@@ -3,7 +3,10 @@
   layout: "_layouts/base.njk",
   title: "FAQ",
   changeFrequency: "monthly",
-  priority: 0.7
+  priority: 0.7,
+  translationKey: "faq",
+  locale: "en",
+  description: "Find answers to frequently asked questions. See the most common topics and more"
 }
 ---
 
@@ -24,7 +27,7 @@
       <!-- Headline -->
       <div class="headline-1 headline-1--xl">
         <h1 class="headline-1__title">{{ title }}</h1>
-        <p class="headline-1__description">Find answers to frequently asked questions. See the most common topics and more.</p>
+        <p class="headline-1__description">{{ description }}</p>
       </div>
 
       {# Start looping through faq items #}

@@ -65,6 +65,10 @@
     padding: $indent-8 $base-indent;
     border-bottom: 1px solid transparent;
 
+    &--active {
+      background-color: $gray-100;
+    }
+
     &:hover {
       border-bottom: 1px solid $secondary;
     }

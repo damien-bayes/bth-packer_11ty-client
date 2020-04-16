@@ -20,32 +20,32 @@ module.exports = {
       {
         id: 2,
         name: "documentation",
-        url: "/documentation"
+        url: "/documentation/"
       },
       {
         id: 3,
         name: "patch notes",
-        url: "/patch-notes"
+        url: "/patch-notes/"
       },
       {
         id: 4,
         name: "about project",
-        url: "/about"
+        url: "/about/"
       },
       {
         id: 5,
         name: "faq",
-        url: "/faq"
+        url: "/faq/"
       },
       {
         id: 6,
         name: "contribution",
-        url: "/contribution"
+        url: "/contribution/"
       },
       {
         id: 7,
         name: "contact",
-        url: "/contact"
+        url: "/contact/"
       }
     ]
   },

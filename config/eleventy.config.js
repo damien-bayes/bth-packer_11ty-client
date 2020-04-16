@@ -80,6 +80,10 @@ module.exports = eleventyConfig => {
     "node_modules/@damien-bayes/baythium-vector_package/dist/fonts/fontawesome": "fonts/fontawesome"
   });
 
+  eleventyConfig.addPassthroughCopy({
+    "src/js/baythium-stargazer.js": "js/baythium-stargazer.js"
+  })
+
   /* SHORTCODES */
   eleventyConfig.addNunjucksShortcode("currentYear", getCurrentYear);
 

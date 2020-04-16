@@ -1,0 +1,83 @@
+{# 
+  Head Partial
+
+  Project: Baythium Packer
+  File: /src/_includes/_partials/head.njk
+  Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+#}
+
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <meta name="copyright" content="{{ app.company.name }}"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="googlebot" content="all"/>
+  <meta name="google" content="notranslate"/>
+  <meta name="author" content="{{ app.author.name }} <{{ app.author.email }}>"/>
+  <meta name="rating" content="general"/>
+  <meta name="coverage" content="worldwide"/>
+  <meta name="target" content="all"/>
+
+  <!-- Change the color of the header and address bar -->
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#ffffff"/>
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#ffffff"/>
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+
+  <!-- <meta name="monetization" content="$pay.stronghold.co/1a155e3a09e210742be8c38ba7cab4795c4"/> -->
+
+  <!-- Open Graph Protocol for Facebook, Telegram -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="{{ app.name }}"/>
+  <meta property="og:site_name" content="{{ app.name }}"/>
+  <meta property="og:description" content="{{ description }}"/>
+  <meta property="og:url" content="{{ app.url }}"/>
+  <!-- <meta property="og:image" content="{{ app.image }}"/> -->
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:site" content="{{ app.url }}"/>
+  <meta name="twitter:title" content="{{ app.name }}"/>
+  <meta name="twitter:description" content="{{ description }}"/>
+  <!-- <meta name="twitter:image" content="{{ app.image }}"/> -->
+
+  <title>{{ title }} - {{ app.name }}</title>
+
+  <meta name="keywords" content="{{ keywords }}"/>
+  <meta name="description" content="{{ description }}"/>
+
+  {# WARNING: Link resources with a high priority MUST go first #}
+  <link rel="canonical" href="{{ app.url }}"/>
+
+  {# NOTE: DNS prefetching helps to decrease waiting time for visitors because the browser performs DNS lookups before it sends a request for resources located on other domains #}
+  <link rel="dns-prefetch" href="{{ app.url }}"/>
+  <link rel="dns-prefetch" href="{{ app.supportUrl }}"/>
+  <link rel="dns-prefetch" href="{{ app.authUrl }}"/>
+
+  {# NOTE: Start prefetching cacheable resources #}
+  <link rel="prefetch" href="{{ app.url }}/images/network-lines.svg"/>
+
+  {# 
+    Mark a web page with a shortcut icon in the browser’s tab area
+
+    NOTE: For shortcut icons, the W3C recommends using a GIF or PNG file with dimensions of 16 × 16 pixels or 32 × 32 pixels
+  #}
+  <!-- <link rel="icon" href="/favicon.ico"/> -->
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+
+  <link href="/styles/baythium-aspectus.min.css" rel="stylesheet" media="all"/>
+  <link href="/styles/baythium-vector.min.css" rel="stylesheet" media="all"/>
+
+  <link href="/styles/custom-baythium-aspectus.min.css" rel="stylesheet" media="all"/>
+
+  {% if stylesheets %}
+    {% for style in stylesheets %}
+      <link href="{{ style }}" rel="stylesheet"/>
+    {% endfor %}
+  {% endif %}
+</head>

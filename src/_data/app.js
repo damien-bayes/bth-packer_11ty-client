@@ -13,8 +13,8 @@ const p = require("../../package.json");
 const options = {
   name: "Baythium Packer",
   url: "https://packer.baythium.com",
-  baseUrl: "/",
 
+  baseUrl: "/",
   authUrl: "https://auth.baythium.com",
   supportUrl: "https://support.baythium.com",
 

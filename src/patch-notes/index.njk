@@ -8,7 +8,10 @@
     alias: "notes"
   },
   changeFrequency: "monthly",
-  priority: 0.9
+  priority: 0.9,
+  translationKey: "patch-notes",
+  locale: "en",
+  description: "Read the latest patch notes or research historical changes"
 }
 ---
 
@@ -28,7 +31,7 @@
       <!-- Headline -->
       <div class="headline-1 headline-1--xl">
         <h1 class="headline-1__title">{{ title }}</h1>
-        <p class="headline-1__description">Read the latest {{ app.name }} patch notes or research historical changes</p>
+        <p class="headline-1__description">{{ description }}</p>
       </div>
 
       {# Start looping notes #}
@@ -49,12 +52,10 @@
 
       <!-- Pagination -->
       <nav class="pagination-1" aria-labelledby="pagination1">
-        <h6 id="pagination1">This is the pagination</h6>
-
         <ul class="pagination-1__list">
           {%- for pageEntry in pagination.pages %}
             <li class="pagination-1__item">
-              <a class="pagination-1__link" href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a>
+              <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} class="pagination-1__link pagination-1__link--active" aria-current="page" {% else %} class="pagination-1__link" {% endif %}>{{ loop.index }}</a>
             </li>
           {%- endfor %}
         </ul>

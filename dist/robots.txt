@@ -1,3 +1,8 @@
+
 User-agent: *
-Disallow:
+Disallow: /images/
+Disallow: /exceptions/
+Disallow: /fonts/
+Disallow: /js/
+Disallow: /styles/
 Sitemap: https://packer.baythium.com/sitemap.xml
