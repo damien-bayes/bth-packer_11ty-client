@@ -54,13 +54,19 @@
   {# WARNING: Link resources with a high priority MUST go first #}
   <link rel="canonical" href="{{ app.url }}"/>
 
+  <link rel="alternate" hreflang="en" href="{{ app.url }}/"/>
+  <link rel="alternate" hreflang="de" href="{{ app.url }}/de/"/>
+  <link rel="alternate" hreflang="ru" href="{{ app.url }}/ru/"/>
+
   {# NOTE: DNS prefetching helps to decrease waiting time for visitors because the browser performs DNS lookups before it sends a request for resources located on other domains #}
+  <!--
   <link rel="dns-prefetch" href="{{ app.url }}"/>
   <link rel="dns-prefetch" href="{{ app.supportUrl }}"/>
   <link rel="dns-prefetch" href="{{ app.authUrl }}"/>
+  -->
 
   {# NOTE: Start prefetching cacheable resources #}
-  <link rel="prefetch" href="{{ app.url }}/images/network-lines.svg"/>
+  <!-- <link rel="prefetch" href="{{ app.url }}/images/network-lines.svg"/> -->
 
   {# 
     Mark a web page with a shortcut icon in the browser’s tab area
