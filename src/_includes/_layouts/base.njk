@@ -39,6 +39,15 @@
     </main>
     {% include "_partials/app-footer.njk" %}
 
+    {# GDPR #}
+    <!--
+    <div class="gdpr">
+      <p>This site uses cookies to improve our services. By using this site, you agree to our <a href="{{ app.policyUrl }}" title="Privacy Policy">privacy policies</a>
+        <button class="button button-primary button-border is-small" title="Close" id="close-gdpr">Accept</button>
+      </p>
+    </div>
+    -->
+
     <noscript>
       <strong>{{ translation[app.locale].noJs }}</strong>
     </noscript>
