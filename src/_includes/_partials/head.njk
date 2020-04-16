@@ -33,18 +33,20 @@
 
   <!-- Open Graph Protocol for Facebook, Telegram -->
   <meta property="og:type" content="website"/>
-  <meta property="og:title" content="{{ app.name }}"/>
+  <meta property="og:title" content="{{ title }}"/>
   <meta property="og:site_name" content="{{ app.name }}"/>
   <meta property="og:description" content="{{ description }}"/>
-  <meta property="og:url" content="{{ app.url }}"/>
+  <meta property="og:url" content="{{ page.url | url }}"/>
   <!-- <meta property="og:image" content="{{ app.image }}"/> -->
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary"/>
-  <meta name="twitter:site" content="{{ app.url }}"/>
-  <meta name="twitter:title" content="{{ app.name }}"/>
+  <meta name="twitter:site" content="{{ app.name }}"/>
+  <meta name="twitter:title" content="{{ title }}"/>
   <meta name="twitter:description" content="{{ description }}"/>
   <!-- <meta name="twitter:image" content="{{ app.image }}"/> -->
+  <meta name="twitter:creator" content="{{ app.company.name }}"/>
+  <meta name="twitter:url" content="{{ page.url | url }}"/>
 
   <title>{{ title }} - {{ app.name }}</title>
 
@@ -53,6 +55,7 @@
 
   {# WARNING: Link resources with a high priority MUST go first #}
   <link rel="canonical" href="{{ app.url }}"/>
+  <!-- <link rel="amphtml" href="*.amp'/> -->
 
   <link rel="alternate" hreflang="en" href="{{ app.url }}/"/>
   <link rel="alternate" hreflang="de" href="{{ app.url }}/de/"/>
