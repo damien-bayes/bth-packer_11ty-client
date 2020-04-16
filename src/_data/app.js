@@ -17,6 +17,7 @@ const options = {
   baseUrl: "/",
   authUrl: "https://auth.baythium.com",
   supportUrl: "https://support.baythium.com",
+  policyUrl: "https://policy.baythium.com",
 
   version: p.version,
   description: p.description,
