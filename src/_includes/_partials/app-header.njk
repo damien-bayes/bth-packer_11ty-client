@@ -63,7 +63,7 @@
             {%- set url = navigation.url %}
 
             <li class="navigation__item" data-navigation-id="{{ id }}">
-              <a {% if page.url == url %} class="navigation__link navigation__link--active" {% else %} class="navigation__link" {% endif %} href="{{ url }}">{{ name | title }}</a>
+              <a {% if page.url == url %} class="navigation__link navigation__link--active" {% else %} class="navigation__link" {% endif %} href="{{ url }}">{{ name }}</a>
             </li>
 
           {% if loop.last %}</ul>{% endif %}

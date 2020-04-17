@@ -16,9 +16,11 @@ const Stargazer = {
    * @return {boolean}
    */
   isValidUrl: function(url) {
-    const pattern = /^(?:(?:https?|ftp):\/\/)(?:\S+(?::\S*)?@)?(?:(?!10(?:\.\d{1,3}){3})(?!127(?:\.​\d{1,3}){3})(?!169\.254(?:\.\d{1,3}){2})(?!192\.168(?:\.\d{1,3}){2})(?!172\.(?:1[​6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1​,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00​a1-\uffff0-9]+-?)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]+-?)*[a-z\u​00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/[^\s]*)?$/i;
-
-    return pattern.test(url);
+    try {
+      new URL(url);
+      return true;
+    }
+    catch(_) { return false; }
   },
 
   /**
@@ -52,13 +54,17 @@ const Stargazer = {
   }
 };
 
-Stargazer.getAndInsert = async function(url, elementId) {
-  const stars = await this.get(url);
+Stargazer.getAndInsert = async function(obj, elementId) {
+  const stars = await this.get(`https://api.github.com/repos/${obj.username}/${obj.repositoryName}`);
 
   const element = document.getElementById(elementId);
   if (typeof(element) != "undefined" && element != null) {
     element.innerText = stars;
+
+    /* Remove all classes from parent element with JavaScript enabled */
+    const parent = element.parentElement;
+    parent.classList.remove(...parent.classList);
   }
 };
 
-Stargazer.getAndInsert("https://api.github.com/repos/damien-bayes/baythium-packer_client", "starsCount");
+Stargazer.getAndInsert({username: "damien-bayes", repositoryName: "baythium-packer_client"}, "starsCount");

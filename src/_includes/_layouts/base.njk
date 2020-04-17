@@ -18,12 +18,25 @@
   {% include "_partials/head.njk" %}
 
   <body id="app" class="baythium-aspectus baythium-aspectus--light no-js">
+    <noscript>
+      <div class="alert-1 alert-1--danger">
+        <div class="alert-1__header">
+          <div>{{ translation[app.locale].danger }}</div>
+        </div>
+        <div class="alert-1__body">
+          <p>{{ translation[app.locale].noJs }}</p>
+        </div>
+      </div>
+
+      <!-- Google Tag Manager -->
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WH62H7" height="0" width="0" style="display:none; visibility:hidden;"></iframe>
+    </noscript>
+
     {# Alert #}
     {%- if app.environment == "development" %}
-    <div class="alert-1 alert-1--danger">
+    <div class="alert-1 alert-1--warning">
       <div class="alert-1__header">
         <div>{{ translation[app.locale].warning }}</div>
-        <div class="alert-1__close-button">&times;</div>
       </div>
       <div class="alert-1__body">
         <p><b class="mr-1--2">{{ translation[app.locale].websiteMode | title }}:</b><span>{{ app.environment }}</span></p>
@@ -40,18 +53,14 @@
     {% include "_partials/app-footer.njk" %}
 
     {# GDPR #}
-    <!--
+    {#
     <div class="gdpr">
       <p>
-        This site uses cookies to improve our services. By using this site, you agree to our <a href="{{ app.policyUrl }}" title="Privacy Policy">privacy policies</a>
+        This site uses cookies for analytics, personalized content and ads. By continuing to browse this site, you agree to our <a href="{{ app.policyUrl }}" title="Privacy Policy">privacy policies</a>
         <button class="button-1 button-1--primary" title="Close">Accept</button>
       </p>
     </div>
-    -->
-
-    <noscript>
-      <strong>{{ translation[app.locale].noJs }}</strong>
-    </noscript>
+    #}
 
     {# THIRD-PARTY IMPORTS #}
     <!-- <script src="https://cdn.optimizely.com/js/6721bcf5-449a-48f1-80c9-2627acf496ee.js"></script> -->
@@ -77,9 +86,9 @@
     {% endset %}
     <!-- 2. Feed it through minifyJs filter to minify content -->
     {% if app.environment == "development" %}
-      <script>{{ js | minifyJs | safe }}</script>
-    {% else %}
       <script>{{ js | safe }}</script>
+    {% else %}
+      <script>{{ js | minifyJs | safe }}</script>
     {% endif %}
   </body>
 </html>

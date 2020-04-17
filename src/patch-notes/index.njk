@@ -4,8 +4,9 @@
   title: "Patch Notes",
   pagination: {
     data: "collections.patch_notes",
-    size: 2,
-    alias: "notes"
+    size: 3,
+    alias: "notes",
+    reverse: true
   },
   changeFrequency: "monthly",
   priority: 0.9,
@@ -35,7 +36,7 @@
       </div>
 
       {# Start looping notes #}
-      {% for note in notes | reverse %}
+      {% for note in notes %}
         {% if loop.first %}<ul>{% endif %}
           <li>
             <article>

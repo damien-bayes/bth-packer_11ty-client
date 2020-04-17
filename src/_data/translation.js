@@ -29,8 +29,9 @@ module.exports = {
     documentation: "documentation",
     download: "download",
     github: "github",
-    noJs: "We are sorry but this website doesn't work properly without JavaScript enabled. Please enable it to continue",
+    noJs: "We are sorry but this website DOES NOT work properly without JavaScript enabled. Please enable it to continue",
     warning: "Warning",
+    danger: "Danger"
   },
 
   /* Russian */

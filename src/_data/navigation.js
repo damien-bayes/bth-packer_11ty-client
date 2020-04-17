@@ -14,37 +14,37 @@ module.exports = {
     items: [
       {
         id: 1,
-        name: "home",
+        name: "Home",
         url: "/"
       },
       {
         id: 2,
-        name: "documentation",
+        name: "Documentation",
         url: "/documentation/"
       },
       {
         id: 3,
-        name: "patch notes",
+        name: "Patch Notes",
         url: "/patch-notes/"
       },
       {
         id: 4,
-        name: "about project",
+        name: "About Project",
         url: "/about/"
       },
       {
         id: 5,
-        name: "faq",
+        name: "FAQ",
         url: "/faq/"
       },
       {
         id: 6,
-        name: "contribution",
+        name: "Contribution",
         url: "/contribution/"
       },
       {
         id: 7,
-        name: "contact",
+        name: "Contact",
         url: "/contact/"
       }
     ]
