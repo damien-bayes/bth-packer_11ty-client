@@ -113,3 +113,4 @@ The list of references used to improve the project planning and its functionalit
 17. https://bryanlrobinson.com/blog/using-eleventys-javascript-data-files
 18. https://alligator.io/html/preload-prefetch
 19. https://gulpjs.com/plugins
+20. https://www.webpagetest.org
