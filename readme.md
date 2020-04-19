@@ -74,6 +74,12 @@ baythium-ecosystem/baythium-packer_client:1.0.15-$timestamp
 npm install -g gulp-cli && gulp -v
 ```
 
+###### Nginx
+
+```bash
+nginx -t -c nginx/nginx.default.conf
+```
+
 ##### CI/CD (In the process)
 
 We use GitHub Actions, which allow for the creation of CI/CD pipelines directly within GitHub. This will check and deploy the source code that is hosted in the current GitHub repository.
