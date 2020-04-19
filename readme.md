@@ -79,6 +79,9 @@ npm install -g gulp-cli && gulp -v
 
 ```bash
 nginx -t -c nginx/nginx.default.conf
+
+# Create encrypted password strings
+openssl passwd <secret-password>
 ```
 
 #### CI/CD (In the process)
