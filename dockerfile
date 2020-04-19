@@ -2,7 +2,8 @@ FROM nginx:1.16.1
 
 LABEL maintainer = "damien.bayes.db@gmail.com"
 
-ENV nginx_version 1.16.1
+ENV NGINX_VERSION 1.16.1
+ENV ELEVENTY_ENV production
 
 COPY dist/ /usr/share/nginx/html/
 # COPY scripts/entrypoint.sh /usr/bin

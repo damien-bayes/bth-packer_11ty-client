@@ -1,27 +1,12 @@
 #!/bin/bash
 
 #####################################
-# Name: bayesian-packer.sh
-# Bayesian Ecosystem
+# Project: Baythium Packer
+# File: /baythium-packer.sh
 # Initial author: Damien Bayes <damien.bayes.db@gmail.com>
 #
 # Synopsis:
-# sudo ./bayesian-packer.sh [source, destination, exclusions, filename, group, list-group, group-count, verbose, help]
-#
-# Use cases:
-# 1. sudo ./bayesian-packer.sh -s <your-source-path> -d <your-destination-path>
-# 1.1. sudo ./bayesian-packer.sh -s <your-source-path> -d <your-destination-path> -gpg
-# 1.2. sudo ./bayesian-packer.sh -s <your-source-path> -d <your-destination-path> -e [<your-exclusion-file>|<your-exclusion-folder]
-# 1.3. sudo ./bayesian-packer.sh -s <your-source-path> -d <your-destination-path> -e [<your-exclusion-file>|<your-exclusion-folder] -gpg
-# 2. sudo ./bayesian-packer.sh -f <your-objective-file-path>
-# 2.1. sudo ./bayesian-packer.sh -f <your-objective-file-path> -g
-# 2.2. sudo ./bayesian-packer.sh -f <your-objective-file-path> -g <your-group-name>
-# 3. sudo ./bayesian-packer.sh -lg <your-group-name>
-# 3.1. sudo ./bayesian-packer.sh -lg
-# 4. sudo ./bayesian-packer.sh -gc <your-group-name>
-# 4.1. sudo ./bayesian-packer.sh -gc
-# 5. sudo ./bayesian-packer.sh -v
-# 6. sudo ./bayesian-packer.sh -h
+# sudo ./baythium-packer.sh [source, destination, exclusions, filename, group, list-group, group-count, verbose, help]
 #
 # sudo ./bayesian-packer.sh /
 # -s <your-source-path> /
@@ -197,8 +182,6 @@ function printHelp () {
         `writeColoredString "-d" "greenColor"` (required)       Destination directory
         `writeColoredString "-e" "greenColor"` (optional)       Exclusions
         `writeColoredString "-f" "greenColor"` (optional)       Path to a file that is represented as json containing all necessary information about source, destination directories along with exclusions
-
-        Organization: `writeColoredString "Bayesian Ecosystem" "greenColor"`
 
         Initial author: `writeColoredString "Damien Bayes <damien.bayes.db@gmail.com> | https://github.com/damien-bayes" "greenColor"`
         Do not hesitate to contact me if you require more information about this script.

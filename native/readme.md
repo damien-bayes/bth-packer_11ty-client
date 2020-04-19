@@ -1,7 +1,7 @@
 # Baythium Packer CLI
 
-**Initial Author:** Damien Bayes<br/>
-**Description:** Archive your large-scale infrastructure more secure and effectively using our command-line tool and keep control of organization data<br/>
+> **Initial Author:** Damien Bayes  
+> **Description:** Effectively archive your large-scale infrastructure data using our powerful and lightweight command-line tool  
 
 ---
 
@@ -48,3 +48,4 @@ The reports make it easy for the Baythium team to handle errors, identify bugs, 
 
 ## References
 1. https://stedolan.github.io/jq
+2. https://www.dcode.fr/acronym-generator

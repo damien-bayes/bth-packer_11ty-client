@@ -15,13 +15,24 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy-plugin-rss": "^1.0.7",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "del": "^5.1.0",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
+    "gulp": "^4.0.2",
+    "gulp-ext-replace": "^0.3.0",
+    "gulp-livereload": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-util": "^3.0.8",
     "html-minifier": "^4.0.0",
+    "imagemin": "^7.0.1",
+    "imagemin-svgo": "^7.1.0",
+    "pump": "^3.0.0",
     "sass": "^1.26.3",
     "terser": "^4.6.10"
   },
@@ -37,7 +48,10 @@
     "npm:audit": "npm audit fix",
     "eslint:init": "eslint --init",
     "eslint": "eslint ./ --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp:hello": "gulp hello",
+    "gulp:optimize-svg": "gulp optimize-svg",
+    "gulp:compress-js": "gulp compress-js"
   },
   "repository": {
     "type": "git",

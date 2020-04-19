@@ -1,7 +1,7 @@
 ---js
 {
   layout: "_layouts/base.njk",
-  title: "Documentation",
+  title: "Docs",
   changeFrequency: "weekly",
   priority: 1,
   translationKey: "documentation",
@@ -27,9 +27,17 @@
 
       <!-- Headline -->
       <div class="headline-1 headline-1--xl">
-        <h1 class="headline-1__title">{{ title }}</h1>
+        <h1 class="headline-1__title">Getting Started</h1>
         <p class="headline-1__description"></p>
       </div>
+      
+      {% highlight "javascript" %}
+function factorial(n) {
+  return n ? n * factorial(n - 1) : 1;
+}
+
+alert( factorial(5) ); // 120
+      {% endhighlight %}
 
     </div>
   </div>

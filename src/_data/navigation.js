@@ -19,8 +19,8 @@ module.exports = {
       },
       {
         id: 2,
-        name: "Documentation",
-        url: "/documentation/"
+        name: "Docs",
+        url: "/docs/"
       },
       {
         id: 3,

@@ -1,9 +1,9 @@
 # Baythium Packer - Client
 
-**Resource:** https://packer.baythium.com<br/>
-**Dedicated Port Number:** 10033<br/>
-**Initial Author:** Damien Bayes<br/>
-**Description:** Archive your large-scale infrastructure more secure and effectively using our command-line tool and keep control of organization data<br/>
+> **Resource:** https://packer.baythium.com  
+> **Dedicated Port Number:** 10033  
+> **Initial Author:** Damien Bayes  
+> **Description:** Effectively archive your large-scale infrastructure data using our powerful and lightweight command-line tool
 
 ---
 
@@ -24,6 +24,8 @@ npm run eleventy:debug
 npm run eslint
 ```
 
+---
+
 ### Development
 
 ```bash
@@ -36,7 +38,7 @@ npm update @damien-bayes/baythium-vector_package --save
 npm update @damien-bayes/baythium-alacritas_package --save
 ```
 
-### Docker
+#### Docker - Containerization
 
 Docker plays an essential part on the Baythium Ecosystem and if you are familiar with it you CAN use the following commands for getting the ball rolling.
 
@@ -47,13 +49,15 @@ Docker plays an essential part on the Baythium Ecosystem and if you are familiar
 sudo docker rm baythium-packer_client && sudo docker stop baythium-packer_client
 
 # Build a new docker image using the Dockerfile
+timestamp = $(date +%s)
+
 sudo docker build . \
 --file dockerfile \
---tag baythium-ecosystem/baythium-packer_client:1.0.14-$(date +%s)
+--tag baythium-ecosystem/baythium-packer_client:1.0.14-$timestamp
 
 sudo docker images
  
-# Run the Baythium Packer in an isolated container using the specified options
+# Run an isolated container using the specified options
 sudo docker run \
 -d \
 --name baythium-packer_client \
@@ -61,10 +65,16 @@ sudo docker run \
 --net baythium-network-1 \
 -e "VIRTUAL_HOST=packer.baythium.com, packer.bayesianflow.space" \
 --restart=on-failure:3 \
-baythium-ecosystem/baythium-packer_client:1.0.14-$(date +%s)
+baythium-ecosystem/baythium-packer_client:1.0.14-$timestamp
 ```
 
-## CI/CD
+##### Gulp - Task Runner
+
+```bash
+npm install -g gulp-cli && gulp -v
+```
+
+##### CI/CD (In the process)
 
 We use GitHub Actions, which allow for the creation of CI/CD pipelines directly within GitHub. This will check and deploy the source code that is hosted in the current GitHub repository.
 
@@ -102,3 +112,4 @@ The list of references used to improve the project planning and its functionalit
 16. https://snipcart.com/blog/11ty-javascript-static-site-generator-tutorial
 17. https://bryanlrobinson.com/blog/using-eleventys-javascript-data-files
 18. https://alligator.io/html/preload-prefetch
+19. https://gulpjs.com/plugins

@@ -1,4 +1,4 @@
-# Baythium Packer CLI Dependencies
+# Baythium Packer - CLI (Dependencies)
 
 ## Unix
 
@@ -8,3 +8,7 @@
 sudo apt-get install zip
 sudo apt-get install jq
 ```
+
+## Windows
+
+###### PowerShell
