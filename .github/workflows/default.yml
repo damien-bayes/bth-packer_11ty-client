@@ -12,12 +12,11 @@ jobs:
     name: Builds a project and uploads all required files into the remote machine
     runs-on: ubuntu-18.04
     steps:
+      uses: actions/checkout@master
+
       - name: Set up environment variables
         env:
           ELEVENTY_ENV: production
-      
-      - name: Use a project master repository
-        uses: actions/checkout@master
 
       - name: Authenticate with GitHub package registry
         run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.TOKEN }}" > ~/.npmrc
