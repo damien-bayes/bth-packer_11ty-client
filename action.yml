@@ -1,0 +1,44 @@
+name: "Deployment Remote Commands"
+description: "Executing remote SSH commands"
+author: "Damien Bayes"
+inputs:
+  host:
+    description: "Hostname"
+  port:
+    description: "Port"
+    default: 22
+  passphrase:
+    description: "SSH Passphrase"
+  username:
+    description: "SSH Username"
+  password:
+    description: "SSH Password"
+  sync:
+    description: "Synchronous execution if multiple hosts"
+    default: false
+  timeout:
+    description: "Timeout for SSH to host"
+    default: "30s"
+  command_timeout:
+    description: "Timeout for ssh command"
+    default: "10m"
+  key:
+    description: "Content of the SSH private key"
+  key_path:
+    description: "Path of the SSH private key"
+  script:
+    description: "Execution commands"
+  script_stop:
+    description: "Stop script after first failure"
+    default: false
+  envs:
+    description: "pass environment variable to shell script"
+  debug:
+    description: "Enable debug mode"
+    default: false
+runs:
+  using: "docker"
+  image: "dockerfile"
+branding:
+  icon: "terminal"
+  color: "gray-dark"

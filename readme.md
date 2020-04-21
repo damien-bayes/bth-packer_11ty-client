@@ -95,6 +95,13 @@ openssl passwd <secret-password>
 
 We use GitHub Actions, which allow for the creation of CI/CD pipelines directly within GitHub. This will check and deploy the source code that is hosted in the current GitHub repository.
 
+#### Wiki 
+
+```
+# Clone the wiki locally
+$ git clone https://github.com/damien-bayes/baythium-packer_client.wiki.git
+```
+
 ---
 
 ## Contribution
