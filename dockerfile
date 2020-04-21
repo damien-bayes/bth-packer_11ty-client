@@ -1,3 +1,9 @@
+# Dockerfile
+#
+# Project: Baythium Packer
+# File: /dockerfile
+# Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+
 FROM nginx:1.16.1 AS builder
 
 LABEL maintainer = "damien.bayes.db@gmail.com"

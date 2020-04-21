@@ -52,10 +52,17 @@ sudo docker rm baythium-packer_client && sudo docker stop baythium-packer_client
 timestamp=$(date +%s)
 version="1.0.15"
 
+# Variant 1
 sudo docker build . \
 --file dockerfile \
 --tag baythium-ecosystem/baythium-packer_client:$version-$timestamp
 
+# Variant 2
+sudo docker build . \
+--file dockerfile.alternative \
+--tag baythium-ecosystem/baythium-packer_client:$version-$timestamp
+
+# List all images
 sudo docker images
  
 # Run an isolated container using the specified options

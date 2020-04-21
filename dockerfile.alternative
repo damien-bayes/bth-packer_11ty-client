@@ -1,9 +1,128 @@
-FROM nginx:1.16.1
+# Alternative Dockerfile
+#
+# Project: Baythium Packer
+# File: /dockerfile.alternative
+# Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+#
+# References:
+# 1. https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-naxsi-on-ubuntu-16-04
+
+FROM ubuntu:18.04 AS builder
+
+LABEL maintainer = "damien.bayes.db@gmail.com"
+
+ENV NGINX_VERSION 1.17.10
+ENV ELEVENTY_ENV production
+
+# Retrieve information about what packages can be installed, including what updates to currently installed packages packages are available, from Internet sources
+RUN apt-get update
+
+# ##########################
+# INSTALLING NGINX AND NAXSI
+# ##########################
+
+# Malicious request example 1:
+# 1. curl 'https://packer.baythium.com/?q="><script>alert(0)</script>'
+# 2. tail -f /var/log/nginx/error.log
+
+# Malicious request example 2:
+# 1. curl 'https://packer.baythium.com/?q=1" or "1"="1"'
+# 2. tail -f /var/log/nginx/error.log
+
+
+# NOTE: In order to compile Nginx from source, you will need the C compiler gcc, the Perl Compatible Regular Expressions library libpcre3-dev, and libssl-dev, which implements the SSL and TLD cryptographic protocols
+RUN apt-get install curl wget tar build-essential libpcre3-dev libssl-dev
+
+# Move into a directory for installing unbundled packages
+WORKDIR /opt/
+
+# Download nginx and naxsi source codes
+RUN wget http://nginx.org/download/nginx-1.17.10.tar.gz
+RUN wget https://github.com/nbs-system/naxsi/archive/0.56.tar.gz -O naxsi
+
+# Extract all downloaded files in order to be able to compile and install them
+RUN tar -xvf nginx-1.17.10.tar.gz
+RUN tar -xvf naxsi
+
+# Move into the nginx directory
+WORKDIR /opt/nginx-1.17.10/
+
+# Compile Nginx from source
+RUN ./configure \
+--conf-path=/etc/nginx/nginx.conf \
+--add-module=../naxsi-0.56/naxsi_src/ \
+--error-log-path=/var/log/nginx/error.log \
+--http-client-body-temp-path=/var/lib/nginx/body \
+--http-fastcgi-temp-path=/var/lib/nginx/fastcgi \
+--http-log-path=/var/log/nginx/access.log \
+--http-proxy-temp-path=/var/lib/nginx/proxy \
+--lock-path=/var/lock/nginx.lock \
+--pid-path=/var/run/nginx.pid \
+--user=www-data \
+--group=www-data \
+--with-http_ssl_module \
+--without-mail_pop3_module \
+--without-mail_smtp_module \
+--without-mail_imap_module \
+--without-http_uwsgi_module \
+--without-http_scgi_module \
+--prefix=/usr
+
+# Enact a series of tasks defined in the Makefile you just created to build the program from the source code
+RUN make
+
+# Use the make install command as a superuser to copy the built program and its libraries to the correct location on a server
+# NOTE: Once this succeeds, you will have a compiled version of Nginx with the NAXSI module. In order to get NAXSI to start blocking unwanted traffic, you now need to establish a set of rules that NAXSI will act upon by creating a series of configure files
+RUN make install
+
+# Lock the nginx package
+# RUN apt-mark hold nginx
+
+# Remove debugging symbols and etc.
+# RUN strip -s /usr/sbin/nginx
+
+# #################
+# CONFIGURING NAXSI
+# #################
+
+# Copy the naxsi_core.rules file to Nginx config directory
+RUN cp /opt/naxsi-0.56/naxsi_config/naxsi_core.rules /etc/nginx/
+
+COPY nginx/naxsi.rules /etc/nginx/
+
+# #####################################
+# CREATING THE STARTUP SCRIPT FOR NGINX
+# #####################################
+
+# NOTE: Since you installed Nginx manually, the next step is to create a startup script to make the web server autostart on system reloads
+
+COPY nginx/nginx.service /lib/systemd/system/
+
+# NOTE: Nginx needs a folder to temporarily store incoming request data before processing it in the event that your server doesn’t have enough memory.
+# Since Nginx is installed from source you will need to create a directory that Nginx can use to store this data
+RUN mkdir -p /var/lib/nginx/body
+
+# ######################
+# CREATING PROJECT FILES
+# ######################
 
 COPY dist/ /usr/share/nginx/html/
 
-RUN chown nginx:nginx /usr/share/nginx/html/*
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
+COPY nginx/custom-errors.conf /etc/nginx/custom-errors.conf
+COPY nginx/nginx.default.conf /etc/nginx/conf.d/default.conf
+
+RUN chown -R nginx:nginx /usr/share/nginx/html
+RUN chmod -R 755 /usr/share/nginx/html
+
+# ##############
+# FINAL SETTINGS
+# ##############
+
+# Cleanup all non-essential files
+RUN rm -rf /opt/*
 
 EXPOSE 10033
 
+# ENTRYPOINT /usr/bin/entrypoint.sh
 CMD ["nginx", "-g", "daemon off;"]
