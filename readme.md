@@ -50,10 +50,11 @@ sudo docker rm baythium-packer_client && sudo docker stop baythium-packer_client
 
 # Build a new docker image using the Dockerfile
 timestamp=$(date +%s)
+version="1.0.15"
 
 sudo docker build . \
 --file dockerfile \
---tag baythium-ecosystem/baythium-packer_client:1.0.15-$timestamp
+--tag baythium-ecosystem/baythium-packer_client:$version-$timestamp
 
 sudo docker images
  
@@ -65,16 +66,25 @@ sudo docker run \
 --net baythium-network-1 \
 -e "VIRTUAL_HOST=packer.baythium.com, packer.bayesianflow.space" \
 --restart=on-failure:3 \
-baythium-ecosystem/baythium-packer_client:1.0.15-$timestamp
+baythium-ecosystem/baythium-packer_client:$version-$timestamp
 ```
 
-##### Gulp - Task Runner
+#### Gulp - Task Runner
 
 ```bash
 npm install -g gulp-cli && gulp -v
 ```
 
-##### CI/CD (In the process)
+#### Nginx
+
+```bash
+nginx -t -c nginx/nginx.default.conf
+
+# Create encrypted password strings
+openssl passwd <secret-password>
+```
+
+#### CI/CD (In the process)
 
 We use GitHub Actions, which allow for the creation of CI/CD pipelines directly within GitHub. This will check and deploy the source code that is hosted in the current GitHub repository.
 
@@ -113,3 +123,4 @@ The list of references used to improve the project planning and its functionalit
 17. https://bryanlrobinson.com/blog/using-eleventys-javascript-data-files
 18. https://alligator.io/html/preload-prefetch
 19. https://gulpjs.com/plugins
+20. https://www.webpagetest.org

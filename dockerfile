@@ -1,4 +1,4 @@
-FROM nginx:1.16.1
+FROM nginx:1.16.1 AS builder
 
 LABEL maintainer = "damien.bayes.db@gmail.com"
 
