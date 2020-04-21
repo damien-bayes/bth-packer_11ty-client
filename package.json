@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@damien-bayes/baythium-aspectus_package": "^1.0.13",
+    "@damien-bayes/baythium-vector_package": "^1.0.4",
     "axios": "^0.19.2",
     "dayjs": "^1.8.23",
     "nunjucks": "^3.2.1"
