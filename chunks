@@ -36,3 +36,36 @@
 
   {% if loop.last %}</ul>{% endif %}
 {% endfor %}
+
+
+name: Deployment
+on:
+  push:
+    paths-ignore:
+      - readme.md
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: 12
+      - run: npm ci
+      - run: npm run 11ty:build
+      - uses: appleboy/ssh-action@master
+        env:
+          NAME: "Baythium Packer"
+          URL: "https://packer.baythium.com"
+        with:
+          envs: NAME,URL
+          host: ${{ secrets.HOSTNAME }}
+          port: ${{ secrets.PORT }}
+          username: ${{ secrets.USERNAME }}
+          passphrase: ${{ secrets.PASSPHRASE }}
+          key: ${{ secrets.KEY }}
+          script: |
+          echo "Project Name: $NAME"
+          echo "Project URL: $URL"
