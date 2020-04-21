@@ -12,7 +12,7 @@ jobs:
     env:
       ELEVENTY_ENV: production
     steps:
-      uses: actions/checkout@master
+      - uses: actions/checkout@master
       - name: Authenticate with GitHub package registry
         run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.TOKEN }}" > ~/.npmrc
       - name: Use required JavaScript runtime environment
