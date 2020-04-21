@@ -138,3 +138,4 @@ The list of references used to improve the project planning and its functionalit
 18. https://alligator.io/html/preload-prefetch
 19. https://gulpjs.com/plugins
 20. https://www.webpagetest.org
+21. https://github.com/marketplace/actions/ssh-remote-commands
