@@ -57,7 +57,7 @@ const options = {
   ],
   
   buildTime: new Date(),
-  environment: process.env.ELEVENTY_ENV.replace(/"/g, "").trim(),
+  environment: process.env.ELEVENTY_ENV ? process.env.ELEVENTY_ENV.replace(/"/g, "").trim() : "production",
 
   clientId: process.env.CLIENT_ID || 0
 };

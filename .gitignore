@@ -1,7 +1,7 @@
 npm-debug.log
 src/js/config.js
 node_modules/*
-dist/
+dist/*
 
 settings.js
 
