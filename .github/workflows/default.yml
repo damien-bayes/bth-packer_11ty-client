@@ -26,7 +26,7 @@ jobs:
       - name: Start transferring files into the remote machine
         uses: appleboy/scp-action@master
         with:
-          host: ${{ secrets.HOST }}
+          host: ${{ secrets.HOSTNAME }}
           port: ${{ secrets.PORT }}
           username: ${{ secrets.USERNAME }}
           passphrase: ${{ secrets.PASSPHRASE }}
