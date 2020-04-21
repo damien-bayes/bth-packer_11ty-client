@@ -1,16 +1,19 @@
-name: Docker Image CI
+name: Deploy
 
 on:
   push:
-    branches: [ master ]
+    paths-ignore:
+      - readme.md
+    branches:
+      - master
   pull_request:
-    branches: [ master ]
+    branches:
+      - master
 
 jobs:
-
   build:
 
-    runs-on: nginx:1.16.1
+    runs-on: [self-hosted, linux]
 
     steps:
     - uses: actions/checkout@v2

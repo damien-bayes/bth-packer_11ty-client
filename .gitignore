@@ -2,6 +2,7 @@ npm-debug.log
 src/js/config.js
 package-lock.json
 node_modules/*
+dist/
 
 settings.js
 
