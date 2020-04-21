@@ -16,4 +16,3 @@ jobs:
           node-version: '12.x'
       - name: Install project dependencies
         run: npm install
-        run: npm run 11ty:build --if-present
