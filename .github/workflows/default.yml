@@ -11,10 +11,10 @@ jobs:
   integration:
     name: Builds a project and uploads all required files into the remote machine
     runs-on: ubuntu-18.04
+    env:
+      ELEVENTY_ENV: production
     steps:
       uses: actions/checkout@master
-      env:
-        ELEVENTY_ENV: production
       - name: Authenticate with GitHub package registry
         run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.TOKEN }}" > ~/.npmrc
       - name: Use required JavaScript runtime environment
