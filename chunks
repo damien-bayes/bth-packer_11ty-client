@@ -69,3 +69,9 @@ jobs:
           script: |
           echo "Project Name: $NAME"
           echo "Project URL: $URL"
+
+            deployment:
+    name: Connects to the remote machine and builds an image using Docker with further requirements
+    runs-in: ubuntu-18.04
+    needs: integration
+    steps:

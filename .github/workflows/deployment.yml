@@ -1,0 +1,40 @@
+name: Integration
+
+on:
+  push:
+    paths-ignore:
+      - readme.md
+    branches:
+      - master
+
+jobs:
+  integration:
+    name: Builds a project and uploads all required files into the remote machine
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Authenticate with GitHub package registry
+        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.TOKEN }}" > ~/.npmrc
+
+      - name: Use required JavaScript runtime environment
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - name: Install project dependencies
+        run: npm install
+
+      - name: Build a project
+        run: npm run 11ty:build
+
+      - name: Start transferring files into the remote machine
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          port: ${{ secrets.PORT }}
+          username: ${{ secrets.USERNAME }}
+          passphrase: ${{ secrets.PASSPHRASE }}
+          key: ${{ secrets.KEY }}
+          source: "dist/*,dockerfile,nginx/*"
+          target: "baythium-packer_client"
