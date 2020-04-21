@@ -49,7 +49,7 @@ Docker plays an essential part on the Baythium Ecosystem and if you are familiar
 sudo docker rm baythium-packer_client && sudo docker stop baythium-packer_client
 
 # Build a new docker image using the Dockerfile
-timestamp = $(date +%s)
+timestamp=$(date +%s)
 
 sudo docker build . \
 --file dockerfile \
