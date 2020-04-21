@@ -17,6 +17,3 @@ jobs:
           node-version: 12
       - run: npm ci
       - run: npm run 11ty:build
-
-    - name: Build the Docker image
-      run: docker build . --file dockerfile --tag baythium-ecosystem/baythium-packer_client:$(date +%s)
