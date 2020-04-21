@@ -13,10 +13,8 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       uses: actions/checkout@master
-
-      - name: Set up environment variables
-        env:
-          ELEVENTY_ENV: production
+      env:
+        ELEVENTY_ENV: production
 
       - name: Authenticate with GitHub package registry
         run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.TOKEN }}" > ~/.npmrc
