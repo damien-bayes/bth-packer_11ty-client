@@ -12,12 +12,26 @@ jobs:
     steps:
       - name: Start deploying
         uses: appleboy/ssh-action@master
+        env:
+          REPOSITORY: ${{ github.repository }}
+          SHA: ${{ github.sha }}
+          PATH: "baythium-projects/baythium-packer_client"
+          NAME: "baythium-packer_client"
+          HOST: "packer.baythium.com,packer.bayesianflow.space"
+          NETWORK: "baythium-network-1"
+          PREFIX: "baythium-ecosystem"
+          PORT: "10033"
         with:
           host: ${{ secrets.HOSTNAME }}
           port: ${{ secrets.PORT }}
           username: ${{ secrets.USERNAME }}
           passphrase: ${{ secrets.PASSPHRASE }}
           key: ${{ secrets.KEY }}
+          envs: PATH,BAR
           script: |
-            whoami
-            groups
+          timestamp=$(date +%s)
+          cd $PATH
+          docker rm $(docker stop $(docker ps --filter "name=$NAME" --format="{{.ID}}"))
+          docker rmi $(docker images | grep "$NAME")
+          docker build . --file dockerfile --tag $PREFIX/$NAME:$timestamp
+          docker run -d --name $NAME --expose $PORT --net  -e "VIRTUAL_HOST=$HOST" --restart=on-failure:3 $PREFIX/$NAME:$timestamp
