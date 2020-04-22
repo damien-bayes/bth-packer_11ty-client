@@ -37,6 +37,8 @@
   {% if loop.last %}</ul>{% endif %}
 {% endfor %}
 
+    needs: integration
+
             timestamp=$(date +%s)
             cd $PATH
             docker rm $(docker stop $(docker ps --filter "name=baythium-packer_client" --format="{{.ID}}"))

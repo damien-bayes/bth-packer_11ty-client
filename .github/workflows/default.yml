@@ -9,7 +9,6 @@ jobs:
   deployment:
     name: Connects to the remote machine and builds an image using Docker with further requirements
     runs-on: ubuntu-18.04
-    needs: integration
     steps:
       - name: Start deploying
         uses: appleboy/ssh-action@master
