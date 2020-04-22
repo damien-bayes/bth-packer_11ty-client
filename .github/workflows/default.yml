@@ -13,8 +13,6 @@ jobs:
       - name: Start deploying
         uses: appleboy/ssh-action@master
         env:
-          REPOSITORY: ${{ github.repository }}
-          SHA: ${{ github.sha }}
           PATH: "baythium-projects/baythium-packer_client"
           NAME: "baythium-packer_client"
           HOST: "packer.baythium.com,packer.bayesianflow.space"
@@ -27,7 +25,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           passphrase: ${{ secrets.PASSPHRASE }}
           key: ${{ secrets.KEY }}
-          envs: REPOSITORY,SHA,PATH,NAME,HOST,NETWORK,PREFIX,PORT
+          envs: PATH,NAME,HOST,NETWORK,PREFIX,PORT
           script: |
             timestamp=$(date +%s)
             cd $PATH
