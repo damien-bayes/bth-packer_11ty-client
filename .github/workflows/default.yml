@@ -42,11 +42,12 @@ jobs:
       NAME: "Baythium Packer"
       URL: "https://packer.baythium.com"
       PATH: "baythium-projects/baythium-packer_client"
+      SHA: ${{ github.sha }}
     steps:
       - name: Start deploying
         uses: appleboy/ssh-action@master
         with:
-          envs: NAME,URL,PROJECT_LOCATION
+          envs: NAME,URL,PATH,SHA
           host: ${{ secrets.HOSTNAME }}
           port: ${{ secrets.PORT }}
           username: ${{ secrets.USERNAME }}
