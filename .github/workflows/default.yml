@@ -13,12 +13,12 @@ jobs:
       - name: Start deploying
         uses: appleboy/ssh-action@master
         env:
-          VPATH: "baythium-projects/baythium-packer_client"
-          VNAME: "baythium-packer_client"
-          VHOST: "packer.baythium.com,packer.bayesianflow.space"
-          VNETWORK: "baythium-network-1"
-          VPREFIX: "baythium-ecosystem"
-          VPORT: "10033"
+          VPATH: baythium-projects/baythium-packer_client
+          VNAME: baythium-packer_client
+          VHOST: packer.baythium.com,packer.bayesianflow.space
+          VNETWORK: baythium-network-1
+          VPREFIX: baythium-ecosystem
+          VPORT: 10033
         with:
           host: ${{ secrets.HOSTNAME }}
           port: ${{ secrets.PORT }}
