@@ -13,23 +13,23 @@ jobs:
       - name: Start deploying
         uses: appleboy/ssh-action@master
         env:
-          PATH: "baythium-projects/baythium-packer_client"
-          NAME: "baythium-packer_client"
+          VPATH: "baythium-projects/baythium-packer_client"
+          VNAME: "baythium-packer_client"
           VHOST: "packer.baythium.com,packer.bayesianflow.space"
-          NETWORK: "baythium-network-1"
-          PREFIX: "baythium-ecosystem"
-          PORT: "10033"
+          VNETWORK: "baythium-network-1"
+          VPREFIX: "baythium-ecosystem"
+          VPORT: "10033"
         with:
           host: ${{ secrets.HOSTNAME }}
           port: ${{ secrets.PORT }}
           username: ${{ secrets.USERNAME }}
           passphrase: ${{ secrets.PASSPHRASE }}
           key: ${{ secrets.KEY }}
-          envs: PATH,NAME,VHOST,NETWORK,PREFIX,PORT
+          envs: VPATH,VNAME,VHOST,VNETWORK,VPREFIX,VPORT
           script: |
             timestamp=$(date +%s)
-            cd $PATH
-            docker rm $(docker stop $(docker ps --filter "name=$NAME" --format="{{.ID}}"))
-            docker rmi $(docker images | grep "$NAME")
-            docker build . --file dockerfile --tag $PREFIX/$NAME:$timestamp
-            docker run -d --name $NAME --expose $PORT --net $NETWORK -e "VIRTUAL_HOST=$VHOST" --restart=on-failure:3 $PREFIX/$NAME:$timestamp
+            cd $VPATH
+            docker rm $(docker stop $(docker ps --filter "name=$VNAME" --format="{{.ID}}"))
+            docker rmi $(docker images | grep "$VNAME")
+            docker build . --file dockerfile --tag $VPREFIX/$VNAME:$timestamp
+            docker run -d --name $VNAME --expose $VPORT --net $VNETWORK -e "VIRTUAL_HOST=$VHOST" --restart=on-failure:3 $VPREFIX/$VNAME:$timestamp
