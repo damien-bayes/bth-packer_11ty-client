@@ -36,3 +36,5 @@
 
   {% if loop.last %}</ul>{% endif %}
 {% endfor %}
+
+docker rmi $(docker images -a | grep "^<none>" | awk '{print $3}')
