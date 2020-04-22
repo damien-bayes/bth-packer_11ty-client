@@ -27,7 +27,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           passphrase: ${{ secrets.PASSPHRASE }}
           key: ${{ secrets.KEY }}
-          envs: PATH,BAR
+          envs: REPOSITORY,SHA,PATH,NAME,HOST,NETWORK,PREFIX,PORT
           script: |
           timestamp=$(date +%s)
           cd $PATH
