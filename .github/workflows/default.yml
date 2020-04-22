@@ -29,9 +29,9 @@ jobs:
           key: ${{ secrets.KEY }}
           envs: REPOSITORY,SHA,PATH,NAME,HOST,NETWORK,PREFIX,PORT
           script: |
-          timestamp=$(date +%s)
-          cd $PATH
-          docker rm $(docker stop $(docker ps --filter "name=$NAME" --format="{{.ID}}"))
-          docker rmi $(docker images | grep "$NAME")
-          docker build . --file dockerfile --tag $PREFIX/$NAME:$timestamp
-          docker run -d --name $NAME --expose $PORT --net  -e "VIRTUAL_HOST=$HOST" --restart=on-failure:3 $PREFIX/$NAME:$timestamp
+            timestamp=$(date +%s)
+            cd $PATH
+            docker rm $(docker stop $(docker ps --filter "name=$NAME" --format="{{.ID}}"))
+            docker rmi $(docker images | grep "$NAME")
+            docker build . --file dockerfile --tag $PREFIX/$NAME:$timestamp
+            docker run -d --name $NAME --expose $PORT --net  -e "VIRTUAL_HOST=$HOST" --restart=on-failure:3 $PREFIX/$NAME:$timestamp
