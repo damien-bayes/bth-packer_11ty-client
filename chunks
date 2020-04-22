@@ -37,7 +37,7 @@
   {% if loop.last %}</ul>{% endif %}
 {% endfor %}
 
-
+ 
 name: Deployment
 on:
   push:

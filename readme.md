@@ -45,35 +45,37 @@ Docker plays an essential part on the Baythium Ecosystem and if you are familiar
 ###### Variant 1
 
 ```bash
-# NOT RECOMMENDED: docker rm -f baythium-packer_client
-sudo docker rm baythium-packer_client && sudo docker stop baythium-packer_client
+# Remove all containers with the specified name
+docker rm $(docker stop $(docker ps --filter "name=baythium-packer_client" --format="{{.ID}}"))
+
+# Remove all images with the specified name
+docker rmi $(docker images | grep "baythium-packer_client")
 
 # Build a new docker image using the Dockerfile
 timestamp=$(date +%s)
-version="1.0.15"
 
 # Variant 1
-sudo docker build . \
+docker build . \
 --file dockerfile \
---tag baythium-ecosystem/baythium-packer_client:$version-$timestamp
+--tag baythium-ecosystem/baythium-packer_client:$timestamp
 
 # Variant 2
-sudo docker build . \
+docker build . \
 --file dockerfile.alternative \
---tag baythium-ecosystem/baythium-packer_client:$version-$timestamp
+--tag baythium-ecosystem/baythium-packer_client:$timestamp
 
 # List all images
-sudo docker images
+docker images
  
 # Run an isolated container using the specified options
-sudo docker run \
+docker run \
 -d \
 --name baythium-packer_client \
 --expose 10033 \
 --net baythium-network-1 \
 -e "VIRTUAL_HOST=packer.baythium.com, packer.bayesianflow.space" \
 --restart=on-failure:3 \
-baythium-ecosystem/baythium-packer_client:$version-$timestamp
+baythium-ecosystem/baythium-packer_client:$timestamp
 ```
 
 #### Gulp - Task Runner
