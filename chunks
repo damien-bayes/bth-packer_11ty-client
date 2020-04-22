@@ -36,6 +36,3 @@
 
   {% if loop.last %}</ul>{% endif %}
 {% endfor %}
-
-    needs: integration
-
