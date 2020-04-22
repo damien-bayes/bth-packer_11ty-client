@@ -50,7 +50,7 @@ jobs:
           script: |
             cd baythium-projects/baythium-packer_client
             ids=$(docker ps -a --filter "name=baythium-packer_client" --format="{{.ID}}")
-            [[ -n $ids ]] && docker stop $ids && docker rm $ids
+            [[ -n $ids ]] && docker stop $ids && docker rm $ids 
             images=$(docker images -a | grep "baythium-packer_client" | awk '{print $1":"$2}')
             [[ -n $images ]] && docker rmi $images
             timestamp=$(date +%s)
