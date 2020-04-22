@@ -12,24 +12,16 @@ jobs:
     steps:
       - name: Start deploying
         uses: appleboy/ssh-action@master
-        env:
-          VPATH: baythium-projects/baythium-packer_client
-          VNAME: baythium-packer_client
-          VHOST: packer.baythium.com,packer.bayesianflow.space
-          VNETWORK: baythium-network-1
-          VPREFIX: baythium-ecosystem
-          VPORT: 10033
         with:
           host: ${{ secrets.HOSTNAME }}
           port: ${{ secrets.PORT }}
           username: ${{ secrets.USERNAME }}
           passphrase: ${{ secrets.PASSPHRASE }}
           key: ${{ secrets.KEY }}
-          envs: VPATH,VNAME,VHOST,VNETWORK,VPREFIX,VPORT
           script: |
             timestamp=$(date +%s)
-            cd $VPATH
-            docker rm $(docker stop $(docker ps --filter "name=$VNAME" --format="{{.ID}}"))
-            docker rmi $(docker images | grep "$VNAME")
-            docker build . --file dockerfile --tag $VPREFIX/$VNAME:$timestamp
-            docker run -d --name $VNAME --expose $VPORT --net $VNETWORK -e "VIRTUAL_HOST=$VHOST" --restart=on-failure:3 $VPREFIX/$VNAME:$timestamp
+            cd baythium-projects/baythium-packer_client
+            docker rm $(docker stop $(docker ps --filter "name=baythium-packer_client" --format="{{.ID}}"))
+            docker rmi $(docker images | grep "baythium-packer_client")
+            docker build . --file dockerfile --tag baythium-ecosystem/baythium-packer_client:$timestamp
+            docker run -d --name baythium-packer_client --expose 10033 --net baythium-network-1 -e "VIRTUAL_HOST=packer.baythium.com,packer.bayesianflow.space" --restart=on-failure:3 baythium-ecosystem/baythium-packer_client:$timestamp
