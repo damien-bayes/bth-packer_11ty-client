@@ -73,6 +73,7 @@ docker run \
 --name baythium-packer_client \
 --expose 10033 \
 --net baythium-network-1 \
+--ip 172.18.0.3 \
 -e "VIRTUAL_HOST=packer.baythium.com, packer.bayesianflow.space" \
 --restart=on-failure:3 \
 baythium-ecosystem/baythium-packer_client:$timestamp
