@@ -9,6 +9,9 @@ services:
       - 10033
     environment:
       "VIRTUAL_HOST=packer.baythium.com"
+    networks:
+      static-network:
+        ipv4_address: 172.18.0.3
 
 networks:
   default:
