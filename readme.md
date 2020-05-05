@@ -8,7 +8,7 @@
 ---
 
 ## Getting Started
-
+ 
 ```bash
 # Automatically run an Eleventy web server on 127.0.0.1:10033 for testing it out
 npm run eleventy:serve-1
