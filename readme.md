@@ -42,8 +42,6 @@ npm update @damien-bayes/baythium-alacritas_package --save
 
 Docker plays an essential part on the Baythium Ecosystem and if you are familiar with it you CAN use the following commands for getting the ball rolling.
 
-###### Variant 1
-
 ```bash
 # Remove all containers with the specified name
 docker rm $(docker stop $(docker ps --filter "name=baythium-packer_client" --format="{{.ID}}"))
