@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  baythium-packer-client:
+    image: baythium-ecosystem/baythium-packer_client
+    container_name: baythium-packer_client
+    restart: always
+    expose:
+      - 10033
+    environment:
+      "VIRTUAL_HOST=packer.baythium.com"
+    networks:
+      static-network:
+        ipv4_address: 172.18.0.3
+
+networks:
+  default:
+    external:
+      name: baythium-network-e8dmczz4

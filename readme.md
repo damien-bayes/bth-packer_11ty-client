@@ -8,7 +8,7 @@
 ---
 
 ## Getting Started
-
+ 
 ```bash
 # Automatically run an Eleventy web server on 127.0.0.1:10033 for testing it out
 npm run eleventy:serve-1
@@ -42,8 +42,6 @@ npm update @damien-bayes/baythium-alacritas_package --save
 
 Docker plays an essential part on the Baythium Ecosystem and if you are familiar with it you CAN use the following commands for getting the ball rolling.
 
-###### Variant 1
-
 ```bash
 # Remove all containers with the specified name
 docker rm $(docker stop $(docker ps --filter "name=baythium-packer_client" --format="{{.ID}}"))
@@ -73,6 +71,7 @@ docker run \
 --name baythium-packer_client \
 --expose 10033 \
 --net baythium-network-1 \
+--ip 172.18.0.3 \
 -e "VIRTUAL_HOST=packer.baythium.com, packer.bayesianflow.space" \
 --restart=on-failure:3 \
 baythium-ecosystem/baythium-packer_client:$timestamp

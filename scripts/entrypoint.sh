@@ -1,4 +1,10 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
+
+# Entrypoint
+#
+# Project: Baythium Packer Client
+# File: /scripts/entrypoint.sh
+# Organization: Baythium Ecosystem (https://baythium.com)
 
 # Entrypoint
 #
