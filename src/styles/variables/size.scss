@@ -1,0 +1,48 @@
+/**
+ * Size
+ *
+ * File: /src/styles/variables/size.scss
+ * Project: Baythium Aspectus
+ * Organization: Baythium Ecosystem: https://baythium.com
+ *
+ * RULES:
+ * 1. You HAVE TO follow the "BEM" naming conventions for each global variable you use
+ */
+
+/* Variant 1 (Default size) */
+$size--max: 100% !default;
+$size--half: 50% !default;
+
+$size--xl: 32px !default;
+$size--lg: 24px !default;
+
+$size--base: 16px !default;
+
+$size--sm: 8px !default;
+$size--xs: 2px !default;
+
+$size--min: 0% !default;
+
+$size--auto: auto !default;
+
+/* Variant 2 (Binary size) */
+$size--bin-0: 0px !default;
+$size--bin-1: 1px !default;
+$size--bin-2: 2px !default;
+$size--bin-4: 4px !default;
+$size--bin-8: 8px !default;
+$size--bin-16: 16px !default;
+$size--bin-32: 32px !default;
+$size--bin-64: 64px !default;
+$size--bin-128: 128px !default;
+$size--bin-256: 256px !default;
+$size--bin-512: 512px !default;
+
+/* VIEWPORT */
+$size__vh--max: 100vh !default;
+$size__vh--half: 50vh !default;
+$size__vh--min: 0vh !default;
+
+$size__vw--max: 100vw !default;
+$size__vw--half: 50vw !default;
+$size__vw--min: 0vw !default;

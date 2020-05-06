@@ -1,17 +1,17 @@
 {# 
   App Footer Partial
 
-  Project: Baythium Packer
   File: /src/_includes/_partials/app-footer.njk
-  Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+  Project: Baythium Packer Client
+  Organization: Baythium Ecosystem: https://baythium.com
 #}
 
 <footer class="app-footer">
   <div class="container-1">
 
     <!-- Deck 1: Language Switcher -->
-    <div class="language-switcher mb-1--5">
-      <span class="icon icon--globe">{{ translation[app.locale].language | capitalize }}:</span>
+    <div class="language-switcher mb--5">
+      <span class="icon icon--globe">{{ translation[app.locale].language }}:</span>
 
       <a href="javascript:" class="language-switcher__link">
         {% for lang in app.languages %}
@@ -56,8 +56,8 @@
     <!-- Deck 5: Synthesis -->
     <div class="app-footer__synthesis text-sm-1--right">
       <ul>
-        <li>{{ translation[app.locale].productName | title }}: <span>{{ app.name }}</span></li>
-        <li>{{ translation[app.locale].clientVersion | title }}: <span>{{ app.version }}</span></li>
+        <li>{{ translation[app.locale].productName }}: <span>{{ app.name }}</span></li>
+        <li>{{ translation[app.locale].clientVersion }}: <span>{{ app.version }}</span></li>
       </ul>
     </div>
 

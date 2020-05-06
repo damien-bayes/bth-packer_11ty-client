@@ -1,9 +1,9 @@
 /**
  * HTML Meta
- * 
- * Project: Baythium Packer
+ *
  * File: /src/shortcodes/html_meta.js
- * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ * Project: Baythium Packer Client
+ * Organization: Baythium Ecosystem: https://baythium.com
  */
 
 "use strict";

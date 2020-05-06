@@ -1,0 +1,18 @@
+/**
+ * Animation
+ *
+ * File: /src/styles/variables/animation.scss
+ * Project: Baythium Aspectus
+ * Organization: Baythium Ecosystem: https://baythium.com
+ *
+ * RULES:
+ * 1. You HAVE TO follow the "BEM" naming conventions for each global variable you use
+ */
+
+$animation__duration--xslow: 1s !default;
+$animation__duration--slow: 600ms !default;
+
+$animation__duration--base: 300ms !default;
+
+$animation__duration--fast: 200ms !default;
+$animation__duration--xfast: 100ms !default;

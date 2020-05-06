@@ -1,25 +1,25 @@
 {# 
   App Header Partial
 
-  Project: Baythium Packer
   File: /src/_includes/_partials/app-header.njk
-  Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+  Project: Baythium Packer Client
+  Organization: Baythium Ecosystem: https://baythium.com
 #}
 
 <header class="app-header">
-  <div class="container-1">
+  <div class="container">
 
     <!-- Deck 1: System -->
     <div class="app-header__system">
-      <div class="row-1">
-        <div class="column-1--6">
-          <a href="javascript:">{{ translation[app.locale].ecosystem | title }}</a>
-          <a href="https://support.baythium.com">{{ translation[app.locale].supportCenter | title }}</a>
+      <div class="row">
+        <div class="column--6">
+          <a href="javascript:">{{ translation[app.locale].ecosystem }}</a>
+          <a href="https://support.baythium.com">{{ translation[app.locale].supportCenter }}</a>
         </div>
 
-        <div class="column-1--6" style="text-align: right;">
-          <a href="https://auth.baythium.com/sign-up">{{ translation[app.locale].signUp | title }}</a>
-          <a href="https://auth.baythium.com/authorize?client_id=10033&redirect_uri=https://packer.baythium.com/callback&scope=4&response_type=code&state=BrcH0DStb0x35sBrhNID8qXm5SnQdYoIFz1iHfDS&locale=en">{{ translation[app.locale].signIn | title }}</a>
+        <div class="column--6" style="text-align: right;">
+          <a href="https://auth.baythium.com/sign-up">{{ translation[app.locale].signUp }}</a>
+          <a href="https://auth.baythium.com/authorize?client_id=10033&redirect_uri=https://packer.baythium.com/callback&scope=4&response_type=code&state=BrcH0DStb0x35sBrhNID8qXm5SnQdYoIFz1iHfDS&locale=en">{{ translation[app.locale].signIn }}</a>
         </div>
       </div>
     </div>
@@ -37,8 +37,8 @@
       <div>
         <div class="app-header__parallelogram">
           <!-- Language switcher -->
-          <div class="language-switcher m-1--0">
-            <span class="icon icon--globe display-1--none display-sm-1--block">{{ translation[app.locale].language | title }}:</span>
+          <div class="language-switcher m--0">
+            <span class="icon icon--globe display--none display__sm--block">{{ translation[app.locale].language }}:</span>
 
             <a href="javascript:" class="language-switcher__link">
               {% for lang in app.languages %}

@@ -1,0 +1,24 @@
+/**
+ * Percentage
+ *
+ * File: /src/styles/variables/percentage.scss
+ * Project: Baythium Aspectus
+ * Organization: Baythium Ecosystem: https://baythium.com
+ *
+ * RULES:
+ * 1. You HAVE TO follow the "BEM" naming conventions for each global variable you use
+ */
+
+/* Variant 1 */
+$percentage--max: 100% !default;
+$percentage--quarter: 25% !default;
+$percentage--half: 50% !default;
+$percentage--min: 0% !default;
+
+/* Variant 2 */
+$percentage--bin-0: 0px !default;
+$percentage--bin-1: 1px !default;
+$percentage--bin-2: 2px !default;
+$percentage--bin-4: 4px !default;
+$percentage--bin-8: 8px !default;
+$percentage--bin-16: 16px !default;

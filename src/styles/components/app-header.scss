@@ -1,34 +1,35 @@
 /**
  * App Header
- * 
- * Project: Baythium Packer
+ *
  * File: /src/scss/components/app-header.scss
- * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ * Project: Baythium Packer Client
+ * Organization: Baythium Ecosystem: https://baythium.com
  */
 
 .app-header {
-  color: $black;
-  background-color: $white;
+  color: $color--black;
+  background-color: $color--white;
   overflow: hidden;
   z-index: 0;
   display: flex;
   flex-direction: column;
+  margin-bottom: $indent--base;
 
   &__system {
     display: flex;
     flex-direction: column;
-    padding: $indent-4 $indent-8;
+    padding: $indent--bin-4 $indent--bin-8;
 
     a {
       text-decoration: none;
 
-      &:not(:last-of-type) { margin-right: $sm-indent; }
+      &:not(:last-of-type) { margin-right: $indent--sm; }
     }
   }
 
   &__default {
     display: flex;
-    border-bottom: 1px solid $gray-200;
+    border-bottom: 1px solid $color--gray-200;
     
     > div { flex: 50% 0 1; }
 
@@ -41,12 +42,12 @@
   &__brand {
     display: flex;
     align-items: center;
-    padding: $base-indent;
+    padding: $indent--base;
 
     img {
       width: 32px;
       height: 32px;
-      margin-right: $base-indent;
+      margin-right: $indent--base;
       transition: -webkit-filter 200ms;
       transition: filter 200ms;
     }
@@ -66,11 +67,11 @@
 
   &__parallelogram {
     position: relative;
-    background-color: $primary;
-    color: $white;
-    background-color: $primary;
+    background-color: $color--primary;
+    color: $color--white;
+    background-color: $color--primary;
     z-index: 0;
-    padding: $base-indent;
+    padding: $indent--base;
     display: flex;
     align-items: center;
 
@@ -82,7 +83,7 @@
       width: 50%;
       height: 100%;
       transform: skew(20deg);
-      background-color: $primary;
+      background-color: $color--primary;
       z-index: -1;
     }
   }

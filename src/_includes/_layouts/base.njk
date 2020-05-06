@@ -7,23 +7,23 @@
 {# 
   Base Layout
 
-  Project: Baythium Packer
   File: /src/_includes/_layouts/base.njk
-  Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+  Project: Baythium Packer Client
+  Organization: Baythium Ecosystem: https://baythium.com
 #}
 
 <!doctype html>
 
-<html lang="{{ app.locale }}" prefix="og:http://ogp.me/ns#">
+<html lang="{{ app.locale }}" prefix="og:http://ogp.me/ns#" class="baythium-aspectus baythium-aspectus--light no-js">
   {% include "_partials/head.njk" %}
 
-  <body id="app" class="baythium-aspectus baythium-aspectus--light no-js">
+  <body id="app">
     <noscript>
-      <div class="alert-1 alert-1--danger">
-        <div class="alert-1__header">
+      <div class="alert alert--danger">
+        <div class="alert__header">
           <div>{{ translation[app.locale].danger }}</div>
         </div>
-        <div class="alert-1__body">
+        <div class="alert__body">
           <p>{{ translation[app.locale].noJs }}</p>
         </div>
       </div>
@@ -34,19 +34,19 @@
 
     {# Alert #}
     {%- if app.environment == "development" %}
-    <div class="alert-1 alert-1--warning">
-      <div class="alert-1__header">
+    <div class="alert alert--warning">
+      <div class="alert__header">
         <div>{{ translation[app.locale].warning }}</div>
       </div>
-      <div class="alert-1__body">
-        <p><b class="mr-1--2">{{ translation[app.locale].websiteMode | title }}:</b><span>{{ app.environment }}</span></p>
-        <p><b class="mr-1--2">{{ translation[app.locale].currentPage | title }}:</b><span>{{ page.url | url }}</span></p>
+      <div class="alert__body">
+        <p><b class="mr--2">{{ translation[app.locale].websiteMode | title }}:</b><span>{{ app.environment }}</span></p>
+        <p><b class="mr--2">{{ translation[app.locale].currentPage | title }}:</b><span>{{ page.url | url }}</span></p>
       </div>
     </div>
     {%- endif %}
 
     {% include "_partials/app-header.njk" %}
-    <main class="container-1">
+    <main class="container">
       {# "Dynamic" content goes here #}
       {{ content | safe }}
     </main>
@@ -57,7 +57,7 @@
     <div class="gdpr">
       <p>
         This site uses cookies for analytics, personalized content and ads. By continuing to browse this site, you agree to our <a href="{{ app.policyUrl }}" title="Privacy Policy">privacy policies</a>
-        <button class="button-1 button-1--primary" title="Close">Accept</button>
+        <button class="button button--primary" title="Close">Accept</button>
       </p>
     </div>
     #}

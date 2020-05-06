@@ -1,9 +1,9 @@
 /**
  * Messages
- * 
- * Project: Baythium Packer
+ *
  * File: /src/_data/messages.js
- * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ * Project: Baythium Packer Client
+ * Organization: Baythium Ecosystem: https://baythium.com
  */
 
 "use strict";
@@ -11,27 +11,28 @@
 module.exports = {
   /* English */
   en: {
-    ecosystem: "ecosystem",
-    supportCenter: "support center",
-    signUp: "sign up",
-    signIn: "sign in",
+    ecosystem: "Ecosystem",
+    supportCenter: "Support Center",
+    signUp: "Sign Up",
+    signIn: "Sign In",
     copyright: {
       paragraphs: [
-        "all product names, trademarks and registered trademarks are property of their respective owners",
-        "use of these names, trademarks and brands does not imply endorsement"
+        "All product names, trademarks and registered trademarks are property of their respective owners.",
+        "Use of these names, trademarks and brands does not imply endorsement."
       ]
     },
-    productName: "product name",
-    clientVersion: "client version",
-    language: "language",
-    currentPage: "current page",
-    websiteMode: "website mode",
-    documentation: "docs",
-    download: "download",
-    github: "github",
-    noJs: "We are sorry but this website DOES NOT work properly without JavaScript enabled. Please enable it to continue",
+    productName: "Product Name",
+    clientVersion: "Client Version",
+    language: "Language",
+    currentPage: "Current page",
+    websiteMode: "Website mode",
+    documentation: "Docs",
+    download: "Download",
+    github: "GitHub",
+    noJs: "We are sorry but this website DOES NOT work properly without JavaScript enabled. Please enable it to continue.",
     warning: "Warning",
-    danger: "Danger"
+    danger: "Danger",
+    new: "New"
   },
 
   /* Russian */

@@ -1,9 +1,9 @@
 /**
  * Global
- * 
- * Project: Baythium Packer
+ *
  * File: /src/_includes/_js/global.js
- * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ * Project: Baythium Packer Client
+ * Organization: Baythium Ecosystem: https://baythium.com
  */
 
 "use strict";
@@ -38,5 +38,5 @@ window.addEventListener("DOMContentLoaded", e => {
    *
    * @see: https://docs.appcues.com/article/438-anonymous-users 
    */
-  Appcues.anonymous();
+  // Appcues.anonymous();
 });

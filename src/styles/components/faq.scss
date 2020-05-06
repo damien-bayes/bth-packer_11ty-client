@@ -1,15 +1,15 @@
 /**
  * FAQ
- * 
- * Project: Baythium Packer
+ *
  * File: /src/scss/components/faq.scss
- * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ * Project: Baythium Packer Client
+ * Organization: Baythium Ecosystem: https://baythium.com
  */
 
 .faq-pillar {
-  margin-bottom: $base-indent;
-  padding: $base-indent 0;
-  border-bottom: 1px solid $gray-200;
+  margin-bottom: $indent--base;
+  padding: $indent--base 0;
+  border-bottom: 1px solid $color--gray-200;
 
   & > summary {
     list-style: none;
@@ -19,19 +19,19 @@
 
   &[open] {
     p { 
-      padding: 0 0 0 $xl-indent;
+      padding: 0 0 0 $indent--xl;
       margin: 0;
     }
 
     summary {
-      margin-bottom: $base-indent;
+      margin-bottom: $indent--base;
 
       &::before {
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
         -o-transform: rotate(45deg);
         -moz-transform: rotate(45deg);
-        background-color: $secondary;
+        background-color: $color--secondary;
       }
     }
   }
@@ -41,10 +41,10 @@
     outline: 0;
     position: relative;
     cursor: pointer;
-    padding: 0 0 0 $xl-indent;
-    font-weight: $font-weight-bold;
-    line-height: $base-line-height;
-    font-size: $base-font-size;
+    padding: 0 0 0 $indent--xl;
+    font-weight: $font__weight--bold;
+    line-height: $text__line-height--base;
+    font-size: $font__size--base;
 
     &::before {
       content: "";
@@ -53,12 +53,12 @@
       left: 8.4px;
       width: 6px;
       height: 6px;
-      background-color: $gray-600;
+      background-color: $color--gray-600;
       -webkit-transition: -webkit-transform .3s ease-in-out;
       transition: -webkit-transform .3s ease-in-out;
       transition: transform .3s ease-in-out;
       transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
-      font-size: $xl-font-size;
+      font-size: $font__size--xl;
       -ms-user-select: none;
       user-select: none;
       -webkit-user-select: none;

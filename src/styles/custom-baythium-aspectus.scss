@@ -1,26 +1,25 @@
 /**
  * Custom Baythium Aspectus
  *
- * Project: Bayesian Packer
  * File: /src/styles/custom-baythium-aspectus.scss
- * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ * Project: Bayesian Packer Client
+ * Organization: Baythium Ecosystem: https://baythium.com
  */
 
-/* VARIABLES */
+/* Variables */
 @import "variables/all"; 
 
-/* COMPONENTS */
+/* Components */
 @import "components/app-header";
 @import "components/app-footer";
 @import "components/navigation";
 @import "components/language-switcher";
 @import "components/faq";
-@import "components/pagination";
 
 @import "components/syntax-highlight";
 @import "components/prism";
 
-/* CUSTOM MODIFICATIONS */
+/* Custom Modifications */
 .icon { 
   display: inline-flex;
   margin-left: 4px;
@@ -28,9 +27,9 @@
   vertical-align: middle;
 }
 
-/* PAGES */
+/* Pages */
 .page-not-found {
-  & .row-1 {
+  & .row {
     display: flex;
     align-items: center;
     text-align: center;
@@ -48,13 +47,13 @@
   &__brand {
     display: flex;
     align-items: center;
-    padding: $xl-indent;
+    padding: $indent--xl;
     flex-direction: column;
 
     img {
       width: 196px;
       height: auto;
-      margin-bottom: $base-indent;
+      margin-bottom: $indent--base;
     }
 
     p { text-align: center; }
@@ -65,7 +64,7 @@
     overflow: hidden;
     z-index: 0;
 
-    .row-1 {
+    .row {
       display: flex;
       align-items: center;
     }
@@ -89,15 +88,15 @@
   }
 
   &__github-banner {
-    background-color: $primary;
-    overflow: hidden;
+    background-color: $color--primary !important;
+    overflow: hidden !important;
     z-index: 0;
-    padding: $xl-indent;
+    padding: $indent--xl;
 
-    .row-1 {
+    .row {
       display: flex;
       align-items: center;
-      color: $white;
+      color: $color--white;
     }
 
     &::before {

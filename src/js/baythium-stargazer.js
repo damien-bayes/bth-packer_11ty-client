@@ -1,9 +1,9 @@
 /**
  * Stargazer
- * 
- * Project: Baythium Packer
+ *
  * File: /src/js/stargazer.js
- * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ * Project: Baythium Packer Client
+ * Organization: Baythium Ecosystem: https://baythium.com
  */
 
 "use strict";

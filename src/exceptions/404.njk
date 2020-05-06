@@ -9,32 +9,32 @@
 {# 
   404 - Page Not Found
 
-  Project: Baythium Packer
   File: /src/exceptions/404.njk
-  Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+  Project: Baythium Packer Client
+  Organization: Baythium Ecosystem: https://baythium.com
 #}
 
-<section class="section-1 page-not-found">
+<!-- Section -->
+<section class="section page-not-found">
 
   <!-- Deck 1 -->
-  <div class="row-1">
+  <div class="row">
 
     <!-- Subdeck 1 -->
-    <div class="sm-column-1--6 sm-order-1--1 order-1--2">
+    <div class="column__sm--6 order__sm--1 order--2">
       <div class="page-not-found__content">
         <h1>{{ title }}</h1>
         <p>The requested resource could not be found but may be available in the future</p>
-        <a class="button-1 button-1--primary button-1--rounded" href="{{ '/' | url }}">Go Home</a>
+        <a class="button button--primary button--rounded" href="{{ '/' | url }}">Go Home</a>
       </div>
     </div>
 
     <!-- Subdeck 2 -->
-    <div class="sm-column-1--6 sm-order-1--2 order-1--1">
+    <div class="column__sm--6 order__sm--2 order--1">
       <div class="page-not-found__image">
         <img src="{{ '/' | url }}images/page-not-found.svg" alt="{{ app.name }}"/>
       </div>
     </div>
 
-  </div>
-  
+  </div>  
 </section>

@@ -1,31 +1,34 @@
 /**
  * Layer
  *
- * Project: Baythium Aspectus
  * File: /src/styles/variables/layer.scss
- * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ * Project: Baythium Aspectus
+ * Organization: Baythium Ecosystem: https://baythium.com
+ *
+ * RULES:
+ * 1. You HAVE TO follow the "BEM" naming conventions for each global variable you use
  */
 
 /* Variant 1 (Default layers) */
-$layer-100: 100;
-$layer-200: 200;
-$layer-300: 300;
-$layer-400: 400;
-$layer-500: 500;
-$layer-600: 600;
-$layer-700: 700;
-$layer-800: 800;
-$layer-900: 900;
+$layer--100: 100 !default;
+$layer--200: 200 !default;
+$layer--300: 300 !default;
+$layer--400: 400 !default;
+$layer--500: 500 !default;
+$layer--600: 600 !default;
+$layer--700: 700 !default;
+$layer--800: 800 !default;
+$layer--900: 900 !default;
 
 /* Variant 2 (Binary layers) */
-$layer-0: 0px !default;
-$layer-1: 1px !default;
-$layer-2: 2px !default;
-$layer-4: 4px !default;
-$layer-8: 8px !default;
-$layer-16: 16px !default;
-$layer-32: 32px !default;
-$layer-64: 64px !default;
-$layer-128: 128px !default;
-$layer-256: 256px !default;
-$layer-512: 512px !default;
+$layer--bin-0: 0px !default;
+$layer--bin-1: 1px !default;
+$layer--bin-2: 2px !default;
+$layer--bin-4: 4px !default;
+$layer--bin-8: 8px !default;
+$layer--bin-16: 16px !default;
+$layer--bin-32: 32px !default;
+$layer--bin-64: 64px !default;
+$layer--bin-128: 128px !default;
+$layer--bin-256: 256px !default;
+$layer--bin-512: 512px !default;

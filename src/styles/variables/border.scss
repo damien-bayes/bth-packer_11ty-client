@@ -1,34 +1,47 @@
 /**
  * Border
  *
- * Project: Baythium Aspectus
  * File: /src/styles/variables/border.scss
- * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ * Project: Baythium Aspectus
+ * Organization: Baythium Ecosystem: https://baythium.com
+ *
+ * RULES:
+ * 1. You HAVE TO follow the "BEM" naming conventions for each global variable you use
  */
+ 
+/* BORDER RADIUS */
 
 /* Variant 1 (Default border radius) */
-$max-border-radius: 100% !default;
-$half-border-radius: 50% !default;
+$border__radius--max: 100% !default;
+$border__radius--half: 50% !default;
 
-$xl-border-radius: 32px !default;
-$lg-border-radius: 24px !default;
- 
-$base-border-radius: 16px !default;
- 
-$sm-border-radius: 8px !default;
-$xs-border-radius: 2px !default;
- 
-$min-border-radius: 0% !default;
+$border__radius--xl: 32px !default;
+$border__radius--lg: 24px !default;
+
+$border__radius--base: 16px !default;
+
+$border__radius--sm: 8px !default;
+$border__radius--xs: 2px !default;
+
+$border__radius--min: 0% !default;
 
 /* Variant 2 (Binary border radius) */
-$border-radius-0: 0px !default;
-$border-radius-1: 1px !default;
-$border-radius-2: 2px !default;
-$border-radius-4: 4px !default;
-$border-radius-8: 8px !default;
-$border-radius-16: 16px !default;
-$border-radius-32: 32px !default;
-$border-radius-64: 64px !default;
-$border-radius-128: 128px !default;
-$border-radius-256: 256px !default;
-$border-radius-512: 512px !default;
+$border__radius--bin-0: 0px !default;
+$border__radius--bin-1: 1px !default;
+$border__radius--bin-2: 2px !default;
+$border__radius--bin-4: 4px !default;
+$border__radius--bin-8: 8px !default;
+$border__radius--bin-16: 16px !default;
+
+/* BORDER WIDTH */
+
+/* Variant 1 (Default border width) */
+$border__width--no: 0px !default;
+$border__width--base: 1px !default;
+
+/* Variant 2 (Binary border width) */
+$border__width--bin-0: 0px !default;
+$border__width--bin-1: 1px !default;
+$border__width--bin-2: 2px !default;
+$border__width--bin-4: 4px !default;
+$border__width--bin-8: 8px !default;

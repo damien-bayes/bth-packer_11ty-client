@@ -6,30 +6,30 @@
   priority: 0.7,
   translationKey: "faq",
   locale: "en",
-  description: "Find answers to frequently asked questions. See the most common topics and more",
+  description: "Find answers to frequently asked questions. See the most common topics and more.",
   stylesheets: [],
   javascripts: []
 }
 ---
 
-{# 
+{#
   FAQ
 
-  Project: Baythium Packer
   File: /src/faq.njk
-  Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+  Project: Baythium Packer Client
+  Organization: Baythium Ecosystem: https://baythium.com
 #}
 
-<!-- FAQ Page -->
-<section class="section-1 faq">
+<!-- Section -->
+<section class="section faq">
 
-  <div class="card-1">
-    <div class="card-1__body">
+  <div class="card">
+    <div class="card__body">
 
       <!-- Headline -->
-      <div class="headline-1 headline-1--xl">
-        <h1 class="headline-1__title">{{ title }}</h1>
-        <p class="headline-1__description">{{ description }}</p>
+      <div class="headline headline--xl">
+        <h1 class="headline__title">{{ title }}</h1>
+        <p class="headline__description">{{ description }}</p>
       </div>
 
       {# Start looping through faq items #}
@@ -39,9 +39,12 @@
         {%- set question = faqItem.question %}
         {%- set answer = faqItem.answer %}
 
-        <details data-faq-id="{{ id }}" class="faq-pillar" {% if loop.first %} open {% endif %}>
-          <summary class="faq-pillar__question">{{ question }}</summary>
-          <p class="faq-pillar__answer">{{ answer }}</p>
+        <!-- Collapse -->
+        <details data-faq-id="{{ id }}" class="collapse" {% if loop.first %} open {% endif %}>
+          <summary class="collapse__header">{{ question }}</summary>
+          <div class="collapse__body">
+            <p>{{ answer }}</p>
+          </div>
         </details>
 
       {%- endfor -%}

@@ -1,15 +1,24 @@
 /**
  * All
  *
- * File: /src/styles/variables/_all.scss
+ * File: /src/styles/variables/all.scss
  * Project: Baythium Aspectus
- * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ * Organization: Baythium Ecosystem: https://baythium.com
+ *
+ * RULES:
+ * 1. All imported variables MUST HAVE the appropriate orders (Ascending)
  */
 
+@charset "utf-8";
+
+@import "animation";
+@import "background";
 @import "border";
 @import "color";
-@import "duration";
 @import "font";
 @import "indent";
 @import "layer";
+@import "percentage";
 @import "shadow";
+@import "size";
+@import "text";

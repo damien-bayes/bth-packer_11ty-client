@@ -1,32 +1,32 @@
 /**
  * Language Switcher
- * 
- * Project: Baythium Packer
+ *
  * File: /src/scss/components/language-switcher.scss
- * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ * Project: Baythium Packer Client
+ * Organization: Baythium Ecosystem: https://baythium.com
  */
 
 .language-switcher {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: $base-indent;
+  margin-bottom: $indent--base;
 
   span {
-    margin-right: $sm-indent;
+    margin-right: $indent--sm;
   }
 
   &__link {
-    color: $white;
+    color: $color--white;
     text-decoration: none;
-    background-color: $secondary;
-    border-radius: $sm-border-radius;
-    color: $white;
-    padding: $sm-indent;
-    line-height: $line-height-16;
+    background-color: $color--secondary;
+    border-radius: $border__radius--sm;
+    color: $color--white;
+    padding: $indent--sm;
+    line-height: $text__line-height--bin-16;
 
     &:hover {
-      background-color: lighten($secondary, 5%);
+      background-color: lighten($color--secondary, 5%);
     }
   }
 }

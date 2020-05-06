@@ -1,9 +1,9 @@
 /**
  * Syntax Highlight Configuration
- * 
- * Project: Baythium Packer
+ *
  * File: /config/eleventy.config.js
- * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ * Project: Baythium Packer Client
+ * Organization: Baythium Ecosystem: https://baythium.com
  */
 
 "use strict";

@@ -15,21 +15,21 @@
 {# 
   Home
 
-  Project: Baythium Packer
   File: /src/index.njk
-  Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+  Project: Baythium Packer Client
+  Organization: Baythium Ecosystem: https://baythium.com
 #}
 
-<!-- Home Page -->
-<section class="section-1 home">
+<!-- Section -->
+<section class="section home">
 
-  <!-- Deck 1 -->
-  <div class="card-1 home__main-card">
-    <div class="card-1__body">
-      <div class="row-1">
+  <!-- Card (Deck 1) -->
+  <div class="card home__main-card">
+    <div class="card__body">
+      <div class="row">
         
         <!-- Subdeck 1 -->
-        <div class="sm-column-1--6 sm-order-1--2 order-1--1">
+        <div class="column__sm--6 order__sm--2 order--1">
           <div class="home__brand">
             <img src="{{ '/' | url }}images/vacuum.svg" alt="{{ app.name }}"/>  
             <p><b>Built for developers</b> in order to make technology open to the world</p>
@@ -37,20 +37,20 @@
         </div>
 
         <!-- Subdeck 2 -->
-        <div class="sm-column-1--6 sm-order-1--1 order-1--2">
+        <div class="column__sm--6 order__sm--1 order--2">
 
           <!-- Headline -->
-          <div class="headline-1 headline-1--xl">
-            <h1 class="headline-1__title">{{ app.name }}<span class="badge-1 badge-1--alternative badge-1--rounded ml-1--3">{{ app.version }}</span></h1>
-            <p class="headline-1__description">{{ app.description }}</p>
+          <div class="headline headline--xl">
+            <h1 class="headline__title">{{ app.name }}<span class="badge badge--alternative badge--rounded ml--3">{{ app.version }}</span></h1>
+            <p class="headline__description">{{ app.description }}</p>
           </div>
 
           <!-- Button collection -->
-          <div class="button-collection-1 button-collection-1--left-aligned">
-            <a href="/documentation" class="button-1 button-1--outlined-primary button-1--rounded button-1--small mr-1--2 mb-1--2"><span class="icon icon--get-started"></span>{{ translation[app.locale].documentation | capitalize }}</a>
+          <div class="button-collection button-collection--left-aligned">
+            <a href="/docs" class="button button--outlined-primary button--rounded button--small mr--2 mb--2"><span class="icon icon--get-started"></span>{{ translation[app.locale].documentation }}</a>
             <!-- WARNING: External link (All external links tend to open in new windows or browser tabs) -->
-            <a href="https://github.com/damien-bayes/baythium-packer_client" target="_blank" rel="noopener noreferrer" class="button-1 button-1--outlined-primary button-1--rounded button-1--small mr-1--2 mb-1--2"><span class="icon icon--github"></span>{{ translation[app.locale].github | capitalize }}<span class="icon icon--external-link"></span></a>
-            <a href="javascript:" target="_blank" class="button-1 button-1--primary button-1--rounded button-1--small mb-1--2"><span class="icon icon--download"></span>{{ translation[app.locale].download | capitalize }}</a>
+            <a href="https://github.com/damien-bayes/baythium-packer_client" target="_blank" rel="noopener noreferrer" class="button button--outlined-primary button--rounded button--small mr--2 mb--2"><span class="icon icon--github"></span>{{ translation[app.locale].github }}<span class="icon icon--external-link"></span></a>
+            <a href="javascript:" target="_blank" class="button button--primary button--rounded button--small mb--2"><span class="icon icon--download"></span>{{ translation[app.locale].download }}</a>
           </div>
 
         </div>
@@ -59,29 +59,29 @@
     </div>
   </div>
 
-  <!-- Deck 2 -->
-  <div class="card-1">
-    <div class="card-1__body">
+  <!-- Card (Deck 2) -->
+  <div class="card">
+    <div class="card__body">
 
       <!-- Headline -->
-      <div class="headline-1 headline-1--lg">
-        <h2 class="headline-1__title">Features</h2>
-        <p class="headline-1__description">We combine many useful tools in a single package so whether you are small company, large enterprise or a government entity, we have all of your business file management needs covered</p>
+      <div class="headline headline--lg">
+        <h2 class="headline__title">Features</h2>
+        <p class="headline__description">We combine many useful tools in a single package so whether you are small company, large enterprise or a government entity, we have all of your business file management needs covered</p>
       </div>
 
       {# Start looping through faq items #}
       {%- for item in feature[app.locale].items -%}
-        {% if loop.first %}<div class="row-1">{% endif %}
+        {% if loop.first %}<div class="row">{% endif %}
 
           {%- set id = item.id %}
           {%- set name = item.name %}
           {%- set description = item.description %}
           {%- set imageUrl = item.imageUrl %}
 
-          <div class="sm-column-1--6 md-column-1--4">
-            <div class="card-1 mx-sm-1--2" data-feature-id="{{ id }}">
-              <img class="card-1__image" style="opacity: .2; filter: grayscale(100%);" src="{{ imageUrl }}" alt="{{ name }}"/>
-              <div class="card-1__body">
+          <div class="column__sm--6 column__md--4">
+            <div class="card mx__sm--2" data-feature-id="{{ id }}">
+              <img class="card__image" style="opacity: .2; filter: grayscale(100%);" src="{{ imageUrl }}" alt="{{ name }}"/>
+              <div class="card__body">
                 <h3>{{ name }}</h3>
                 <p>{{ description }}</p>
               </div>
@@ -94,19 +94,19 @@
     </div>
   </div>
 
-  <!-- Deck 3 -->
-  <div class="card-1 home__github-banner">
-    <div class="card-1__body">
-      <div class="row-1">
+  <!-- Card (Deck 3) -->
+  <div class="card home__github-banner">
+    <div class="card__body">
+      <div class="row">
 
         <!-- Subdeck 1 -->
-        <div class="sm-column-1--4 text-1--center">
-          <a href="https://github.com/damien-bayes/baythium-packer_client" target="_blank" rel="noopener noreferrer" class="button-1 button-1--secondary mb-1--2">Join Us On Github<span class="icon icon--external-link"></span></a>
-          <p class="display-1--none">Stars: <span id="starsCount">0</span></p>
+        <div class="column__sm--4 text--center">
+          <a href="https://github.com/damien-bayes/baythium-packer_client" target="_blank" rel="noopener noreferrer" class="button button--secondary mb--2">Join Us On Github<span class="icon icon--external-link"></span></a>
+          <p class="display--none">Stars: <span id="starsCount">0</span></p>
         </div>
 
         <!-- Subdeck 2 -->
-        <div class="sm-column-1--8">
+        <div class="column__sm--8">
           <h3>Let's build the future of the web, together</h3>
           <p>As you know, Github is the best place to share code with friends, co-workers and complete strangers so join our team today and start collaborating</p>
         </div>

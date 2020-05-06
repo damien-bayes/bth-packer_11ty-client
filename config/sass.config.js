@@ -1,9 +1,9 @@
 /**
  * SASS/SCSS Configuration
- * 
- * Project: Baythium Packer
+ *
  * File: /config/sass.config.js
- * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ * Project: Baythium Packer Client
+ * Organization: Baythium Ecosystem: https://baythium.com
  */
 
 "use strict";

@@ -12,57 +12,70 @@
   priority: 0.9,
   translationKey: "patch-notes",
   locale: "en",
-  description: "Read the latest patch notes or research historical changes"
+  description: "Read the latest patch notes or research historical changes."
 }
 ---
 
 {# 
   Patch Notes
 
-  Project: Baythium Packer
   File: /src/patch-notes/index.njk
-  Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+  Project: Baythium Packer Client
+  Organization: Baythium Ecosystem: https://baythium.com
 #}
 
-<section class="section-1 patch-notes">
+<section class="section patch-notes">
 
-  <div class="card-1">
-    <div class="card-1__body">
+  <div class="card">
+    <div class="card__body">
     
       <!-- Headline -->
-      <div class="headline-1 headline-1--xl">
-        <h1 class="headline-1__title">{{ title }}</h1>
-        <p class="headline-1__description">{{ description }}</p>
+      <div class="headline headline--xl">
+        <h1 class="headline__title">{{ title }}</h1>
+        <p class="headline__description">{{ description }}</p>
       </div>
 
-      {# Start looping notes #}
+      {# Start looping through notes #}
       {% for note in notes %}
-        {% if loop.first %}<ul>{% endif %}
-          <li>
+        {% if loop.first %}<ul class="list">{% endif %}
+          <li class="list__item">
             <article>
-              <a href="{{ note.url | url }}">
-                {{ note.data.title }}
-                {{ note.date | humanReadableFormat }}
+              <a class="list__link" href="{{ note.url | url }}">
+                <h6 class="list__title">{{ note.data.title }}</h6>
+                <p class="list__description">{{ note.date | humanReadableFormat }}</p>
               </a>
             </article>
           </li>
         {% if loop.last %}</ul>{% endif %}
       {% endfor %}
     </div>
-    <div class="card-1__action-bar">
+
+    <div class="card__action-bar">
 
       <!-- Pagination -->
-      <nav class="pagination-1" aria-labelledby="pagination1">
-        <ul class="pagination-1__list">
-          {%- for pageEntry in pagination.pages %}
-            <li class="pagination-1__item">
-              <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} class="pagination-1__link pagination-1__link--active" aria-current="page" {% else %} class="pagination-1__link" {% endif %}>{{ loop.index }}</a>
-            </li>
-          {%- endfor %}
-        </ul>
-      </nav>
-
+      <ul class="paginator paginator--primary mb-2" style="justify-content: center;" aria-labelledby="pagination">
+        <li class="paginator__item">
+          {% if pagination.href.previous %}
+            <a class="paginator__link" href="{{ pagination.href.previous }}">Previous</a>
+          {% else %}
+            <a class="paginator__link paginator__link--disabled" href="javascript:">Previous</a>
+          {% endif %}
+        </li>
+        {%- for pageEntry in pagination.pages %}
+          <li {% if page.url == pagination.hrefs[ loop.index0 ] %} class="paginator__item paginator__item--active" aria-current="page" {% else %} class="paginator__item" {% endif %}>
+            <a class="paginator__link" href="{{ pagination.hrefs[ loop.index0 ] }}">{{ loop.index }}</a>
+          </li>
+        {%- endfor %}
+        <li class="paginator__item">
+          {% if pagination.href.next %}
+            <a class="paginator__link" href="{{ pagination.href.next }}">Next</a>
+          {% else %}
+            <a class="paginator__link paginator__link--disabled" href="javascript:">Next</a>
+          {% endif %}
+        </li>
+      </ul>
     </div>
+
   </div>
 
 </section>

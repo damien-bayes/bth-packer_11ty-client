@@ -1,25 +1,29 @@
 {# 
   Patch Note Partial
 
-  Project: Baythium Packer
   File: /src/_includes/_partials/patch-note.njk
-  Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+  Project: Baythium Packer Client
+  Organization: Baythium Ecosystem: https://baythium.com
 #}
 
-<div class="card-1 mr-md-1--2">
-  <div class="card-1__body">
+<!-- Card -->
+<div class="card mr__md--2">
+  <div class="card__body">
 
     <!-- Headline -->
-    <div class="headline-1">
-      <h2 class="headline-1__title">Recent Patch Notes</h2>
-    </div>
+    <div class="headline">
+      <h2 class="headline__title">Recent Patch Notes</h2>
+    </div> 
 
     {# Start looping through patch notes #}
     {% for note in collections.patch_notes %}
       {% if loop.first %}<ul class="list">{% endif %}
-        <div>
-          <a href="{{ note.url | url }}">{{ note.data.title }}<span class="badge-1 badge-1--alternative badge-1--rounded">{{ note.data.date | humanReadableFormat }}</span></a>
-        </div>
+        <li class="list__item">
+          <a class="list__link" href="{{ note.url | url }}">
+            <h6 class="list__title">{{ note.data.title }}</h6>
+            <p class="list__description">{{ note.date | humanReadableFormat }}</p>
+          </a>
+        </li>
       {% if loop.last %}</ul>{% endif %}
     {% endfor %}
 

@@ -1,16 +1,16 @@
 /**
  * App Footer
- * 
- * Project: Baythium Packer
+ *
  * File: /src/scss/components/app-footer.scss
- * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ * Project: Baythium Packer Client
+ * Organization: Baythium Ecosystem: https://baythium.com
  */
 
 .app-footer {
-    color: $white;
-    background-color: $primary;
+    color: $color--white;
+    background-color: $color--primary;
     background: linear-gradient(120deg, rgba(58,31,93,1) 0%, rgba(40,12,79,1) 100%);
-    padding: $xl-indent $base-indent;
+    padding: $indent--xl $indent--base;
     position: relative;
     overflow: hidden;
     z-index: 0;
@@ -34,9 +34,9 @@
     }
 
     &__navigation-item {
-      margin-bottom: $base-indent;
+      margin-bottom: $indent--base;
 
-      &:not(:last-of-type) { margin-right: $base-indent; }
+      &:not(:last-of-type) { margin-right: $indent--base; }
     }
 
     &__navigation-list {
@@ -50,38 +50,38 @@
 
     &__navigation-link {
       display: block;
-      color: $white;
+      color: $color--white;
       text-decoration: none;
-      padding: $indent-2 $sm-indent !important;
+      padding: $indent--bin-2 $indent--sm !important;
       border-bottom: 1px solid transparent;
-      line-height: $base-line-height;
+      line-height: $text__line-height--base;
 
       &--active {
-        background-color: $alternative;
-        color: $black !important;
-        border-radius: $sm-border-radius;
+        background-color: $color--alternative;
+        color: $color--black !important;
+        border-radius: $border__radius--sm;
 
         &:hover {
-          background-color: lighten($alternative, 5%);
+          background-color: lighten($color--alternative, 5%);
         }
       }
 
       &:hover {
-        border-bottom: 1px solid $secondary;
+        border-bottom: 1px solid $color--secondary;
       }
     }
   
-    &__navigation { color: $white; }
+    &__navigation { color: $color--white; }
   
     &__copyright {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: $base-indent;
-      font-size: $sm-font-size;
-  
+      margin-bottom: $indent--base;
+      font-size: $font__size--sm;
+
       p:first-of-type {
-        margin-bottom: $base-indent;
+        margin-bottom: $indent--base;
       }
   
       span {
@@ -96,24 +96,24 @@
       
       ul {
         display: inline-flex;
-        font-size: $sm-font-size;
+        font-size: $font__size--sm;
         margin: 0;
         padding: 0;
         list-style: none;
   
         li:not(:last-of-type) {
-          margin-right: $base-indent;
+          margin-right: $indent--base;
         }
   
         span {
-          padding: 0 $xs-indent;
-          color: $black;
+          padding: 0 $indent--xs;
+          color: $color--black;
           border-radius: 4px;
-          color: $white;
+          color: $color--white;
   
           &:hover {
-            background-color: $alternative;
-            color: $black;
+            background-color: $color--alternative;
+            color: $color--black;
           }
         }
       }
@@ -122,7 +122,7 @@
     &__brand {
       display: flex;
       justify-content: center;
-      margin-bottom: $lg-indent;
+      margin-bottom: $indent--lg;
   
       img {
         width: 128px;

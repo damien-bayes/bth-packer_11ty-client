@@ -1,14 +1,14 @@
 /**
  * Navigation
- * 
- * Project: Baythium Packer
+ *
  * File: /src/scss/components/navigation.scss
- * Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+ * Project: Baythium Packer Client
+ * Organization: Baythium Ecosystem: https://baythium.com
  */
 
 .navigation {
   display: flex;
-  color: $gray-800;
+  color: $color--gray-800;
   
   &__list {
     height: 100%;
@@ -18,13 +18,13 @@
   }
 
   &__button:first-of-type {
-    border-right: 1px solid $gray-300;
-    margin-right: $xs-indent;
+    border-right: 1px solid $color--gray-300;
+    margin-right: $indent--xs;
   }
 
   &__button:last-of-type {
-    border-left: 1px solid $gray-300;
-    margin-left: $xs-indent;
+    border-left: 1px solid $color--gray-300;
+    margin-left: $indent--xs;
   }
 
   &__wrapper {
@@ -43,7 +43,7 @@
   &__button {
     background: none;
     border: 0;
-    padding: 0 $sm-indent;
+    padding: 0 $indent--sm;
     outline: 0;
     cursor: pointer;
     text-align: center;
@@ -55,22 +55,22 @@
     transform: scale(1) translate3d(0, 0, 0);
     overflow: hidden;
     position: relative;
-    font-size: $xl-font-size;
+    font-size: $font__size--xl;
   }
 
   &__link {
     text-align: center;
     white-space: nowrap;
     text-decoration: none;
-    padding: $indent-8 $base-indent;
+    padding: $indent--bin-8 $indent--base;
     border-bottom: 1px solid transparent;
 
     &--active {
-      background-color: $gray-100;
+      background-color: $color--gray-100;
     }
 
     &:hover {
-      border-bottom: 1px solid $secondary;
+      border-bottom: 1px solid $color--secondary;
     }
   }
 
@@ -80,7 +80,7 @@
   }
 
   &__item {
-    margin-right: $xl-indent;
+    margin-right: $indent--xl;
     display: flex;
     align-items: center;
   }

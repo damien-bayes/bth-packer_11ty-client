@@ -1,0 +1,32 @@
+/**
+ * Text
+ *
+ * File: /src/styles/variables/text.scss
+ * Project: Baythium Aspectus
+ * Organization: Baythium Ecosystem: https://baythium.com
+ *
+ * RULES:
+ * 1. You HAVE TO follow the "BEM" naming conventions for each global variable you use
+ */
+
+/*
+ * On the Web, the default print rule of 120% seems a little too cluttered, while perfectly readable
+ * We usually suggest implementing it from 130% / 150% on, especially for a small amount of text
+ */
+
+/* Variant 1 (Default line heights) */
+$text__line-height--no: 0px !default;
+$text__line-height--base: 24px !default;
+
+/* Variant 2 (Binary line heights) */
+$text__line-height--bin-0: 0px !default;
+$text__line-height--bin-1: 1px !default;
+$text__line-height--bin-2: 2px !default;
+$text__line-height--bin-4: 4px !default;
+$text__line-height--bin-8: 8px !default;
+$text__line-height--bin-16: 16px !default;
+$text__line-height--bin-32: 32px !default;
+$text__line-height--bin-64: 64px !default;
+$text__line-height--bin-128: 128px !default;
+$text__line-height--bin-256: 256px !default;
+$text__line-height--bin-512: 512px !default;
