@@ -39,12 +39,15 @@
       {% for note in notes %}
         {% if loop.first %}<ul class="list">{% endif %}
           <li class="list__item">
-            <article>
-              <a class="list__link" href="{{ note.url | url }}">
-                <h6 class="list__title">{{ note.data.title }}</h6>
-                <p class="list__description">{{ note.date | humanReadableFormat }}</p>
-              </a>
-            </article>
+            <a class="list__link" href="{{ note.url | url }}">
+              <div class="list__deck">
+                <div class="list__subdeck list__subdeck--growth">
+                  <h6 class="list__title">{{ note.data.title }}</h6>
+                  <p class="list__description">{{ note.date | humanReadableFormat }}</p>
+                </div>
+                <div class="list__subdeck">Author:<span class="badge badge--secondary badge--rounded">{{ note.data.author }}</span></div>
+              </div>
+            </a>
           </li>
         {% if loop.last %}</ul>{% endif %}
       {% endfor %}
@@ -56,9 +59,9 @@
       <ul class="paginator paginator--primary mb-2" style="justify-content: center;" aria-labelledby="pagination">
         <li class="paginator__item">
           {% if pagination.href.previous %}
-            <a class="paginator__link" href="{{ pagination.href.previous }}">Previous</a>
+            <a class="paginator__link" href="{{ pagination.href.previous }}">&#60;</a>
           {% else %}
-            <a class="paginator__link paginator__link--disabled" href="javascript:">Previous</a>
+            <a class="paginator__link paginator__link--disabled" href="javascript:">&#60;</a>
           {% endif %}
         </li>
         {%- for pageEntry in pagination.pages %}
@@ -68,9 +71,9 @@
         {%- endfor %}
         <li class="paginator__item">
           {% if pagination.href.next %}
-            <a class="paginator__link" href="{{ pagination.href.next }}">Next</a>
+            <a class="paginator__link" href="{{ pagination.href.next }}">&#62;</a>
           {% else %}
-            <a class="paginator__link paginator__link--disabled" href="javascript:">Next</a>
+            <a class="paginator__link paginator__link--disabled" href="javascript:">&#62;</a>
           {% endif %}
         </li>
       </ul>
