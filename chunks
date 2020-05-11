@@ -5,10 +5,7 @@
 </li>
 {%- endfor -%}
 
-
-
-
-  {# loop though site.languages #}
+{# loop though site.languages #}
 {% for lang in app.languages %}
   {% if loop.first %}<ul class="c-lggnav">{% endif %}
 
