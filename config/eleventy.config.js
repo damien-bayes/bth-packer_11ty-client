@@ -98,11 +98,11 @@ module.exports = eleventyConfig => {
   eleventyConfig.addNunjucksShortcode("changelog", ({filePath}) => {
     /* First you must remove "./" from filePath. This leaves you with the format "posts/2020/file.md" */
     const relativePath = filePath.slice(2);
-    const repoLocation = path.resolve(process.cwd()) + "\\";
+    // const repoLocation = path.resolve(process.cwd()) + "\\";
 
     /* Limit logs to 20, only fetch commit message and date */
     const options = {
-      repo: repoLocation,
+      repo: __dirname,
       number: 20,
       fields: ["subject", "authorDate"],
       file: relativePath
