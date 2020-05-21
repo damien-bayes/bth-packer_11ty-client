@@ -29,17 +29,20 @@
 
       <!-- Headline -->
       <div class="headline headline--xl">
-        <h1 class="headline__title">Getting Started</h1>
-        <p class="headline__description"></p>
+        <h1 class="headline__title">Docs</h1>
+        <p class="headline__description">Learn how to start using a command-line tool to cover your needs.</p>
       </div>
-      
-      {% highlight "javascript" %}
-function factorial(n) {
-  return n ? n * factorial(n - 1) : 1;
-}
 
-alert( factorial(5) ); // 120
-      {% endhighlight %}
+      <ul class="list">
+        {% for doc in collections.docs %}
+          <li class="list__item">
+            <a class="list__link" href="{{ doc.url }}">
+              <h6 class="list__title">{{ doc.data.title }}</h6>
+              <p class="list__description"></p>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
 
     </div>
   </div>

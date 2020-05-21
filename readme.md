@@ -3,7 +3,7 @@
 > **Resource:** https://packer.baythium.com  
 > **Dedicated Port Number:** 10033  
 > **Initial Author:** Damien Bayes  
-> **Description:** Effectively archive your large-scale infrastructure data using our powerful and lightweight command-line tool
+> **Description:** Effectively archive your large-scale infrastructure data using our powerful and lightweight command-line tool  
 
 ---
 
@@ -141,3 +141,6 @@ The list of references used to improve the project planning and its functionalit
 20. https://www.webpagetest.org
 21. https://github.com/marketplace/actions/ssh-remote-commands
 22. https://github.community/t5/GitHub-Actions/Installing-npm-packages-from-the-GitHub-package-registry/td-p/30559
+23. https://24ways.org/2018/dynamic-social-sharing-images/
+24. https://annualbeta.com/blog/dynamic-social-sharing-images-with-eleventy/
+25. https://eleventythemes.com/website/learning-resources/

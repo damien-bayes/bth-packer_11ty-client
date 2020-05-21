@@ -70,11 +70,11 @@
       </div>
 
       {# Start looping through faq items #}
-      {%- for item in feature[app.locale].items -%}
+      {%- for item in features[app.locale].items -%}
         {% if loop.first %}<div class="row">{% endif %}
 
           {%- set id = item.id %}
-          {%- set name = item.name %}
+          {%- set name = item.name %} 
           {%- set description = item.description %}
           {%- set imageUrl = item.imageUrl %}
 

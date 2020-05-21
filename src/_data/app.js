@@ -16,8 +16,17 @@ const options = {
   url: "https://packer.baythium.com",
   baseUrl: "/",
   authUrl: "https://auth.baythium.com",
+  signUpUrl: "https://auth.baythium.com/sign-up",
+  signInUrl: "https://auth.baythium.com/sign-in",
   supportUrl: "https://support.baythium.com",
   policyUrl: "https://policy.baythium.com",
+
+  /* Auth Endpoints */
+  authAuthorizationEndpoint: "https://auth.baythium.com/authorize",
+  authTokenEndpoint: "https://auth.baythium.com/token",
+  authRevocationEndpoint: "https://auth.baythium.com/revoke",
+  authUserInfoEndpoint: "https://auth.baythium.com/userinfo",
+  authIntrospectionEndpoint: "https://auth.baythium.com/introspect",
 
   version: p.version,
   description: p.description,

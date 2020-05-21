@@ -16,8 +16,18 @@ module.exports = eleventyConfig => {
   and in this case the 11ty configures required environment options on its own
   */
 
+  const options = {
+    /* Control if output with dangerous characters are escaped automatically */
+    autoescape: true,
+    /* Never use a cache and recompile templates each time */
+    noCache: true,
+    /* Reload templates when they are changed */
+    watch: true
+  };
+
   const nunjucksEnvironment = new Nunjucks.Environment(
-    new Nunjucks.FileSystemLoader("../src/_includes")
+    new Nunjucks.FileSystemLoader("../src/_includes"),
+    options
   );
 
   eleventyConfig.setLibrary("njk", nunjucksEnvironment);

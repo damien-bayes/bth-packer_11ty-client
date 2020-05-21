@@ -1,36 +1,34 @@
 ---js
 {
   layout: "_layouts/base.njk",
-  title: "Contact",
-  changeFrequency: "yearly",
-  priority: 0.5,
-  translationKey: "contact",
-  locale: "en",
+  title: "Change Logs",
   stylesheets: [],
   javascripts: []
 }
 ---
 
 {# 
-  Contact
+  Change Logs
 
-  File: /src/contact.njk
-  Project: Baythium Packer Client
+  File: /src/change-logs.njk
+  Project: Baythium Packer
   Organization: Baythium Ecosystem: https://baythium.com
 #}
 
 <!-- Section -->
-<section class="section contact">
+<section class="section change-logs">
 
   <!-- Card -->
   <div class="card">
     <div class="card__body">
-
+      
       <!-- Headline -->
       <div class="headline headline--xl">
         <h1 class="headline__title">{{ title }}</h1>
-        <p class="headline__description">We are committed to open communication with our community, and we welcome inquiries and feedback of all kinds.</p>
+        <p class="headline__description"></p>
       </div>
+
+      {% changelog filePath=page.inputPath %}
 
     </div>
   </div>

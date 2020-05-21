@@ -1,0 +1,36 @@
+---js
+{
+  layout: "_layouts/base.njk",
+  author: "Damien Bayes",
+  title: "CLI Commands",
+  date: "2020-05-21",
+  tags: "docs"
+}
+---
+
+<!-- Section -->
+<section class="section cli-commands">
+
+  <!-- Card -->
+  <div class="card">
+    <div class="card__body">
+      <!-- Headline -->
+      <div class="headline headline--xl">
+        <h1 class="headline__title">{{ title }}</h1>
+        <p class="headline__description"></p>
+      </div>
+
+      <div class="cli-commands__content">
+        {% highlight "javascript" %}
+function factorial(n) {
+  return n ? n * factorial(n - 1) : 1;
+}
+
+alert( factorial(5) ); // 120
+        {% endhighlight %}
+      </div>
+
+    </div>
+  </div>
+
+</section>

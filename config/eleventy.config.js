@@ -8,12 +8,15 @@
 
 "use strict";
 
-const fs = require("fs");
-const htmlmin = require("html-minifier");
-const terser = require("terser");
-const dayjs = require("dayjs");
+const
+  fs = require("fs"),
+  htmlmin = require("html-minifier"),
+  terser = require("terser"),
+  dayjs = require("dayjs"),
+  path = require("path");
 
 const { getCurrentYear } = require("../src/shortcodes/helper");
+const gitlog = require("gitlog").default;
 
 module.exports = eleventyConfig => {
   /* Enable quiet mode to reduce console noise */
@@ -86,6 +89,39 @@ module.exports = eleventyConfig => {
 
   /* SHORTCODES */
   eleventyConfig.addNunjucksShortcode("currentYear", getCurrentYear);
+
+  /**
+   * Setting up the changelog shortcode
+   * 
+   * @see: https://timothymiller.dev/posts/2020/adding-a-changelog-to-my-11ty-blog/
+   */
+  eleventyConfig.addNunjucksShortcode("changelog", ({filePath}) => {
+    /* First you must remove "./" from filePath. This leaves you with the format "posts/2020/file.md" */
+    const relativePath = filePath.slice(2);
+    const repoLocation = path.resolve(process.cwd()) + "\\";
+
+    /* Limit logs to 20, only fetch commit message and date */
+    const options = {
+      repo: repoLocation,
+      number: 20,
+      fields: ["subject", "authorDate"],
+      file: relativePath
+    };
+
+    /* Here's where the magic happens! You must pass your params into gitlog, and it handles the rest */
+    const commits = gitlog(options);
+
+    let html = "<details><summary>Changelog</summary><ul>";
+    for (let i=0; i<commits.length; i++) {
+      /* Convert the git date to ISO */
+      let isoDate = commits[i].authorDate.slice(0,10);
+      /* Convert ISO to readable date e.g. "May 05 2020" */
+      let readableDate = DateTime.fromISO(isoDate).toFormat("LLLL dd yyyy");
+      html += `<li><time datetime="${isoDate}">${readableDate}</time> ${commits[i].subject}</li>`;
+    }
+    html += "</ul></details>";
+    return html;
+  });
 
   /* FILTERS */
 
