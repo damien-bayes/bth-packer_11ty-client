@@ -20,6 +20,9 @@
 ![GitHub](https://img.shields.io/github/license/damien-bayes/baythium-packer_client?color=blueviolet&label=License&style=flat-square)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/damien-bayes/baythium-packer_client?color=blueviolet&label=Version&style=flat-square)
 ![GitHub stars](https://img.shields.io/github/stars/damien-bayes/baythium-packer_client?color=blueviolet&label=GitHub%20Stars&style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/damien-bayes/baythium-packer_client?color=blueviolet&label=Issues&style=flat-square)
+![Website](https://img.shields.io/website?down_color=red&down_message=Down&label=Website&style=flat-square&up_color=blueviolet&up_message=Up&url=https%3A%2F%2Fpacker.baythium.com)
+![GitHub last commit](https://img.shields.io/github/last-commit/damien-bayes/baythium-packer_client?color=blueviolet&label=Last%20Commit&style=flat-square)
 
 ## Getting Started
  
