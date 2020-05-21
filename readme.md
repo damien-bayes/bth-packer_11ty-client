@@ -137,7 +137,7 @@ The list of references used to improve the project planning and its functionalit
 16. https://snipcart.com/blog/11ty-javascript-static-site-generator-tutorial
 17. https://bryanlrobinson.com/blog/using-eleventys-javascript-data-files
 18. https://alligator.io/html/preload-prefetch
-19. https://gulpjs.com/plugins
+19. https://gulpjs.com/plugins 
 20. https://www.webpagetest.org
 21. https://github.com/marketplace/actions/ssh-remote-commands
 22. https://github.community/t5/GitHub-Actions/Installing-npm-packages-from-the-GitHub-package-registry/td-p/30559
