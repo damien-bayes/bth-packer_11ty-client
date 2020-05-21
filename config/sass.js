@@ -8,9 +8,19 @@
 
 "use strict";
 
+/* ************** */
+/* SYSTEM IMPORTS */
+/* ************** */
+const
+  fs = require("fs-extra"),
+  path = require("path");
+
+/* ******************* */
+/* THIRD-PARTY IMPORTS */
+/* ******************* */
 const sass = require("sass");
-const fs = require("fs-extra");
-const path = require("path");
+
+/* ************************************************************************* */
 
 module.exports = (scssPath, cssPath) => {
   /* If cssPath directory doesn't exist... */

@@ -8,7 +8,12 @@
 
 "use strict";
 
+/* ******************* */
+/* THIRD-PARTY IMPORTS */
+/* ******************* */
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+
+/* ************************************************************************* */
 
 const options = {
   /* Change which syntax highlighters are installed */

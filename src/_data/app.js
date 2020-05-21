@@ -8,7 +8,12 @@
 
 "use strict";
 
+/* ************** */
+/* CUSTOM IMPORTS */
+/* ************** */
 const p = require("../../package.json");
+
+/* ************************************************************************* */
  
 const options = {
   name: "Baythium Packer",

@@ -8,13 +8,18 @@
 
 "use strict";
 
+/* ******************* */
+/* THIRD-PARTY IMPORTS */
+/* ******************* */
 const Nunjucks = require("nunjucks");
+
+/* ************************************************************************* */
 
 module.exports = eleventyConfig => {
   /*
-  WARNING: Most likely, the "_includes" is being searched in the current directory, NOT in the original 11ty folder
-  and in this case the 11ty configures required environment options on its own
-  */
+   * WARNING: Most likely, the "_includes" is being searched in the current directory, NOT in the original 11ty folder
+   * and in this case the 11ty configures required environment options on its own
+   */
 
   const options = {
     /* Control if output with dangerous characters are escaped automatically */
@@ -25,10 +30,12 @@ module.exports = eleventyConfig => {
     watch: true
   };
 
-  const nunjucksEnvironment = new Nunjucks.Environment(
-    new Nunjucks.FileSystemLoader("../src/_includes"),
+  const nunjucksInstance = new Nunjucks.Environment(
+    new Nunjucks.FileSystemLoader("src/_includes"),
     options
   );
 
-  eleventyConfig.setLibrary("njk", nunjucksEnvironment);
+  eleventyConfig.setLibrary("njk", nunjucksInstance);
+
+  return nunjucksInstance;
 };

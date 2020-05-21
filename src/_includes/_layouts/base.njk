@@ -89,7 +89,7 @@
     {% if app.environment == "development" %}
       <script>{{ js | safe }}</script>
     {% else %}
-      <script>{{ js | minifyJs | safe }}</script>
+      <script>{{ js | minifiedJs | safe }}</script>
     {% endif %}
   </body>
 </html>

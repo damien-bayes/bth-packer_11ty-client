@@ -7,22 +7,28 @@
 
 "use strict";
 
-const sass = require("./config/sass.config");
-const Nunjucks = require("nunjucks");
+/* ******************* */
+/* THIRD-PARTY IMPORTS */
+/* ******************* */
+require("module-alias/register");
 
-module.exports = config => {
-  // Watch for modificaions in style directory
+/* ************** */
+/* CUSTOM IMPORTS */
+/* ************** */
+const
+  sass = require("@config/sass"),
+  eleventy = require("@config/eleventy"),
+  nunjucks = require("@config/nunjucks"),
+  syntaxHighlight = require("@config/syntax-highlight");
+
+/* ************************************************************************* */
+
+module.exports = eleventyConfig => {
+  /* Watch for modificaions in style directory */
   sass("./src/styles/custom-baythium-aspectus.scss", "./dist/styles/custom-baythium-aspectus.min.css");
-
-  // require("./config/nunjucks.config")(config);
-  const nunjucksEnvironment = new Nunjucks.Environment(
-    new Nunjucks.FileSystemLoader("src/_includes")
-  );
-
-  config.setLibrary("njk", nunjucksEnvironment);
-
-  require("./config/eleventy.config")(config);
-  require("./config/syntax_highlight.config")(config);
+  eleventy(eleventyConfig);
+  nunjucks(eleventyConfig);
+  syntaxHighlight(eleventyConfig);
 
   return {
     dir: {
