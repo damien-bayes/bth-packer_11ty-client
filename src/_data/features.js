@@ -41,6 +41,12 @@ module.exports = {
         name: "Open Source",
         description: "Access to the source code and join our active community",
         imageUrl: "/images/no-image.svg"
+      },
+      {
+        id: 6,
+        name: "Steganography",
+        description: "Hide your crucial data in plain sight",
+        imageUrl: "/images/no-image.svg"
       }
     ]
   }
