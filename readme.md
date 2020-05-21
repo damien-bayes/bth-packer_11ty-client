@@ -1,8 +1,8 @@
 # Baythium Packer - Client
 
 > **Resource:** https://packer.baythium.com  
-> **Dedicated Port Number:** 10033  
-> **Initial Author:** Damien Bayes  
+> **Port Number:** 10033  
+> **Organization:** Baythium Ecosystem  
 > **Description:** Effectively archive your large-scale infrastructure data using our powerful and lightweight command-line tool  
 
 ---
@@ -11,6 +11,12 @@
 
 - [Status](#status)
 - [Getting Started](#getting-started)
+  - [Development](#development)
+    - [Docker - Containerization](#docker-(containerization))
+    - [Gulp - Task Runner](#gulp-(task-runner))
+    - [Nginx](#nginx)
+    - [CI/CD](#ci/cd)
+    - [Wiki](#wiki)
 - [Contribution](#contribution)
 - [Bug Fixes](#bug-fixes)
 - [References](#references)
@@ -25,9 +31,12 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/damien-bayes/baythium-packer_client?color=blueviolet&label=Last%20Commit&style=flat-square)
 
 ## Getting Started
- 
+
 ```bash
-# Automatically run an Eleventy web server on 127.0.0.1:10033 for testing it out
+# Install all project dependencies
+npm install
+
+# Run an eleventy web server on 127.0.0.1:10033 for testing it out
 npm run 11ty:serve
 
 npm run 11ty:serve-prod
@@ -36,10 +45,10 @@ npm run 11ty:serve-dev
 # Build a project for production
 npm run eleventy:build
 
-# Run Eleventy in debug mode
+# Run eleventy in the debug mode
 npm run eleventy:debug
 
-# Check all javascript files on syntax requirements under the Baythium ecosystem standards
+# Check all javascript files on syntax requirements under the project standards
 npm run eslint
 ```
 
@@ -48,18 +57,22 @@ npm run eslint
 ### Development
 
 ```bash
-# Install Eleventy (Static site generator)
+# Install eleventy (static site generator) globally
 npm install -g @11ty/eleventy
 
-# Update Baythium packages from the repositories (Optional)
+# Update baythium packages from the repositories (optional)
+# npm update @baythium/baythium-aspectus_package --save
+# npm update @baythium/baythium-vector_package --save
+# npm update @baythium/baythium-alacritas_package --save
+
 npm update @damien-bayes/baythium-aspectus_package --save
 npm update @damien-bayes/baythium-vector_package --save
 npm update @damien-bayes/baythium-alacritas_package --save
 ```
 
-#### Docker - Containerization
+#### Docker (Containerization)
 
-Docker plays an essential part on the Baythium Ecosystem and if you are familiar with it you CAN use the following commands for getting the ball rolling.
+Docker plays an essential part on this project and if you are familiar with it you CAN use the following commands for getting the ball rolling.
 
 ```bash
 # Remove all containers with the specified name
@@ -68,20 +81,14 @@ docker rm $(docker stop $(docker ps --filter "name=baythium-packer_client" --for
 # Remove all images with the specified name
 docker rmi $(docker images | grep "baythium-packer_client")
 
-# Build a new docker image using the Dockerfile
 timestamp=$(date +%s)
 
-# Variant 1
+# Build a new docker image using the Dockerfile
 docker build . \
 --file dockerfile \
 --tag baythium-ecosystem/baythium-packer_client:$timestamp
 
-# Variant 2
-docker build . \
---file dockerfile.alternative \
---tag baythium-ecosystem/baythium-packer_client:$timestamp
-
-# List all images
+# List all images to check that the required image exists
 docker images
  
 # Run an isolated container using the specified options
@@ -89,44 +96,47 @@ docker run \
 -d \
 --name baythium-packer_client \
 --expose 10033 \
---net baythium-network-1 \
+--net baythium-network-d83f1df8 \
 --ip 172.18.0.3 \
--e "VIRTUAL_HOST=packer.baythium.com, packer.bayesianflow.space" \
+-e "VIRTUAL_HOST=packer.baythium.com" \
 --restart=on-failure:3 \
 baythium-ecosystem/baythium-packer_client:$timestamp
 ```
 
-#### Gulp - Task Runner
+#### Gulp (Task Runner)
 
 ```bash
+# Install a task runner with the name gulp
 npm install -g gulp-cli && gulp -v
 ```
 
 #### Nginx
 
 ```bash
+# Test the nginx configuration file for any errors
 nginx -t -c nginx/nginx.default.conf
 
 # Create encrypted password strings
 openssl passwd <secret-password>
 ```
 
-#### CI/CD (In the process)
+#### CI/CD
 
-We use GitHub Actions, which allow for the creation of CI/CD pipelines directly within GitHub. This will check and deploy the source code that is hosted in the current GitHub repository.
+We use github actions, which allow for the creation of ci/cd pipelines directly within github. This will check and deploy the source code that is hosted in the current github repository.
 
-#### Wiki 
+#### Wiki
 
-```
-# Clone the wiki locally
-$ git clone https://github.com/damien-bayes/baythium-packer_client.wiki.git
+```bash
+# Clone the wiki to your local machine
+# git cline https://github.com/baythium/baythium-packer_client.wiki.git
+git clone https://github.com/damien-bayes/baythium-packer_client.wiki.git
 ```
 
 ---
 
 ## Contribution
 
-Thanks for contributing to the Baythium Packer. Without you and the open source community this project would NOT be possible. Before you get started, please familiarize yourself with the project and its demanding standards.
+Thanks for contributing to the project. Without you and the open source community this project would NOT be possible. Before you get started, please familiarize yourself with the project and its demanding standards.
 
 ## Bug Fixes
 
