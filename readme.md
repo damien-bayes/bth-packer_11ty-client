@@ -140,7 +140,7 @@ Thanks for contributing to the project. Without you and the open source communit
 
 ## Bug Fixes
 
-If you have some problems or proposals, please open an issue including a log error on https://github.com/damien-bayes/baythium-packer/issues and we will try to fix it as soon as possible in accordance with the priorities.
+If you have some problems or proposals, please open an issue including a log error on https://github.com/damien-bayes/baythium-packer_client/issues and we will try to fix it as soon as possible in accordance with the priorities.
 
 The reports make it easy for the Baythium team to handle errors, identify bugs, solve it, and release a new version of the Baythium Packer by seeing the stacktrace.
 
