@@ -7,12 +7,28 @@
 
 ---
 
+## Table of contents
+
+- [Status](#status)
+- [Getting Started](#getting-started)
+- [Contribution](#contribution)
+- [Bug Fixes](#bug-fixes)
+- [References](#references)
+
+## Status
+
+![GitHub](https://img.shields.io/github/license/damien-bayes/baythium-packer_client?color=blueviolet&label=License&style=social)  
+![GitHub package.json version](https://img.shields.io/github/package-json/v/damien-bayes/baythium-packer_client?style=social)  
+![GitHub stars](https://img.shields.io/github/stars/damien-bayes/baythium-packer_client?style=social)  
+
 ## Getting Started
  
 ```bash
 # Automatically run an Eleventy web server on 127.0.0.1:10033 for testing it out
-npm run eleventy:serve-1
-npm run eleventy:serve-2
+npm run 11ty:serve
+
+npm run 11ty:serve-prod
+npm run 11ty:serve-dev
 
 # Build a project for production
 npm run eleventy:build
