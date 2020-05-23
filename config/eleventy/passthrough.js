@@ -23,6 +23,6 @@ module.exports = eleventyConfig => {
   });
 
   eleventyConfig.addPassthroughCopy({
-    "src/js/baythium-stargazer.js": "js/baythium-stargazer.js"
+    "src/js": "js/"
   });
 }
