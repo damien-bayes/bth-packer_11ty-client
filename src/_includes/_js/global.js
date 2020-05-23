@@ -39,4 +39,6 @@ window.addEventListener("DOMContentLoaded", e => {
    * @see: https://docs.appcues.com/article/438-anonymous-users 
    */
   // Appcues.anonymous();
+
+  console.log("Baythium Aspectus initialized", aspectus.pkg());
 });
