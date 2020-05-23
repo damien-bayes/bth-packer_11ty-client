@@ -67,7 +67,7 @@ Stargazer.prototype = {
   },
 
   /**
-   * @param {*} x
+   * @param {*} n
    * 
    * @see: https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
    */
@@ -96,7 +96,8 @@ Stargazer.prototype = {
     .then(response => { return response.json(); })
     .then(data => {
       return data.stargazers_count || 0;
-    });
+    })
+    .catch(err => console.error(err));
 
     this.update(stars);
   },
