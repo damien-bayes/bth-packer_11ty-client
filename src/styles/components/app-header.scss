@@ -22,6 +22,7 @@
 
     a {
       text-decoration: none;
+      font-size: $font__size--sm;
 
       &:not(:last-of-type) { margin-right: $indent--sm; }
     }
