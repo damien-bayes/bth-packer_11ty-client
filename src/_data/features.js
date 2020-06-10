@@ -16,37 +16,37 @@ module.exports = {
         id: 1,
         name: "Encryption",
         description: "Protect your vulnerable data using the world-class encryption to keep your secrets safe",
-        imageUrl: "/images/no-image.svg"
+        imageUrl: "/images/encryption.svg"
       },
       {
         id: 2,
         name: "Compression",
         description: "Take many files and compress them into one file, which is smaller than the combined size of the originals",
-        imageUrl: "/images/no-image.svg"
+        imageUrl: "/images/compression.svg"
       },
       {
         id: 3,
         name: "Backup",
         description: "Full enterprise backup with task schedulers and more",
-        imageUrl: "/images/no-image.svg"
+        imageUrl: "/images/backup.svg"
       },
       {
         id: 4,
         name: "Cloud",
         description: "Save your archived files to different cloud services",
-        imageUrl: "/images/no-image.svg"
+        imageUrl: "/images/cloud.svg"
       },
       {
         id: 5,
         name: "Open Source",
         description: "Access to the source code and join our active community",
-        imageUrl: "/images/no-image.svg"
+        imageUrl: "/images/open-source.svg"
       },
       {
         id: 6,
         name: "Steganography",
         description: "Hide your crucial data in plain sight",
-        imageUrl: "/images/no-image.svg"
+        imageUrl: "/images/steganography.svg"
       }
     ]
   }

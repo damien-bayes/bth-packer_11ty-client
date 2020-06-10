@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 256 256" style="enable-background:new 0 0 256 256;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#453131;}
+	.st1{fill:url(#SVGID_1_);}
+	.st2{fill:url(#SVGID_2_);}
+	.st3{fill:url(#SVGID_3_);}
+</style>
+<g id="cloud">
+	<path class="st0" d="M100.3,177.1l1.3-0.8c0.8-0.1,1.6,0,2.4,0.4"/>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="98.6049" y1="178.1309" x2="103.9879" y2="178.1309">
+		<stop  offset="0" style="stop-color:#FFAC13"/>
+		<stop  offset="1" style="stop-color:#FFE200"/>
+	</linearGradient>
+	<path class="st1" d="M98.6,179.9c0-1.9,1.4-3.3,3-3.5c0.8-0.1,1.6,0,2.4,0.4"/>
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="3" y1="123.1217" x2="244.8861" y2="123.1217">
+		<stop  offset="0" style="stop-color:#6F5EC2"/>
+		<stop  offset="1" style="stop-color:#7D37A8"/>
+	</linearGradient>
+	<path class="st2" d="M244.9,44.4L227,33l0,0c-8.4-5.8-21.4-5.1-36,3.3c-1.6,0.9-3.3,2-4.9,3.1l-10.4-6.7c-1-0.7-2-1.4-3.1-2l0,0
+		l0,0c-11.9-6.6-29.2-5-48.6,6.2c-18.5,10.7-35.2,28.1-47,47.3c-5.6,1.4-11.6,3.8-17.9,7.4C28.2,109.5,3,149.2,3,180.3
+		c0,13.8,5,23.6,13.2,28.6l0,0l16.7,10.5l2.3-6.9c7.3-0.8,15.4-3.5,24-8.5c11.5-6.7,22.2-16.3,31.2-27.4c9.8,0.3,21.4-2.9,33.7-10
+		c13.6-7.9,26.3-19.4,36.7-32.6c8.1,2.4,18.6,0.6,30.2-6.1c25.3-14.6,45.8-47,45.8-72.3c0-6-1.2-11.1-3.3-15.2L244.9,44.4z"/>
+	<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="20.1824" y1="130.6507" x2="254" y2="130.6507">
+		<stop  offset="0" style="stop-color:#2D206D"/>
+		<stop  offset="1" style="stop-color:#652C8A"/>
+	</linearGradient>
+	<path class="st3" d="M76.4,102.5c6.2-3.6,12.2-6.1,17.9-7.4c11.8-19.2,28.5-36.6,47-47.3c26.5-15.3,49.3-12.6,59.4,4.4
+		c2.5-1.8,5-3.5,7.6-5c25.3-14.6,45.8-5.9,45.8,19.4s-20.5,57.7-45.8,72.3c-11.6,6.7-22.2,8.5-30.2,6.1
+		c-10.4,13.2-23.1,24.7-36.7,32.6c-12.3,7.1-23.9,10.3-33.7,10c-8.9,11.1-19.6,20.8-31.2,27.4c-31,17.9-56.2,7.3-56.2-23.8
+		S45.4,120.4,76.4,102.5z"/>
+</g>
+</svg>

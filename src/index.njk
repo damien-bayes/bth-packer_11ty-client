@@ -68,7 +68,7 @@
         <p class="headline__description">We combine many useful tools in a single package so whether you are small company, large enterprise or a government entity, we have all of your business file management needs covered</p>
       </div>
 
-      {# Start looping through faq items #}
+      {# Start looping through feature items #}
       {%- for item in features[app.locale].items -%}
         {% if loop.first %}<div class="row">{% endif %}
 
@@ -78,8 +78,8 @@
           {%- set imageUrl = item.imageUrl %}
 
           <div class="column__sm--6 column__md--4">
-            <div class="card mx__sm--2" data-feature-id="{{ id }}">
-              <img class="card__image" style="opacity: .2; filter: grayscale(100%);" src="{{ imageUrl }}" alt="{{ name }}"/>
+            <div class="card mx__sm--2" style="display: flex;" data-feature-id="{{ id }}">
+              <img class="card__image" style="margin: 0 auto; object-fit: contain; width: 128px;" src="{{ imageUrl }}" alt="{{ name }}"/>
               <div class="card__body">
                 <h3>{{ name }}</h3>
                 <p>{{ description }}</p>
