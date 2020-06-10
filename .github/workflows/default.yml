@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Authenticate with GitHub package registry
-        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.TOKEN }}" > ~/.npmrc
+        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.TOKEN }}" > .npmrc
       - name: Use required JavaScript runtime environment
         uses: actions/setup-node@v1
         with:
@@ -23,6 +23,8 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - name: Install project dependencies
         run: npm install
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.TOKEN }}
       - name: Build a project
         run: npm run 11ty:build 
       - name: Start transferring files into the remote machine
