@@ -24,7 +24,7 @@ jobs:
       - name: Install project dependencies
         run: npm install
       - name: Build a project
-        run: npm run 11ty:build
+        run: npm run 11ty:build 
       - name: Start transferring files into the remote machine
         uses: appleboy/scp-action@master
         with:
