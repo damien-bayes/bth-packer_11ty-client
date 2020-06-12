@@ -10,6 +10,7 @@
 /* CUSTOM IMPORTS */
 /* ************** */
 import Stargazer from "./modules/stargazer.js";
+// let module = await import('/modules/stargazer.js');
 
 /* ************************************************************************* */
 
