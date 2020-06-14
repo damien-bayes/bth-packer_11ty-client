@@ -16,18 +16,12 @@
 <section class="section">
   <div class="row">
     <!-- Deck 1 -->
-    <div class="column__sm--4">
-      {% include "_partials/patch-note.njk" %}
-    </div>
-
-    <!-- Deck 2 -->
     <div class="column__sm--8">
-
       <div class="card">
         <div class="card__body">
 
           <!-- Headline -->
-          <div class="headline">
+          <div class="headline headline--xl headline--labeled">
             <h1 class="headline__title">{{ title }}</h1>
             <p class="headline__description">{{ date | humanReadableFormat }}</p>
           </div>
@@ -66,7 +60,11 @@
 
         </div>
       </div>
+    </div>
 
+    <!-- Deck 2 -->
+    <div class="column__sm--4 pl__md--4">
+      {% include "_partials/patch-note.njk" %}
     </div>
 
   </div>

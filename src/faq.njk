@@ -23,11 +23,12 @@
 <!-- Section -->
 <section class="section faq">
 
+  <!-- Card -->
   <div class="card">
     <div class="card__body">
 
       <!-- Headline -->
-      <div class="headline headline--xl">
+      <div class="headline headline--xl headline--labeled">
         <h1 class="headline__title">{{ title }}</h1>
         <p class="headline__description">{{ description }}</p>
       </div>
@@ -48,7 +49,16 @@
         </details>
 
       {%- endfor -%}
+    </div>
+  </div>
 
+  <div class="card">
+    <div class="card__body">
+      <!-- Headline -->
+      <div class="headline headline--xl headline--labeled">
+        <h2 class="headline__title">Didn't find an answer?</h2>
+        <p class="headline__description">We understand you may have questions that are not answered. If you cannot find the answer to your question, please feel free to contact support.</p>
+      </div>
     </div>
   </div>
 

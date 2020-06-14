@@ -63,22 +63,25 @@
     <div class="card__body">
 
       <!-- Headline -->
-      <div class="headline headline--lg">
+      <div class="headline headline--lg headline--labeled">
         <h2 class="headline__title">Features</h2>
         <p class="headline__description">We combine many useful tools in a single package so whether you are small company, large enterprise or a government entity, we have all of your business file management needs covered</p>
       </div>
 
       {# Start looping through feature items #}
       {%- for item in features[app.locale].items -%}
-        {% if loop.first %}<div class="row">{% endif %}
+        {% if loop.first %}
+          <div class="card-collection">
+            <div class="row">
+        {% endif %}
 
           {%- set id = item.id %}
           {%- set name = item.name %} 
           {%- set description = item.description %}
           {%- set imageUrl = item.imageUrl %}
 
-          <div class="column__sm--6 column__md--4">
-            <div class="card mx__sm--2" style="display: flex;" data-feature-id="{{ id }}">
+          <div class="column__sm--6 column__md--4 pr__sm--4 pb__sm--4">
+            <div class="card" data-feature-id="{{ id }}">
               <img class="card__image" style="margin: 0 auto; object-fit: contain; width: 128px;" src="{{ imageUrl }}" alt="{{ name }}"/>
               <div class="card__body">
                 <h3>{{ name }}</h3>
@@ -87,7 +90,10 @@
             </div>
           </div>
 
-        {% if loop.last %}</div>{% endif %}
+        {% if loop.last %}
+            </div>
+          </div>
+        {% endif %}
       {%- endfor -%}
 
     </div>
