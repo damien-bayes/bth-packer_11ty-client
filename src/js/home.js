@@ -11,6 +11,9 @@
 /* ************** */
 import Stargazer from "./modules/stargazer.js";
 
+/* Dynamically import the module using ES2020 features */
+// let module = await import('/modules/stargazer.js');
+
 /* ************************************************************************* */
 
 (function(w, d) {
