@@ -133,6 +133,12 @@ We use github actions, which allow for the creation of ci/cd pipelines directly 
 git clone https://github.com/damien-bayes/baythium-packer_client.wiki.git
 ```
 
+#### Git
+
+```bash
+git log
+```
+
 ---
 
 ## Contribution
