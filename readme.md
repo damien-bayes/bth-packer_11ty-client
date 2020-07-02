@@ -75,3 +75,4 @@ The list of references used to improve the project planning and its functionalit
 4. https://alligator.io/html/preload-prefetch
 5. https://www.webpagetest.org
 6. https://24ways.org/2018/dynamic-social-sharing-images/
+7. https://statickit.com/guides/eleventy-webpack
