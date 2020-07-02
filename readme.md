@@ -78,4 +78,5 @@ The list of references used to improve the project planning and its functionalit
 7. https://statickit.com/guides/eleventy-webpack
 
 ###### Assessment Tools
-1. https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fpacker.baythium.com%2F
+1. https://developers.google.com/speed/pagespeed/insights
+2. https://search.google.com/test/mobile-friendly
