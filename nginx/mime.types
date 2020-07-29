@@ -10,7 +10,8 @@ types {
     application/rss+xml                   rss;
 
     text/mathml                           mml;
-    text/plain                            txt;
+    # Guide the browser that the extension of this file is data, but the content is plain text and COULD be displayed inside the browser
+    text/plain                            txt bth data;
     text/vnd.sun.j2me.app-descriptor      jad;
     text/vnd.wap.wml                      wml;
     text/x-component                      htc;
@@ -91,8 +92,7 @@ types {
     application/vnd.sun.xml.writer             sxw;
     application/vnd.sun.xml.writer.template    stw;
 
-    # Mime types for web fonts. Stolen from here:
-    # http://seconddrawer.com.au/blog/ in part.
+    # Mime types for web fonts (http://seconddrawer.com.au/blog/)
     application/x-font-ttf                ttf;
     font/opentype                         otf;
     application/vnd.ms-fontobject         eot;
