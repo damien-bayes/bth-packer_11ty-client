@@ -39,6 +39,8 @@ npm run eleventy:debug
 npm run eslint
 ```
 
+***NOTE:*** To run Eleventy with experimental features, we’re using the ELEVENTY_EXPERIMENTAL=true environment variable.
+
 ---
 
 ## CI/CD
