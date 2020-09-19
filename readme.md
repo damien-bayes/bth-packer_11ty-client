@@ -78,6 +78,7 @@ The list of references used to improve the project planning and its functionalit
 5. https://www.webpagetest.org
 6. https://24ways.org/2018/dynamic-social-sharing-images/
 7. https://statickit.com/guides/eleventy-webpack
+8. https://getform.io/
 
 ###### Assessment Tools
 1. https://developers.google.com/speed/pagespeed/insights
