@@ -9,7 +9,10 @@
 <head>
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <!-- <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1"/> -->
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
   <meta name="copyright" content="{{ app.company.name }}"/>
@@ -92,10 +95,11 @@
   <link rel="mask-icon" href="/pinned-tab.svg?v=d73aea1f" color="#000000">
   #}
 
-  <link href="/styles/baythium-aspectus.min.css" rel="stylesheet" media="all"/>
-  <link href="/styles/baythium-vector.min.css" rel="stylesheet" media="all"/>
+  <!-- <link type="text/css" href="https://static.baythium.com/styles/baythium-aspectus.min.css" rel="stylesheet" media="all" crossorigin="anonymous"/> -->
+  <link type="text/css" href="/styles/baythium-aspectus.min.css" rel="stylesheet" media="all"/>
+  <link type="text/css" href="/styles/baythium-vector.min.css" rel="stylesheet" media="all"/>
 
-  <link href="/styles/custom-baythium-aspectus.min.css" rel="stylesheet" media="all"/>
+  <link type="text/css" href="/styles/custom-baythium-aspectus.min.css" rel="stylesheet" media="all"/>
 
   {% if stylesheets %}
     {% for style in stylesheets %}

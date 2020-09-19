@@ -1,5 +1,7 @@
 # Eleventy
 
+Eleventy is a simple static site generator based on JavaScript. The great thing about Eleventy is that it is zero-config by default but can also be run with configurations options which makes it flexible and extremely easy to use at the same time.
+
 ## References
 1. https://www.webstoemp.com/blog/multilingual-sites-eleventy
 2. https://www.11ty.dev/docs/config/#default-template-engine-for-markdown-files
