@@ -1,6 +1,6 @@
 {
   "name": "baythium-packer_client",
-  "version": "1.0.26",
+  "version": "1.0.27",
   "description": "Effectively archive your large-scale infrastructure data using our powerful and lightweight command-line tool",
   "main": ".eleventy.js",
   "directories": {
@@ -15,7 +15,7 @@
     "@transforms": "./src/transforms"
   },
   "dependencies": {
-    "@damien-bayes/baythium-aspectus_package": "^1.0.18",
+    "@damien-bayes/baythium-aspectus_package": "^1.0.20",
     "@damien-bayes/baythium-vector_package": "^1.0.4",
     "axios": "^0.19.2",
     "dayjs": "^1.8.23",
