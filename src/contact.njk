@@ -32,6 +32,8 @@
         <p class="headline__description">We are committed to open communication with our community, and we welcome inquiries and feedback of all kinds.</p>
       </div>
 
+      <p>Fill out our contact form below to get in touch with us. Please, provide as much information as possible for us to help you with your inquiry.</p>
+
       <!-- <bth-info title="Custom Component"></bth-info> -->
 
       <form
@@ -39,36 +41,48 @@
         action="https://getform.io/f/5278fd78-0f44-474b-bf7f-1ec1102d861d"
         method="post"
         accept-charset="UTF-8"
-        enctype="multipart/form-data">
+        enctype="multipart/form-data"
+        style="margin: 0;">
 
         <!-- Input: Name -->
-        <div class="form-collection">
-          <label for="name">Name</label>
-          <input type="text" name="name" id="name" required="required"/>
+        <div class="form__collection">
+          <label class="form__label" for="name">Name</label>
+          <input
+            class="form__input"
+            type="text"
+            name="name"
+            id="name"
+            required="required"/>
         </div>
 
         <!-- Input: Email -->
-        <div class="form-collection">
-          <label for="email">Email</label>
+        <div class="form__collection">
+          <label class="form__label" for="email">Email</label>
           <input
+            class="form__input"
             type="email"
             name="email"
             id="email"
             required="required"
             placeholder="you@example.com"/>
-          <small class="form-text">We won't share your email with anyone else</small>
+          <small class="form__text">We won't share your email with anyone else</small>
         </div>
 
         <!-- Input: Message -->
-        <div class="form-collection">
-          <label for="message">Message</label>
-          <textarea name="message" id="message" rows="3" required="required"></textarea>
+        <div class="form__collection">
+          <label class="form__label" for="message">Message</label>
+          <textarea
+            class="form__input"
+            name="message"
+            id="message"
+            rows="3"
+            required="required"></textarea>
         </div>
 
         <!-- Google reCAPTCHA -->
         <div class="g-recaptcha mb--5" data-sitekey="6Lc-EM4ZAAAAAPATY1pNUhofj7_hKQBLGLWTeXBR"></div>
 
-        <button type="submit" class="button button--primary button--rounded">Send</button>
+        <button type="submit" class="button button--primary">Send</button>
       </form>
 
     </div>

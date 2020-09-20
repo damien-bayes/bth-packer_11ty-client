@@ -15,7 +15,7 @@
     "@transforms": "./src/transforms"
   },
   "dependencies": {
-    "@damien-bayes/baythium-aspectus_package": "^1.0.18",
+    "@damien-bayes/baythium-aspectus_package": "^1.0.20",
     "@damien-bayes/baythium-vector_package": "^1.0.4",
     "axios": "^0.19.2",
     "dayjs": "^1.8.23",
