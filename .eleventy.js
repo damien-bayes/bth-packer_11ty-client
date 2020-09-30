@@ -54,12 +54,7 @@ module.exports = eleventyConfig => {
     */
     templateFormats: [
       "njk",
-      "html", 
       "md",
-      "css",
-      "svg",
-      "webp",
-      "11ty.js"
     ],
 
     /* Deploy to a subdirectory with a path prefix */
