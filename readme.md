@@ -78,9 +78,12 @@ The list of references used to improve the project planning and its functionalit
 5. https://www.webpagetest.org
 6. https://24ways.org/2018/dynamic-social-sharing-images/
 7. https://statickit.com/guides/eleventy-webpack
-8. https://getform.io/
-9. https://getform.io/docs/collecting-submissions/spam-filtering-with-recaptcha
 
 ###### Assessment Tools
 1. https://developers.google.com/speed/pagespeed/insights
 2. https://search.google.com/test/mobile-friendly
+
+###### Features
+1. https://disqus.com/pricing/
+2. https://getform.io/
+3. https://getform.io/docs/collecting-submissions/spam-filtering-with-recaptcha
