@@ -8,6 +8,11 @@ FROM nginx:1.16.1 AS builder
 
 LABEL maintainer = "damien.bayes.db@gmail.com"
 
+###################
+# RUNTIME VARIABLES
+###################
+
+# NOTE: The variables set with ENV are for runtime only
 ENV NGINX_VERSION 1.16.1
 ENV ELEVENTY_ENV production
 
