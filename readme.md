@@ -80,6 +80,7 @@ The list of references used to improve the project planning and its functionalit
 7. https://statickit.com/guides/eleventy-webpack
 8. https://www.npmjs.com/package/husky
 9. https://www.npmjs.com/package/hyperhtml
+10. https://www.npmjs.com/package/lint-staged
 
 ###### Assessment Tools
 1. https://developers.google.com/speed/pagespeed/insights
