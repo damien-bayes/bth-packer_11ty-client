@@ -19,3 +19,4 @@ Eleventy is a simple static site generator (SSG) based on JavaScript. The great 
 14. https://annualbeta.com/blog/dynamic-social-sharing-images-with-eleventy/
 15. https://eleventythemes.com/website/learning-resources/
 16. https://medium.com/@stowball/creating-a-production-ready-eleventy-project-with-webpack-babel-and-sass-89a740886092
+17. https://medium.com/@11ty/making-a-simple-web-site-with-eleventy-level-2-1b356183377c
