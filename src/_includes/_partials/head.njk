@@ -55,6 +55,14 @@
   <meta name="twitter:url" content="{{ page.url | url }}"/>
 
   <title>{{ title }} - {{ app.name }}</title>
+  {#
+    <!--
+      NOTE: It’s safer to always prefix your variables with locals,
+      that way you can easily support undefined variables in your
+      templates
+    -->
+    <title>{{ locals.title }} - {{ app.name }}</title>
+  #}
 
   <meta name="keywords" content="{{ keywords }}"/>
   <meta name="description" content="{{ description }}"/>
