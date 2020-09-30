@@ -47,7 +47,10 @@
 
     {% include "_partials/app-header.njk" %}
     <main class="container">
-      {# "Dynamic" content goes here #}
+      {#
+        Render any page content (unescaped) that uses this layout within this block
+        NOTE: Your "dynamic" content goes here
+      #}
       {{ content | safe }}
     </main>
     {% include "_partials/app-footer.njk" %}
