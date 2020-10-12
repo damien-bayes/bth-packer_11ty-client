@@ -1,4 +1,5 @@
 name: Default
+
 on:
   push:
     paths-ignore:
@@ -6,6 +7,7 @@ on:
       - docs/
     branches:
       - master
+
 jobs:
   integration:
     name: Builds a project and uploads all required files into the remote machine
@@ -14,7 +16,8 @@ jobs:
     env:
       ELEVENTY_ENV: production
     steps:
-      - uses: actions/checkout@master
+      - name: 🛎️ Checkout
+        uses: actions/checkout@master
       - name: Authenticate with GitHub package registry
         run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.TOKEN }}" > .npmrc
       - name: Use required JavaScript runtime environment
@@ -26,7 +29,7 @@ jobs:
         run: npm install
         env:
           NODE_AUTH_TOKEN: ${{ secrets.TOKEN }}
-      - name: Build a project
+      - name: 🔧 Build a project
         run: npm run 11ty:build 
       - name: Start transferring files into the remote machine
         uses: appleboy/scp-action@master
@@ -39,12 +42,13 @@ jobs:
           source: "dist/*,dockerfile,nginx/*"
           target: "baythium-projects/baythium-packer_client"
           rm: true
+
   deployment:
     name: Connects to the remote machine and builds an image using Docker with further requirements
     runs-on: ubuntu-18.04
     needs: integration
     steps:
-      - name: Start deploying
+      - name: 🚀 Start deploying
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOSTNAME }}
