@@ -67,6 +67,16 @@ If you have some problems or proposals, please open an issue including a log err
 
 The reports make it easy for the Baythium team to handle errors, identify bugs, solve it, and release a new version of the Baythium Packer by seeing the stacktrace.
 
+## Technology Stack
+
+- JavaScript
+- Eleventy
+- Docker
+- Gulp
+- Nginx
+- Nunjucks, HTML
+- SCSS, CSS
+
 ## References
 
 The list of references used to improve the project planning and its functionalities.
