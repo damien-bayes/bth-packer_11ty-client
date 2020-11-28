@@ -30,7 +30,14 @@
         <!-- Subdeck 1 -->
         <div class="column__sm--6 order__sm--2 order--1">
           <div class="home__brand">
-            <img src="{{ '/' | url }}images/vacuum.svg" alt="{{ app.name }}"/>  
+            <!-- <img src="{{ '/' | url }}images/vacuum.svg" alt="{{ app.name }}"/> -->
+
+            <!--
+            @see: https://count.ly/web-analytics
+            @see: https://mozilla.github.io/nunjucks/templating.html#include
+            --> 
+            {% include "_images/vacuum.svg" ignore missing %}
+
             <p><b>Built for developers</b> in order to make technology open to the world</p>
           </div>
         </div>

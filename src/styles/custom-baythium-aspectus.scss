@@ -27,7 +27,11 @@
   vertical-align: middle;
 }
 
-/* Pages */
+/*********/
+/* PAGES */
+/*********/
+
+/* Not Found Page */
 .page-not-found {
   & .row {
     display: flex;
@@ -43,6 +47,7 @@
   }
 }
 
+/* Home Page */
 .home {
   &__brand {
     display: flex;
@@ -50,10 +55,33 @@
     padding: $indent--xl;
     flex-direction: column;
 
+    #vacuum,
     img {
       width: 196px;
       height: auto;
       margin-bottom: $indent--base;
+    }
+
+    #vacuum {
+      @for $i from 1 through 8 {
+        #particle#{$i} {
+          animation: particle-ani 3s linear infinite;
+          transition-delay: random() + s;
+          animation-delay: random() + s;
+        }
+      }
+    }
+
+    @keyframes particle-ani {
+      0%,
+      50%,
+      to {
+        opacity: 1;
+      }
+      25%,
+      75% {
+        opacity: 0;
+      }
     }
 
     p { text-align: center; }
