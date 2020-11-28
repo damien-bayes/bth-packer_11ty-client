@@ -12,6 +12,10 @@
 
   <!-- <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1"/> -->
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <!--
+  <meta name="HandheldFriendly" content="true"/>
+  <meta name="MobileOptimized" content="320"/>
+  -->
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
@@ -24,6 +28,8 @@
   <meta name="coverage" content="worldwide"/>
   <meta name="target" content="all"/>
   <meta name="revisit-after" content="3 days"/>
+
+  <!-- <meta name="referrer" content="strict-origin-when-cross-origin"/> -->
 
   <!-- Change the color of the header and address bar -->
   <!-- Chrome, Firefox OS and Opera -->
@@ -55,6 +61,14 @@
   <meta name="twitter:url" content="{{ page.url | url }}"/>
 
   <title>{{ title }} - {{ app.name }}</title>
+  {#
+    <!--
+      NOTE: It’s safer to always prefix your variables with locals,
+      that way you can easily support undefined variables in your
+      templates
+    -->
+    <title>{{ locals.title }} - {{ app.name }}</title>
+  #}
 
   <meta name="keywords" content="{{ keywords }}"/>
   <meta name="description" content="{{ description }}"/>
@@ -77,7 +91,12 @@
   <link rel="dns-prefetch" href="{{ app.authUrl }}"/>
   -->
 
-  {# NOTE: Start prefetching cacheable resources #}
+  {#
+    Start prefetching cacheable resources
+
+    NOTE: Silently preload site contents to project a more fluid,
+    seamless web experience
+  #}
   <!-- <link rel="prefetch" href="{{ app.url }}/images/network-lines.svg"/> -->
 
   {# 

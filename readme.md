@@ -39,7 +39,7 @@ npm run eleventy:debug
 npm run eslint
 ```
 
-***NOTE:*** To run Eleventy with experimental features, we’re using the ELEVENTY_EXPERIMENTAL=true environment variable.
+***NOTE:*** To run Eleventy with experimental features, we’re using the `ELEVENTY_EXPERIMENTAL=true` environment variable.
 
 ---
 
@@ -67,6 +67,16 @@ If you have some problems or proposals, please open an issue including a log err
 
 The reports make it easy for the Baythium team to handle errors, identify bugs, solve it, and release a new version of the Baythium Packer by seeing the stacktrace.
 
+## Technology Stack
+
+- JavaScript
+- Eleventy
+- Docker
+- Gulp
+- Nginx
+- Nunjucks, HTML
+- SCSS, CSS
+
 ## References
 
 The list of references used to improve the project planning and its functionalities.
@@ -78,9 +88,18 @@ The list of references used to improve the project planning and its functionalit
 5. https://www.webpagetest.org
 6. https://24ways.org/2018/dynamic-social-sharing-images/
 7. https://statickit.com/guides/eleventy-webpack
-8. https://getform.io/
-9. https://getform.io/docs/collecting-submissions/spam-filtering-with-recaptcha
+8. https://www.npmjs.com/package/husky
+9. https://www.npmjs.com/package/hyperhtml
+10. https://www.npmjs.com/package/lint-staged
+11. https://github.com/google/eleventy-high-performance-blog
+12. https://www.npmjs.com/package/localtunnel
+13. https://github.com/ain/smartbanner.js/
 
 ###### Assessment Tools
 1. https://developers.google.com/speed/pagespeed/insights
 2. https://search.google.com/test/mobile-friendly
+
+###### Features
+1. https://disqus.com/pricing/
+2. https://getform.io/
+3. https://getform.io/docs/collecting-submissions/spam-filtering-with-recaptcha

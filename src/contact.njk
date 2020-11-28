@@ -17,6 +17,10 @@
   File: /src/contact.njk
   Project: Baythium Packer Client
   Organization: Baythium Ecosystem: https://baythium.com
+
+  NOTE: If you would like to accept file attachments to your form,
+  you should also add enctype=’multipart/form-data’ attribute to
+  your form tag as well as the file input
 #}
 
 <!-- Section -->
@@ -52,7 +56,10 @@
             type="text"
             name="name"
             id="name"
-            required="required"/>
+            required="required"
+            onpaste="return false;"
+            ondrop="return false;"
+            autocomplete="off"/>
         </div>
 
         <!-- Input: Email -->

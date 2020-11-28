@@ -1,10 +1,13 @@
 name: Default
+
 on:
   push:
     paths-ignore:
       - readme.md
+      - docs/
     branches:
       - master
+
 jobs:
   integration:
     name: Builds a project and uploads all required files into the remote machine
@@ -13,20 +16,26 @@ jobs:
     env:
       ELEVENTY_ENV: production
     steps:
-      - uses: actions/checkout@master
+      - name: 🛎️ Checkout
+        uses: actions/checkout@master
+
       - name: Authenticate with GitHub package registry
         run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.TOKEN }}" > .npmrc
+
       - name: Use required JavaScript runtime environment
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
           registry-url: https://npm.pkg.github.com/
+
       - name: Install project dependencies
         run: npm install
         env:
           NODE_AUTH_TOKEN: ${{ secrets.TOKEN }}
-      - name: Build a project
-        run: npm run 11ty:build 
+
+      - name: 🔧 Build a project
+        run: npm run 11ty:build
+
       - name: Start transferring files into the remote machine
         uses: appleboy/scp-action@master
         with:
@@ -38,12 +47,13 @@ jobs:
           source: "dist/*,dockerfile,nginx/*"
           target: "baythium-projects/baythium-packer_client"
           rm: true
+
   deployment:
     name: Connects to the remote machine and builds an image using Docker with further requirements
     runs-on: ubuntu-18.04
     needs: integration
     steps:
-      - name: Start deploying
+      - name: 🚀 Start deploying
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOSTNAME }}
@@ -59,4 +69,4 @@ jobs:
             [[ -n $images ]] && docker rmi $images
             timestamp=$(date +%s) 
             docker build . --rm --file dockerfile --tag baythium-ecosystem/baythium-packer_client:$timestamp
-            docker run -d --name baythium-packer_client --expose 10033 --net baythium-network-1 -e "VIRTUAL_HOST=packer.baythium.com,packer.bayesianflow.space" --restart=on-failure:3 baythium-ecosystem/baythium-packer_client:$timestamp
+            docker run -d --name baythium-packer_client --expose 10033 --net baythium-network-1 -e "VIRTUAL_HOST=packer.baythium.com,packer.baythium.space" --restart=on-failure:3 baythium-ecosystem/baythium-packer_client:$timestamp
