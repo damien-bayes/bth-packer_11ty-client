@@ -1,8 +1,10 @@
 /**
- * Project: Bayesian Packer
+ * Project: Baythium Packer
  *
- * This project is a part of Bayesian Ecosystem
+ * This project is a part of Baythium Ecosystem
  * Initial author: Damien Bayes (damien.bayes.db@gmail.com)
+ *
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
  */
 
 "use strict";
