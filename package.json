@@ -49,7 +49,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "11ty:build": "npm run clean && eleventy",
-    "11ty:serve-dev": "npm run clean && set ELEVENTY_ENV=\"development\" && eleventy --serve --port 10033 --watch",
+    "11ty:serve-dev": "npm run clean | set ELEVENTY_ENV=\"development\" | eleventy --serve --port 10033 --watch",
     "11ty:serve-prod": "npm run clean && set ELEVENTY_ENV=\"production\" && eleventy --serve --port 10033 --watch",
     "11ty:serve": "npm run 11ty:serve-dev",
     "11ty:serve-experimental": "ELEVENTY_EXPERIMENTAL=true npx @11ty/eleventy --serve --port 10033",
