@@ -14,24 +14,92 @@
     position: relative;
     overflow: hidden;
     z-index: 0;
-  
-    &::before {
-      content: "";
+
+    #network-lines {
       position: absolute;
       top: 0;
       right: 0;
       width: 512px;
       height: 512px;
-      background: url("../images/network-lines.svg") 0 0 no-repeat;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      object-fit: contain;
       z-index: -1;
-      filter: invert(1);
-      opacity: .15;
+
+      line,
+      path {
+        opacity: .1;
+      }
+
+      #line1-1,
+      #line2-1,
+      #line3-1,
+      #line4-1 {
+        line { animation: line-ani-1530 3s linear infinite }
+        path { animation: path-ani-1530 3s linear infinite }
+      }
+
+      #line1-2,
+      #line2-2,
+      #line3-2,
+      #line4-2 {
+        line { animation: line-ani-015 3s linear infinite }
+        path { animation: path-ani-015 3s linear infinite }
+      }
+
+      #line1-3,
+      #line2-3,
+      #line3-3,
+      #line4-3 {
+        line { animation: line-ani-3050 3s linear infinite }
+        path { animation: path-ani-3050 3s linear infinite }
+      }
+
+      @keyframes path-ani-015 {
+        0% { fill: #fbff00; opacity: .2; }
+        15% { fill: #ffffff; }
+      }
+
+      @keyframes line-ani-015 {
+        0% { stroke: #fbff00; opacity: .2; }
+        15% { stroke: #ffffff; }
+      }
+
+      @keyframes path-ani-1530 {
+        15% { fill: #fbff00; opacity: .2; }
+        30% { fill: #ffffff; }
+      }
+
+      @keyframes line-ani-1530 {
+        15% { stroke: #fbff00; opacity: .2; }
+        30% { stroke: #ffffff; }
+      }
+
+      @keyframes path-ani-3050 {
+        30% { fill: #fbff00; opacity: .2; }
+        50% { fill: #ffffff; }
+      }
+
+      @keyframes line-ani-3050 {
+        30% { stroke: #fbff00;opacity: .2; }
+        50% { stroke: #ffffff; }
+      }
     }
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    //   width: 512px;
+    //   height: 512px;
+    //   background: url("../images/network-lines.svg") 0 0 no-repeat;
+    //   -webkit-background-size: cover;
+    //   -moz-background-size: cover;
+    //   -o-background-size: cover;
+    //   background-size: cover;
+    //   object-fit: contain;
+    //   z-index: -1;
+    //   filter: invert(1);
+    //   opacity: .15;
+    // }
 
     &__navigation-item {
       margin-bottom: $indent--base;
