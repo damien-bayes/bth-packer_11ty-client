@@ -14,12 +14,18 @@
       <div class="row">
         <div class="column--6">
           <a href="javascript:">{{ translation[app.locale].ecosystem }}</a>
-          <a href="https://support.baythium.com">{{ translation[app.locale].supportCenter }}</a>
+          <a href="https://support.baythium.com">
+            {{ translation[app.locale].supportCenter }}
+          </a>
         </div>
 
         <div class="column--6" style="text-align: right;">
-          <a href="https://auth.baythium.com/sign-up">{{ translation[app.locale].signUp }}</a>
-          <a href="https://auth.baythium.com/authorize?client_id=10033&redirect_uri=https://packer.baythium.com/callback&scope=4&response_type=code&state=BrcH0DStb0x35sBrhNID8qXm5SnQdYoIFz1iHfDS&locale=en">{{ translation[app.locale].signIn }}</a>
+          <a href="https://auth.baythium.com/sign-up">
+            {{ translation[app.locale].signUp }}
+          </a>
+          <a href="https://auth.baythium.com/authorize?client_id=10033&redirect_uri=https://packer.baythium.com/callback&scope=4&response_type=code&state=BrcH0DStb0x35sBrhNID8qXm5SnQdYoIFz1iHfDS&locale=en">
+            {{ translation[app.locale].signIn }}
+          </a>
         </div>
       </div>
     </div>
@@ -29,8 +35,13 @@
       <div>
         <div class="app-header__brand">
           <a href="/">
-            <img src="{{ '/' | url }}images/baythium-ecosystem-1.svg" alt="{{ app.name }}" loading="lazy"/>
-            {{ app.name }}
+            <img
+              src="{{ '/' | url }}images/baythium-ecosystem-1.svg"
+              alt="{{ app.name }}"
+              loading="lazy"
+            />
+            <!-- @see: https://en.wikipedia.org/wiki/Software_release_life_cycle -->
+            {{ app.name }}<span class="badge badge--secondary badge--rounded">Alpha</span>
           </a>
         </div>
       </div>
@@ -38,7 +49,9 @@
         <div class="app-header__parallelogram">
           <!-- Language switcher -->
           <div class="language-switcher m--0">
-            <span class="icon icon--globe display--none display__sm--block">{{ translation[app.locale].language }}:</span>
+            <span class="icon icon--globe display--none display__sm--block">
+              {{ translation[app.locale].language }}:
+            </span>
 
             <a href="javascript:" class="language-switcher__link">
               {% for lang in app.languages %}
@@ -63,7 +76,13 @@
             {%- set url = navigation.url %}
 
             <li class="navigation__item" data-navigation-id="{{ id }}">
-              <a {% if page.url == url %} class="navigation__link navigation__link--active" {% else %} class="navigation__link" {% endif %} href="{{ url }}">{{ name }}</a>
+              <a
+                {% if page.url == url %} class="navigation__link navigation__link--active"
+                {% else %} class="navigation__link" {% endif %}
+                href="{{ url }}"
+              >
+                {{ name }}
+              </a>
             </li>
 
           {% if loop.last %}</ul>{% endif %}

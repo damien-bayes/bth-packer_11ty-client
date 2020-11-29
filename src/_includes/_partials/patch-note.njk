@@ -23,9 +23,15 @@
             <div class="list__deck">
               <div class="list__subdeck list__subdeck--growth">
                 <h6 class="list__title">{{ note.data.title }}</h6>
-                <p class="list__description">{{ note.date | humanReadableFormat }}</p>
+                <p class="list__description">
+                  {{ note.date | humanReadableFormat }}
+                </p>
               </div>
-              <div class="list__subdeck"><span class="badge badge--secondary badge--rounded">{{ note.data.author }}</span></div>
+              <div class="list__subdeck">
+                <span class="badge badge--secondary badge--rounded">
+                  {{ note.data.author }}
+                </span>
+              </div>
             </div>
           </a>
         </li>

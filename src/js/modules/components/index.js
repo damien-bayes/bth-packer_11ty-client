@@ -6,6 +6,8 @@
  * Organization: Baythium Ecosystem: https://baythium.com
  */
 
+'use strict';
+
 /* ************** */
 /* CUSTOM IMPORTS */
 /* ************** */

@@ -32,7 +32,13 @@
 
           {# Compare the navigation url and special Eleventy-provided page.url variable to find the current page #}
           <li data-navigation-id="{{ id }}" class="app-footer__navigation-item">
-            <a {% if page.url == url %} class="app-footer__navigation-link app-footer__navigation-link--active" {% else %} class="app-footer__navigation-link" {% endif %} href="{{ url }}">{{ name }}</a>
+            <a
+              {% if page.url == url %} class="app-footer__navigation-link app-footer__navigation-link--active"
+              {% else %} class="app-footer__navigation-link" {% endif %}
+              href="{{ url }}"
+            >
+              {{ name }}
+            </a>
           </li>
 
         {% if loop.last %}</ul>{% endif %}
@@ -41,7 +47,11 @@
 
     <!-- Deck 3: Brand -->
     <div class="app-footer__brand">
-      <img src="{{ '/' | url }}images/baythium-ecosystem-2.svg" alt="{{ app.company.name }}" loading="lazy"/>
+      <img
+        src="{{ '/' | url }}images/baythium-ecosystem-2.svg"
+        alt="{{ app.company.name }}"
+        loading="lazy"
+      />
     </div>
 
     <!-- Deck 4: Copyright -->

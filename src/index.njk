@@ -66,7 +66,7 @@
   </div>
 
   <!-- Card (Deck 2) -->
-  <div class="card">
+  <div class="card home__feature-card">
     <div class="card__body">
 
       <!-- Headline -->
@@ -87,9 +87,14 @@
           {%- set description = item.description %}
           {%- set imageUrl = item.imageUrl %}
 
-          <div class="column__sm--6 column__md--4 pr__sm--4 pb__sm--4">
+          <div class="column--6 column__sm--12 column__md--4 pr__sm--4 pb__sm--4">
             <div class="card" data-feature-id="{{ id }}">
-              <img class="card__image" style="margin: 0 auto; object-fit: contain; width: 128px;" src="{{ imageUrl }}" alt="{{ name }}"/>
+              <img
+                class="card__image"
+                src="{{ imageUrl }}"
+                alt="{{ name }}"
+                loading="lazy"
+              />
               <div class="card__body">
                 <h3>{{ name }}</h3>
                 <p>{{ description }}</p>

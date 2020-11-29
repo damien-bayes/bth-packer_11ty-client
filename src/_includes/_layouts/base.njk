@@ -14,7 +14,12 @@
 
 <!doctype html>
 
-<html lang="{{ app.locale }}" dir="ltr" prefix="og:http://ogp.me/ns#" class="baythium-aspectus baythium-aspectus--light no-js">
+<html
+  lang="{{ app.locale }}"
+  dir="ltr"
+  prefix="og:http://ogp.me/ns#"
+  class="baythium-aspectus baythium-aspectus--light no-js"
+>
   {% include "_partials/head.njk" %}
 
   <body id="app">
@@ -29,7 +34,11 @@
       </div>
 
       <!-- Google Tag Manager -->
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WH62H7" height="0" width="0" style="display:none; visibility:hidden;"></iframe>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5WH62H7"
+        height="0"
+        width="0"
+        style="display:none; visibility:hidden;"></iframe>
     </noscript>
 
     {# Alert #}
@@ -39,8 +48,14 @@
         <div>{{ translation[app.locale].warning }}</div>
       </div>
       <div class="alert__body">
-        <p><b class="mr--2">{{ translation[app.locale].websiteMode | title }}:</b><span>{{ app.environment }}</span></p>
-        <p><b class="mr--2">{{ translation[app.locale].currentPage | title }}:</b><span>{{ page.url | url }}</span></p>
+        <p>
+          <b class="mr--2">{{ translation[app.locale].websiteMode | title }}:</b>
+          <span>{{ app.environment }}</span>
+        </p>
+        <p>
+          <b class="mr--2">{{ translation[app.locale].currentPage | title }}:</b>
+          <span>{{ page.url | url }}</span>
+        </p>
       </div>
     </div>
     {%- endif %}

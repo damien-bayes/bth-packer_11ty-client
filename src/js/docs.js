@@ -1,9 +1,12 @@
 /**
- * Home
+ * Share
  *
- * File: /src/js/home.js
+ * File: /src/js/share.js
  * Project: Baythium Packer Client
  * Organization: Baythium Ecosystem: https://baythium.com
+ *
+ * References:
+ * 1. https://css-tricks.com/how-to-use-the-web-share-api
  */
 
 'use strict';
@@ -11,7 +14,7 @@
 /* ************** */
 /* CUSTOM IMPORTS */
 /* ************** */
-import Stargazer from "./modules/stargazer.js";
+import Share from "./modules/share.js";
 
 /* Dynamically import the module using ES2020 features */
 // let module = await import('/modules/stargazer.js');
@@ -22,6 +25,6 @@ import Stargazer from "./modules/stargazer.js";
   "use strict";
 
   w.addEventListener("DOMContentLoaded", _ => {
-    Stargazer.inititialize();
+    Share.inititialize();
   });
 })(window, document);

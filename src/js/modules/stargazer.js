@@ -8,17 +8,31 @@
 
 "use strict";
 
+/*******************/
+/* PROJECT IMPORTS */
+/*******************/
+
+import {applyThousandSeparator} from './utils/strings.js';
+import {isValidUrl} from './utils/urls.js';
+import {getValuesFromAttrs} from './utils/dom.js';
+import {logToConsole} from './utils/console.js'
+
+/*****************************************************************************/
+
 /**
  * @constructor
  * 
  * @param {*} element 
  * @param {object} options 
  */
-const Stargazer = function(element, options) {
+export const Stargazer = function(element, options) {
   this.element = element;
   this.options = options;
 }
 
+/**
+ * 
+ */
 Stargazer.inititialize = () => {
   const
     elements = document.querySelectorAll("[data-stargazer]"),
@@ -36,46 +50,6 @@ Stargazer.prototype = {
   constructor: Stargazer,
 
   /**
-   * Gets attribute values
-   *
-   * @param {*} attr
-   */
-  getValuesFromAttrs: function(attrs) {
-    let obj = {};
-
-    if (Array.isArray(attrs)) {
-      attrs.forEach(attr => {
-        obj[attr] = this.element.getAttribute(`data-stargazer-${attr}`);
-      });
-    }
-
-    return obj;
-  },
-
-  /**
-   * Checks url validity
-   * @param {string} url
-   * 
-   * @return {boolean}
-   */
-  isValidUrl: function(url) {
-    try {
-      new URL(url);
-      return true;
-    }
-    catch(_) { return false; }
-  },
-
-  /**
-   * @param {*} n
-   * 
-   * @see: https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
-   */
-  applyThousandSeparator: function(n) {
-    return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  },
-
-  /**
    * Extracts repository stars
    * URL example: https://api.github.com/repos/{username}/{repository-name}
    * 
@@ -85,34 +59,51 @@ Stargazer.prototype = {
    */
   getStars: async function() {
     const
-      { username, repository } = this.getValuesFromAttrs(["username", "repository"]),
+      {username, repository} = getValuesFromAttrs(
+        this.element,
+        ["username", "repository"],
+        'data-stargazer'
+      ),
+
       url = `https://api.github.com/repos/${username}/${repository}`;
 
-    if (this.isValidUrl(url) === false) {
+    if (isValidUrl(url) === false) {
       return 0;
     }
 
     const stars = await fetch(url)
-    .then(response => { return response.json(); })
+    .then(response => response.json())
     .then(data => {
+      /* Check for any errors coming from github api */
+      if (data.message) { logToConsole(data.message, 'error'); }
+
       return data.stargazers_count || 0;
     })
-    .catch(err => console.error(err));
+    .catch(err => {
+      logToConsole(err, 'error');
+    });
 
     this.update(stars);
   },
 
+  /**
+   * 
+   * @param {*} stars 
+   */
   update: function(stars) {
-    this.element.innerText = this.applyThousandSeparator(stars);
+    this.element.innerText = applyThousandSeparator(stars);
 
     /* Remove all classes from parent element with JavaScript enabled */
     const parent = this.element.parentElement;
 
-    if (!parent) {
-      return;
-    }
+    if (!parent) { return; }
+
     parent.classList.remove(...parent.classList);
   }
 }
+
+/***********/
+/* EXPORTS */
+/***********/
 
 export default Stargazer;

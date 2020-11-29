@@ -62,6 +62,7 @@
       margin-bottom: $indent--base;
     }
 
+    /* Project logo */
     #vacuum {
       @for $i from 1 through 8 {
         #particle#{$i} {
@@ -112,6 +113,21 @@
       object-fit: contain;
       z-index: -1;
       opacity: .25;
+    }
+  }
+
+  &__feature-card {
+    .card img {
+      margin: 0 auto;
+      object-fit: contain;
+      width: 96px;
+      transition: -webkit-filter 200ms;
+      transition: filter 200ms;
+
+      &:hover {
+        -webkit-filter: brightness(110%) contrast(110%);
+        filter: brightness(110%) contrast(110%);
+      }
     }
   }
 

@@ -4,7 +4,9 @@
   author: "Damien Bayes",
   title: "CLI Commands",
   date: "2020-05-21",
-  tags: "docs"
+  tags: "docs",
+  stylesheets: [],
+  javascripts: ["/js/docs.js"]
 }
 ---
 
@@ -14,10 +16,21 @@
   <!-- Card -->
   <div class="card">
     <div class="card__body">
-      <!-- Headline -->
-      <div class="headline headline--xl headline--labeled">
-        <h1 class="headline__title">{{ title }}</h1>
-        <p class="headline__description"></p>
+
+      <div class="row">
+        <div class="column--6">
+
+          <!-- Headline -->
+          <div class="headline headline--xl headline--labeled">
+            <h1 class="headline__title">{{ title }}</h1>
+            <p class="headline__description"></p>
+          </div>
+
+        </div>
+
+        <div class="column--6 text--right">
+          <button class="button button--xs button--outlined-primary button--rounded display--none" data-share>Share</button>
+        </div>
       </div>
 
       <div class="cli-commands__content">

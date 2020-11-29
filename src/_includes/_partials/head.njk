@@ -10,7 +10,12 @@
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
-  <!-- <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1"/> -->
+  <!--
+  <meta
+    name="viewport"
+    content="user-scalable=no,initial-scale=1,maximum-scale=1"
+  />
+  -->
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <!--
   <meta name="HandheldFriendly" content="true"/>
@@ -23,7 +28,10 @@
   <meta name="robots" content="index, follow"/>
   <meta name="googlebot" content="all"/>
   <meta name="google" content="notranslate"/>
-  <meta name="author" content="{{ app.author.name }} <{{ app.author.email }}>"/>
+  <meta
+    name="author"
+    content="{{ app.author.name }} <{{ app.author.email }}>"
+  />
   <meta name="rating" content="general"/>
   <meta name="coverage" content="worldwide"/>
   <meta name="target" content="all"/>
@@ -41,7 +49,12 @@
   <!-- iOS Safari -->
   <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
 
-  <!-- <meta name="monetization" content="$pay.stronghold.co/1a155e3a09e210742be8c38ba7cab4795c4"/> -->
+  <!--
+  <meta
+    name="monetization"
+    content="$pay.stronghold.co/1a155e3a09e210742be8c38ba7cab4795c4"
+  />
+  -->
 
   <!-- Open Graph Protocol for Facebook, Telegram -->
   <meta property="og:type" content="website"/>
@@ -49,14 +62,20 @@
   <meta property="og:site_name" content="{{ app.name }}"/>
   <meta property="og:description" content="{{ description }}"/>
   <meta property="og:url" content="{{ page.url | url }}"/>
-  <meta property="og:image" content="{{ app.url }}/images/baythium-ecosystem.png"/>
+  <meta
+   property="og:image"
+   content="{{ app.url }}/images/baythium-ecosystem.png"
+  />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary"/>
   <meta name="twitter:site" content="{{ app.name }}"/>
   <meta name="twitter:title" content="{{ title }}"/>
   <meta name="twitter:description" content="{{ description }}"/>
-  <meta name="twitter:image" content="{{ app.url }}/images/baythium-ecosystem.png"/>
+  <meta
+    name="twitter:image"
+    content="{{ app.url }}/images/baythium-ecosystem.png"
+  />
   <meta name="twitter:creator" content="{{ app.company.name }}"/>
   <meta name="twitter:url" content="{{ page.url | url }}"/>
 
@@ -84,7 +103,11 @@
   <link rel="alternate" hreflang="de" href="{{ app.url }}/de/"/>
   <link rel="alternate" hreflang="ru" href="{{ app.url }}/ru/"/>
 
-  {# NOTE: DNS prefetching helps to decrease waiting time for visitors because the browser performs DNS lookups before it sends a request for resources located on other domains #}
+  {#
+  NOTE: DNS prefetching helps to decrease waiting time for visitors because
+  the browser performs DNS lookups before it sends a request for resources
+  located on other domains
+  #}
   <!--
   <link rel="dns-prefetch" href="{{ app.url }}"/>
   <link rel="dns-prefetch" href="{{ app.supportUrl }}"/>
@@ -102,23 +125,66 @@
   {# 
     Mark a web page with a shortcut icon in the browser’s tab area
 
-    NOTE: For shortcut icons, the W3C recommends using a GIF or PNG file with dimensions of 16 × 16 pixels or 32 × 32 pixels
+    NOTE: For shortcut icons, the W3C recommends using a GIF or PNG file with
+    dimensions of 16 × 16 pixels or 32 × 32 pixels
   #}
   <!-- <link rel="icon" href="/favicon.ico"/> -->
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
 
   {#
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=d73aea1f"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=d73aea1f"/>
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=d73aea1f"/>
-  <link rel="mask-icon" href="/pinned-tab.svg?v=d73aea1f" color="#000000">
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/apple-touch-icon.png?v=d73aea1f"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/favicon-32x32.png?v=d73aea1f"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/favicon-16x16.png?v=d73aea1f"
+  />
+  <link
+    rel="mask-icon"
+    href="/pinned-tab.svg?v=d73aea1f"
+    color="#000000"
+  />
   #}
 
-  <!-- <link type="text/css" href="https://static.baythium.com/styles/baythium-aspectus.min.css" rel="stylesheet" media="all" crossorigin="anonymous"/> -->
-  <link type="text/css" href="/styles/baythium-aspectus.min.css" rel="stylesheet" media="all"/>
-  <link type="text/css" href="/styles/baythium-vector.min.css" rel="stylesheet" media="all"/>
+  <!--
+  <link
+    type="text/css"
+    href="https://static.baythium.com/styles/baythium-aspectus.min.css"
+    rel="stylesheet"
+    media="all"
+    crossorigin="anonymous"
+  />
+  -->
 
-  <link type="text/css" href="/styles/custom-baythium-aspectus.min.css" rel="stylesheet" media="all"/>
+  <link
+    type="text/css"
+    href="/styles/baythium-aspectus.min.css"
+    rel="stylesheet"
+    media="all"
+  />
+  <link
+    type="text/css"
+    href="/styles/baythium-vector.min.css"
+    rel="stylesheet"
+    media="all"
+  />
+
+  <link
+    type="text/css"
+    href="/styles/custom-baythium-aspectus.min.css"
+    rel="stylesheet"
+    media="all"
+  />
 
   {% if stylesheets %}
     {% for style in stylesheets %}

@@ -1,6 +1,6 @@
 {
   "name": "baythium-packer_client",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "description": "Effectively archive your large-scale infrastructure data using our powerful and lightweight command-line tool",
   "main": ".eleventy.js",
   "directories": {
@@ -57,6 +57,7 @@
     "11ty:watch": "eleventy --port 10033 --watch",
     "11ty:build-quietly": "npm run clean && set ELEVENTY_ENV=\"production\" && eleventy --quiet",
     "11ty:help": "eleventy --help",
+    "start": "npm run 11ty:serve-dev",
     "npm:audit": "npm audit fix",
     "eslint:init": "eslint --init",
     "eslint": "eslint ./ --fix",
