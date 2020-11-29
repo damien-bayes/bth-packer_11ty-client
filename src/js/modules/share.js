@@ -61,9 +61,9 @@ Share.prototype = {
    */
   clickHandler: function(e) {
     /*
-     * Check if the Web Share API is supported on the user’s browser
+     * Check if the Web Share API is supported on the user's browser
      *
-     * NOTE: It’s only available for Chrome for Android, and Safari (desktop and iOS)
+     * NOTE: It's only available for Chrome for Android, and Safari (desktop and iOS)
      * @see: https://w3c.github.io/web-share/
      */
     if (navigator.share) {
