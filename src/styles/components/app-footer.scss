@@ -25,61 +25,61 @@
 
       line,
       path {
-        opacity: .1;
+        opacity: .08;
       }
 
       #line1-1,
       #line2-1,
       #line3-1,
       #line4-1 {
-        line { animation: line-ani-1530 3s linear infinite }
-        path { animation: path-ani-1530 3s linear infinite }
+        line { animation: line-ani-1530 3s linear infinite; }
+        path { animation: path-ani-1530 3s linear infinite; }
       }
 
       #line1-2,
       #line2-2,
       #line3-2,
       #line4-2 {
-        line { animation: line-ani-015 3s linear infinite }
-        path { animation: path-ani-015 3s linear infinite }
+        line { animation: line-ani-015 3s linear infinite; }
+        path { animation: path-ani-015 3s linear infinite; }
       }
 
       #line1-3,
       #line2-3,
       #line3-3,
       #line4-3 {
-        line { animation: line-ani-3050 3s linear infinite }
-        path { animation: path-ani-3050 3s linear infinite }
+        line { animation: line-ani-3050 3s linear infinite; }
+        path { animation: path-ani-3050 3s linear infinite; }
       } 
 
       @keyframes path-ani-015 {
-        0% { fill: #fbff00; opacity: .2; }
-        15% { fill: #ffffff; }
+        0% { fill: #fbff00; opacity: .25; }
+        15% { fill: #ffffff; opacity: .08; }
       }
 
       @keyframes line-ani-015 {
-        0% { stroke: #fbff00; opacity: .2; }
-        15% { stroke: #ffffff; }
+        0% { stroke: #fbff00; opacity: .25; }
+        15% { stroke: #ffffff; opacity: .08; }
       }
 
       @keyframes path-ani-1530 {
-        15% { fill: #fbff00; opacity: .2; }
-        30% { fill: #ffffff; }
+        15% { fill: #fbff00; opacity: .25; }
+        30% { fill: #ffffff; opacity: .08; }
       }
 
       @keyframes line-ani-1530 {
-        15% { stroke: #fbff00; opacity: .2; }
-        30% { stroke: #ffffff; }
+        15% { stroke: #fbff00; opacity: .25; }
+        30% { stroke: #ffffff; opacity: .08; }
       }
 
       @keyframes path-ani-3050 {
-        30% { fill: #fbff00; opacity: .2; }
-        50% { fill: #ffffff; }
+        30% { fill: #fbff00; opacity: .25; }
+        50% { fill: #ffffff; opacity: .08; }
       }
 
       @keyframes line-ani-3050 {
-        30% { stroke: #fbff00;opacity: .2; }
-        50% { stroke: #ffffff; }
+        30% { stroke: #fbff00; opacity: .25; }
+        50% { stroke: #ffffff; opacity: .08; }
       }
     }
 
