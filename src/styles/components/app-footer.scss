@@ -124,6 +124,10 @@
       border-bottom: 1px solid transparent;
       line-height: $text__line-height--base;
 
+      &:hover {
+        border-bottom: 1px solid $color--secondary;
+      }
+
       &--active {
         background-color: $color--alternative;
         color: $color--black !important;
@@ -132,10 +136,6 @@
         &:hover {
           background-color: lighten($color--alternative, 5%);
         }
-      }
-
-      &:hover {
-        border-bottom: 1px solid $color--secondary;
       }
     }
   
@@ -159,8 +159,25 @@
     }
   
     &__synthesis {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+
+      a {
+        display: block;
+        color: $color--white;
+        text-decoration: none;
+        padding: $indent--bin-2 $indent--sm !important;
+        border-bottom: 1px solid transparent;
+        line-height: $text__line-height--base;
+        font-size: $font__size--base;
+  
+        &:hover {
+          border-bottom: 1px solid $color--secondary;
+        }
+      }
       
       ul {
         display: inline-flex;
@@ -168,6 +185,10 @@
         margin: 0;
         padding: 0;
         list-style: none;
+
+        &:not(:last-of-type) {
+          margin-bottom: $indent--base;
+        }
   
         li:not(:last-of-type) {
           margin-right: $indent--base;

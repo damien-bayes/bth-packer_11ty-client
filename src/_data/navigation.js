@@ -15,38 +15,43 @@ module.exports = {
       {
         id: 1,
         name: "Home",
-        url: "/"
+        url: "/",
       },
       {
         id: 2,
         name: "Docs",
-        url: "/docs/"
+        url: "/docs/",
       },
       {
         id: 3,
         name: "Patch Notes",
-        url: "/patch-notes/"
+        url: "/patch-notes/",
       },
       {
         id: 4,
         name: "About Project",
-        url: "/about/"
+        url: "/about/",
       },
       {
         id: 5,
         name: "FAQ",
-        url: "/faq/"
+        url: "/faq/",
       },
       {
         id: 6,
         name: "Contribution",
-        url: "/contribution/"
+        url: "/contribution/",
       },
       {
         id: 7,
         name: "Contact",
-        url: "/contact/"
-      }
+        url: "/contact/",
+      },
+      {
+        id: 8,
+        name: "Sponsors",
+        url: "/sponsors/",
+      },
     ]
   },
 
