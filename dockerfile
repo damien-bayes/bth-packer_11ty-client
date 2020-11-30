@@ -27,7 +27,7 @@ COPY nginx/nginx.default.conf /etc/nginx/conf.d/default.conf
 RUN chown -R nginx:nginx /usr/share/nginx/html && \ 
     chmod -R 755 /usr/share/nginx/html
 
-EXPOSE 10033
+# EXPOSE 10033
 
 # ENTRYPOINT /usr/bin/entrypoint.sh
 CMD ["nginx", "-g", "daemon off;"]
