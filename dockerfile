@@ -2,11 +2,11 @@
 #
 # Project: Baythium Packer
 # File: /dockerfile
-# Initial author: Damien Bayes <damien.bayes.db@gmail.com>
+# Organization: Baythium - https://baythium.com
 
 FROM nginx:1.16.1 AS builder
 
-LABEL maintainer = "damien.bayes.db@gmail.com"
+LABEL maintainer = "Baythium"
 
 ###################
 # RUNTIME VARIABLES
