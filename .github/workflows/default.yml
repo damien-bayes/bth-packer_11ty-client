@@ -45,7 +45,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           key: ${{ secrets.KEY }}
           source: "dist/*,dockerfile,nginx/*"
-          target: "baythium-projects/baythium-packer_client"
+          target: "baythium-projects/bth-packer_11ty-client"
           rm: true
 
   deployment:
@@ -62,11 +62,11 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           key: ${{ secrets.KEY }}
           script: |
-            cd baythium-projects/baythium-packer_client
-            ids=$(docker ps -a --filter "name=baythium-packer_client" --format="{{.ID}}")
+            cd baythium-projects/bth-packer_11ty-client
+            ids=$(docker ps -a --filter "name=bth-packer_11ty-client" --format="{{.ID}}")
             [[ -n $ids ]] && docker stop $ids && docker rm $ids 
-            images=$(docker images -a | grep "baythium-packer_client" | awk '{print $1":"$2}')
+            images=$(docker images -a | grep "bth-packer_11ty-client" | awk '{print $1":"$2}')
             [[ -n $images ]] && docker rmi $images
             timestamp=$(date +%s) 
-            docker build . --rm --file dockerfile --tag baythium-ecosystem/baythium-packer_client:$timestamp
-            docker run -d --name baythium-packer_client --net baythium-network-1 --ip 172.18.0.42 -p 127.0.0.1:10033:10033 --restart=on-failure:3 baythium-ecosystem/baythium-packer_client:$timestamp
+            docker build . --rm --file dockerfile --tag baythium-ecosystem/bth-packer_11ty-client:$timestamp
+            docker run -d --name bth-packer_11ty-client --net baythium-network-1 --ip 172.18.0.42 -p 127.0.0.1:10033:80 --restart=on-failure:3 baythium-ecosystem/bth-packer_11ty-client:$timestamp
