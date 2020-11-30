@@ -1,8 +1,9 @@
 /**
- * Project: Baythium Packer
+ * Eleventy Configuration
  *
- * This project is a part of Baythium Ecosystem
- * Initial author: Damien Bayes (damien.bayes.db@gmail.com)
+ * File: /.eleventy.js
+ * Project: Baythium Packer
+ * Organization: Baythium Ecosystem: https://baythium.com
  *
  * Licensed under the MIT license - http://opensource.org/licenses/MIT
  */
