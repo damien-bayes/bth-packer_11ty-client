@@ -69,4 +69,4 @@ jobs:
             [[ -n $images ]] && docker rmi $images
             timestamp=$(date +%s) 
             docker build . --rm --file dockerfile --tag baythium-ecosystem/bth-packer_11ty-client:$timestamp
-            docker run -d --name bth-packer_11ty-client --net baythium-network-1 --ip 172.18.0.42 -p 127.0.0.1:10033:80 --restart=on-failure:3 baythium-ecosystem/bth-packer_11ty-client:$timestamp
+            docker run -d --name bth-packer_11ty-client --net baythium-network-1 --ip 172.18.0.42 -p 127.0.0.1:10033:10033 --restart=on-failure:3 baythium-ecosystem/bth-packer_11ty-client:$timestamp
