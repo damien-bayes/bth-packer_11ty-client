@@ -64,7 +64,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp:hello": "gulp hello",
     "gulp:optimize-svg": "gulp optimize-svg",
-    "gulp:compress-js": "gulp compress-js"
+    "gulp:compress-js": "gulp compress-js",
+    "prettier": "prettier --write"
   },
   "repository": {
     "type": "git",
