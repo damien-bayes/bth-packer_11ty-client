@@ -94,6 +94,7 @@ The list of references used to improve the project planning and its functionalit
 11. https://github.com/google/eleventy-high-performance-blog
 12. https://www.npmjs.com/package/localtunnel
 13. https://github.com/ain/smartbanner.js/
+14. https://github.com/ThewApp/speedlify-actions
 
 ###### Assessment Tools
 1. https://developers.google.com/speed/pagespeed/insights
