@@ -16,6 +16,7 @@ Effectively archive your large-scale infrastructure data using our powerful and 
 ![GitHub issues](https://img.shields.io/github/issues/damien-bayes/baythium-packer_client?color=blueviolet&label=Issues&style=flat-square)
 ![Website](https://img.shields.io/website?down_color=red&label=Website&style=flat-square&up_color=blueviolet&url=https%3A%2F%2Fpacker.baythium.com%2F)
 ![GitHub last commit](https://img.shields.io/github/last-commit/damien-bayes/baythium-packer_client?color=blueviolet&label=Last%20Commit&style=flat-square)
+![Security Headers](https://img.shields.io/security-headers?url=https%3A%2F%2Fpacker.baythium.com)
 
 ## Getting Started
 
