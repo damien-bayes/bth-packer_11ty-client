@@ -1,10 +1,22 @@
 # Baythium Packer - Client
 
-Effectively archive your large-scale infrastructure data using our powerful and lightweight command-line tool  
+<p align="center" style="background-color:white;">
+  <a href="https://packer.baythium.com" style="background-color:white;">
+    <img src="https://packer.baythium.com/images/baythium-ecosystem-1.svg" alt="Baythium Packer" width="200" height="96">
+  </a>
+</p>
+
+Effectively archive your large-scale infrastructure data using our powerful and lightweight command-line tool
+
+<p align="center">
+  <a href="https://github.com/damien-bayes/bth-packer_11ty-client/issues">Report bug</a>
+  ·
+  <a href="https://github.com/damien-bayes/bth-packer_11ty-client/issues">Request feature</a>
+</p>
 
 > **Resource:** https://packer.baythium.com  
 > **Port Number:** 10033  
-> **Organization:** Baythium Ecosystem  
+> **Organization:** Baythium  
 
 ---
 
