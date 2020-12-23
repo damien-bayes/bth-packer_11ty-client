@@ -1,4 +1,4 @@
-# Baythium Packer - Client
+<h1 align="center">Baythium Packer - Client</h1>
 
 <p align="center" style="background-color:white;">
   <a href="https://packer.baythium.com" style="background-color:white;">
