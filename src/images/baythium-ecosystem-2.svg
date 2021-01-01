@@ -5,24 +5,27 @@
 <style type="text/css">
 	.st0{display:none;}
 	.st1{display:inline;fill:#400693;stroke:#000000;stroke-miterlimit:10;}
-	.st2{fill:#FFFFFF;}
-	.st3{fill:#F6D365;}
+	.st2{fill:#C83660;}
+	.st3{fill:#FFFFFF;}
+	.st4{fill:#F6D365;}
 </style>
-<g id="Layer_2" class="st0">
-	<rect class="st1" width="1024" height="512"/>
+<g id="helper">
+	<g class="st0">
+		<rect class="st1" width="1024" height="512"/>
+	</g>
+	<g>
+		<path class="st2" d="M661,212L661,212c0,10.4-8.4,18.9-18.9,18.9l0,0c-10.4,0-18.9-8.4-18.9-18.9l0,0c0-10.4,8.4-18.9,18.9-18.9
+			l0,0C652.6,193.2,661,201.6,661,212z"/>
+		<rect x="482.3" y="212" class="st3" width="48.9" height="198.3"/>
+		<polygon class="st3" points="492.4,128.2 843.5,128.2 779.7,168.8 428.7,168.8 		"/>
+		<rect x="851.2" y="155.6" class="st3" width="48.9" height="254.7"/>
+		<rect x="617.7" y="282.9" class="st4" width="48.9" height="127.4"/>
+		<polygon class="st4" points="709.3,256 836.7,256 808.5,289.7 681.1,289.7 		"/>
+	</g>
 </g>
-<g id="Layer_1">
-	<path class="st2" d="M363,418H178.4l-53-53h290L363,418z M204.6,312.6h-79.2L310,94h79.2L204.6,312.6z"/>
-	<path class="st3" d="M310,94l105.4,271L363,418l-96.2-273L310,94z"/>
-	<path class="st3" d="M659.5,219.7L659.5,219.7c0,10.4-8.4,18.9-18.9,18.9h0c-10.4,0-18.9-8.4-18.9-18.9v0
-		c0-10.4,8.4-18.9,18.9-18.9h0C651.1,200.9,659.5,209.3,659.5,219.7z"/>
-	
-		<rect x="406.1" y="294.4" transform="matrix(6.049389e-11 -1 1 6.049389e-11 186.3947 824.121)" class="st2" width="198.3" height="48.9"/>
-	<polygon class="st2" points="490.9,135.9 842,135.9 778.2,176.5 427.2,176.5 	"/>
-	
-		<rect x="746.8" y="266.2" transform="matrix(4.707885e-11 -1 1 4.707885e-11 583.5106 1164.7737)" class="st2" width="254.7" height="48.9"/>
-	
-		<rect x="577" y="329.9" transform="matrix(9.415674e-11 -1 1 9.415674e-11 286.3342 994.9658)" class="st2" width="127.4" height="48.9"/>
-	<polygon class="st2" points="707.8,263.7 835.2,263.7 807,297.4 679.6,297.4 	"/>
+<g id="brand">
+	<polygon class="st4" points="356.5,414.6 175.8,414.6 123.9,362.7 407.8,362.7 	"/>
+	<polygon class="st3" points="201.5,311.4 123.9,311.4 304.6,97.4 382.2,97.4 	"/>
+	<polygon class="st2" points="304.6,97.4 407.8,362.7 356.5,414.6 262.3,147.4 	"/>
 </g>
 </svg>
