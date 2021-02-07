@@ -47,7 +47,7 @@
         accept-charset="UTF-8"
         enctype="multipart/form-data"
         style="margin: 0;"
-        autocomplete="off">
+        autocomplete="on">
 
         <!-- Input: Name -->
         <div class="form__collection">
@@ -60,7 +60,7 @@
             required="required"
             onpaste="return false;"
             ondrop="return false;"
-            autocomplete="off"/>
+            autocomplete="name"/>
         </div>
 
         <!-- Input: Email -->
@@ -72,7 +72,8 @@
             name="email"
             id="email"
             required="required"
-            placeholder="you@example.com"/>
+            placeholder="you@example.com"
+            autocomplete="email"/>
           <small class="form__text">We won't share your email with anyone else</small>
         </div>
 
