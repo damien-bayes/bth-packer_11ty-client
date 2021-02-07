@@ -57,7 +57,9 @@
             type="text"
             name="name"
             id="name"
-            required="required"
+            required
+            inputmode="text"
+            enterkeyhint="next"
             onpaste="return false;"
             ondrop="return false;"
             autocomplete="name"/>
@@ -71,7 +73,9 @@
             type="email"
             name="email"
             id="email"
-            required="required"
+            required
+            inputmode="email"
+            enterkeyhint="next"
             placeholder="you@example.com"
             autocomplete="email"/>
           <small class="form__text">We won't share your email with anyone else</small>
