@@ -1,3 +1,4 @@
 # To Do List (Idea)
 
 1. Automate versioning and publication
+2. Install JSDocs withing this project using the following command: `npm install --save-dev jsdoc`
