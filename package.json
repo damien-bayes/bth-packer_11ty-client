@@ -79,6 +79,7 @@
     "baythium-packer",
     "baythium-automation",
     "11ty",
+    "eleventy",
     "bash",
     "shell",
     "archiver",

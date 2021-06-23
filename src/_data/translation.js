@@ -27,6 +27,7 @@ module.exports = {
     currentPage: "Current page",
     websiteMode: "Website mode",
     documentation: "Docs",
+    learnMore: "Learn more",
     download: "Download",
     github: "GitHub",
     noJs: "We are sorry but this website DOES NOT work properly without JavaScript enabled. Please enable it to continue.",

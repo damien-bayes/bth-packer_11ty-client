@@ -93,6 +93,15 @@
     overflow: hidden;
     z-index: 0;
 
+    .headline__title {
+      color: $color--primary;
+      font-size: 48px !important;
+
+      // background-image: -webkit-linear-gradient(120deg,#b142ec 0%,#812bea 100%);
+      // background-clip: text;
+      // -webkit-text-fill-color: transparent;
+    }
+
     .row {
       display: flex;
       align-items: center;
@@ -117,6 +126,8 @@
   }
 
   &__feature-card {
+    margin-bottom: 32px !important;
+
     .card img {
       margin: 0 auto;
       object-fit: contain;
@@ -131,11 +142,13 @@
     }
   }
 
-  &__github-banner {
+  .github-banner {
     background-color: $color--primary !important;
-    overflow: hidden !important;
-    z-index: 0;
+    overflow: initial !important;
     padding: $indent--xl;
+    position: relative;
+
+    background: radial-gradient(circle at top left,#3a1f5d 0%,#521d91 100%) !important;
 
     .row {
       display: flex;
@@ -143,14 +156,12 @@
       color: $color--white;
     }
 
-    &::before {
-      content: "";
+    &__octocat {
       position: absolute;
       bottom: 0;
       left: 0;
-      width: 256px;
-      height: 256px;
-      background: url("/images/github.svg") 0 0 no-repeat; 
+      width: 128px;
+      height: 128px;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -159,6 +170,32 @@
       z-index: -1;
       opacity: .05;
       filter: invert(1);
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -1;
+      width: 32px;
+      height: 32px;
+      border-radius: 100%;
+      background: $color--secondary;
+      top: -16px;
+      left: 64px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -1;
+      width: 128px;
+      height: 128px;
+      border-radius: 67% 33% 75% 25% / 0% 81% 19% 100%;
+      background: $color--alternative;
+      right: -64px;
+      bottom: -32px;
     }
   }
 }

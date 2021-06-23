@@ -35,7 +35,6 @@ module.exports = (scssPath, cssPath) => {
   }
 
   /* Watch for changes to scssPath directory... */
-  /*
   fs.watch(path.dirname(scssPath), () => {
     console.log(`Watching ${path.dirname(scssPath)}...`);
 
@@ -46,5 +45,4 @@ module.exports = (scssPath, cssPath) => {
     fs.writeFile(cssPath, watchResult.css.toString())
       .catch(error => console.error(error));
   });
-  */
 };
