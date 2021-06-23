@@ -46,7 +46,8 @@
         method="post"
         accept-charset="UTF-8"
         enctype="multipart/form-data"
-        style="margin: 0;">
+        style="margin: 0;"
+        autocomplete="on">
 
         <!-- Input: Name -->
         <div class="form__collection">
@@ -56,10 +57,12 @@
             type="text"
             name="name"
             id="name"
-            required="required"
+            required
+            inputmode="text"
+            enterkeyhint="next"
             onpaste="return false;"
             ondrop="return false;"
-            autocomplete="off"/>
+            autocomplete="name"/>
         </div>
 
         <!-- Input: Email -->
@@ -70,8 +73,11 @@
             type="email"
             name="email"
             id="email"
-            required="required"
-            placeholder="you@example.com"/>
+            required
+            inputmode="email"
+            enterkeyhint="next"
+            placeholder="you@example.com"
+            autocomplete="email"/>
           <small class="form__text">We won't share your email with anyone else</small>
         </div>
 
@@ -83,7 +89,8 @@
             name="message"
             id="message"
             rows="3"
-            required="required"></textarea>
+            required
+            autocomplete="off"></textarea>
         </div>
 
         <!-- Google reCAPTCHA -->

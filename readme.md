@@ -2,7 +2,7 @@
 
 <p align="center" style="background-color:white;">
   <a href="https://packer.baythium.com" style="background-color:white;">
-    <img src="https://packer.baythium.com/images/baythium-ecosystem-1.svg" alt="Baythium Packer" width="200" height="96">
+    <img src="https://packer.baythium.com/images/baythium-ecosystem.png" alt="Baythium Packer" height="128">
   </a>
 </p>
 
