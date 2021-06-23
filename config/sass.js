@@ -35,14 +35,14 @@ module.exports = (scssPath, cssPath) => {
   }
 
   /* Watch for changes to scssPath directory... */
-  fs.watch(path.dirname(scssPath), () => {
-    console.log(`Watching ${path.dirname(scssPath)}...`);
+  // fs.watch(path.dirname(scssPath), () => {
+  //   console.log(`Watching ${path.dirname(scssPath)}...`);
 
-    // Encapsulate rendered css from scssPath into watchResult variable
-    const watchResult = sass.renderSync({ file: scssPath });
+  //   // Encapsulate rendered css from scssPath into watchResult variable
+  //   const watchResult = sass.renderSync({ file: scssPath });
 
-    // Then write result css string to cssPath file
-    fs.writeFile(cssPath, watchResult.css.toString())
-      .catch(error => console.error(error));
-  });
+  //   // Then write result css string to cssPath file
+  //   fs.writeFile(cssPath, watchResult.css.toString())
+  //     .catch(error => console.error(error));
+  // });
 };
