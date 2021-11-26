@@ -2,7 +2,7 @@
   <img width="48" height="48" src="https://raw.githubusercontent.com/damien-bayes/damien-bayes/2a89109817733b8a5e8a9d5d2db2f77b397352d8/baythium-logo-43d172db-190f-49a9-9e9c-57c52d5ff6c1.svg"/>
 </div>
 
-<h1 align="center">Baythium Packer - Client</h1>
+<h1 align="center">Baythium Packer - Eleventy Client</h1>
 
 <p align="center">
   ⚠️ The project is still in early development
