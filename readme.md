@@ -17,7 +17,7 @@ Effectively archive your large-scale infrastructure data using our powerful and 
 </p>
 
 > **Resource:** https://packer.baythium.com  
-> **Port Number:** 10033  
+> **Privileged port:** 10033  
 > **Organization:** Baythium  
 
 ---
