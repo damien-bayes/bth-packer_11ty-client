@@ -110,6 +110,7 @@ The list of references used to improve the project planning and its functionalit
 12. https://www.npmjs.com/package/localtunnel
 13. https://github.com/ain/smartbanner.js/
 14. https://github.com/ThewApp/speedlify-actions
+15. https://upx.github.io/
 
 ###### Assessment Tools
 1. https://developers.google.com/speed/pagespeed/insights
