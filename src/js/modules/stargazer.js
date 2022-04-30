@@ -74,9 +74,16 @@ Stargazer.prototype = {
     const fetchController = new AbortController();
     const { signal } = fetchController;
 
+    // let timeout1 = setTimeout(() => {
+    //   fetchController.abort();
+    //   console.info('Fetch request aborted');
+    // }, 10);
+
     const stars = await fetch(url, { signal })
     .then(response => response.json())
     .then(data => {
+      // clearTimeout(timeout1);
+
       /* Check for any errors coming from github api */
       if (data.message) { logToConsole(data.message, 'error'); }
 
