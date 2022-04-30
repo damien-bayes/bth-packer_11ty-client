@@ -71,7 +71,10 @@ Stargazer.prototype = {
       return 0;
     }
 
-    const stars = await fetch(url)
+    const fetchController = new AbortController();
+    const { signal } = fetchController;
+
+    const stars = await fetch(url, { signal })
     .then(response => response.json())
     .then(data => {
       /* Check for any errors coming from github api */
@@ -81,6 +84,7 @@ Stargazer.prototype = {
     })
     .catch(err => {
       logToConsole(err, 'error');
+      // console.warn({ err });
     });
 
     this.update(stars);

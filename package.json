@@ -58,6 +58,7 @@
     "11ty:build-quietly": "npm run clean && set ELEVENTY_ENV=\"production\" && eleventy --quiet",
     "11ty:help": "eleventy --help",
     "start": "npm run 11ty:serve-dev",
+    "build": "npm run 11ty:build",
     "npm:audit": "npm audit fix",
     "eslint:init": "eslint --init",
     "eslint": "eslint ./ --fix",
