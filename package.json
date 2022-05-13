@@ -38,7 +38,7 @@
     "gulp-ext-replace": "^0.3.0",
     "gulp-livereload": "^4.0.2",
     "gulp-uglify": "^3.0.2",
-    "gulp-util": "^1.0.0",
+    "gulp-util": "^3.0.8",
     "html-minifier": "^4.0.0",
     "imagemin": "^8.0.1",
     "imagemin-svgo": "^10.0.1",
