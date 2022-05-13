@@ -8,12 +8,16 @@
 
 "use strict";
 
-/* ************** */
+/******************/
 /* SYSTEM IMPORTS */
-/* ************** */
+/******************/
+
 const fs = require("fs");
 
-/* CUSTOM IMPORTS */
+/*******************/
+/* PROJECT IMPORTS */
+/*******************/
+
 const
   applyCustomCollection = require("./custom-collections"),
   applyFilters = require("./filters"),
@@ -25,7 +29,7 @@ const
 
 /* ************************************************************************* */
 
-module.exports = eleventyConfig => {
+module.exports = (eleventyConfig) => {
   /* Enable quiet mode to reduce the console noise */
   eleventyConfig.setQuietMode(false);
 

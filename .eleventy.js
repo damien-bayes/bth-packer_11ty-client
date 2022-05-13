@@ -1,7 +1,7 @@
 /**
  * Eleventy Configuration
  *
- * File: /.eleventy.js  
+ * File: /.eleventy.js
  * Project: Baythium Packer
  * Organization: Baythium Ecosystem: https://baythium.com
  *
@@ -10,25 +10,30 @@
 
 "use strict";
 
-/* ******************* */
+/***********************/
 /* THIRD-PARTY IMPORTS */
-/* ******************* */
+/***********************/
+
 require("module-alias/register");
 
 /* ************** */
 /* CUSTOM IMPORTS */
 /* ************** */
+
 const
   sass = require("@config/sass"),
   eleventy = require("@config/eleventy"),
   nunjucks = require("@config/nunjucks"),
   syntaxHighlight = require("@config/syntax-highlight");
 
-/* ************************************************************************* */
+/*****************************************************************************/
 
 module.exports = eleventyConfig => {
   /* Watch for modificaions in style directory */
-  sass("./src/styles/custom-baythium-aspectus.scss", "./dist/styles/custom-baythium-aspectus.min.css");
+  sass(
+    "./src/styles/custom-baythium-aspectus.scss",
+    "./dist/styles/custom-baythium-aspectus.min.css"
+  );
   eleventy(eleventyConfig);
   nunjucks(eleventyConfig);
   syntaxHighlight(eleventyConfig);
