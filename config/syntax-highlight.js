@@ -36,7 +36,7 @@ const options = {
   alwaysWrapLineHighlights: false
 };
 
-module.exports = eleventyConfig => {
+module.exports = (eleventyConfig) => {
   /* PLUGINS */
   eleventyConfig.addPlugin(syntaxHighlight, options || {});
 };
